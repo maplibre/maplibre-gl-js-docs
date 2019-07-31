@@ -1,8 +1,22 @@
-Mapbox GL JS has [API documentation](#writing-api-documentation) and [examples](#writing-examples).
+# Mapbox GL JS Documentation
+
+The source code for the website that hosts [API documentation](#writing-api-documentation) and [examples](#writing-examples) for [Mapbox GL JS](https://github.com/mapbox/mapbox-gl-js).
+
+## Setting up the Development Environment
+
+After cloning this repository, run:
+
+```bash
+yarn # install dependencies
+git submodule update --init # initialize mapbox-gl-js git submodule
+```
+
+When pulling in new commits that change the `mapbox-gl-js` submodule,
+run `git submodule update` to update the local copy as well.
 
 ## Writing API Documentation
 
-API documentation is written as [JSDoc comments](http://usejsdoc.org/) and processed with [documentationjs](http://documentation.js.org/).
+API documentation is written as [JSDoc comments](http://usejsdoc.org/) and processed with [documentationjs](http://documentation.js.org/) **in the source code of [mapbox-gl-js](https://github.com/mapbox/mapbox-gl-js)**. This repository fetches the source code through a git submodule.
 
 * Classes, methods, events, and anything else in the public interface must be documented with JSDoc comments. Everything outside of the public interface may be documented and must be tagged as `@private`.
 * Text within JSDoc comments may use markdown formatting. Code identifiers must be surrounded by \`backticks\`.
@@ -42,7 +56,8 @@ Every example **must** have an accompanying image. To get an image, run the site
 
 ## Running the Documentation Server Locally
 
-To start a documentation server locally run
+To start a documentation server locally, run:
+
 ```bash
 npm run start-docs
 ```
@@ -51,15 +66,17 @@ The command will print the URL you can use to view the documentation.
 
 💡 If you receive an error related to `@mapbox/appropriate-images`, try `nvm use 8 && npm run start-docs`.
 
+The examples section of the locally run documentation will use the GL JS version located in `../mapbox-gl-js/dist`,
+so make sure to have a working minified build in your local copy of the `mapbox-gl-js` repo (not the submodule).
+
 ## Committing and Publishing Documentation
 
-The mapbox-gl-js repository has both `master` and `publisher-production` as active branches. The **`master` branch** is used for mainline code development: the next version of mapbox-gl-js will come from the code in this branch, and it may contain documentation and examples for APIs that are not yet part of a public release. The **`publisher-production` branch** is published to https://www.mapbox.com/mapbox-gl-js/ on any push to the branch. For the purposes of documentation changes, use these two branches as follows:
+When a new GL JS release goes out, the release manager will make a PR that updates this repo's `mapbox-gl-js` submodule to point to the new release.
 
-* If your changes are relevant to the **currently released version**, make them on `publisher-production`. Examples: correcting the API documentation for a released API, adding a new example that depends only on current APIs.
-* If your changes depend on gl-js features **not in the currently released version**, make them on `master`. Examples: documenting or adding an example for a newly-added API.
+To update the API documentation, PR the relevant changes to the `master` branch of the `mapbox-gl-js` repo.
+It reflects code that isn't yet released, but the changes will propagate to this repo when a new GL JS release goes out.
+If you absolutely have to make an API docs change between releases, make it in the corresponding release branch of `mapbox-gl-js`
+and update the `mapbox-gl-js` submodule here to point to the new commit.
 
-When releasing, the release manager will:
-
-* Merge `publisher-production` to `master`, ensuring that any accumulated changes in `publisher-production` propagate to `master`
-* Make the release
-* Fast-forward `publisher-production` to the current `master`, ensuring that all accumulated changes are published to mapbox.com
+To update or add a new example, PR the relevant changes to this repo. The example will be live once the PR is merged.
+If this example uses a version of GL JS that isn't yet released, the PR should not be merged until the release is out.
