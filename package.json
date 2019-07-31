@@ -37,7 +37,7 @@
     "slugg": "^1.2.1"
   },
   "scripts": {
-    "build-docs": "documentation build --github --format json --config ./docs/documentation.yml --output docs/components/api.json src/index.js && npm run build-images",
+    "build-docs": "documentation build --github --format json --config ./docs/documentation.yml --output docs/components/api.json mapbox-gl-js/src/index.js && npm run build-images",
     "build-images": "mkdir -p docs/img/dist && node docs/bin/build-image-config.js && node docs/bin/appropriate-images.js --all",
     "create-image": "node docs/bin/create-image",
     "build": "run-s build-docs && batfish build # invoked by publisher when publishing docs on the publisher-production branch",

@@ -1,0 +1,4 @@
+[submodule "mapbox-gl-js"]
+	path = mapbox-gl-js
+	url = https://github.com/mapbox/mapbox-gl-js
+	shallow = true

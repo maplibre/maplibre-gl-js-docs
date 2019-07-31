@@ -6,7 +6,7 @@ import PageShell from '../components/page_shell';
 import SDKSupportTable from '../components/sdk_support_table';
 import {highlightJavascript, highlightJSON} from '../components/prism_highlight';
 import entries from 'object.entries';
-import ref from '../../src/style-spec/reference/latest';
+import ref from '../../mapbox-gl-js/src/style-spec/reference/latest';
 import Icon from '@mapbox/mr-ui/icon';
 import Feedback from '@mapbox/dr-ui/feedback';
 import constants from '../constants';

@@ -1,9 +1,9 @@
-import ref from '../../src/style-spec/reference/latest';
-import { toString } from '../../src/style-spec/expression/types';
-import CompoundExpression from '../../src/style-spec/expression/compound_expression';
+import ref from '../../mapbox-gl-js/src/style-spec/reference/latest';
+import { toString } from '../../mapbox-gl-js/src/style-spec/expression/types';
+import CompoundExpression from '../../mapbox-gl-js/src/style-spec/expression/compound_expression';
 
 // registers compound expressions
-import '../../src/style-spec/expression/definitions/index';
+import '../../mapbox-gl-js/src/style-spec/expression/definitions/index';
 
 const comparisonSignatures = [{
     type: 'boolean',
