@@ -1,7 +1,6 @@
 {
   "extends": [
     "mourner",
-    "plugin:flowtype/recommended",
     "plugin:import/recommended"
   ],
   "parser": "babel-eslint",
@@ -9,7 +8,6 @@
     "sourceType": "module"
   },
   "plugins": [
-    "flowtype",
     "import"
   ],
   "rules": {
@@ -32,13 +30,6 @@
 
     "array-bracket-spacing": "off",
     "consistent-return": "off",
-    "flowtype/define-flow-type": 1,
-    "flowtype/require-valid-file-annotation": [
-      2,
-      "always", {
-        "annotationStyle": "line"
-      }
-    ],
     "global-require": "off",
     "import/no-commonjs": "error",
     "key-spacing": "off",
@@ -71,7 +62,7 @@
         "parameters": "off"
       }
     }],
-    "no-multiple-empty-lines": [ "error", { 
+    "no-multiple-empty-lines": [ "error", {
         "max": 1
     }]
   },
