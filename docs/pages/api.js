@@ -1,7 +1,7 @@
 import React from 'react';
 import PageShell from '../components/page_shell';
 import {prefixUrl} from '@mapbox/batfish/modules/prefix-url';
-import {version} from '../../package.json';
+import {version} from '../../mapbox-gl-js/package.json';
 import docs from '../components/api.json'; // eslint-disable-line import/no-unresolved
 import GithubSlugger from 'github-slugger';
 import createFormatters from 'documentation/src/output/util/formatters';

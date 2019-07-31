@@ -2,7 +2,7 @@
 
 const puppeteer = require('puppeteer'); // eslint-disable-line
 const path = require('path'); // eslint-disable-line
-const pack = require('../../package.json'); // eslint-disable-line
+const pack = require('../../mapbox-gl-js/package.json'); // eslint-disable-line
 
 const fileName = process.argv[2];
 const token = process.argv[3] || process.env.MAPBOX_ACCESS_TOKEN || process.env.MapboxAccessToken;

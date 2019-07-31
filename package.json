@@ -40,8 +40,9 @@
     "build-docs": "documentation build --github --format json --config ./docs/documentation.yml --output docs/components/api.json mapbox-gl-js/src/index.js && npm run build-images",
     "build-images": "mkdir -p docs/img/dist && node docs/bin/build-image-config.js && node docs/bin/appropriate-images.js --all",
     "create-image": "node docs/bin/create-image",
-    "build": "run-s build-docs && batfish build # invoked by publisher when publishing docs on the publisher-production branch",
-    "start-docs": "run-s build-prod-min build-css build-docs && NODE_OPTIONS=\"--max_old_space_size=2048\" DEPLOY_ENV=local batfish start",
+    "build": "run-s install-spec-deps build-docs && batfish build # invoked by publisher when publishing docs on the publisher-production branch",
+    "install-spec-deps": "cd mapbox-gl-js/src/style-spec && yarn --ignore-scripts --pure-lockfile",
+    "start-docs": "run-s install-spec-deps build-docs && NODE_OPTIONS=\"--max_old_space_size=2048\" DEPLOY_ENV=local batfish start",
     "lint": "eslint --cache --ignore-path .gitignore docs docs/pages/example/*.html",
     "open-changed-examples": "git diff --name-only publisher-production HEAD -- docs/pages/example/*.html | awk '{print \"http://127.0.0.1:4000/mapbox-gl-js/example/\" substr($0,33,length($0)-37)}' | xargs open"
   }

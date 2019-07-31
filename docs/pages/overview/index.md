@@ -6,7 +6,7 @@ prependJs:
   - "import Quickstart from '../../components/quickstart';"
   - "import Copyable from '../../components/copyable';"
   - "import urls from '../../components/urls';"
-  - "import {version} from '../../../package.json';"
+  - "import {version} from '../../../mapbox-gl-js/package.json';"
 pathname: /mapbox-gl-js/overview/
 contentType: API
 ---
