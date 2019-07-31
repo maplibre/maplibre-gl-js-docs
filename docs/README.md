@@ -7,7 +7,7 @@ The source code for the website that hosts [API documentation](#writing-api-docu
 After cloning this repository, run:
 
 ```bash
-yarn # install dependencies
+npm install # install dependencies
 git submodule update --init # initialize mapbox-gl-js git submodule
 ```
 
@@ -59,7 +59,7 @@ Every example **must** have an accompanying image. To get an image, run the site
 To start a documentation server locally, run:
 
 ```bash
-npm run start-docs
+npm start
 ```
 
 The command will print the URL you can use to view the documentation.

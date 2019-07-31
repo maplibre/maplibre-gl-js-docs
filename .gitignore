@@ -2,7 +2,6 @@
 /docs/pages/dist/
 /docs/img/dist/
 node_modules
-package-lock.json
 *.sublime-*
 .DS_Store
 .eslintcache
@@ -12,3 +11,4 @@ _site
 yarn-error.log
 yarn-debug.log
 npm-debug.log
+yarn.lock
