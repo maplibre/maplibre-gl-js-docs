@@ -100,15 +100,11 @@ class PageShell extends React.Component {
             return jsx;
         }
         if (Array.isArray(jsx)) {
-            return jsx.reduce(
-            (previous, current) =>
-                previous + this.innerJsxText(current),
-            ''
-            );
+            return jsx.reduce((previous, current) => previous + this.innerJsxText(current), '');
         }
         if (
             Object.prototype.hasOwnProperty.call(jsx, 'props') &&
-          Object.prototype.hasOwnProperty.call(jsx.props, 'children')
+            Object.prototype.hasOwnProperty.call(jsx.props, 'children')
         ) {
             return this.innerJsxText(jsx.props.children);
         }

@@ -50,9 +50,9 @@ In the `.html` file, write the HTML and JavaScript constituting the example.
 Every example **must** have an accompanying image. To get an image, run the site locally and take a screenshot of the rendered map in the example:
 
 1. Run `npm run create-image <example-file-name> <mapbox-access-token>`. The script will take a screenshot of the map in the example and save it to `docs/img/src/`. Commit the image.
-2. Run `npm run start-docs` to verify that your example image is loading as expected.
+2. Run `npm start` to verify that your example image is loading as expected.
 
-💡 If `npm run create-image` does not generate an ideal image. You can also take a screenshot of it yourself by running the site locally with `npm run start-docs` and taking a screenshot of the example map in PNG format. Resize it to 1200 x 500 pixels and save it in the `docs/img/src` folder.
+💡 If `npm run create-image` does not generate an ideal image. You can also take a screenshot of it yourself by running the site locally with `npm start` and taking a screenshot of the example map in PNG format. Resize it to 1200 x 500 pixels and save it in the `docs/img/src` folder.
 
 ## Running the Documentation Server Locally
 
@@ -64,7 +64,7 @@ npm start
 
 The command will print the URL you can use to view the documentation.
 
-💡 If you receive an error related to `@mapbox/appropriate-images`, try `nvm use 8 && npm run start-docs`.
+💡 If you receive an error related to `@mapbox/appropriate-images`, try `nvm use 8 && npm start`.
 
 The examples section of the locally run documentation will use the GL JS version located in `../mapbox-gl-js/dist`,
 so make sure to have a working minified build in your local copy of the `mapbox-gl-js` repo (not the submodule).

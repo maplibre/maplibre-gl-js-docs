@@ -159,12 +159,12 @@ map.on('load', function() {
         "layout": {
             "icon-image": "airport-15",
             "icon-padding": 0,
-            "icon-allow-overlap":true
+            "icon-allow-overlap": true
         }
     });
 
     map.on('moveend', function() {
-        var features = map.queryRenderedFeatures({layers:['airport']});
+        var features = map.queryRenderedFeatures({layers: ['airport']});
 
         if (features) {
             var uniqueFeatures = getUniqueFeatures(features, "iata_code");
