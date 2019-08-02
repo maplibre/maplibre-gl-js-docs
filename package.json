@@ -41,7 +41,7 @@
   },
   "scripts": {
     "lint": "eslint --cache --ignore-path .gitignore docs docs/pages/example/*.html",
-    "install-spec-deps": "cd mapbox-gl-js/src/style-spec && npm install --ignore-scripts --no-package-lock --loglevel=error",
+    "install-spec-deps": "cd mapbox-gl-js/src/style-spec && npm install --ignore-scripts --no-package-lock --no-audit --loglevel=error",
     "build-api": "documentation build --github --format json --config ./docs/documentation.yml --output docs/components/api.json mapbox-gl-js/src/index.js",
     "build-images": "mkdir -p docs/img/dist && node docs/bin/build-image-config.js && node docs/bin/appropriate-images.js --all",
     "build-docs": "run-s install-spec-deps build-api build-images",

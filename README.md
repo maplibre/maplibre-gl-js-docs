@@ -7,7 +7,7 @@ The source code for the website that hosts [API documentation](#writing-api-docu
 After cloning this repository, run:
 
 ```bash
-npm install # install dependencies
+yarn # install dependencies with Yarn
 git submodule update --init # initialize mapbox-gl-js git submodule
 ```
 
