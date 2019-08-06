@@ -9,11 +9,11 @@ import ProductMenu from '@mapbox/dr-ui/product-menu/product-menu';
 import PageLayout from '@mapbox/dr-ui/page-layout';
 import SectionedNavigation from '@mapbox/dr-ui/sectioned-navigation';
 import NavigationAccordion from '@mapbox/dr-ui/navigation-accordion';
-import examples from '@mapbox/batfish/data/examples'; // eslint-disable-line import/no-unresolved
+import examples from '@mapbox/batfish/data/examples';
 import GithubSlugger from 'github-slugger';
 import ApiNavigation from './api-navigation';
 import TopNavTabs from './top-nav-tabs';
-import { tags } from '../data/tags.js';
+import tags from '../data/tags.json';
 import { overviewNavigation } from '../data/overview-navigation';
 import { styleSpecNavigation } from '../data/style-spec-navigation';
 import { plugins } from '../pages/plugins';
@@ -22,18 +22,22 @@ import Search from '@mapbox/dr-ui/search';
 
 const slugger = new GithubSlugger();
 
-const site = "Mapbox GL JS";
+const site = 'Mapbox GL JS';
 
 class PageShell extends React.Component {
-
     componentDidMount() {
-    // initialize analytics
+        // initialize analytics
         if (typeof window !== 'undefined' && window.initializeMapboxAnalytics) {
-            const isProduction = /\.?mapbox\.com/.test(window.location.hostname);
+            const isProduction = /\.?mapbox\.com/.test(
+                window.location.hostname
+            );
 
             let sentryInit = {};
             if (isProduction) {
-                sentryInit = { sentryDsn: 'https://6ba8cfeeedad4fb7acb8576f0fd6e266@sentry.io/1384508' };
+                sentryInit = {
+                    sentryDsn:
+                        'https://6ba8cfeeedad4fb7acb8576f0fd6e266@sentry.io/1384508'
+                };
             } else {
                 sentryInit = false;
             }
@@ -49,34 +53,38 @@ class PageShell extends React.Component {
             title: section.title,
             path: `/mapbox-gl-js/overview/${section.path}`
         }));
-        const subtitles = overviewNavigation.filter(section => section.title === frontMatter.title).map(section => section.subnav.map(subNavItem => ({
-            title: subNavItem.title,
-            path: subNavItem.path
-        })))[0];
+        const subtitles = overviewNavigation
+            .filter(section => section.title === frontMatter.title)
+            .map(section =>
+                section.subnav.map(subNavItem => ({
+                    title: subNavItem.title,
+                    path: subNavItem.path
+                }))
+            )[0];
         const sidebarContent = (
-            <div className='mx0-mm ml-neg24 mr-neg36 relative-mm absolute right left'>
+            <div className="mx0-mm ml-neg24 mr-neg36 relative-mm absolute right left">
                 <NavigationAccordion
                     currentPath={this.props.location.pathname}
                     contents={{
                         firstLevelItems: sections,
                         secondLevelItems: subtitles
                     }}
-                    onDropdownChange={(value) => {
+                    onDropdownChange={value => {
                         routeToPrefixed(value);
                     }}
                 />
             </div>
         );
         return {
-            contentType: "Overview",
+            contentType: 'Overview',
             sidebarContent,
             sidebarStackedOnNarrowScreens: true
         };
     }
 
     getExampleSections(data) {
-        return (
-            Object.keys(data).map((topic) => {
+        return Object.keys(data)
+            .map(topic => {
                 const subNavItems = examples
                     .filter(item => item.tags[0] === topic)
                     .map(item => ({
@@ -90,8 +98,8 @@ class PageShell extends React.Component {
                     url: `/mapbox-gl-js/examples/#${topic}`,
                     items: subNavItems
                 };
-            }).filter(topic => topic.items.length > 0)
-        );
+            })
+            .filter(topic => topic.items.length > 0);
     }
 
     innerJsxText(jsx) {
@@ -100,7 +108,10 @@ class PageShell extends React.Component {
             return jsx;
         }
         if (Array.isArray(jsx)) {
-            return jsx.reduce((previous, current) => previous + this.innerJsxText(current), '');
+            return jsx.reduce(
+                (previous, current) => previous + this.innerJsxText(current),
+                ''
+            );
         }
         if (
             Object.prototype.hasOwnProperty.call(jsx, 'props') &&
@@ -112,27 +123,30 @@ class PageShell extends React.Component {
     }
 
     getPluginSections(data) {
-        return (
-            Object.keys(data).map((section) => {
-                const subNavItems = Object.keys(data[section]).map(item => ({
-                    text: item,
-                    description: this.innerJsxText(data[section][item].description),
-                    url: data[section][item].website
-                }));
-                return {
-                    title: section,
-                    url: `#${slugger.slug(section)}`,
-                    items: subNavItems
-                };
-            })
-        );
+        return Object.keys(data).map(section => {
+            const subNavItems = Object.keys(data[section]).map(item => ({
+                text: item,
+                description: this.innerJsxText(data[section][item].description),
+                url: data[section][item].website
+            }));
+            return {
+                title: section,
+                url: `#${slugger.slug(section)}`,
+                items: subNavItems
+            };
+        });
     }
 
     sectionedNavProps(activeTab, sections) {
-        const contentType = activeTab.charAt(0).toUpperCase() + activeTab.substr(1).toLowerCase();
+        const contentType =
+            activeTab.charAt(0).toUpperCase() +
+            activeTab.substr(1).toLowerCase();
         const sidebarContent = (
-            <div className='ml36 mr12'>
-                <SectionedNavigation sections={sections} includeFilterBar={true} />
+            <div className="ml36 mr12">
+                <SectionedNavigation
+                    sections={sections}
+                    includeFilterBar={true}
+                />
             </div>
         );
         return {
@@ -144,44 +158,43 @@ class PageShell extends React.Component {
 
     apiNavProps() {
         return {
-            contentType: "API reference",
+            contentType: 'API reference',
             sidebarContent: <ApiNavigation />,
             sidebarStackedOnNarrowScreens: false,
-            interactiveClass: "toggle-sibling",
+            interactiveClass: 'toggle-sibling',
             sidebarColSize: 3
         };
     }
 
     styleSpecNavProps() {
         slugger.reset();
-        const sections = styleSpecNavigation
-            .map((section) => {
-                let subNavItems = [];
-                const sectionSlug = slugger.slug(section.title);
-                if (section.subnav) {
-                    subNavItems = section.subnav.map((item) => {
-                        slugger.reset();
-                        const itemSlug = slugger.slug(item.title);
-                        return {
-                            text: item.title,
-                            url: `#${sectionSlug}-${itemSlug}`
-                        };
-                    });
-                }
-                return {
-                    title: section.title,
-                    url: `#${sectionSlug}`,
-                    items: subNavItems
-                };
-            });
+        const sections = styleSpecNavigation.map(section => {
+            let subNavItems = [];
+            const sectionSlug = slugger.slug(section.title);
+            if (section.subnav) {
+                subNavItems = section.subnav.map(item => {
+                    slugger.reset();
+                    const itemSlug = slugger.slug(item.title);
+                    return {
+                        text: item.title,
+                        url: `#${sectionSlug}-${itemSlug}`
+                    };
+                });
+            }
+            return {
+                title: section.title,
+                url: `#${sectionSlug}`,
+                items: subNavItems
+            };
+        });
         const sidebarContent = (
-            <div className='ml36 mr12'>
+            <div className="ml36 mr12">
                 <SectionedNavigation sections={sections} includeCount={false} />
             </div>
         );
 
         return {
-            contentType: "Specification",
+            contentType: 'Specification',
             sidebarContent,
             sidebarStackedOnNarrowScreens: false,
             sidebarColSize: 3
@@ -192,11 +205,17 @@ class PageShell extends React.Component {
         if (activeTab === 'overview') {
             return this.accordionNavProps();
         } else if (activeTab === 'examples') {
-            return this.sectionedNavProps(activeTab, this.getExampleSections(tags));
+            return this.sectionedNavProps(
+                activeTab,
+                this.getExampleSections(tags)
+            );
         } else if (activeTab === 'api') {
             return this.apiNavProps();
         } else if (activeTab === 'plugins') {
-            return this.sectionedNavProps(activeTab, this.getPluginSections(plugins));
+            return this.sectionedNavProps(
+                activeTab,
+                this.getPluginSections(plugins)
+            );
         } else if (activeTab === 'style-spec') {
             return this.styleSpecNavProps();
         }
@@ -215,7 +234,12 @@ class PageShell extends React.Component {
         };
 
         return (
-            <ReactPageShell site={site} darkHeaderText={true} includeFooter={false} {...this.props}>
+            <ReactPageShell
+                site={site}
+                darkHeaderText={true}
+                includeFooter={false}
+                {...this.props}
+            >
                 <Helmet>
                     <link
                         rel="canonical"
@@ -226,18 +250,37 @@ class PageShell extends React.Component {
                 <TopbarSticker unStickWidth={980}>
                     <div className="limiter">
                         <div className="grid">
-                            <div className={`col col--4-mm ${sidebarProps.sidebarColSize ? `col--${sidebarProps.sidebarColSize}-ml` : ''} col--12`}>
+                            <div
+                                className={`col col--4-mm ${
+                                    sidebarProps.sidebarColSize
+                                        ? `col--${sidebarProps.sidebarColSize}-ml`
+                                        : ''
+                                } col--12`}
+                            >
                                 <div className="ml24-mm pt12">
-                                    <ProductMenu productName={topbarContent.productName} homePage='/mapbox-gl-js/'/>
+                                    <ProductMenu
+                                        productName={topbarContent.productName}
+                                        homePage="/mapbox-gl-js/"
+                                    />
                                 </div>
                             </div>
-                            <div className={`col col--7-mm ${sidebarProps.sidebarColSize ? `col--${11 - sidebarProps.sidebarColSize}-ml` : ''} col--12`}>
+                            <div
+                                className={`col col--7-mm ${
+                                    sidebarProps.sidebarColSize
+                                        ? `col--${11 -
+                                              sidebarProps.sidebarColSize}-ml`
+                                        : ''
+                                } col--12`}
+                            >
                                 <div style={{ height: '50px' }}>
                                     {topbarContent.topNav}
                                 </div>
                             </div>
                             <div className="col col--1-mm col--12">
-                                <div className="flex-parent-mm flex-parent--end-main h-full-mm wmax300 wmax-full-mm" style={{margin: '7px 0'}}>
+                                <div
+                                    className="flex-parent-mm flex-parent--end-main h-full-mm wmax300 wmax-full-mm"
+                                    style={{ margin: '7px 0' }}
+                                >
                                     <Search site={site} />
                                 </div>
                             </div>
@@ -246,22 +289,42 @@ class PageShell extends React.Component {
                 </TopbarSticker>
                 <div className="limiter">
                     <PageLayout
-                        sidebarTitle={<div className="ml36">{sidebarProps.contentType}</div>}
+                        sidebarTitle={
+                            <div className="ml36">
+                                {sidebarProps.contentType}
+                            </div>
+                        }
                         sidebarContent={sidebarProps.sidebarContent}
                         sidebarContentStickyTop={60}
                         sidebarContentStickyTopNarrow={0}
                         currentPath={location.pathname}
                         interactiveClass={sidebarProps.interactiveClass}
                         sideBarColSize={sidebarProps.sidebarColSize || 0}
-                        sidebarStackedOnNarrowScreens={sidebarProps.sidebarStackedOnNarrowScreens}
+                        sidebarStackedOnNarrowScreens={
+                            sidebarProps.sidebarStackedOnNarrowScreens
+                        }
                     >
                         <div
-                            className={`static-header-page ${activeTab}-page ${(activeTab !== 'examples' || activeTab !== 'plugins') ? '' : 'prose'} ${activeTab === 'overview' ? 'mt60 pt30 mt0-mm pt0-mm' : 'mt30 mt0-mm'}`}>
+                            className={`static-header-page ${activeTab}-page ${
+                                activeTab !== 'examples' ||
+                                activeTab !== 'plugins'
+                                    ? ''
+                                    : 'prose'
+                            } ${
+                                activeTab === 'overview'
+                                    ? 'mt60 pt30 mt0-mm pt0-mm'
+                                    : 'mt30 mt0-mm'
+                            }`}
+                        >
                             {this.props.children}
                         </div>
-                        {activeTab !== 'overview' ? <div className="fixed block mx24 my24 z5 bottom right">
-                            <BackToTopButton />
-                        </div> : ''}
+                        {activeTab !== 'overview' ? (
+                            <div className="fixed block mx24 my24 z5 bottom right">
+                                <BackToTopButton />
+                            </div>
+                        ) : (
+                            ''
+                        )}
                     </PageLayout>
                 </div>
             </ReactPageShell>

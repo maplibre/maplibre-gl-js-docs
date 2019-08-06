@@ -1,23 +1,23 @@
 .fixed-table {
-  table-layout:fixed;
+    table-layout: fixed;
 }
 
 .prose h2 + div h3 {
-  padding-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 .prose pre {
-  margin-bottom: 18px !important;
+    margin-bottom: 18px !important;
 }
 
 /* override */
 #docs-content .style-spec-section h2,
 #docs-content .api-section h2 {
-  border: 0 !important;
+    border: 0 !important;
 }
 
 #docs-content .api-section h3 {
-  padding-top: 47px;
+    padding-top: 47px;
 }
 
 .toggle-target .mb24 {
@@ -28,7 +28,7 @@
 
 .api-section table code,
 .api-section table .txt-code {
-  word-wrap: break-word;
+    word-wrap: break-word;
 }
 
 /* style-spec styles */
@@ -39,6 +39,6 @@
 }
 
 var {
-  color: #d23c75;
-  font-style: italic;
+    color: #d23c75;
+    font-style: italic;
 }

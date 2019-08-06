@@ -22,15 +22,21 @@ class Quickstart extends React.Component {
 
     renderCdn() {
         return (
-            <div id='quickstart-cdn'>
-                <p>Include the JavaScript and CSS files in the <code>&lt;head&gt;</code> of your HTML file.</p>
-                <Copyable lang='markup'>{`
+            <div id="quickstart-cdn">
+                <p>
+                    Include the JavaScript and CSS files in the{' '}
+                    <code>&lt;head&gt;</code> of your HTML file.
+                </p>
+                <Copyable lang="markup">{`
 <script src='${urls.js()}'></script>
 <link href='${urls.css()}' rel='stylesheet' />
 `}</Copyable>
 
-                <p>Include the following code in the <code>&lt;body&gt;</code> of your HTML file.</p>
-                <Copyable lang='markup'>{`
+                <p>
+                    Include the following code in the <code>&lt;body&gt;</code>{' '}
+                    of your HTML file.
+                </p>
+                <Copyable lang="markup">{`
 <div id='map' style='width: 400px; height: 300px;'></div>
 <script>
 mapboxgl.accessToken = '${this.state.userAccessToken}';
@@ -46,19 +52,25 @@ var map = new mapboxgl.Map({
 
     renderBundler() {
         return (
-            <div id='quickstart-bundler'>
+            <div id="quickstart-bundler">
                 <p>Install the npm package.</p>
-                <Copyable lang='markup'>{`
+                <Copyable lang="markup">{`
 npm install --save mapbox-gl
 `}</Copyable>
 
-                <p>Include the CSS file in the <code>&lt;head&gt;</code> of your HTML file.</p>
-                <Copyable lang='markup'>{`
+                <p>
+                    Include the CSS file in the <code>&lt;head&gt;</code> of
+                    your HTML file.
+                </p>
+                <Copyable lang="markup">{`
 <link href='${urls.css()}' rel='stylesheet' />
 `}</Copyable>
 
-                <p>Include the following code in the <code>&lt;body&gt;</code> of your HTML file.</p>
-                <Copyable lang='javascript'>{`
+                <p>
+                    Include the following code in the <code>&lt;body&gt;</code>{' '}
+                    of your HTML file.
+                </p>
+                <Copyable lang="javascript">{`
 import mapboxgl from 'mapbox-gl';
 // or "const mapboxgl = require('mapbox-gl');"
 
@@ -84,11 +96,9 @@ const map = new mapboxgl.Map({
                     id="select-quickstart"
                     themeToggleGroup="bg-blue py3 px3 my12"
                     themeToggle="txt-s py3 toggle--white toggle--active-blue"
-                    onChange={
-                        (value) => {
-                            this.setState({ selectedMethod: value });
-                        }
-                    }
+                    onChange={value => {
+                        this.setState({ selectedMethod: value });
+                    }}
                     value={this.state.selectedMethod}
                     options={[
                         {

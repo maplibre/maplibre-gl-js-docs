@@ -1,5 +1,5 @@
 import { scopeAppropriateImage } from '@mapbox/appropriate-images-react';
-import imageConfig from '../img/dist/image.config.json'; // eslint-disable-line import/no-unresolved
+import imageConfig from '../img/dist/image.config.json';
 // image.config.json is generated on build
 
 // See https://github.com/mapbox/appropriate-images-react#appropriateimage

@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    ["@mapbox/remark-lint-link-text", [2]],
+    ["remark-frontmatter", ["yaml"]],
+    ["@mapbox/remark-lint-mapbox/frontmatter", [2]],
+    ["@mapbox/remark-lint-mapbox/link-checker", {
+      "constants": "docs/constants.json",
+      "pages": "docs/pages/",
+      "siteBasePath": "mapbox-gl-js",
+      "siteOrigin": "https://docs.mapbox.com"
+      }, [2]]
+  ]
+}

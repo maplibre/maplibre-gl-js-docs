@@ -1,206 +1,206 @@
 export const styleSpecNavigation = [
     {
-        "title": "Root",
-        "subnav": [
+        title: 'Root',
+        subnav: [
             {
-                "title": "version"
+                title: 'version'
             },
             {
-                "title": "name"
+                title: 'name'
             },
             {
-                "title": "metadata"
+                title: 'metadata'
             },
             {
-                "title": "center"
+                title: 'center'
             },
             {
-                "title": "zoom"
+                title: 'zoom'
             },
             {
-                "title": "bearing"
+                title: 'bearing'
             },
             {
-                "title": "pitch"
+                title: 'pitch'
             },
             {
-                "title": "light"
+                title: 'light'
             },
             {
-                "title": "sources"
+                title: 'sources'
             },
             {
-                "title": "sprite"
+                title: 'sprite'
             },
             {
-                "title": "glyphs"
+                title: 'glyphs'
             },
             {
-                "title": "transition"
+                title: 'transition'
             },
             {
-                "title": "layers"
+                title: 'layers'
             }
         ]
     },
     {
-        "title": "Light",
-        "subnav": [
+        title: 'Light',
+        subnav: [
             {
-                "title": "anchor"
+                title: 'anchor'
             },
             {
-                "title": "position"
+                title: 'position'
             },
             {
-                "title": "color"
+                title: 'color'
             },
             {
-                "title": "intensity"
+                title: 'intensity'
             }
         ]
     },
     {
-        "title": "Sources",
-        "subnav": [
+        title: 'Sources',
+        subnav: [
             {
-                "title": "vector"
+                title: 'vector'
             },
             {
-                "title": "raster"
+                title: 'raster'
             },
             {
-                "title": "raster-dem"
+                title: 'raster-dem'
             },
             {
-                "title": "geojson"
+                title: 'geojson'
             },
             {
-                "title": "image"
+                title: 'image'
             },
             {
-                "title": "video"
+                title: 'video'
             }
         ]
     },
     {
-        "title": "Sprite"
+        title: 'Sprite'
     },
     {
-        "title": "Glyphs"
+        title: 'Glyphs'
     },
     {
-        "title": "Transition",
-        "subnav": [
+        title: 'Transition',
+        subnav: [
             {
-                "title": "duration"
+                title: 'duration'
             },
             {
-                "title": "delay"
+                title: 'delay'
             }
         ]
     },
     {
-        "title": "Layers",
-        "subnav": [
+        title: 'Layers',
+        subnav: [
             {
-                "title": "background"
+                title: 'background'
             },
             {
-                "title": "fill"
+                title: 'fill'
             },
             {
-                "title": "line"
+                title: 'line'
             },
             {
-                "title": "symbol"
+                title: 'symbol'
             },
             {
-                "title": "raster"
+                title: 'raster'
             },
             {
-                "title": "circle"
+                title: 'circle'
             },
             {
-                "title": "fill-extrusion"
+                title: 'fill-extrusion'
             },
             {
-                "title": "heatmap"
+                title: 'heatmap'
             },
             {
-                "title": "hillshade"
+                title: 'hillshade'
             }
         ]
     },
     {
-        "title": "Types",
-        "subnav": [
+        title: 'Types',
+        subnav: [
             {
-                "title": "Color"
+                title: 'Color'
             },
             {
-                "title": "String"
+                title: 'String'
             },
             {
-                "title": "Formatted"
+                title: 'Formatted'
             },
             {
-                "title": "Boolean"
+                title: 'Boolean'
             },
             {
-                "title": "Number"
+                title: 'Number'
             },
             {
-                "title": "Array"
+                title: 'Array'
             }
         ]
     },
     {
-        "title": "Expressions",
-        "subnav": [
+        title: 'Expressions',
+        subnav: [
             {
-                "title": "Types"
+                title: 'Types'
             },
             {
-                "title": "Feature data"
+                title: 'Feature data'
             },
             {
-                "title": "Lookup"
+                title: 'Lookup'
             },
             {
-                "title": "Decision"
+                title: 'Decision'
             },
             {
-                "title": "Ramps, scales, curves"
+                title: 'Ramps, scales, curves'
             },
             {
-                "title": "Variable binding"
+                title: 'Variable binding'
             },
             {
-                "title": "String"
+                title: 'String'
             },
             {
-                "title": "Color"
+                title: 'Color'
             },
             {
-                "title": "Math"
+                title: 'Math'
             },
             {
-                "title": "Zoom"
+                title: 'Zoom'
             },
             {
-                "title": "Heatmap"
+                title: 'Heatmap'
             }
         ]
     },
     {
-        "title": "Other",
-        "subnav": [
+        title: 'Other',
+        subnav: [
             {
-                "title": "Function"
+                title: 'Function'
             },
             {
-                "title": "Filter"
+                title: 'Filter'
             }
         ]
     }

@@ -15,9 +15,9 @@ class MarkdownPageshell extends React.Component {
         MapboxPageShell.afterUserCheck(() => {
             // fetches username so we can identify them in segment
             this.setState({
-                userName: MapboxPageShell.getUser() ?
-                    MapboxPageShell.getUser().id :
-                    undefined
+                userName: MapboxPageShell.getUser()
+                    ? MapboxPageShell.getUser().id
+                    : undefined
             });
         });
     }
@@ -38,9 +38,7 @@ class MarkdownPageshell extends React.Component {
         if (frontMatter.level) meta.level = frontMatter.level;
         return (
             <PageShell meta={meta} {...this.props}>
-                <div className="prose">
-                    {this.props.children}
-                </div>
+                <div className="prose">{this.props.children}</div>
                 <div className="mt18">
                     <Feedback
                         site="Mapbox GL JS"

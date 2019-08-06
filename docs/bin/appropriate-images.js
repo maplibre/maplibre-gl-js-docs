@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 'use strict';
 
-const path = require('path'); // eslint-disable-line import/no-commonjs
-const appropriateImages = require('@mapbox/appropriate-images'); // eslint-disable-line import/no-commonjs
-const imageConfig = require('../img/dist/image.config.json'); // eslint-disable-line import/no-commonjs
+const path = require('path');
+const appropriateImages = require('@mapbox/appropriate-images');
+const imageConfig = require('../img/dist/image.config.json');
 
 appropriateImages.createCli(imageConfig, {
     inputDirectory: path.join(__dirname, '../img/src'),

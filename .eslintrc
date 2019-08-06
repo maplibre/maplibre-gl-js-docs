@@ -1,43 +1,4 @@
 {
-  "extends": [
-    "mourner",
-    "plugin:import/recommended"
-  ],
-  "parser": "babel-eslint",
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "plugins": [
-    "import",
-    "react"
-  ],
-  "rules": {
-    "react/jsx-uses-vars": "error",
-    "import/no-duplicates": "error",
-    "import/no-commonjs": "error",
-    "no-confusing-arrow": ["error", {"allowParens": true}],
-    "prefer-const": ["error", {"destructuring": "all"}],
-    "no-restricted-properties": [2, {"object": "Object", "property": "assign"}],
-    "template-curly-spacing": "error",
-
-    "new-cap": "off",
-    "array-bracket-spacing": "off",
-    "consistent-return": "off",
-    "global-require": "off",
-    "object-curly-spacing": "off",
-    "quotes": "off",
-    "space-before-function-paren": "off",
-    "no-useless-escape": "off",
-    "no-multiple-empty-lines": [ "error", {"max": 1}]
-  },
-  "globals": {
-    "analytics": false,
-    "MapboxPageShell": false
-  },
-  "env": {
-    "browser": true
-  }
+  "root": true,
+  "extends": "./conf/eslint-config-base.json"
 }

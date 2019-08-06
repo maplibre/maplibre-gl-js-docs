@@ -1,5 +1,5 @@
-import {version} from '../../mapbox-gl-js/package.json';
-import {prefixUrl} from '@mapbox/batfish/modules/prefix-url';
+import { version } from '../../mapbox-gl-js/package.json';
+import { prefixUrl } from '@mapbox/batfish/modules/prefix-url';
 
 function url(ext, options) {
     if (options && options.local && process.env.DEPLOY_ENV === 'local') {
@@ -17,4 +17,4 @@ function css(options) {
     return url('css', options);
 }
 
-export default {js, css};
+export default { js, css };
