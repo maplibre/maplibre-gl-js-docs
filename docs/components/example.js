@@ -18,7 +18,8 @@ export default function(html) {
             this.state = {
                 filter: '',
                 token: undefined,
-                userName: undefined
+                userName: undefined,
+                unsupported: false
             };
         }
 
@@ -42,10 +43,10 @@ export default function(html) {
 <body>
 
 ${html.replace(
-                '<script>',
-                `<script>\nmapboxgl.accessToken = '${this.state.token ||
-                    '<your access token here>'}';`
-            )}
+    '<script>',
+    `<script>\nmapboxgl.accessToken = '${this.state.token ||
+        '<your access token here>'}';`
+)}
 </body>
 </html>`;
         }
@@ -87,7 +88,7 @@ ${html}
                                     {md(frontMatter.description)}
                                 </div>
 
-                                {!supported() && (
+                                {this.state.unsupported && (
                                     <div id="unsupported" className="">
                                         <div className="bg-yellow-faint round px12 py12 mb24">
                                             <div className="txt-bold mb6">
@@ -165,6 +166,8 @@ ${html}
         }
 
         componentDidMount() {
+            if (!supported()) this.setState({ unsupported: true });
+
             if (!this.iframe) return;
             const doc = this.iframe.contentWindow.document;
             doc.open();
