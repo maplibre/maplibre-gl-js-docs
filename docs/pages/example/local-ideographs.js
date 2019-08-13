@@ -12,10 +12,11 @@ description: >-
   in the fontstack defined in the map's style (light/regular/medium/bold) will
   be translated into a CSS 'font-weight'.
 
+
   This setting is enabled by default to use the system 'sans-serif' font. When
   overriding this setting, keep in mind that the fonts you select may not be available
   on all users' devices. It is best to specify at least one broadly available
-  fallback font class such as 'sans-serif'.
+  fallback font class such as 'sans-serif'. Note that [Mapbox Studio](https://studio.mapbox.com/) sets this value to `false` by default.
 tags:
   - internationalization
 pathname: /mapbox-gl-js/example/local-ideographs/
