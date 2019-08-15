@@ -4,10 +4,11 @@ import md from './md';
 import PageShell from './page_shell';
 import Prism from 'prismjs';
 import supported from '@mapbox/mapbox-gl-supported';
-import Icon from '@mapbox/mr-ui/icon';
 import CodeSnippet from '@mapbox/mr-ui/code-snippet';
 import Feedback from '@mapbox/dr-ui/feedback';
 import constants from '../constants';
+import Note from '@mapbox/dr-ui/note';
+import WarningImage from '@mapbox/dr-ui/warning-image';
 
 const highlightTheme = require('raw-loader!@mapbox/dr-ui/css/prism.css');
 
@@ -89,30 +90,21 @@ ${html}
                                 </div>
 
                                 {this.state.unsupported && (
-                                    <div id="unsupported" className="">
-                                        <div className="bg-yellow-faint round px12 py12 mb24">
-                                            <div className="txt-bold mb6">
-                                                <Icon
-                                                    name="alert"
-                                                    inline={true}
-                                                />
-                                                Mapbox GL unsupported
-                                            </div>
-                                            <div className="">
-                                                Mapbox GL requires{' '}
-                                                <a href="http://caniuse.com/webgl">
-                                                    WebGL support
-                                                </a>
-                                                . Please check that you are
-                                                using a supported browser and
-                                                that WebGL is{' '}
-                                                <a href="http://get.webgl.org/">
-                                                    enabled
-                                                </a>
-                                                .
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <Note
+                                        title="Mapbox GL unsupported"
+                                        theme="warning"
+                                        imageComponent={<WarningImage color="orange" />}
+                                    >
+                                        Mapbox GL requires{' '}
+                                        <a className="link" href="https://caniuse.com/#feat=webgl">
+                                          WebGL support
+                                        </a>
+                                        . Please check that you are using a supported browser and that{' '}
+                                        <a className="link" href="https://get.webgl.org/">
+                                          WebGL is enabled
+                                        </a>
+                                        .
+                                    </Note>
                                 )}
                             </div>
 

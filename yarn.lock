@@ -1200,20 +1200,23 @@
     vfile-reporter "^5.1.1"
     vfile-sort "^2.0.0"
 
-"@mapbox/dr-ui@0.19.2":
-  version "0.19.2"
-  resolved "https://registry.yarnpkg.com/@mapbox/dr-ui/-/dr-ui-0.19.2.tgz#1317aceecfc0382fc003e3dac7073cd2b98a0c2d"
-  integrity sha512-YjCsbDZl4xnwcMamI7l9Ro/4sBKn5Tn9o4Zkgf5DSXCjcq12nmojh4BmJ5K54rGp+b39cShy7EgGX8JxnhF9Vg==
+"@mapbox/dr-ui@0.20.1":
+  version "0.20.1"
+  resolved "https://registry.yarnpkg.com/@mapbox/dr-ui/-/dr-ui-0.20.1.tgz#455a2071cfec08411c4926690ae9e7230826edbc"
+  integrity sha512-jP1Xz6mYMhIcZKICvEYLbWJULl+awiBY5bFMrusEJiC5fvTl/ZFwbXf/D3PI+Sz9uWOexmc7fgq+3sGaGWt5bA==
   dependencies:
     "@elastic/react-search-ui" "^1.0.0"
     "@elastic/react-search-ui-views" "^1.0.0"
     "@elastic/search-ui-site-search-connector" "^1.0.0"
+    "@mapbox/mapbox-gl-supported" "^1.4.1"
     "@mapbox/mr-ui" "^0.7.0"
     classnames "^2.2.6"
     compare-versions "^3.4.0"
+    core-js "^3.2.1"
     debounce "^1.2.0"
     downshift "^3.2.7"
     hastscript "^5.0.0"
+    prismjs "^1.15.0"
     react-html-parser "^2.0.2"
     react-stickynode "^2.1.1"
     rehype-sectionize-headings "^1.0.0-rc.1"
@@ -1288,6 +1291,11 @@
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@mapbox/mapbox-gl-supported/-/mapbox-gl-supported-1.4.0.tgz#36946b22944fe2cfa43cfafd5ef36fdb54a069e4"
   integrity sha512-ZD0Io4XK+/vU/4zpANjOtdWfVszAgnaMPsGR6LKsWh4kLIEv9qoobTVmJPPuwuM+ZI2b3BlZ6DYw1XHVmv6YTA==
+
+"@mapbox/mapbox-gl-supported@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@mapbox/mapbox-gl-supported/-/mapbox-gl-supported-1.4.1.tgz#c0a03cf75f8b0ad7b57849d6c7e91b0aec4b640f"
+  integrity sha512-yyKza9S6z3ELKuf6w5n6VNUB0Osu6Z93RXPfMHLIlNWohu3KqxewLOq4lMXseYJ92GwkRAxd207Pr/Z98cwmvw==
 
 "@mapbox/mbx-assembly@^0.28.2":
   version "0.28.2"
@@ -3930,6 +3938,11 @@ core-js@^3.1.4:
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.1.4.tgz#3a2837fc48e582e1ae25907afcd6cf03b0cc7a07"
   integrity sha512-YNZN8lt82XIMLnLirj9MhKDFZHalwzzrL9YLt6eb0T5D0EDl4IQ90IGkua8mHbnxNrkj1d8hbdizMc0Qmg1WnQ==
+
+core-js@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.2.1.tgz#cd41f38534da6cc59f7db050fe67307de9868b09"
+  integrity sha512-Qa5XSVefSVPRxy2XfUC13WbvqkxhkwB3ve+pgCQveNgYzbM/UxZeu1dcOX/xr4UmfUd+muuvsaxilQzCyUurMw==
 
 core-util-is@~1.0.0:
   version "1.0.2"
