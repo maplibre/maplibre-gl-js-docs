@@ -29,6 +29,6 @@ map.on('mousemove', function (e) {
         // to the top-left corner of the map
         JSON.stringify(e.point) + '<br />' +
         // e.lngLat is the longitude, latitude geographical position of the event
-        JSON.stringify(e.lngLat);
+        JSON.stringify(e.lngLat.wrap());
 });
 </script>
