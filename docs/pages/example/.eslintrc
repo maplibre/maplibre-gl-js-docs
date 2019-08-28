@@ -14,7 +14,9 @@
       "turf": true,
       "d3": true,
       "Uint8Array": true,
-      "Float32Array": true
+      "Float32Array": true,
+      "MapboxDraw": true,
+      "mapboxSdk": true
     },
     "rules": {
       "flowtype/require-valid-file-annotation": [0],

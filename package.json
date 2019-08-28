@@ -51,7 +51,7 @@
     "tape": "^4.11.0"
   },
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint --ext .html docs/pages/example --ext .js .",
     "lint-md": "remark docs/pages/",
     "install-spec-deps": "cd mapbox-gl-js/src/style-spec && npm install --ignore-scripts --no-package-lock --no-audit --loglevel=error",
     "build-api": "documentation build --github --format json --config ./docs/documentation.yml --output docs/components/api.json mapbox-gl-js/src/index.js",
