@@ -227,9 +227,9 @@ const types = {
         {
             type: 'formatted',
             parameters: [
-                'input_1: string, options_1: { "font-scale": number, "text-font": array<string> }',
+                'input_1: string, options_1: { "font-scale": number, "text-font": array<string>, "text-color": color }',
                 '...',
-                'input_n: string, options_n: { "font-scale": number, "text-font": array<string> }'
+                'input_n: string, options_n: { "font-scale": number, "text-font": array<string>, "text-color": color }'
             ]
         }
     ],
