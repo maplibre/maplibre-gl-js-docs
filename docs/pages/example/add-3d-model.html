@@ -5,7 +5,7 @@
 var map = window.map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v10',
-    zoom: 17.5,
+    zoom: 18,
     center: [148.9819, -35.3981],
     pitch: 60,
     antialias: true // create the gl context with MSAA antialiasing, so custom layers are antialiased
@@ -15,17 +15,21 @@ var map = window.map = new mapboxgl.Map({
 var modelOrigin = [148.98190, -35.39847];
 var modelAltitude = 0;
 var modelRotate = [Math.PI / 2, 0, 0];
-var modelScale = 5.41843220338983e-8;
+
+var modelAsMercatorCoordinate = mapboxgl.MercatorCoordinate.fromLngLat(modelOrigin, modelAltitude);
 
 // transformation parameters to position, rotate and scale the 3D model onto the map
 var modelTransform = {
-    translateX: mapboxgl.MercatorCoordinate.fromLngLat(modelOrigin, modelAltitude).x,
-    translateY: mapboxgl.MercatorCoordinate.fromLngLat(modelOrigin, modelAltitude).y,
-    translateZ: mapboxgl.MercatorCoordinate.fromLngLat(modelOrigin, modelAltitude).z,
+    translateX: modelAsMercatorCoordinate.x,
+    translateY: modelAsMercatorCoordinate.y,
+    translateZ: modelAsMercatorCoordinate.z,
     rotateX: modelRotate[0],
     rotateY: modelRotate[1],
     rotateZ: modelRotate[2],
-    scale: modelScale
+    /* Since our 3D model is in real world meters, a scale transform needs to be
+     * applied since the CustomLayerInterface expects units in MercatorCoordinates.
+     */
+    scale: modelAsMercatorCoordinate.meterInMercatorCoordinateUnits()
 };
 
 var THREE = window.THREE;
