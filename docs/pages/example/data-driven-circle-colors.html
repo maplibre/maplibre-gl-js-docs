@@ -9,6 +9,18 @@ var map = new mapboxgl.Map({
 
 map.on('load', function () {
 
+    /* Sample feature from the `examples.8fgz4egr` tileset:
+       {
+           "type": "Feature",
+           "properties:" {
+               "ethnicity": "White"
+           },
+           "geometry": {
+               "type": "Point",
+               "coordinates": [ -122.447303, 37.753574 ]
+           }
+       }
+     */
     map.addLayer({
         'id': 'population',
         'type': 'circle',
