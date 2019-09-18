@@ -14,7 +14,7 @@
     "@mapbox/appropriate-images-react": "^1.0.0",
     "@mapbox/batfish": "1.9.8",
     "@mapbox/copyeditor": "^0.7.0",
-    "@mapbox/dr-ui": "0.20.1",
+    "@mapbox/dr-ui": "0.21.2",
     "@mapbox/mapbox-gl-supported": "^1.4.0",
     "@mapbox/mbx-assembly": "^0.28.2",
     "@mapbox/mr-ui": "0.7.2",
