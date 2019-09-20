@@ -336,9 +336,6 @@ var nonMobile = {
       name: 'Glossary',
       to: 'https://docs.mapbox.com/help/glossary/'
     }, {
-      name: 'Account FAQ',
-      to: 'https://docs.mapbox.com/help/account-faq/'
-    }, {
       name: 'API playground',
       to: 'https://docs.mapbox.com/api-playground/'
     }]
