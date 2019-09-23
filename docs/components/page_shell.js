@@ -19,6 +19,7 @@ import { styleSpecNavigation } from '../data/style-spec-navigation';
 import { plugins } from '../pages/plugins';
 import { routeToPrefixed } from '@mapbox/batfish/modules/route-to';
 import Search from '@mapbox/dr-ui/search';
+import * as Sentry from '@sentry/browser';
 
 const slugger = new GithubSlugger();
 
@@ -28,23 +29,11 @@ class PageShell extends React.Component {
     componentDidMount() {
         // initialize analytics
         if (typeof window !== 'undefined' && window.initializeMapboxAnalytics) {
-            const isProduction = /\.?mapbox\.com/.test(
-                window.location.hostname
-            );
-
-            let sentryInit = {};
-            if (isProduction) {
-                sentryInit = {
-                    sentryDsn:
-                        'https://6ba8cfeeedad4fb7acb8576f0fd6e266@sentry.io/1384508'
-                };
-            } else {
-                sentryInit = false;
-            }
-            window.initializeMapboxAnalytics({
-                sentry: sentryInit
-            });
+            window.initializeMapboxAnalytics();
         }
+        Sentry.init({
+            dsn: 'https://6ba8cfeeedad4fb7acb8576f0fd6e266@sentry.io/1384508'
+        });
     }
 
     accordionNavProps() {
