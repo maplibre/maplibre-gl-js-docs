@@ -80,7 +80,6 @@ var customLayer = {
             .multiply(rotationY)
             .multiply(rotationZ);
 
-        this.camera.projectionMatrix.elements = matrix;
         this.camera.projectionMatrix = m.multiply(l);
         this.renderer.state.reset();
         this.renderer.render(this.scene, this.camera);
