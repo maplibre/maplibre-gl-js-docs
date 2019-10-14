@@ -29,7 +29,11 @@ class PageShell extends React.Component {
     componentDidMount() {
         // initialize analytics
         if (typeof window !== 'undefined' && window.initializeMapboxAnalytics) {
-            window.initializeMapboxAnalytics();
+            window.initializeMapboxAnalytics({
+                segmentIntegrations: {
+                    'Facebook Pixel': true
+                }
+            });
         }
         Sentry.init({
             dsn: 'https://6ba8cfeeedad4fb7acb8576f0fd6e266@sentry.io/1384508'
