@@ -2305,7 +2305,7 @@ export default class extends React.Component {
                                     <strong>Property functions</strong> allow
                                     the appearance of a map feature to change
                                     with its properties. Property functions can
-                                    be used to visually differentate types of
+                                    be used to visually differentiate types of
                                     features within the same layer or create
                                     data visualizations. Each stop is an array
                                     with two elements, the first is a property
