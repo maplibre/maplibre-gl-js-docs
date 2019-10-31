@@ -71,6 +71,12 @@ const types = {
             ]
         }
     ],
+    image: [
+        {
+            type: 'image',
+            parameters: ['value']
+        }
+    ],
     object: [
         {
             type: 'object',

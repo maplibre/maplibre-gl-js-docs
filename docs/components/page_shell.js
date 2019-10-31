@@ -167,7 +167,13 @@ class PageShell extends React.Component {
             if (section.subnav) {
                 subNavItems = section.subnav.map(item => {
                     slugger.reset();
-                    const itemSlug = slugger.slug(item.title);
+                    let maintainCase = false;
+                    let title = item.title;
+                    if (item.title === 'ResolvedImage') {
+                        title = 'resolvedImage';
+                        maintainCase = true;
+                    }
+                    const itemSlug = slugger.slug(title, maintainCase);
                     return {
                         text: item.title,
                         url: `#${sectionSlug}-${itemSlug}`

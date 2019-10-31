@@ -1348,6 +1348,34 @@ export default class extends React.Component {
                                     }`)}
                         </SectionH3>
 
+                        <SectionH3
+                            id="types-resolvedImage"
+                            title="ResolvedImage"
+                        >
+                            <p>
+                                The <code>resolvedImage</code> type represents
+                                an image (e.g., an icon or pattern) which is
+                                used in a layer. An input to the{' '}
+                                <code>image</code>
+                                expression operator is checked against the
+                                current map style to see if it is available to
+                                be rendered or not, and the result is returned
+                                in the <code>resolvedImage</code> type. This
+                                approach allows developers to define a series of
+                                images which the map can fall back to if
+                                previous images are not found, which cannot be
+                                achieved by providing, for example,
+                                <code>icon-image</code> with a plain string
+                                (because multiple strings cannot be supplied to
+                                <code>icon-image</code> and multiple images
+                                cannot be defined in a string).
+                            </p>
+                            {highlightJSON(`
+                                    {
+                                        "icon-image": ["coalesce", ["image", "myImage"], ["image", "fallbackImage"]]
+                                    }`)}
+                        </SectionH3>
+
                         <SectionH3 id="types-string" title="String">
                             <p>
                                 A string is basically just text. In Mapbox
@@ -1355,7 +1383,7 @@ export default class extends React.Component {
                             </p>
                             {highlightJSON(`
                                     {
-                                        "icon-image": "marker"
+                                        "source": "mySource"
                                     }`)}
                         </SectionH3>
 
