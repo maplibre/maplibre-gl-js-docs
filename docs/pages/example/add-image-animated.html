@@ -9,11 +9,14 @@ var map = new mapboxgl.Map({
 
 var size = 200;
 
+// implementation of CustomLayerInterface to draw a pulsing dot icon on the map
+// see https://docs.mapbox.com/mapbox-gl-js/api/#customlayerinterface for more info
 var pulsingDot = {
     width: size,
     height: size,
     data: new Uint8Array(size * size * 4),
 
+    // get rendering context for the map canvas when layer is added to the map
     onAdd: function() {
         var canvas = document.createElement('canvas');
         canvas.width = this.width;
@@ -21,6 +24,7 @@ var pulsingDot = {
         this.context = canvas.getContext('2d');
     },
 
+    // called once before every frame where the icon will be used
     render: function() {
         var duration = 1000;
         var t = (performance.now() % duration) / duration;
@@ -48,7 +52,7 @@ var pulsingDot = {
         // update this image's data with data from the canvas
         this.data = context.getImageData(0, 0, this.width, this.height).data;
 
-        // keep the map repainting
+        // continuously repaint the map, resulting in the smooth animation of the dot
         map.triggerRepaint();
 
         // return `true` to let the map know that the image was updated
