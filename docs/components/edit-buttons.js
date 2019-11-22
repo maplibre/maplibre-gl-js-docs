@@ -10,8 +10,8 @@ class EditButtons extends React.Component {
     render() {
         let { css, code, frontMatter, rawHtml, head, url } = this.props;
         // regex to find and extract css and scripts in html
-        const //srcRegex = /(?<=\bsrc=["'])[^"']*/g,
-            //hrefRegex = /(?<=\bhref=["'])[^"']*/g,
+        const srcRegex = /src=("|')([^']*?)("|')/g,
+            hrefRegex = /href=("|')([^']*?)("|')/g,
             scriptRegex = /<script>((.|\n)*)<\/script>/,
             cssRegex = /<style>((.|\n)*)<\/style>/,
             moreCss = rawHtml.match(cssRegex);
@@ -34,15 +34,21 @@ class EditButtons extends React.Component {
             html = html.replace(cssRegex, '');
         }
         // extract inline scripts from html, add them as resources, then remove from html output
-        /*if (rawHtml.match(srcRegex)) {
-            resources.js = resources.js.concat(rawHtml.match(srcRegex));
+        if (rawHtml.match(srcRegex)) {
+            const srcArr = rawHtml
+                .match(srcRegex)
+                .map(src => src.replace('src=', '').replace(/["']/g, ''));
+            resources.js = resources.js.concat(srcArr);
             html = html.replace(/<script[\s\S]*?>[\s\S]*?<\/script>/g, '');
         }
         // extract inline stylesheets from html, add them as resources, then remove from html output
         if (rawHtml.match(hrefRegex)) {
-            resources.css = resources.css.concat(rawHtml.match(hrefRegex));
+            const hrefArr = rawHtml
+                .match(hrefRegex)
+                .map(src => src.replace('href=', '').replace(/["']/g, ''));
+            resources.css = resources.css.concat(hrefArr);
             html = html.replace(/<link[\s\S]*?>/g, '');
-        }*/
+        }
         // format css
         css = prettier.format(css, { parser: 'css', plugins: [parserCss] });
         // format js
