@@ -18,6 +18,7 @@ export default function(html) {
             const { frontMatter } = this.props;
             frontMatter.language = ['JavaScript'];
             frontMatter.contentType = 'example';
+
             return (
                 <PageShell meta={frontMatter}>
                     <div className="relative prose">
@@ -29,6 +30,7 @@ export default function(html) {
                                 <ExampleCode
                                     html={html}
                                     frontMatter={frontMatter}
+                                    location={this.props.location}
                                 />
                             </div>
                         </div>
