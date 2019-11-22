@@ -10,8 +10,8 @@ class EditButtons extends React.Component {
     render() {
         let { css, code, frontMatter, rawHtml, head, url } = this.props;
         // regex to find and extract css and scripts in html
-        const srcRegex = /(?<=\bsrc=["'])[^"']*/g,
-            hrefRegex = /(?<=\bhref=["'])[^"']*/g,
+        const //srcRegex = /(?<=\bsrc=["'])[^"']*/g,
+            //hrefRegex = /(?<=\bhref=["'])[^"']*/g,
             scriptRegex = /<script>((.|\n)*)<\/script>/,
             cssRegex = /<style>((.|\n)*)<\/style>/,
             moreCss = rawHtml.match(cssRegex);
@@ -34,7 +34,7 @@ class EditButtons extends React.Component {
             html = html.replace(cssRegex, '');
         }
         // extract inline scripts from html, add them as resources, then remove from html output
-        if (rawHtml.match(srcRegex)) {
+        /*if (rawHtml.match(srcRegex)) {
             resources.js = resources.js.concat(rawHtml.match(srcRegex));
             html = html.replace(/<script[\s\S]*?>[\s\S]*?<\/script>/g, '');
         }
@@ -42,7 +42,7 @@ class EditButtons extends React.Component {
         if (rawHtml.match(hrefRegex)) {
             resources.css = resources.css.concat(rawHtml.match(hrefRegex));
             html = html.replace(/<link[\s\S]*?>/g, '');
-        }
+        }*/
         // format css
         css = prettier.format(css, { parser: 'css', plugins: [parserCss] });
         // format js
