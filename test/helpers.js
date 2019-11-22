@@ -20,7 +20,11 @@ async function latestStableTag() {
     }).catch(err => {
         console.error(`Failed to list tags. ${JSON.stringify(err, null, 2)}`);
     });
-    return `v${JSON.parse(stdout).pop()}`;
+    const suffixRe = new RegExp(`(-([beta]+|[rc]+|[alpha]+)(\\.?[0-9]+?)?)`);
+    const stableReleases = JSON.parse(stdout).filter(
+        ver => !ver.match(suffixRe)
+    );
+    return `v${stableReleases.pop()}`;
 }
 
 async function currentTag() {
