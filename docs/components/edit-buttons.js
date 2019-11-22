@@ -3,7 +3,7 @@ import urls from './urls';
 import prettier from 'prettier/standalone';
 import parserCss from 'prettier/parser-postcss';
 import parserJs from 'prettier/parser-babylon';
-import parserHtml from 'prettier/parser-html';
+// import parserHtml from 'prettier/parser-html';
 import stripMd from 'remove-markdown';
 
 class EditButtons extends React.Component {
@@ -48,7 +48,7 @@ class EditButtons extends React.Component {
         // format js
         js = prettier.format(js, { parser: 'babel', plugins: [parserJs] });
         // formt html
-        html = prettier.format(html, { parser: 'html', plugins: [parserHtml] });
+        // html = prettier.format(html, { parser: 'html', plugins: [parserHtml] });
 
         const btnClass = 'btn btn--s cursor-pointer round';
 
