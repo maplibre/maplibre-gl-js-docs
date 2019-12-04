@@ -84,6 +84,11 @@ export const plugins = {
             website: 'https://github.com/uber/deck.gl',
             description:
                 'Adds advanced WebGL visualization layers to Mapbox GL JS.'
+        },
+        L7: {
+            website: 'https://github.com/antvis/L7',
+            description:
+                'Adds large-scale WebGL-powered geospatial data visualization framework to Mapbox GL JS.'
         }
     },
     'Framework Integrations': {
@@ -253,9 +258,7 @@ export default class extends React.Component {
                                                     <a
                                                         className="link link--blue"
                                                         href={prefixUrl(
-                                                            `/example/${
-                                                                plugin.example
-                                                            }`
+                                                            `/example/${plugin.example}`
                                                         )}
                                                     >
                                                         <IconText iconBefore="code">
