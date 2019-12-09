@@ -65,6 +65,7 @@ class EditButtons extends React.Component {
                 style={{ marginTop: '4px' }}
             >
                 <form
+                    target="_blank"
                     className="inline-block"
                     method="post"
                     action="http://jsfiddle.net/api/post/library/pure/"
@@ -98,6 +99,7 @@ class EditButtons extends React.Component {
                 </form>
 
                 <form
+                    target="_blank"
                     className="inline-block ml6"
                     action="https://codepen.io/pen/define"
                     method="POST"
