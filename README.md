@@ -42,10 +42,9 @@ code for the example, and a `.js` file containing example boilerplate and front 
 
 In the `.html` file, write the HTML and JavaScript constituting the example.
 
-* Use **4 space indentation**. Exception: do not add an initial level of indentation to code within `<script>` tags (it should start flush left).
 * Do **not** include an access token in the example code. The access token will be inserted automatically by the template, using the current logged in user's default public token, or a placeholder `<insert token here>` string if the user is not logged in.
 * Do **not** use custom styles from your personal account. Use only the default `mapbox` account styles.
-* When embedding literal JSON (GeoJSON or Mapbox style snippets) into script code, double-quote property names and string values. Elsewhere, use single-quoted strings.
+* On commit, Prettier will format the code for all files, including HTML.
 
 Every example **must** have an accompanying image. To get an image, run the site locally and take a screenshot of the rendered map in the example:
 

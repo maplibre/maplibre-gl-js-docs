@@ -7,36 +7,36 @@
     }
 </style>
 
-<div id='map'></div>
-<div id='menu'>
+<div id="map"></div>
+<div id="menu">
     <div>Set <code>renderWorldCopies</code> to:</div>
     <div>
-        <input type='radio' id='true' name='rtoggle' value='true' checked>
-        <label for='true'>true</label>
+        <input type="radio" id="true" name="rtoggle" value="true" checked />
+        <label for="true">true</label>
     </div>
     <div>
-        <input type='radio' id='false' name='rtoggle' value='false'>
-        <label for='false'>false</label>
+        <input type="radio" id="false" name="rtoggle" value="false" />
+        <label for="false">false</label>
     </div>
 </div>
 
 <script>
-var map = new mapboxgl.Map({
-    container: 'map', // container id
-    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-    center: [0, 0], // starting position [lng, lat]
-    zoom: 0 // starting zoom
-});
+    var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        center: [0, 0], // starting position [lng, lat]
+        zoom: 0 // starting zoom
+    });
 
-var renderOptions = document.getElementById('menu');
-var inputs = renderOptions.getElementsByTagName('input');
+    var renderOptions = document.getElementById('menu');
+    var inputs = renderOptions.getElementsByTagName('input');
 
-function switchRenderOption(option) {
-    var status = option.target.id;
-    map.setRenderWorldCopies(status === 'true');
-}
+    function switchRenderOption(option) {
+        var status = option.target.id;
+        map.setRenderWorldCopies(status === 'true');
+    }
 
-for (var i = 0; i < inputs.length; i++) {
-    inputs[i].onclick = switchRenderOption;
-}
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].onclick = switchRenderOption;
+    }
 </script>

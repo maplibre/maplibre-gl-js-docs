@@ -31,7 +31,8 @@ export const plugins = {
         },
         'mapbox-gl-controls': {
             website: 'https://github.com/bravecow/mapbox-gl-controls',
-            description: 'Ruler control, Style inspector, Localization, Style switcher.'
+            description:
+                'Ruler control, Style inspector, Localization, Style switcher.'
         },
         'mapbox-gl-directions': {
             website: 'https://github.com/mapbox/mapbox-gl-directions',

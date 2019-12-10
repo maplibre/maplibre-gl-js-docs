@@ -12,39 +12,43 @@
         cursor: crosshair;
     }
 </style>
-<div id='map'></div>
-<pre id='features'></pre>
+<div id="map"></div>
+<pre id="features"></pre>
 <script>
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-96, 37.8],
-    zoom: 3
-});
-
-map.on('mousemove', function (e) {
-    var features = map.queryRenderedFeatures(e.point);
-
-    // Limit the number of properties we're displaying for
-    // legibility and performance
-    var displayProperties = [
-        "type",
-        "properties",
-        "id",
-        "layer",
-        "source",
-        "sourceLayer",
-        "state",
-    ];
-
-    var displayFeatures = features.map(function(feat) {
-        var displayFeat = {};
-        displayProperties.forEach(function(prop) {
-            displayFeat[prop] = feat[prop];
-        });
-        return displayFeat;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-96, 37.8],
+        zoom: 3
     });
 
-    document.getElementById('features').innerHTML = JSON.stringify(displayFeatures, null, 2);
-});
+    map.on('mousemove', function(e) {
+        var features = map.queryRenderedFeatures(e.point);
+
+        // Limit the number of properties we're displaying for
+        // legibility and performance
+        var displayProperties = [
+            'type',
+            'properties',
+            'id',
+            'layer',
+            'source',
+            'sourceLayer',
+            'state'
+        ];
+
+        var displayFeatures = features.map(function(feat) {
+            var displayFeat = {};
+            displayProperties.forEach(function(prop) {
+                displayFeat[prop] = feat[prop];
+            });
+            return displayFeat;
+        });
+
+        document.getElementById('features').innerHTML = JSON.stringify(
+            displayFeatures,
+            null,
+            2
+        );
+    });
 </script>

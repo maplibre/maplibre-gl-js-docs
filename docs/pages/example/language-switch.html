@@ -19,27 +19,31 @@
         font-weight: bold;
     }
 </style>
-<div id='map'></div>
+<div id="map"></div>
 <ul id="buttons">
-    <li id='button-fr' class='button'>French</li>
-    <li id='button-ru' class='button'>Russian</li>
-    <li id='button-de' class='button'>German</li>
-    <li id='button-es' class='button'>Spanish</li>
+    <li id="button-fr" class="button">French</li>
+    <li id="button-ru" class="button">Russian</li>
+    <li id="button-de" class="button">German</li>
+    <li id="button-es" class="button">Spanish</li>
 </ul>
 <script>
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/light-v10',
-    center: [16.05, 48],
-    zoom: 2.9
-});
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/light-v10',
+        center: [16.05, 48],
+        zoom: 2.9
+    });
 
-document.getElementById('buttons').addEventListener('click', function(event) {
-    var language = event.target.id.substr('button-'.length);
-    // Use setLayoutProperty to set the value of a layout property in a style layer.
-    // The three arguments are the id of the layer, the name of the layout property,
-    // and the new property value.
-    map.setLayoutProperty('country-label', 'text-field', ['get', 'name_' + language]);
-});
-
+    document
+        .getElementById('buttons')
+        .addEventListener('click', function(event) {
+            var language = event.target.id.substr('button-'.length);
+            // Use setLayoutProperty to set the value of a layout property in a style layer.
+            // The three arguments are the id of the layer, the name of the layout property,
+            // and the new property value.
+            map.setLayoutProperty('country-label', 'text-field', [
+                'get',
+                'name_' + language
+            ]);
+        });
 </script>

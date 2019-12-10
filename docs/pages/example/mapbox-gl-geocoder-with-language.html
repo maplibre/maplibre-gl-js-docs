@@ -1,23 +1,26 @@
-<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js'></script>
-<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css' type='text/css' />
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css"
+    type="text/css"
+/>
 <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
 <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-<div id='map'></div>
+<div id="map"></div>
 
 <script>
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
-    center: [-79.4512, 43.6568],
-    zoom: 13
-});
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        center: [-79.4512, 43.6568],
+        zoom: 13
+    });
 
-var geocoder = new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken,
-    language: 'de-DE',
-    mapboxgl: mapboxgl
-});
-map.addControl(geocoder);
-
+    var geocoder = new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        language: 'de-DE',
+        mapboxgl: mapboxgl
+    });
+    map.addControl(geocoder);
 </script>
