@@ -9,4 +9,5 @@ pathname: /mapbox-gl-js/example/mapbox-gl-geocoder-custom-render/
 ---*/
 import Example from '../../components/example';
 import html from './mapbox-gl-geocoder-custom-render.html';
+
 export default Example(html);

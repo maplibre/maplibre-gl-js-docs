@@ -9,4 +9,5 @@ pathname: /mapbox-gl-js/example/queryrenderedfeatures/
 ---*/
 import Example from '../../components/example';
 import html from './queryrenderedfeatures.html';
+
 export default Example(html);

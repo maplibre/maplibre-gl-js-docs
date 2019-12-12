@@ -10,4 +10,5 @@ pathname: /mapbox-gl-js/example/mapbox-gl-rtl-text/
 ---*/
 import Example from '../../components/example';
 import html from './mapbox-gl-rtl-text.html';
+
 export default Example(html);

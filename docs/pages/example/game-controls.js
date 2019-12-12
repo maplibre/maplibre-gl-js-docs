@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/game-controls/
 ---*/
 import Example from '../../components/example';
 import html from './game-controls.html';
+
 export default Example(html);

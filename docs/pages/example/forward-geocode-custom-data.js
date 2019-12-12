@@ -11,4 +11,5 @@ pathname: /mapbox-gl-js/example/forward-geocode-custom-data/
 ---*/
 import Example from '../../components/example';
 import html from './forward-geocode-custom-data.html';
+
 export default Example(html);

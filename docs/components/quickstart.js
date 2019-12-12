@@ -15,7 +15,9 @@ class Quickstart extends React.Component {
     componentDidMount() {
         MapboxPageShell.afterUserCheck(() => {
             this.setState({
-                userAccessToken: MapboxPageShell.getUserPublicAccessToken()
+                userAccessToken:
+                    MapboxPageShell.getUserPublicAccessToken() ||
+                    `<your access token here>`
             });
         });
     }

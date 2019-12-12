@@ -8,4 +8,5 @@ pathname: /mapbox-gl-js/example/color-switcher/
 ---*/
 import Example from '../../components/example';
 import html from './color-switcher.html';
+
 export default Example(html);

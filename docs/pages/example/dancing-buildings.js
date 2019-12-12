@@ -9,4 +9,5 @@ pathname: /mapbox-gl-js/example/dancing-buildings/
 ---*/
 import Example from '../../components/example';
 import html from './dancing-buildings.html';
+
 export default Example(html);

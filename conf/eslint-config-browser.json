@@ -1,22 +1,6 @@
 {
-  "extends": "./eslint-config-base.json",
-  "parser": "babel-eslint",
-  "env": {
-    "browser": true
-  },
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "globals": {
-    "MapboxPageShell": true,
-    "analytics": true
-  },
-  "plugins": ["react"],
+  "extends": ["./eslint-config-base.json", "@mapbox/eslint-config-docs"],
   "rules": {
-    "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error"
+    "es/no-for-of-loops": "off"
   }
 }

@@ -10,4 +10,5 @@ pathname: /mapbox-gl-js/example/line-gradient/
 ---*/
 import Example from '../../components/example';
 import html from './line-gradient.html';
+
 export default Example(html);

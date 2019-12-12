@@ -1,6 +1,7 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import React from 'react';
+import PropTypes from 'prop-types';
 import slug from 'slugg';
 import assert from 'assert';
 import md from '../components/md';
@@ -15,6 +16,11 @@ import ref from '../../mapbox-gl-js/src/style-spec/reference/latest';
 import Icon from '@mapbox/mr-ui/icon';
 import Feedback from '@mapbox/dr-ui/feedback';
 import constants from '../constants';
+
+import {
+    expressions,
+    expressionGroups
+} from '../components/expression-metadata';
 
 const meta = {
     title: 'Style Specification',
@@ -43,11 +49,6 @@ const layerTypes = [
     'heatmap',
     'hillshade'
 ];
-
-import {
-    expressions,
-    expressionGroups
-} from '../components/expression-metadata';
 
 const groupedExpressions = [
     'Types',
@@ -467,7 +468,7 @@ class Item extends React.Component {
     }
 }
 
-export default class extends React.Component {
+export default class StyleSpec extends React.Component {
     render() {
         return (
             <PageShell meta={meta}>
@@ -2687,3 +2688,49 @@ export default class extends React.Component {
         );
     }
 }
+
+StyleSpec.propTypes = {
+    location: PropTypes.object
+};
+
+SectionH2.propTypes = {
+    id: PropTypes.string,
+    children: PropTypes.node,
+    title: PropTypes.string,
+    location: PropTypes.object
+};
+
+SectionH3.propTypes = {
+    id: PropTypes.string,
+    children: PropTypes.node,
+    title: PropTypes.string
+};
+
+SectionH4.propTypes = {
+    id: PropTypes.string,
+    children: PropTypes.node,
+    title: PropTypes.string
+};
+
+InnerSection.propTypes = {
+    className: PropTypes.string,
+    children: PropTypes.node
+};
+
+Item.propTypes = {
+    'sdk-support': PropTypes.object,
+    id: PropTypes.string,
+    example: PropTypes.any,
+    doc: PropTypes.string,
+    name: PropTypes.string,
+    kind: PropTypes.string,
+    transition: PropTypes.bool,
+    maximum: PropTypes.number,
+    minimum: PropTypes.number,
+    requires: PropTypes.array,
+    values: PropTypes.any,
+    function: PropTypes.string,
+    default: PropTypes.any,
+    units: PropTypes.string,
+    required: PropTypes.bool
+};

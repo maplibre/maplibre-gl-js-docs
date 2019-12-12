@@ -1,5 +1,3 @@
-'use strict';
-
 const puppeteer = require('puppeteer'); // eslint-disable-line
 const path = require('path'); // eslint-disable-line
 const pack = require('../../mapbox-gl-js/package.json'); // eslint-disable-line
@@ -34,12 +32,8 @@ const html = `<!DOCTYPE html>
 <html>
 <head>
 <meta charset='utf-8' />
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v${
-    pack.version
-}/mapbox-gl.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v${
-    pack.version
-}/mapbox-gl.css' rel='stylesheet' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v${pack.version}/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v${pack.version}/mapbox-gl.css' rel='stylesheet' />
 <style>
 body { margin:0; padding:0; }
 #map { position: absolute; top:0; bottom:0; width: 600px; max-height: 300px; }
@@ -58,7 +52,7 @@ ${snippet}
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     // set html for page and then wait until mapbox-gl-js loads
-    await page.setContent(html, { waitUntil: 'networkidle2' });
+    await page.setContent(html, { waitUntil: 'networkidle2' }); // eslint-disable-line
     // set viewport and double deviceScaleFactor to get a closer shot of the map
     await page.setViewport({
         width: 600,

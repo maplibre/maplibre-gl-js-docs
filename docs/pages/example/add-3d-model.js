@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/add-3d-model/
 ---*/
 import Example from '../../components/example';
 import html from './add-3d-model.html';
+
 export default Example(html);

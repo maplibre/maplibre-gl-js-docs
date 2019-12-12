@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import GithubSlugger from 'github-slugger';
 import createFormatters from 'documentation/src/output/util/formatters';
 import LinkerStack from 'documentation/src/output/util/linker_stack';
-import docs from '../components/api.json';
+import docs from '../components/api.json'; // eslint-disable-line
 import ApiItem from '../components/api-item';
 import Icon from '@mapbox/mr-ui/icon';
 
@@ -56,7 +57,10 @@ class ApiItemMember extends React.Component {
                             <span
                                 className="color-gray txt-code mr12"
                                 dangerouslySetInnerHTML={{
-                                    __html: formatters.parameters(member, true)
+                                    __html: `${formatters.parameters(
+                                        member,
+                                        true
+                                    )}`
                                 }}
                             />
                         )}
@@ -102,5 +106,12 @@ class ApiItemMember extends React.Component {
         window.removeEventListener('hashchange', this.hashChange);
     }
 }
+
+ApiItemMember.propTypes = {
+    namespace: PropTypes.string,
+    name: PropTypes.string,
+    kind: PropTypes.string,
+    location: PropTypes.object
+};
 
 export default ApiItemMember;

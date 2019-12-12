@@ -4,7 +4,7 @@ import React from 'react'; // eslint-disable-line no-unused-vars
 import 'prismjs/components/prism-json';
 
 function highlight(code, language) {
-    return { __html: Prism.highlight(code, Prism.languages[language]) };
+    return { __html: `${Prism.highlight(code, Prism.languages[language])}` };
 }
 
 export default function prismHighlight(code, language) {

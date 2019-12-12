@@ -1,5 +1,5 @@
 {
-  "extends": "../conf/eslint-config-browser.json",
+  "extends": "../../conf/eslint-config-browser.json",
   "rules": {
     "es/no-async-functions": "off"
   }

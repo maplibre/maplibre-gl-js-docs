@@ -9,4 +9,5 @@ pathname: /mapbox-gl-js/example/mouse-position/
 ---*/
 import Example from '../../components/example';
 import html from './mouse-position.html';
+
 export default Example(html);

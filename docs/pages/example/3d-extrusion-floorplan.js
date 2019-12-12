@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/3d-extrusion-floorplan/
 ---*/
 import Example from '../../components/example';
 import html from './3d-extrusion-floorplan.html';
+
 export default Example(html);

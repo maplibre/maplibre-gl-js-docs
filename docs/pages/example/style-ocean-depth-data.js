@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/style-ocean-depth-data/
 ---*/
 import Example from '../../components/example';
 import html from './style-ocean-depth-data.html';
+
 export default Example(html);

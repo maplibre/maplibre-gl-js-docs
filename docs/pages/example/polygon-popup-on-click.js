@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/polygon-popup-on-click/
 ---*/
 import Example from '../../components/example';
 import html from './polygon-popup-on-click.html';
+
 export default Example(html);

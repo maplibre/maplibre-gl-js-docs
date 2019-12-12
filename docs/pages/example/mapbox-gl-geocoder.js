@@ -11,4 +11,5 @@ pathname: /mapbox-gl-js/example/mapbox-gl-geocoder/
 ---*/
 import Example from '../../components/example';
 import html from './mapbox-gl-geocoder.html';
+
 export default Example(html);

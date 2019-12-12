@@ -11,4 +11,5 @@ pathname: /mapbox-gl-js/example/zoomto-linestring/
 ---*/
 import Example from '../../components/example';
 import html from './zoomto-linestring.html';
+
 export default Example(html);

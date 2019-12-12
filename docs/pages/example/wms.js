@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/wms/
 ---*/
 import Example from '../../components/example';
 import html from './wms.html';
+
 export default Example(html);

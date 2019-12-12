@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/queryrenderedfeatures-around-point/
 ---*/
 import Example from '../../components/example';
 import html from './queryrenderedfeatures-around-point.html';
+
 export default Example(html);

@@ -8,4 +8,5 @@ pathname: /mapbox-gl-js/example/animate-a-line/
 ---*/
 import Example from '../../components/example';
 import html from './animate-a-line.html';
+
 export default Example(html);

@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/hover-styles/
 ---*/
 import Example from '../../components/example';
 import html from './hover-styles.html';
+
 export default Example(html);

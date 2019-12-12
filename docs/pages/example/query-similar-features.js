@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/query-similar-features/
 ---*/
 import Example from '../../components/example';
 import html from './query-similar-features.html';
+
 export default Example(html);

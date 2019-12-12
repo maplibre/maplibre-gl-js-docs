@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import createFormatters from 'documentation/src/output/util/formatters';
 import LinkerStack from 'documentation/src/output/util/linker_stack';
 import GithubSlugger from 'github-slugger';
 import { highlightJavascript } from '../components/prism_highlight.js';
-import docs from '../components/api.json';
+import docs from '../components/api.json'; // eslint-disable-line
 import ApiItemMember from './api-item-member';
 import IconText from '@mapbox/mr-ui/icon-text';
 import Feedback from '@mapbox/dr-ui/feedback';
@@ -48,12 +49,16 @@ class ApiItem extends React.Component {
         }
         return (
             <span
-                dangerouslySetInnerHTML={{ __html: formatters.markdown(ast) }}
+                dangerouslySetInnerHTML={{
+                    __html: `${formatters.markdown(ast)}`
+                }}
             />
         );
     };
     formatType = type => (
-        <span dangerouslySetInnerHTML={{ __html: formatters.type(type) }} />
+        <span
+            dangerouslySetInnerHTML={{ __html: `${formatters.type(type)}` }}
+        />
     );
 
     render() {
@@ -92,17 +97,16 @@ class ApiItem extends React.Component {
                                 {section.name}
                             </a>
                         </h3>
-                        {section.context &&
-                            section.context.github && (
-                                <a
-                                    className="pt6 link--gray txt-s unprose"
-                                    href={section.context.github.url}
-                                >
-                                    <IconText iconBefore="github">
-                                        {section.context.github.path}
-                                    </IconText>
-                                </a>
-                            )}
+                        {section.context && section.context.github && (
+                            <a
+                                className="pt6 link--gray txt-s unprose"
+                                href={section.context.github.url}
+                            >
+                                <IconText iconBefore="github">
+                                    {section.context.github.path}
+                                </IconText>
+                            </a>
+                        )}
                     </div>
                 )}
 
@@ -115,7 +119,7 @@ class ApiItem extends React.Component {
                             <span
                                 key={i}
                                 dangerouslySetInnerHTML={{
-                                    __html: formatters.autolink(tag.name)
+                                    __html: `${formatters.autolink(tag.name)}`
                                 }}
                             />
                         ))}
@@ -218,8 +222,7 @@ class ApiItem extends React.Component {
                                                                         {property.default && (
                                                                             <span className="color-gray txt-break-word">
                                                                                 default{' '}
-                                                                                <code
-                                                                                >
+                                                                                <code>
                                                                                     {
                                                                                         property.default
                                                                                     }
@@ -386,5 +389,32 @@ class ApiItem extends React.Component {
         );
     }
 }
+
+ApiItem.propTypes = {
+    nested: PropTypes.string,
+    namespace: PropTypes.string,
+    name: PropTypes.string,
+    context: PropTypes.object,
+    augments: PropTypes.array,
+    kind: PropTypes.string,
+    constructorComment: PropTypes.shape({
+        access: PropTypes.string
+    }),
+    version: PropTypes.string,
+    license: PropTypes.string,
+    author: PropTypes.string,
+    copyright: PropTypes.string,
+    location: PropTypes.object,
+    description: PropTypes.object,
+    interface: PropTypes.string,
+    since: PropTypes.string,
+    params: PropTypes.array,
+    properties: PropTypes.array,
+    returns: PropTypes.array,
+    throws: PropTypes.array,
+    examples: PropTypes.array,
+    members: PropTypes.object,
+    sees: PropTypes.array
+};
 
 export default ApiItem;

@@ -9,4 +9,5 @@ pathname: /mapbox-gl-js/example/drag-a-point/
 ---*/
 import Example from '../../components/example';
 import html from './drag-a-point.html';
+
 export default Example(html);

@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/custom-style-id/
 ---*/
 import Example from '../../components/example';
 import html from './custom-style-id.html';
+
 export default Example(html);

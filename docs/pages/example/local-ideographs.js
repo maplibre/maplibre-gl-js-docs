@@ -23,4 +23,5 @@ pathname: /mapbox-gl-js/example/local-ideographs/
 ---*/
 import Example from '../../components/example';
 import html from './local-ideographs.html';
+
 export default Example(html);

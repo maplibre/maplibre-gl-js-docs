@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import PageShell from './page_shell';
 import Feedback from '@mapbox/dr-ui/feedback';
 import constants from '../constants';
@@ -51,5 +52,12 @@ class MarkdownPageshell extends React.Component {
         );
     }
 }
+
+MarkdownPageshell.propTypes = {
+    frontMatter: PropTypes.object,
+    location: PropTypes.object,
+    meta: PropTypes.object,
+    children: PropTypes.node
+};
 
 export default MarkdownPageshell;

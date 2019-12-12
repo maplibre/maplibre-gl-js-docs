@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/fullscreen/
 ---*/
 import Example from '../../components/example';
 import html from './fullscreen.html';
+
 export default Example(html);

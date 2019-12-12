@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import urls from './urls';
 import prettier from 'prettier/standalone';
 import parserCss from 'prettier/parser-postcss';
@@ -16,7 +17,7 @@ class EditButtons extends React.Component {
             cssRegex = /<style>((.|\n)*)<\/style>/,
             moreCss = rawHtml.match(cssRegex);
         // output for code panels
-        let html = rawHtml.replace(scriptRegex, ''),
+        let html = `${rawHtml.replace(scriptRegex, '')}`,
             js = code.match(scriptRegex)[1],
             resources = {
                 js: [urls.js()],
@@ -30,8 +31,8 @@ class EditButtons extends React.Component {
         description += `\n\nSee the example: [${url}](${url})`;
         // extract inline css from html, append to css var, then remove from html output
         if (moreCss) {
-            css += moreCss[0].replace('</style>', '').replace('<style>', '');
-            html = html.replace(cssRegex, '');
+            css += moreCss[0].replace('</style>', '').replace('<style>', ''); // eslint-disable-line
+            html = `${html.replace(cssRegex, '')}`;
         }
         // extract inline scripts from html, add them as resources, then remove from html output
         if (rawHtml.match(srcRegex)) {
@@ -39,7 +40,7 @@ class EditButtons extends React.Component {
                 .match(srcRegex)
                 .map(src => src.replace('src=', '').replace(/["']/g, ''));
             resources.js = resources.js.concat(srcArr);
-            html = html.replace(/<script[\s\S]*?>[\s\S]*?<\/script>/g, '');
+            html = `${html.replace(/<script[\s\S]*?>[\s\S]*?<\/script>/g, '')}`;
         }
         // extract inline stylesheets from html, add them as resources, then remove from html output
         if (rawHtml.match(hrefRegex)) {
@@ -47,7 +48,7 @@ class EditButtons extends React.Component {
                 .match(hrefRegex)
                 .map(src => src.replace('href=', '').replace(/["']/g, ''));
             resources.css = resources.css.concat(hrefArr);
-            html = html.replace(/<link[\s\S]*?>/g, '');
+            html = `${html.replace(/<link[\s\S]*?>/g, '')}`;
         }
         // format css
         css = prettier.format(css, { parser: 'css', plugins: [parserCss] });
@@ -135,3 +136,15 @@ class EditButtons extends React.Component {
 }
 
 export default EditButtons;
+
+EditButtons.propTypes = {
+    css: PropTypes.string,
+    code: PropTypes.string,
+    frontMatter: PropTypes.shape({
+        title: PropTypes.string,
+        description: PropTypes.string
+    }),
+    rawHtml: PropTypes.string, // eslint-disable-line
+    head: PropTypes.string,
+    url: PropTypes.string
+};

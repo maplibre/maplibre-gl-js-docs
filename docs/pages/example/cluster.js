@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/cluster/
 ---*/
 import Example from '../../components/example';
 import html from './cluster.html';
+
 export default Example(html);

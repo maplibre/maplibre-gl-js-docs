@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/fill-pattern/
 ---*/
 import Example from '../../components/example';
 import html from './fill-pattern.html';
+
 export default Example(html);

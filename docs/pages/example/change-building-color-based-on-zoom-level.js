@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/change-building-color-based-on-zoom-level/
 ---*/
 import Example from '../../components/example';
 import html from './change-building-color-based-on-zoom-level.html';
+
 export default Example(html);

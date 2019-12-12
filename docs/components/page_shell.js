@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { withLocation } from '@mapbox/batfish/modules/with-location';
 import ReactPageShell from '../../vendor/docs-page-shell/react-page-shell.js';
@@ -9,7 +10,7 @@ import ProductMenu from '@mapbox/dr-ui/product-menu/product-menu';
 import PageLayout from '@mapbox/dr-ui/page-layout';
 import SectionedNavigation from '@mapbox/dr-ui/sectioned-navigation';
 import NavigationAccordion from '@mapbox/dr-ui/navigation-accordion';
-import examples from '@mapbox/batfish/data/examples';
+import examples from '@mapbox/batfish/data/examples'; // eslint-disable-line
 import GithubSlugger from 'github-slugger';
 import ApiNavigation from './api-navigation';
 import TopNavTabs from './top-nav-tabs';
@@ -330,5 +331,12 @@ class PageShell extends React.Component {
         );
     }
 }
+
+PageShell.propTypes = {
+    frontMatter: PropTypes.object,
+    location: PropTypes.object,
+    meta: PropTypes.object,
+    children: PropTypes.node
+};
 
 export default withLocation(PageShell);

@@ -1,15 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import PageShell from './page_shell';
 import Feedback from '@mapbox/dr-ui/feedback';
 import constants from '../constants';
 import ExampleCode from './example_code';
 
 export default function(html) {
-    return class extends React.Component {
+    class ExampleComponent extends React.Component {
         constructor(props) {
             super(props);
             this.state = {
-                filter: '',
                 userName: undefined
             };
         }
@@ -57,5 +57,16 @@ export default function(html) {
                 });
             });
         }
+    }
+
+    ExampleComponent.propTypes = {
+        frontMatter: PropTypes.shape({
+            title: PropTypes.string,
+            language: PropTypes.array,
+            contentType: PropTypes.string
+        }),
+        location: PropTypes.object
     };
+
+    return ExampleComponent;
 }

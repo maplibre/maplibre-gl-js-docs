@@ -10,4 +10,5 @@ pathname: /mapbox-gl-js/example/mapbox-gl-geocoder-limit-region/
 ---*/
 import Example from '../../components/example';
 import html from './mapbox-gl-geocoder-limit-region.html';
+
 export default Example(html);

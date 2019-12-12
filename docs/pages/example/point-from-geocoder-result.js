@@ -9,4 +9,5 @@ pathname: /mapbox-gl-js/example/point-from-geocoder-result/
 ---*/
 import Example from '../../components/example';
 import html from './point-from-geocoder-result.html';
+
 export default Example(html);

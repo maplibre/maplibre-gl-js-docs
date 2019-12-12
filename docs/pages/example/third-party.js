@@ -8,4 +8,5 @@ pathname: /mapbox-gl-js/example/third-party/
 ---*/
 import Example from '../../components/example';
 import html from './third-party.html';
+
 export default Example(html);

@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/flyto/
 ---*/
 import Example from '../../components/example';
 import html from './flyto.html';
+
 export default Example(html);

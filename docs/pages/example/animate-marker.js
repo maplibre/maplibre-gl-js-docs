@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/animate-marker/
 ---*/
 import Example from '../../components/example';
 import html from './animate-marker.html';
+
 export default Example(html);

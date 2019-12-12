@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/fallback-image/
 ---*/
 import Example from '../../components/example';
 import html from './fallback-image.html';
+
 export default Example(html);

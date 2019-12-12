@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/display-and-style-rich-text-labels/
 ---*/
 import Example from '../../components/example';
 import html from './display-and-style-rich-text-labels.html';
+
 export default Example(html);

@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/change-case-of-labels/
 ---*/
 import Example from '../../components/example';
 import html from './change-case-of-labels.html';
+
 export default Example(html);

@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/geojson-markers/
 ---*/
 import Example from '../../components/example';
 import html from './geojson-markers.html';
+
 export default Example(html);

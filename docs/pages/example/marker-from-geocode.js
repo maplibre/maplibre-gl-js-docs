@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/marker-from-geocode/
 ---*/
 import Example from '../../components/example';
 import html from './marker-from-geocode.html';
+
 export default Example(html);

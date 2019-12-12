@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/playback-locations/
 ---*/
 import Example from '../../components/example';
 import html from './playback-locations.html';
+
 export default Example(html);

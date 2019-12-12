@@ -9,4 +9,5 @@ pathname: /mapbox-gl-js/example/measure/
 ---*/
 import Example from '../../components/example';
 import html from './measure.html';
+
 export default Example(html);

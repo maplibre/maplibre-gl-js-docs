@@ -8,4 +8,5 @@ pathname: /mapbox-gl-js/example/center-on-symbol/
 ---*/
 import Example from '../../components/example';
 import html from './center-on-symbol.html';
+
 export default Example(html);

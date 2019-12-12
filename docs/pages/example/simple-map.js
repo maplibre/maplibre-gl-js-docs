@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/simple-map/
 ---*/
 import Example from '../../components/example';
 import html from './simple-map.html';
+
 export default Example(html);

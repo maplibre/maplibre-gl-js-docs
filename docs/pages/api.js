@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import PageShell from '../components/page_shell';
 import { prefixUrl } from '@mapbox/batfish/modules/prefix-url';
 import { version } from '../../mapbox-gl-js/package.json';
-import docs from '../components/api.json';
+import docs from '../components/api.json'; // eslint-disable-line
 import GithubSlugger from 'github-slugger';
 import createFormatters from 'documentation/src/output/util/formatters';
 import LinkerStack from 'documentation/src/output/util/linker_stack';
@@ -39,7 +40,7 @@ function md(ast, inline) {
         };
     }
     return (
-        <span dangerouslySetInnerHTML={{ __html: formatters.markdown(ast) }} />
+        <span dangerouslySetInnerHTML={{ __html: formatters.markdown(ast) }} /> // eslint-disable-line
     );
 }
 
@@ -63,18 +64,10 @@ class Note extends React.Component {
     }
 }
 
-export default class extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { token: '<your access token here>' };
-    }
-
+export default class Api extends React.Component {
     render() {
         return (
-            <PageShell
-                meta={meta}
-                onUser={(_, token) => this.setState({ token })}
-            >
+            <PageShell meta={meta}>
                 <div className="prose">
                     <h1 className="mt24 mt0-mm txt-fancy">Mapbox GL JS</h1>
                     <div className="py6 color-gray txt-s mt-neg24 mb12">
@@ -149,3 +142,13 @@ export default class extends React.Component {
         );
     }
 }
+
+Note.propTypes = {
+    namespace: PropTypes.string,
+    name: PropTypes.string,
+    description: PropTypes.object
+};
+
+Api.propTypes = {
+    location: PropTypes.object
+};

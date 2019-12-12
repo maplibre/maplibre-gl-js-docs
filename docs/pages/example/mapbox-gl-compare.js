@@ -8,4 +8,5 @@ pathname: /mapbox-gl-js/example/mapbox-gl-compare/
 ---*/
 import Example from '../../components/example';
 import html from './mapbox-gl-compare.html';
+
 export default Example(html);

@@ -9,4 +9,5 @@ pathname: /mapbox-gl-js/example/drag-a-marker/
 ---*/
 import Example from '../../components/example';
 import html from './drag-a-marker.html';
+
 export default Example(html);

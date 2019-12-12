@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/vector-source/
 ---*/
 import Example from '../../components/example';
 import html from './vector-source.html';
+
 export default Example(html);

@@ -13,4 +13,5 @@ pathname: /mapbox-gl-js/example/toggle-worldviews/
 ---*/
 import Example from '../../components/example';
 import html from './toggle-worldviews.html';
+
 export default Example(html);

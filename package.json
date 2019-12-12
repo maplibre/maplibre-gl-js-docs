@@ -15,20 +15,27 @@
     "@mapbox/batfish": "1.9.8",
     "@mapbox/copyeditor": "^0.7.0",
     "@mapbox/dr-ui": "0.22.0",
+    "@mapbox/eslint-config-docs": "^0.2.1",
+    "@mapbox/eslint-config-mapbox": "^2.0.1",
     "@mapbox/mapbox-gl-supported": "^1.4.0",
     "@mapbox/mbx-assembly": "^0.28.2",
     "@mapbox/mr-ui": "0.7.2",
     "@mapbox/remark-lint-link-text": "^0.4.3",
     "@mapbox/remark-lint-mapbox": "^0.9.0",
     "@sentry/browser": "^5.9.1",
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^10.0.3",
     "core-js": "^3.1.4",
     "documentation": "~12.1.0",
     "eslint": "^6.1.0",
     "eslint-config-mourner": "^3.0.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-es": "^2.0.0",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-xss": "^0.1.9",
     "execa": "^3.2.0",
     "github-slugger": "1.2.1",
     "husky": "^3.0.2",
@@ -95,5 +102,9 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "dependencies": {
+    "js-yaml": "^3.13.1",
+    "regenerator-runtime": "^0.13.3"
   }
 }

@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/locate-user/
 ---*/
 import Example from '../../components/example';
 import html from './locate-user.html';
+
 export default Example(html);

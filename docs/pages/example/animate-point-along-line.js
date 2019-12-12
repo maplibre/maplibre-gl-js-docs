@@ -8,4 +8,5 @@ pathname: /mapbox-gl-js/example/animate-point-along-line/
 ---*/
 import Example from '../../components/example';
 import html from './animate-point-along-line.html';
+
 export default Example(html);

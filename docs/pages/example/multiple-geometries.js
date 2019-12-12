@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/multiple-geometries/
 ---*/
 import Example from '../../components/example';
 import html from './multiple-geometries.html';
+
 export default Example(html);

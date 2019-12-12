@@ -10,4 +10,5 @@ pathname: /mapbox-gl-js/example/updating-choropleth/
 ---*/
 import Example from '../../components/example';
 import html from './updating-choropleth.html';
+
 export default Example(html);

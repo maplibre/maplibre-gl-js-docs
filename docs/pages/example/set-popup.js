@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/set-popup/
 ---*/
 import Example from '../../components/example';
 import html from './set-popup.html';
+
 export default Example(html);

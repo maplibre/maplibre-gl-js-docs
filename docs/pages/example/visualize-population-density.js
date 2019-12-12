@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/visualize-population-density/
 ---*/
 import Example from '../../components/example';
 import html from './visualize-population-density.html';
+
 export default Example(html);

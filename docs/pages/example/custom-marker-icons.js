@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/custom-marker-icons/
 ---*/
 import Example from '../../components/example';
 import html from './custom-marker-icons.html';
+
 export default Example(html);

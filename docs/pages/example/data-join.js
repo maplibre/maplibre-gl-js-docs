@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/data-join/
 ---*/
 import Example from '../../components/example';
 import html from './data-join.html';
+
 export default Example(html);

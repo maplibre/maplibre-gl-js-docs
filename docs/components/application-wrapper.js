@@ -1,7 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 if (typeof window !== 'undefined') {
-    import(/* webpackChunkName: "assembly-js" */ '@mapbox/mbx-assembly/dist/assembly.js');
+    import(
+        /* webpackChunkName: "assembly-js" */ '@mapbox/mbx-assembly/dist/assembly.js'
+    );
 }
 
 class ApplicationWrapper extends React.Component {
@@ -9,5 +12,9 @@ class ApplicationWrapper extends React.Component {
         return this.props.children;
     }
 }
+
+ApplicationWrapper.propTypes = {
+    children: PropTypes.node
+};
 
 export default ApplicationWrapper;

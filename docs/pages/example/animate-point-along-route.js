@@ -8,4 +8,5 @@ pathname: /mapbox-gl-js/example/animate-point-along-route/
 ---*/
 import Example from '../../components/example';
 import html from './animate-point-along-route.html';
+
 export default Example(html);

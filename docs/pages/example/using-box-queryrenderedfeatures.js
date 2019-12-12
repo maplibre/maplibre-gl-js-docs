@@ -8,4 +8,5 @@ pathname: /mapbox-gl-js/example/using-box-queryrenderedfeatures/
 ---*/
 import Example from '../../components/example';
 import html from './using-box-queryrenderedfeatures.html';
+
 export default Example(html);

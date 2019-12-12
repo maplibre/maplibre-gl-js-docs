@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-'use strict';
 
 const path = require('path');
 const appropriateImages = require('@mapbox/appropriate-images');

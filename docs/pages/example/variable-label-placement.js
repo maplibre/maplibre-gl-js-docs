@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/variable-label-placement/
 ---*/
 import Example from '../../components/example';
 import html from './variable-label-placement.html';
+
 export default Example(html);

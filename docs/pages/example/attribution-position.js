@@ -8,4 +8,5 @@ pathname: /mapbox-gl-js/example/attribution-position/
 ---*/
 import Example from '../../components/example';
 import html from './attribution-position.html';
+
 export default Example(html);

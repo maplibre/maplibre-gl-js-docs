@@ -8,4 +8,5 @@ pathname: /mapbox-gl-js/example/restrict-bounds/
 ---*/
 import Example from '../../components/example';
 import html from './restrict-bounds.html';
+
 export default Example(html);

@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/live-update-feature/
 ---*/
 import Example from '../../components/example';
 import html from './live-update-feature.html';
+
 export default Example(html);

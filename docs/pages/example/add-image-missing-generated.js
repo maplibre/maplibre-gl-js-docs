@@ -8,4 +8,5 @@ pathname: /mapbox-gl-js/example/add-image-missing-generated/
 ---*/
 import Example from '../../components/example';
 import html from './add-image-missing-generated.html';
+
 export default Example(html);

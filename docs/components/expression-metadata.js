@@ -59,11 +59,11 @@ const types = {
             parameters: ['value']
         },
         {
-            type: 'array<type>',
+            type: `array<type>`,
             parameters: ['type: "string" | "number" | "boolean"', 'value']
         },
         {
-            type: 'array<type, N>',
+            type: `array<type, N>`,
             parameters: [
                 'type: "string" | "number" | "boolean"',
                 'N: number (literal)',
@@ -147,7 +147,7 @@ const types = {
     ],
     interpolate: [
         {
-            type: 'OutputType (number, array<number>, or Color)',
+            type: `OutputType (number, array<number>, or Color)`,
             parameters: [
                 'interpolation: ["linear"] | ["exponential", base] | ["cubic-bezier", x1, y1, x2, y2 ]',
                 'input: number',
@@ -233,9 +233,9 @@ const types = {
         {
             type: 'formatted',
             parameters: [
-                'input_1: string, options_1: { "font-scale": number, "text-font": array<string>, "text-color": color }',
+                `input_1: string, options_1: { "font-scale": number, "text-font": array<string>, "text-color": color }`,
                 '...',
-                'input_n: string, options_n: { "font-scale": number, "text-font": array<string>, "text-color": color }'
+                `input_n: string, options_n: { "font-scale": number, "text-font": array<string>, "text-color": color }`
             ]
         }
     ],

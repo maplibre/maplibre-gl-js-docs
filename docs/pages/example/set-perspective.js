@@ -9,4 +9,5 @@ pathname: /mapbox-gl-js/example/set-perspective/
 ---*/
 import Example from '../../components/example';
 import html from './set-perspective.html';
+
 export default Example(html);

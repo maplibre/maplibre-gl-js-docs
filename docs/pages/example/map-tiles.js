@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/map-tiles/
 ---*/
 import Example from '../../components/example';
 import html from './map-tiles.html';
+
 export default Example(html);

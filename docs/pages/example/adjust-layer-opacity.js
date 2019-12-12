@@ -8,4 +8,5 @@ pathname: /mapbox-gl-js/example/adjust-layer-opacity/
 ---*/
 import Example from '../../components/example';
 import html from './adjust-layer-opacity.html';
+
 export default Example(html);

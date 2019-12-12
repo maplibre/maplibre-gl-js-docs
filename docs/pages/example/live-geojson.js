@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/live-geojson/
 ---*/
 import Example from '../../components/example';
 import html from './live-geojson.html';
+
 export default Example(html);

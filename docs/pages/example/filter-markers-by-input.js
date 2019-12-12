@@ -7,4 +7,5 @@ pathname: /mapbox-gl-js/example/filter-markers-by-input/
 ---*/
 import Example from '../../components/example';
 import html from './filter-markers-by-input.html';
+
 export default Example(html);

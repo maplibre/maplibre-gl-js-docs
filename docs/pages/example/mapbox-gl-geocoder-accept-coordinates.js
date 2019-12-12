@@ -10,4 +10,5 @@ pathname: /mapbox-gl-js/example/mapbox-gl-geocoder-accept-coordinates/
 ---*/
 import Example from '../../components/example';
 import html from './mapbox-gl-geocoder-accept-coordinates.html';
+
 export default Example(html);
