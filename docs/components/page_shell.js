@@ -17,7 +17,7 @@ import TopNavTabs from './top-nav-tabs';
 import tags from '../data/tags.json';
 import { overviewNavigation } from '../data/overview-navigation';
 import { styleSpecNavigation } from '../data/style-spec-navigation';
-import { plugins } from '../pages/plugins';
+import plugins from '../data/plugins';
 import { routeToPrefixed } from '@mapbox/batfish/modules/route-to';
 import Search from '@mapbox/dr-ui/search';
 import * as Sentry from '@sentry/browser';
