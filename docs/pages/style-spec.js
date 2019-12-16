@@ -1027,21 +1027,23 @@ export default class StyleSpec extends React.Component {
                         </p>
                         <ul>
                             <li>
-                                An <em>index file</em>, which is a JSON document
-                                containing a description of each image contained
-                                in the sprite. The content of this file must be
-                                a JSON object whose keys form identifiers to be
-                                used as the values of the above style
-                                properties, and whose values are objects
-                                describing the dimensions (<code>width</code>{' '}
-                                and
-                                <code>height</code> properties) and pixel ratio
-                                (<code>pixelRatio</code>) of the image and its
-                                location within the sprite (<code>x</code> and{' '}
-                                <code>y</code>
-                                ). For example, a sprite containing a single
-                                image might have the following index file
-                                contents:
+                                <p>
+                                    An <em>index file</em>, which is a JSON
+                                    document containing a description of each
+                                    image contained in the sprite. The content
+                                    of this file must be a JSON object whose
+                                    keys form identifiers to be used as the
+                                    values of the above style properties, and
+                                    whose values are objects describing the
+                                    dimensions (<code>width</code> and
+                                    <code>height</code> properties) and pixel
+                                    ratio (<code>pixelRatio</code>) of the image
+                                    and its location within the sprite (
+                                    <code>x</code> and <code>y</code>
+                                    ). For example, a sprite containing a single
+                                    image might have the following index file
+                                    contents:
+                                </p>
                                 <div className="mb6">
                                     {highlightJSON(`
                                         {
@@ -1054,14 +1056,51 @@ export default class StyleSpec extends React.Component {
                                             }
                                         }`)}
                                 </div>
-                                Then the style could refer to this sprite image
-                                by creating a symbol layer with the layout
-                                property
-                                <code>"icon-image": "poi"</code>, or with the
-                                tokenized value{' '}
-                                <code>"icon-image": "{`{icon}`}"</code> and
-                                vector tile features with a <code>icon</code>{' '}
-                                property with the value <code>poi</code>.
+                                <p>
+                                    Then the style could refer to this sprite
+                                    image by creating a symbol layer with the
+                                    layout property
+                                    <code>"icon-image": "poi"</code>, or with
+                                    the tokenized value{' '}
+                                    <code>"icon-image": "{`{icon}`}"</code> and
+                                    vector tile features with an{' '}
+                                    <code>icon</code> property with the value{' '}
+                                    <code>poi</code>.
+                                </p>
+                                <p>
+                                    Apart from the required <code>width</code>,{' '}
+                                    <code>height</code>, <code>x</code>, and{' '}
+                                    <code>y</code>{' '}
+                                    properties, the following optional
+                                    properties are supported:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <code>content</code>: An array of four
+                                        numbers, with the first two specifying
+                                        the left, top corner, and the last two
+                                        specifying the right, bottom corner. If
+                                        present, and if the icon uses{' '}
+                                        <a href="#layout-symbol-icon-text-fit">
+                                            <code>icon-text-fit</code>
+                                        </a>
+                                        , the symbol's text will be fit inside
+                                        the content box.
+                                    </li>
+                                    <li>
+                                        <code>stretchX</code>: An array of
+                                        two-element arrays, consisting of two
+                                        numbers that represent the <em>from</em>{' '}
+                                        position and the{' '}
+                                        <em>to</em> position of areas that can
+                                        be stretched.
+                                    </li>
+                                    <li>
+                                        <code>stretchY</code>: Same as{' '}
+                                        <code>stretchX</code>, but for the
+                                        vertical dimension.
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <em>Image files</em>, which are PNG images
