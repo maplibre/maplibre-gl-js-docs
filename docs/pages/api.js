@@ -9,7 +9,7 @@ import createFormatters from 'documentation/src/output/util/formatters';
 import LinkerStack from 'documentation/src/output/util/linker_stack';
 import ApiItem from '../components/api-item';
 import DrUiNote from '@mapbox/dr-ui/note';
-import WarningImage from '@mapbox/dr-ui/warning-image';
+import BookImage from '@mapbox/dr-ui/book-image';
 
 const meta = {
     title: 'API Reference',
@@ -93,35 +93,14 @@ export default class Api extends React.Component {
                         desktop and mobile platforms.
                     </p>
                     <DrUiNote
-                        title="Pricing is changing for Mapbox GL JS < v1.0.0"
-                        theme="warning"
-                        imageComponent={<WarningImage color="orange" />}
+                        title="Pricing for Mapbox GL JS"
+                        imageComponent={<BookImage />}
                     >
                         <p>
-                            If you are using Mapbox GL JS v1.0.0 or higher you
-                            will not be affected by this change. Your usage will
-                            continue to be counted in{' '}
-                            <a href="https://docs.mapbox.com/help/glossary/map-loads/">
-                                map loads
-                            </a>
-                            .
+                            If you are using Mapbox GL JS v1.0.0 or higher your usage is counted in <a href="https://docs.mapbox.com/help/glossary/map-loads/">map loads</a>. If you are using Mapbox GL JS {'<'} v1.0.0, your usage is measured in tile requests. 
                         </p>
-                        <p>
-                            If you are using Mapbox GL JS {'<'} v1.0.0, your
-                            usage is measured in <em>tile requests</em>. The
-                            rate per <em>tile request</em> is changing in
-                            December 2019. For more details see{' '}
-                            <a href="https://docs.mapbox.com/accounts/overview/pricing/#mapbox-gl-js--v100">
-                                our pricing guide
-                            </a>
-                            .
-                        </p>
-                        <p>
-                            Questions? Reach out to our{' '}
-                            <a href="https://support.mapbox.com/hc/en-us">
-                                support team
-                            </a>
-                            .
+                        <p>    
+                            For more details see <a href="https://docs.mapbox.com/accounts/overview/pricing/#mapbox-gl-js--v100">our pricing guide</a> or reach out to our <a href="https://support.mapbox.com/hc/en-us">support team</a>.
                         </p>
                     </DrUiNote>
                     <div className="api-section">
