@@ -68,7 +68,7 @@ class EditButtons extends React.Component {
                     target="_blank"
                     className="inline-block"
                     method="post"
-                    action="http://jsfiddle.net/api/post/library/pure/"
+                    action="https://jsfiddle.net/api/post/library/pure/"
                 >
                     <input
                         style={{ border: 0 }}
