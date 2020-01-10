@@ -64,6 +64,14 @@ mapboxgl.workerUrl = "${urls.js().replace('.js', '-csp-worker.js')}";
 </script>`}</Copyable>
 }}
 
+If you use the <code>sandbox</code> directive, and your [access token is restricted to certain URLs](https://docs.mapbox.com/accounts/overview/tokens/#url-restrictions), the <code>allow-same-origin</code> value is required. This allows requests to have a <code>Referer</code> header that is not <code>null</code>. See the section on [Referrer Policies](https://docs.mapbox.com/mapbox-gl-js/overview/#referrer-policies) for further information.
+
+## Referrer Policies
+
+If you use a [URL-restricted access token](https://docs.mapbox.com/accounts/overview/tokens/#url-restrictions), you have to make sure that the browser sends the correct referrer header. This is the default setting. But if you use the [Referrer-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy) header on your website, pick a value that still sends a <code>Referer</code> header, like <code>no-referrer-when-downgrade</code>, <code>origin</code>, <code>origin-when-cross-origin</code>, or <code>strict-origin</code>. Specifically, <code>same-origin</code> and <code>no-referrer</code> will never send a referrer header, and thus Mapbox API calls won't work.
+
+If you limit the referrer to the origin, make sure that the URL you restrict your access token to doesn't contain path information, because the <code>Origin</code> header doesn't contain a path by definition.
+
 ## Mapbox CSS
 
 The CSS referenced in the Quickstart is used to style DOM elements created by Mapbox code. Without the CSS, elements like Popups and Markers won't work.

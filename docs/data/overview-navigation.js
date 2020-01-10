@@ -12,6 +12,10 @@ export const overviewNavigation = [
                 path: 'csp-directives'
             },
             {
+                title: 'Referrer Policies',
+                path: 'referrer-policies'
+            },
+            {
                 title: 'Mapbox CSS',
                 path: 'mapbox-css'
             }
