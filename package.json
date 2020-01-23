@@ -84,5 +84,30 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --write",
+      "git add"
+    ],
+    "*.html": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.css": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@mapbox/rehype-prism": "^0.4.0",
+    "js-yaml": "^3.13.1",
+    "regenerator-runtime": "^0.13.3",
+    "rehype-slug": "^2.0.3"
   }
 }

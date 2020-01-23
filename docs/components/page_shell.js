@@ -22,12 +22,23 @@ import { routeToPrefixed } from '@mapbox/batfish/modules/route-to';
 import Search from '@mapbox/dr-ui/search';
 import * as Sentry from '@sentry/browser';
 
+const redirect = require('../util/style-spec-redirect');
+
 const slugger = new GithubSlugger();
 
 const site = 'Mapbox GL JS';
 
 class PageShell extends React.Component {
     componentDidMount() {
+        // redirect hashes on /style-spec/
+        if (
+            this.props.location.pathname === '/mapbox-gl-js/style-spec/' &&
+            this.props.location.hash
+        ) {
+            if (redirect(this.props.location))
+                window.location = redirect(this.props.location);
+        }
+
         // initialize analytics
         if (typeof window !== 'undefined' && window.initializeMapboxAnalytics) {
             window.initializeMapboxAnalytics({
@@ -41,27 +52,43 @@ class PageShell extends React.Component {
         });
     }
 
-    accordionNavProps() {
+    accordionNavProps(nav, slug, contentType) {
         const { frontMatter } = this.props;
-        const sections = overviewNavigation.map(section => ({
+        const sections = nav.map(section => ({
             title: section.title,
-            path: `/mapbox-gl-js/overview/${section.path}`
+            path: `/mapbox-gl-js/${slug}/${
+                section.path ? `${section.path}/` : ''
+            }`,
+            tag: section.tag || undefined
         }));
-        const subtitles = overviewNavigation
+        const subtitles = nav
             .filter(section => section.title === frontMatter.title)
-            .map(section =>
-                section.subnav.map(subNavItem => ({
+            .map(section => {
+                if (!section.subnav) return;
+
+                return section.subnav.map(subNavItem => ({
                     title: subNavItem.title,
-                    path: subNavItem.path
-                }))
-            )[0];
+                    path:
+                        subNavItem.path ||
+                        `${section.path}-${subNavItem.title}`,
+                    thirdLevelItems: subNavItem.subnav
+                        ? subNavItem.subnav.map(subSubNavItem => ({
+                              title: subSubNavItem.title,
+                              path:
+                                  subSubNavItem.path ||
+                                  `${section.path}-${subNavItem.title}-${subSubNavItem.title}`
+                          }))
+                        : undefined
+                }));
+            })[0];
+
         const sidebarContent = (
             <div className="mx0-mm ml-neg24 mr-neg36 relative-mm absolute right left">
                 <NavigationAccordion
                     currentPath={this.props.location.pathname}
                     contents={{
                         firstLevelItems: sections,
-                        secondLevelItems: subtitles
+                        secondLevelItems: subtitles || null
                     }}
                     onDropdownChange={value => {
                         routeToPrefixed(value);
@@ -70,7 +97,7 @@ class PageShell extends React.Component {
             </div>
         );
         return {
-            contentType: 'Overview',
+            contentType,
             sidebarContent,
             sidebarStackedOnNarrowScreens: true
         };
@@ -160,50 +187,13 @@ class PageShell extends React.Component {
         };
     }
 
-    styleSpecNavProps() {
-        slugger.reset();
-        const sections = styleSpecNavigation.map(section => {
-            let subNavItems = [];
-            const sectionSlug = slugger.slug(section.title);
-            if (section.subnav) {
-                subNavItems = section.subnav.map(item => {
-                    slugger.reset();
-                    let maintainCase = false;
-                    let title = item.title;
-                    if (item.title === 'ResolvedImage') {
-                        title = 'resolvedImage';
-                        maintainCase = true;
-                    }
-                    const itemSlug = slugger.slug(title, maintainCase);
-                    return {
-                        text: item.title,
-                        url: `#${sectionSlug}-${itemSlug}`
-                    };
-                });
-            }
-            return {
-                title: section.title,
-                url: `#${sectionSlug}`,
-                items: subNavItems
-            };
-        });
-        const sidebarContent = (
-            <div className="ml36 mr12">
-                <SectionedNavigation sections={sections} includeCount={false} />
-            </div>
-        );
-
-        return {
-            contentType: 'Specification',
-            sidebarContent,
-            sidebarStackedOnNarrowScreens: false,
-            sidebarColSize: 3
-        };
-    }
-
     getSidebarProps(activeTab) {
         if (activeTab === 'overview') {
-            return this.accordionNavProps();
+            return this.accordionNavProps(
+                overviewNavigation,
+                'overview',
+                'Overview'
+            );
         } else if (activeTab === 'examples') {
             return this.sectionedNavProps(
                 activeTab,
@@ -217,25 +207,43 @@ class PageShell extends React.Component {
                 this.getPluginSections(plugins)
             );
         } else if (activeTab === 'style-spec') {
-            return this.styleSpecNavProps();
+            return this.accordionNavProps(
+                styleSpecNavigation,
+                'style-spec',
+                'Style Specification'
+            );
         }
     }
 
     render() {
-        const { location } = this.props;
+        const { frontMatter, location } = this.props;
 
         let activeTab = location.pathname.split('/')[2];
         if (activeTab === 'example') activeTab = 'examples';
-
         const sidebarProps = this.getSidebarProps(activeTab);
         const topbarContent = {
             productName: site,
             topNav: <TopNavTabs activeTab={activeTab} />
         };
 
+        const meta = this.props.meta || {};
+        if (!meta.title && frontMatter.title) {
+            meta.title = frontMatter.title;
+        }
+        if (!meta.description && frontMatter.description) {
+            meta.description = frontMatter.description;
+        }
+        if (!meta.pathname) {
+            meta.pathname = location ? location.pathname : frontMatter.pathname;
+        }
+        if (frontMatter.contentType) meta.contentType = frontMatter.contentType;
+        if (frontMatter.language) meta.language = frontMatter.language;
+        if (frontMatter.level) meta.level = frontMatter.level;
+
         return (
             <ReactPageShell
                 site={site}
+                meta={meta}
                 darkHeaderText={true}
                 includeFooter={false}
                 {...this.props}
@@ -243,7 +251,7 @@ class PageShell extends React.Component {
                 <Helmet>
                     <link
                         rel="canonical"
-                        href={`https://docs.mapbox.com${this.props.meta.pathname}`}
+                        href={`https://docs.mapbox.com${meta.pathname}`}
                     />
                 </Helmet>
                 <div className="shell-header-buffer" />

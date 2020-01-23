@@ -20,7 +20,7 @@ export default function(html) {
             frontMatter.contentType = 'example';
 
             return (
-                <PageShell meta={frontMatter}>
+                <PageShell {...this.props}>
                     <div className="relative prose">
                         <div className="round bg-white">
                             <div className="prose">

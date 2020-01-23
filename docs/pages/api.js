@@ -1,3 +1,12 @@
+/*---
+title: API Reference
+description: The Mapbox GL JS API documentation to render interactive maps from vector tiles and Mapbox styles.
+pathname: /mapbox-gl-js/api/
+contentType: API
+lanaguage:
+    - JavaScript
+---*/
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import PageShell from '../components/page_shell';
@@ -9,15 +18,6 @@ import createFormatters from 'documentation/src/output/util/formatters';
 import LinkerStack from 'documentation/src/output/util/linker_stack';
 import ApiItem from '../components/api-item';
 import DrUiNote from '@mapbox/dr-ui/note';
-
-const meta = {
-    title: 'API Reference',
-    description:
-        'The Mapbox GL JS API documentation to render interactive maps from vector tiles and Mapbox styles.',
-    pathname: '/mapbox-gl-js/api/',
-    contentType: 'API',
-    lanaguage: ['JavaScript']
-};
 
 const linkerStack = new LinkerStack({}).namespaceResolver(docs, namespace => {
     const slugger = new GithubSlugger();
@@ -66,7 +66,7 @@ class Note extends React.Component {
 export default class Api extends React.Component {
     render() {
         return (
-            <PageShell meta={meta}>
+            <PageShell {...this.props}>
                 <div className="prose">
                     <h1 className="mt24 mt0-mm txt-fancy">Mapbox GL JS</h1>
                     <div className="py6 color-gray txt-s mt-neg24 mb12">

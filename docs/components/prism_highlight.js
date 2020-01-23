@@ -14,7 +14,7 @@ function wrapper(language, code, highlighter) {
         <pre className={`language-${language}`}>
             <code
                 className={`language-${language}`}
-                dangerouslySetInnerHTML={{__html: `${highlightedCode}`}}
+                dangerouslySetInnerHTML={{ __html: `${highlightedCode}` }}
             />
         </pre>
     );

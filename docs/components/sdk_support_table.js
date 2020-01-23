@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import entries from 'object.entries';
 import md from './md';
 
@@ -12,7 +13,7 @@ export default class SDKSupportTable extends React.Component {
 
     render() {
         return (
-            <div className="scroll-auto mb12">
+            <div className="scroll-auto">
                 <table className="txt-s">
                     <thead>
                         <tr
@@ -34,18 +35,24 @@ export default class SDKSupportTable extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {entries(this.props).map(([key, entry], i) => (
-                            <tr key={i}>
-                                <td>{md(key)}</td>
-                                <td>{this.support(entry, 'js')}</td>
-                                <td>{this.support(entry, 'android')}</td>
-                                <td>{this.support(entry, 'ios')}</td>
-                                <td>{this.support(entry, 'macos')}</td>
-                            </tr>
-                        ))}
+                        {entries(this.props.supportItems || this.props).map(
+                            ([key, entry], i) => (
+                                <tr key={i}>
+                                    <td>{md(key)}</td>
+                                    <td>{this.support(entry, 'js')}</td>
+                                    <td>{this.support(entry, 'android')}</td>
+                                    <td>{this.support(entry, 'ios')}</td>
+                                    <td>{this.support(entry, 'macos')}</td>
+                                </tr>
+                            )
+                        )}
                     </tbody>
                 </table>
             </div>
         );
     }
 }
+
+SDKSupportTable.propTypes = {
+    supportItems: PropTypes.object
+};

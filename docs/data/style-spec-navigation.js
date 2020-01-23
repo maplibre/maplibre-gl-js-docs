@@ -1,209 +1,200 @@
+import entries from 'object.entries';
+import slug from 'slugg';
+import ref from '../../mapbox-gl-js/src/style-spec/reference/latest';
+import { layerTypes, groupedExpressions } from './types';
+
+/*
+This object powers the sidebar navigation for the Style Specification page.
+IMPORTANT: Match the heading (h2, h3) and <Property> hierarchy found in each respective page.
+*/
+
+// generates subnav using the style-spec reference data
+function makeSubNav(entry, section) {
+    return entries(entry).reduce((arr, [name]) => {
+        if (
+            [
+                'vector',
+                'raster',
+                'raster-dem',
+                'geojson',
+                'image',
+                'video'
+            ].indexOf(section) > -1 &&
+            (name === '*' || name === 'type')
+        )
+            return arr;
+        else
+            arr.push({
+                title: name,
+                path: `${section ? `${section}-` : ''}${name}`
+            });
+        return arr;
+    }, []);
+}
+
 export const styleSpecNavigation = [
+    { title: 'Introduction', path: '' },
     {
         title: 'Root',
-        subnav: [
-            {
-                title: 'version'
-            },
-            {
-                title: 'name'
-            },
-            {
-                title: 'metadata'
-            },
-            {
-                title: 'center'
-            },
-            {
-                title: 'zoom'
-            },
-            {
-                title: 'bearing'
-            },
-            {
-                title: 'pitch'
-            },
-            {
-                title: 'light'
-            },
-            {
-                title: 'sources'
-            },
-            {
-                title: 'sprite'
-            },
-            {
-                title: 'glyphs'
-            },
-            {
-                title: 'transition'
-            },
-            {
-                title: 'layers'
-            }
-        ]
+        path: 'root',
+        subnav: makeSubNav(ref.$root)
     },
     {
         title: 'Light',
-        subnav: [
-            {
-                title: 'anchor'
-            },
-            {
-                title: 'position'
-            },
-            {
-                title: 'color'
-            },
-            {
-                title: 'intensity'
-            }
-        ]
+        path: 'light',
+        subnav: makeSubNav(ref.light)
     },
     {
         title: 'Sources',
+        path: 'sources',
         subnav: [
             {
-                title: 'vector'
+                title: 'vector',
+                path: 'vector',
+                subnav: makeSubNav(ref.source_vector, 'vector')
             },
             {
-                title: 'raster'
+                title: 'raster',
+                path: 'raster',
+                subnav: makeSubNav(ref.source_raster, 'raster')
             },
             {
-                title: 'raster-dem'
+                title: 'raster-dem',
+                path: 'raster-dem',
+                subnav: makeSubNav(ref.source_raster_dem, 'raster-dem')
             },
             {
-                title: 'geojson'
+                title: 'geojson',
+                path: 'geojson',
+                subnav: makeSubNav(ref.source_geojson, 'geojson')
             },
             {
-                title: 'image'
+                title: 'image',
+                path: 'image',
+                subnav: makeSubNav(ref.source_image, 'image')
             },
             {
-                title: 'video'
+                title: 'video',
+                path: 'video',
+                subnav: makeSubNav(ref.source_video, 'video')
             }
         ]
     },
     {
-        title: 'Sprite'
+        title: 'Sprite',
+        path: 'sprite'
     },
     {
-        title: 'Glyphs'
+        title: 'Glyphs',
+        path: 'glyphs'
     },
     {
         title: 'Transition',
-        subnav: [
-            {
-                title: 'duration'
-            },
-            {
-                title: 'delay'
-            }
-        ]
+        path: 'transition',
+        subnav: makeSubNav(ref.transition)
     },
     {
         title: 'Layers',
-        subnav: [
-            {
-                title: 'background'
-            },
-            {
-                title: 'fill'
-            },
-            {
-                title: 'line'
-            },
-            {
-                title: 'symbol'
-            },
-            {
-                title: 'raster'
-            },
-            {
-                title: 'circle'
-            },
-            {
-                title: 'fill-extrusion'
-            },
-            {
-                title: 'heatmap'
-            },
-            {
-                title: 'hillshade'
-            }
-        ]
+        path: 'layers',
+        subnav: layerTypes.map(type => {
+            return {
+                title: type,
+                path: type,
+                subnav: [
+                    ...makeSubNav(ref[`layout_${type}`], `layout-${type}`),
+                    ...makeSubNav(ref[`paint_${type}`], `paint-${type}`)
+                ]
+            };
+        })
     },
     {
         title: 'Types',
+        path: 'types',
         subnav: [
             {
-                title: 'Color'
+                title: 'Color',
+                path: 'color'
             },
             {
-                title: 'String'
+                title: 'Formatted',
+                path: 'formatted'
             },
             {
-                title: 'Formatted'
+                title: 'ResolvedImage',
+                path: 'resolvedImage'
             },
             {
-                title: 'ResolvedImage'
+                title: 'String',
+                path: 'string'
             },
             {
-                title: 'Boolean'
+                title: 'Boolean',
+                path: 'boolean'
             },
             {
-                title: 'Number'
+                title: 'Number',
+                path: 'number'
             },
             {
-                title: 'Array'
+                title: 'Array',
+                path: 'array'
             }
         ]
     },
     {
         title: 'Expressions',
-        subnav: [
-            {
-                title: 'Types'
-            },
-            {
-                title: 'Feature data'
-            },
-            {
-                title: 'Lookup'
-            },
-            {
-                title: 'Decision'
-            },
-            {
-                title: 'Ramps, scales, curves'
-            },
-            {
-                title: 'Variable binding'
-            },
-            {
-                title: 'String'
-            },
-            {
-                title: 'Color'
-            },
-            {
-                title: 'Math'
-            },
-            {
-                title: 'Zoom'
-            },
-            {
-                title: 'Heatmap'
-            }
-        ]
+        path: 'expressions',
+        subnav: groupedExpressions.map(group => {
+            return {
+                title: group.name,
+                path: `${slug(group.name)}`,
+                subnav: group.expressions.map(g => {
+                    return {
+                        title: g.name,
+                        path: `${group.name === 'Types' ? 'types-' : ''}${slug(
+                            g.name
+                        ) || g.name}`
+                    };
+                })
+            };
+        })
     },
     {
         title: 'Other',
+        path: 'other',
+        tag: 'legacy',
         subnav: [
             {
-                title: 'Function'
+                title: 'Function',
+                path: 'function',
+                subnav: [
+                    'stops',
+                    'property',
+                    'base',
+                    'type',
+                    'default',
+                    'colorSpace'
+                ].map(title => {
+                    return {
+                        title,
+                        path: `function-${title}`
+                    };
+                })
             },
             {
-                title: 'Filter'
+                title: 'Other filter',
+                path: 'other-filter',
+                subnav: [
+                    'Existential filters',
+                    'Comparison filters',
+                    'Set membership filters',
+                    'Combining filters'
+                ].map(title => {
+                    return {
+                        title,
+                        path: slug(title)
+                    };
+                })
             }
         ]
     }
