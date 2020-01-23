@@ -4,18 +4,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import urls from './urls';
 import md from './md';
-import Prism from 'prismjs';
 import supported from '@mapbox/mapbox-gl-supported';
-import CodeSnippet from '@mapbox/mr-ui/code-snippet';
-import EditButtons from './edit-buttons';
+import CodeSnippet from '@mapbox/dr-ui/code-snippet';
 import Note from '@mapbox/dr-ui/note';
-import WarningImage from '@mapbox/dr-ui/warning-image';
-
-const highlightTheme = require('raw-loader!@mapbox/dr-ui/css/prism.css');
+import { highlightHtml } from '@mapbox/dr-ui/highlight/html';
+import * as helpers from '@mapbox/dr-ui/edit/helpers';
 
 const viewport = `<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />`;
 const css = `\tbody { margin: 0; padding: 0; }
-\t#map { position: absolute; top: 0; bottom: 0; width: 100%; };`;
+\t#map { position: absolute; top: 0; bottom: 0; width: 100%; }`;
 
 export default class ExampleCode extends React.Component {
     constructor(props) {
@@ -74,15 +71,14 @@ ${html}
 
     render() {
         const { frontMatter, html } = this.props;
+
+        const code = this.displayHTML(html);
+        const parsedCode = helpers.extractor(code);
         return (
             <div className="prose">
                 <div className="mb36">{md(frontMatter.description)}</div>
                 {this.state.unsupported && (
-                    <Note
-                        title="Mapbox GL unsupported"
-                        theme="warning"
-                        imageComponent={<WarningImage color="orange" />}
-                    >
+                    <Note title="Mapbox GL unsupported" theme="warning">
                         Mapbox GL requires{' '}
                         <a
                             className="link"
@@ -113,27 +109,18 @@ ${html}
                     />
                 )}
 
-                <div className="bg-white" data-swiftype-index="false">
+                <div className="bg-white">
                     <div id="code" className="relative">
-                        <EditButtons
-                            code={this.displayHTML(html)}
-                            css={css}
-                            frontMatter={this.props.frontMatter}
-                            rawHtml={html}
-                            head={viewport}
-                            url={`https://docs.mapbox.com${this.props.location.pathname}`}
-                        />
                         <CodeSnippet
                             code={this.displayHTML(html)}
-                            highlightedCode={Prism.highlight(
-                                this.displayHTML(html),
-                                Prism.languages['markup']
-                            )}
-                            highlightThemeCss={highlightTheme}
-                            onCopy={() => {
-                                analytics.track(
-                                    'Copied example with clipboard'
-                                );
+                            highlighter={() => highlightHtml}
+                            edit={{
+                                frontMatter: this.props.frontMatter,
+                                head: viewport,
+                                js: parsedCode.js,
+                                html: parsedCode.html,
+                                css: parsedCode.css,
+                                resources: parsedCode.resources
                             }}
                         />
                     </div>

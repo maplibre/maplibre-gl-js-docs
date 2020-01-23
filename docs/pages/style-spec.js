@@ -1070,9 +1070,8 @@ export default class StyleSpec extends React.Component {
                                 <p>
                                     Apart from the required <code>width</code>,{' '}
                                     <code>height</code>, <code>x</code>, and{' '}
-                                    <code>y</code>{' '}
-                                    properties, the following optional
-                                    properties are supported:
+                                    <code>y</code> properties, the following
+                                    optional properties are supported:
                                 </p>
                                 <ul>
                                     <li>
@@ -1091,9 +1090,8 @@ export default class StyleSpec extends React.Component {
                                         <code>stretchX</code>: An array of
                                         two-element arrays, consisting of two
                                         numbers that represent the <em>from</em>{' '}
-                                        position and the{' '}
-                                        <em>to</em> position of areas that can
-                                        be stretched.
+                                        position and the <em>to</em> position of
+                                        areas that can be stretched.
                                     </li>
                                     <li>
                                         <code>stretchY</code>: Same as{' '}

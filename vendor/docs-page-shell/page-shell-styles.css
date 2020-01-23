@@ -420,6 +420,10 @@
   .shell-wrapper .shell-align-r-mm {
     text-align: right !important;
   }
+  .shell-wrapper .shell-txt-l-mm {
+    font-size: 18px !important;
+    line-height: 30px;
+  }
 }
 @media screen and (min-width: 800px) {
   .shell-wrapper .shell-mt42-ml {

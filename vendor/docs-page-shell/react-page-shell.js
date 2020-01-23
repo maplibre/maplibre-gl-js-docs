@@ -249,119 +249,197 @@ PopupMenu.defaultProps = {
   darkText: true
 };
 
-var immutable = extend;
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-
-function extend() {
-  var target = {};
-
-  for (var i = 0; i < arguments.length; i++) {
-    var source = arguments[i];
-
-    for (var key in source) {
-      if (hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-}
-
+var language = "en";
+var logoSiteTitle = "Docs";
+var all = "All docs";
 var nonMobile = {
-  maps: {
-    sdks: {
-      title: 'Maps SDKs',
-      links: [{
-        name: 'for iOS',
-        to: 'https://docs.mapbox.com/ios/maps/overview/'
-      }, {
-        name: 'for Android',
-        to: 'https://docs.mapbox.com/android/maps/overview/'
-      }, {
-        name: 'for Unity',
-        to: 'https://docs.mapbox.com/unity/maps/overview/'
-      }]
-    },
-    links: [{
-      name: 'Mapbox GL JS',
-      to: 'https://docs.mapbox.com/mapbox-gl-js/'
-    }, {
-      name: 'Mapbox Studio',
-      to: 'https://docs.mapbox.com/studio-manual/overview/'
-    }, {
-      name: 'Mapbox Style Spec',
-      to: 'https://docs.mapbox.com/mapbox-gl-js/style-spec/'
-    }, {
-      name: 'Vector tiles',
-      to: 'https://docs.mapbox.com/vector-tiles/'
-    }, {
-      name: 'Maps APIs',
-      to: 'https://docs.mapbox.com/api/maps/'
-    }]
-  },
-  navigation: {
-    sdks: {
-      title: 'Navigation SDKs',
-      links: [{
-        name: 'for iOS',
-        to: 'https://docs.mapbox.com/ios/navigation/overview/'
-      }, {
-        name: 'for Android',
-        to: 'https://docs.mapbox.com/android/navigation/overview/'
-      }]
-    },
-    links: [{
-      name: 'Directions APIs',
-      to: 'https://docs.mapbox.com/api/navigation/'
-    }]
-  },
-  search: {
-    links: [{
-      name: 'Geocoding API',
-      to: 'https://docs.mapbox.com/api/search/'
-    }]
-  },
-  help: {
-    links: [{
-      name: 'How Mapbox works',
-      to: 'https://docs.mapbox.com/help/how-mapbox-works/'
-    }, {
-      name: 'Tutorials',
-      to: 'https://docs.mapbox.com/help/tutorials/'
-    }, {
-      name: 'Troubleshooting',
-      to: 'https://docs.mapbox.com/help/troubleshooting/'
-    }, {
-      name: 'Glossary',
-      to: 'https://docs.mapbox.com/help/glossary/'
-    }, {
-      name: 'API playground',
-      to: 'https://docs.mapbox.com/api-playground/'
-    }]
-  }
+	maps: {
+		title: "Maps",
+		sdks: {
+			title: "Maps SDKs",
+			links: [
+				{
+					name: "for iOS",
+					to: "https://docs.mapbox.com/ios/maps/overview/"
+				},
+				{
+					name: "for Android",
+					to: "https://docs.mapbox.com/android/maps/overview/"
+				},
+				{
+					name: "for Unity",
+					to: "https://docs.mapbox.com/unity/maps/overview/"
+				}
+			]
+		},
+		links: [
+			{
+				name: "Mapbox GL JS",
+				to: "https://docs.mapbox.com/mapbox-gl-js/"
+			},
+			{
+				name: "Mapbox Studio",
+				to: "https://docs.mapbox.com/studio-manual/overview/"
+			},
+			{
+				name: "Mapbox Style Spec",
+				to: "https://docs.mapbox.com/mapbox-gl-js/style-spec/"
+			},
+			{
+				name: "Vector tiles",
+				to: "https://docs.mapbox.com/vector-tiles/"
+			},
+			{
+				name: "Maps APIs",
+				to: "https://docs.mapbox.com/api/maps/"
+			}
+		]
+	},
+	navigation: {
+		title: "Navigation",
+		sdks: {
+			title: "Navigation SDKs",
+			links: [
+				{
+					name: "for iOS",
+					to: "https://docs.mapbox.com/ios/navigation/overview/"
+				},
+				{
+					name: "for Android",
+					to: "https://docs.mapbox.com/android/navigation/overview/"
+				}
+			]
+		},
+		links: [
+			{
+				name: "Directions APIs",
+				to: "https://docs.mapbox.com/api/navigation/"
+			}
+		]
+	},
+	search: {
+		title: "Search",
+		links: [
+			{
+				name: "Geocoding API",
+				to: "https://docs.mapbox.com/api/search/"
+			}
+		]
+	},
+	help: {
+		title: "Help",
+		links: [
+			{
+				name: "How Mapbox works",
+				to: "https://docs.mapbox.com/help/how-mapbox-works/"
+			},
+			{
+				name: "Tutorials",
+				to: "https://docs.mapbox.com/help/tutorials/"
+			},
+			{
+				name: "Troubleshooting",
+				to: "https://docs.mapbox.com/help/troubleshooting/"
+			},
+			{
+				name: "Glossary",
+				to: "https://docs.mapbox.com/help/glossary/"
+			}
+		]
+	}
 };
 var mobile = {
-  maps: {
-    links: nonMobile.maps.sdks.links.map(function (item) {
-      return immutable(item, {
-        name: "SDK ".concat(item.name)
-      });
-    }).concat(nonMobile.maps.links)
-  },
-  navigation: {
-    links: nonMobile.navigation.sdks.links.map(function (item) {
-      return immutable(item, {
-        name: "SDK ".concat(item.name)
-      });
-    }).concat(nonMobile.navigation.links)
-  },
-  search: nonMobile.search,
-  help: nonMobile.help
+	maps: {
+		title: "Maps",
+		links: [
+			{
+				name: "SDK for iOS",
+				to: "https://docs.mapbox.com/ios/maps/overview/"
+			},
+			{
+				name: "SDK for Android",
+				to: "https://docs.mapbox.com/android/maps/overview/"
+			},
+			{
+				name: "SDK for Unity",
+				to: "https://docs.mapbox.com/unity/maps/overview/"
+			},
+			{
+				name: "Mapbox GL JS",
+				to: "https://docs.mapbox.com/mapbox-gl-js/"
+			},
+			{
+				name: "Mapbox Studio",
+				to: "https://docs.mapbox.com/studio-manual/overview/"
+			},
+			{
+				name: "Mapbox Style Spec",
+				to: "https://docs.mapbox.com/mapbox-gl-js/style-spec/"
+			},
+			{
+				name: "Vector tiles",
+				to: "https://docs.mapbox.com/vector-tiles/"
+			},
+			{
+				name: "Maps APIs",
+				to: "https://docs.mapbox.com/api/maps/"
+			}
+		]
+	},
+	navigation: {
+		title: "Navigation",
+		links: [
+			{
+				name: "SDK for iOS",
+				to: "https://docs.mapbox.com/ios/navigation/overview/"
+			},
+			{
+				name: "SDK for Android",
+				to: "https://docs.mapbox.com/android/navigation/overview/"
+			},
+			{
+				name: "Directions APIs",
+				to: "https://docs.mapbox.com/api/navigation/"
+			}
+		]
+	},
+	search: {
+		title: "Search",
+		links: [
+			{
+				name: "Geocoding API",
+				to: "https://docs.mapbox.com/api/search/"
+			}
+		]
+	},
+	help: {
+		title: "Help",
+		links: [
+			{
+				name: "How Mapbox works",
+				to: "https://docs.mapbox.com/help/how-mapbox-works/"
+			},
+			{
+				name: "Tutorials",
+				to: "https://docs.mapbox.com/help/tutorials/"
+			},
+			{
+				name: "Troubleshooting",
+				to: "https://docs.mapbox.com/help/troubleshooting/"
+			},
+			{
+				name: "Glossary",
+				to: "https://docs.mapbox.com/help/glossary/"
+			}
+		]
+	}
 };
 var navigationMenuData = {
-  nonMobile: nonMobile,
-  mobile: mobile
+	language: language,
+	logoSiteTitle: logoSiteTitle,
+	all: all,
+	nonMobile: nonMobile,
+	mobile: mobile
 };
 
 function LinkList(props) {
@@ -401,34 +479,37 @@ LinkList.defaultProps = {
   bullets: false
 };
 
-var navItems = navigationMenuData.nonMobile.search.links;
-
 function SearchMenu(props) {
+  var navItems = navigationMenuData.nonMobile.search ? navigationMenuData.nonMobile.search.links : [];
   return React.createElement(PopupMenu, _extends({}, props, {
-    name: "Search"
+    name: props.title
   }), React.createElement("div", {
     className: "shell-py30 shell-px30"
   }, React.createElement(LinkList, {
     links: navItems
   })));
 }
-
-var navItems$1 = navigationMenuData.nonMobile.help.links;
+SearchMenu.propTypes = {
+  title: PropTypes.string
+};
 
 function HelpMenu(props) {
+  var navItems = navigationMenuData.nonMobile.help.links;
   return React.createElement(PopupMenu, _extends({}, props, {
-    name: "Help"
+    name: props.title
   }), React.createElement("div", {
     className: "shell-py30 shell-px30"
   }, React.createElement(LinkList, {
-    links: navItems$1
+    links: navItems
   })));
 }
-
-var menuData = navigationMenuData.nonMobile.maps;
-var standardLinks = menuData.links;
+HelpMenu.propTypes = {
+  title: PropTypes.string
+};
 
 function MapsMenu(props) {
+  var menuData = navigationMenuData.nonMobile.maps;
+  var standardLinks = menuData.links;
   var sdkEls = React.createElement(LinkList, {
     title: menuData.sdks.title,
     links: menuData.sdks.links,
@@ -438,7 +519,7 @@ function MapsMenu(props) {
     links: standardLinks
   });
   return React.createElement(PopupMenu, _extends({}, props, {
-    name: "Maps"
+    name: props.title
   }), React.createElement("div", {
     className: "shell-py30 shell-px30 w360"
   }, React.createElement("div", {
@@ -449,21 +530,23 @@ function MapsMenu(props) {
     className: "shell-col shell-col--6"
   }, standardLinkEls))));
 }
-
-var menuData$1 = navigationMenuData.nonMobile.navigation;
-var standardLinks$1 = menuData$1.links;
+MapsMenu.propTypes = {
+  title: PropTypes.string
+};
 
 function NavigationMenu(props) {
+  var menuData = navigationMenuData.nonMobile.navigation ? navigationMenuData.nonMobile.navigation : undefined;
+  var standardLinks = menuData ? menuData.links : [];
   var sdkEls = React.createElement(LinkList, {
-    title: menuData$1.sdks.title,
-    links: menuData$1.sdks.links,
+    title: menuData.sdks.title,
+    links: menuData.sdks.links,
     bullets: true
   });
   var standardLinkEls = React.createElement(LinkList, {
-    links: standardLinks$1
+    links: standardLinks
   });
   return React.createElement(PopupMenu, _extends({}, props, {
-    name: "Navigation"
+    name: props.title
   }), React.createElement("div", {
     className: "shell-py30 shell-px30 w360"
   }, React.createElement("div", {
@@ -474,6 +557,9 @@ function NavigationMenu(props) {
     className: "shell-col shell-col--6"
   }, standardLinkEls))));
 }
+NavigationMenu.propTypes = {
+  title: PropTypes.string
+};
 
 function NavigationItem(props) {
   var colorBasedClasses = props.darkText ? 'shell-navigation-menu-button shell-color-gray-dark shell-color-blue-on-hover' : 'shell-navigation-menu-button shell-link shell-link--white';
@@ -593,30 +679,30 @@ function MobileNavigation() {
     }
   }, React.createElement("div", {
     className: "shell-pb24"
-  }, React.createElement(MobileLinkList, {
-    title: "Maps",
+  }, navigationMenuData.mobile.maps && React.createElement(MobileLinkList, {
+    title: navigationMenuData.mobile.maps.title,
     links: navigationMenuData.mobile.maps.links
   }), React.createElement("div", {
     className: "shell-mt24"
-  }, React.createElement(MobileLinkList, {
-    title: "Navigation",
+  }, navigationMenuData.mobile.navigation && React.createElement(MobileLinkList, {
+    title: navigationMenuData.mobile.navigation.title,
     links: navigationMenuData.mobile.navigation.links
   })), React.createElement("div", {
     className: "shell-mt24"
-  }, React.createElement(MobileLinkList, {
-    title: "Search",
+  }, navigationMenuData.mobile.search && React.createElement(MobileLinkList, {
+    title: navigationMenuData.mobile.search.title,
     links: navigationMenuData.mobile.search.links
   })), React.createElement("div", {
     className: "shell-mt24"
-  }, React.createElement(MobileLinkList, {
-    title: "Help",
+  }, navigationMenuData.mobile.help && React.createElement(MobileLinkList, {
+    title: navigationMenuData.mobile.help.title,
     links: navigationMenuData.mobile.help.links
   }))), React.createElement("div", {
     className: "shell-border-t shell-border--gray-light shell-py24"
   }, React.createElement("a", {
     href: ORIGIN_DOCS_PRODUCTION,
     className: "shell-color-blue"
-  }, "All docs")))));
+  }, navigationMenuData.all)))));
 }
 
 function Logo(props) {
@@ -648,7 +734,8 @@ function Logo(props) {
     });
   }
 
-  var nameClasses = 'shell-flex-child shell-txt-bold shell-txt-l ';
+  var nameClasses = 'shell-flex-child shell-txt-bold ';
+  nameClasses += 'shell-txt-l ';
   nameClasses += darkText ? ' shell-color-blue shell-color-blue-dark-on-hover' : ' shell-link shell-link--white';
 
   if (mini) {
@@ -669,7 +756,7 @@ function Logo(props) {
       marginBottom: 2
     },
     "data-subtitle-dark": darkText
-  }, "Docs"));
+  }, navigationMenuData.logoSiteTitle));
 }
 
 Logo.propTypes = {
@@ -706,17 +793,21 @@ function PageHeader(props) {
     className: "shell-flex-child shell-flex-child--grow shell-flex-parent shell-flex-parent--center-cross shell-flex-parent--end-main"
   }, React.createElement("div", {
     className: "shell-flex-parent shell-flex-parent--center-cross shell-flex-parent--end-main"
-  }, React.createElement(MapsMenu, {
+  }, navigationMenuData.nonMobile.maps && React.createElement(MapsMenu, {
+    title: navigationMenuData.nonMobile.maps.title,
     darkText: props.darkText
-  }), React.createElement(NavigationMenu, {
+  }), navigationMenuData.nonMobile.navigation && React.createElement(NavigationMenu, {
+    title: navigationMenuData.nonMobile.navigation.title,
     darkText: props.darkText
-  }), React.createElement(SearchMenu, {
+  }), navigationMenuData.nonMobile.search && React.createElement(SearchMenu, {
+    title: navigationMenuData.nonMobile.search.title,
     darkText: props.darkText
   }), React.createElement(NavigationItem, {
     href: ORIGIN_DOCS_PRODUCTION,
     darkText: props.darkText,
     name: "all"
-  }, "All docs"), React.createElement(HelpMenu, {
+  }, navigationMenuData.all), navigationMenuData.nonMobile.help && React.createElement(HelpMenu, {
+    title: navigationMenuData.nonMobile.help.title,
     darkText: props.darkText
   }))), React.createElement("div", {
     className: "shell-flex-child shell-ml6 shell-ml12-ml shell-ml18-mxl"
@@ -1192,6 +1283,7 @@ function (_React$Component) {
       }, React.createElement(PageHeader, {
         darkText: this.props.darkHeaderText
       })), React.createElement("main", {
+        role: "main",
         style: {
           zIndex: 0,
           position: 'relative',

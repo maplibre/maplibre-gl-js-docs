@@ -1,38 +1,35 @@
-import Prism from 'prismjs';
-import React from 'react'; // eslint-disable-line no-unused-vars
+import React from 'react';
+import { highlightJsx } from '@mapbox/dr-ui/highlight/jsx';
+import { highlightJson } from '@mapbox/dr-ui/highlight/json';
+import { highlightHtml } from '@mapbox/dr-ui/highlight/html';
 
-import 'prismjs/components/prism-json';
-
-function highlight(code, language) {
-    return { __html: `${Prism.highlight(code, Prism.languages[language])}` };
-}
-
-export default function prismHighlight(code, language) {
+function wrapper(language, code, highlighter) {
     const startingIndent = code.match(/^\n( *)/);
     const dedentSize = startingIndent ? startingIndent[1].length : 0;
     if (dedentSize) {
         code = code.replace(new RegExp(`^ {0,${dedentSize}}`, 'mg'), '');
     }
+    const highlightedCode = highlighter()(code.trim());
     return (
         <pre className={`language-${language}`}>
             <code
                 className={`language-${language}`}
-                dangerouslySetInnerHTML={highlight(code.trim(), language)}
+                dangerouslySetInnerHTML={{__html: `${highlightedCode}`}}
             />
         </pre>
     );
 }
 
 export function highlightMarkup(code) {
-    return prismHighlight(code, 'markup');
+    return wrapper('html', code, () => highlightHtml);
 }
 
 export function highlightJavascript(code) {
-    return prismHighlight(code, 'javascript');
+    return wrapper('javascript', code, () => highlightJsx);
 }
 
 export function highlightJSON(code) {
-    return prismHighlight(code, 'json');
+    return wrapper('json', code, () => highlightJson);
 }
 
 export function highlightShell(code) {
