@@ -117,6 +117,15 @@ const types = {
             parameters: ['number', 'array']
         }
     ],
+    in: [
+        {
+            type: 'boolean',
+            parameters: [
+                'needle: (boolean, string or number)',
+                'haystack: (array or string)'
+            ]
+        }
+    ],
     case: [
         {
             type: 'OutputType',
