@@ -14,7 +14,7 @@
     "@mapbox/appropriate-images-react": "^1.0.0",
     "@mapbox/batfish": "1.9.8",
     "@mapbox/copyeditor": "^0.7.0",
-    "@mapbox/dr-ui": "^0.25.4",
+    "@mapbox/dr-ui": "^0.25.5",
     "@mapbox/eslint-config-docs": "^0.2.1",
     "@mapbox/eslint-config-mapbox": "^2.0.1",
     "@mapbox/mapbox-gl-supported": "^1.4.0",
