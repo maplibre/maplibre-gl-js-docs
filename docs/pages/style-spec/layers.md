@@ -6,6 +6,7 @@ contentType: specification
 prependJs:
     - "import Items from '../../components/style-spec/items';"
     - "import { layerTypes } from '../../data/types';"
+    - "import combineItems from '../../util/combine-items';"
     - "import ref from '../../../mapbox-gl-js/src/style-spec/reference/latest';"
 ---
 
@@ -48,86 +49,40 @@ Specification. To update any content displayed in this section, make edits to:
 https://github.com/mapbox/mapbox-gl-js/blob/master/src/style-spec/reference/v8.json.
 -->
 
-
 ## background
 
-{{
-<React.Fragment>
-  <Items headingLevel="3" kind="layout" section={`layout-background`} entry={ref[`layout_background`]} />
-  <Items headingLevel="3" kind="paint" section={`paint-background`} entry={ref[`paint_background`]} />
-</React.Fragment>
-}}
+{{<Items headingLevel="3" entry={combineItems(['layout','paint'], 'background')} /> }}
 
 ## fill
 
-{{
-<React.Fragment>
-  <Items headingLevel="3" kind="layout" section={`layout-fill`} entry={ref[`layout_fill`]} />
-  <Items headingLevel="3" kind="paint" section={`paint-fill`} entry={ref[`paint_fill`]} />
-</React.Fragment>
-}}
+{{<Items headingLevel="3" entry={combineItems(['layout','paint'], 'fill')} /> }}
 
 ## line
 
-{{
-<React.Fragment>
-  <Items kind="layout" section={`layout-line`} entry={ref[`layout_line`]} />
-  <Items kind="paint" section={`paint-line`} entry={ref[`paint_line`]} />
-</React.Fragment>
-}}
+{{<Items headingLevel="3" entry={combineItems(['layout','paint'], 'line')} /> }}
 
 ## symbol
 
-{{
-<React.Fragment>
-  <Items kind="layout" section={`layout-symbol`} entry={ref[`layout_symbol`]} />
-  <Items kind="paint" section={`paint-symbol`} entry={ref[`paint_symbol`]} />
-</React.Fragment>
-}}
+{{<Items headingLevel="3" entry={combineItems(['layout','paint'], 'symbol')} /> }}
 
 ## raster
 
-{{
-<React.Fragment>
-  <Items kind="layout" section={`layout-raster`} entry={ref[`layout_raster`]} />
-  <Items kind="paint" section={`paint-raster`} entry={ref[`paint_raster`]} />
-</React.Fragment>
-}}
+{{<Items headingLevel="3" entry={combineItems(['layout','paint'], 'raster')} /> }}
 
 ## circle
 
-{{
-<React.Fragment>
-  <Items kind="layout" section={`layout-circle`} entry={ref[`layout_circle`]} />
-  <Items kind="paint" section={`paint-circle`} entry={ref[`paint_circle`]} />
-</React.Fragment>
-}}
+{{<Items headingLevel="3" entry={combineItems(['layout','paint'], 'circle')} /> }}
 
 ## fill-extrusion
 
-{{
-<React.Fragment>
-  <Items kind="layout" section={`layout-fill-extrusion`} entry={ref[`layout_fill-extrusion`]} />
-  <Items kind="paint" section={`paint-fill-extrusion`} entry={ref[`paint_fill-extrusion`]} />
-</React.Fragment>
-}}
+{{<Items headingLevel="3" entry={combineItems(['layout','paint'], 'fill-extrusion')} /> }}
 
 ## heatmap
 
-{{
-<React.Fragment>
-  <Items kind="layout" section={`layout-heatmap`} entry={ref[`layout_heatmap`]} />
-  <Items kind="paint" section={`paint-heatmap`} entry={ref[`paint_heatmap`]} />
-</React.Fragment>
-}}
+{{<Items headingLevel="3" entry={combineItems(['layout','paint'], 'heatmap')} /> }}
 
 ## hillshade
 
-{{
-<React.Fragment>
-  <Items kind="layout" section={`layout-hillshade`} entry={ref[`layout_hillshade`]} />
-  <Items kind="paint" section={`paint-hillshade`} entry={ref[`paint_hillshade`]} />
-</React.Fragment>
-}}
+{{<Items headingLevel="3" entry={combineItems(['layout','paint'], 'hillshade')} /> }}
 
 <!-- END GENERATED CONTENT -->

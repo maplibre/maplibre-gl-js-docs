@@ -1,5 +1,7 @@
 import entries from 'object.entries';
+import React from 'react';
 import slug from 'slugg';
+import Icon from '@mapbox/mr-ui/icon';
 import ref from '../../mapbox-gl-js/src/style-spec/reference/latest';
 import { layerTypes, groupedExpressions } from './types';
 
@@ -8,28 +10,50 @@ This object powers the sidebar navigation for the Style Specification page.
 IMPORTANT: Match the heading (h2, h3) and <Property> hierarchy found in each respective page.
 */
 
+const icons = {
+    paint: 'paint',
+    layout: 'line'
+};
+
 // generates subnav using the style-spec reference data
 function makeSubNav(entry, section) {
-    return entries(entry).reduce((arr, [name]) => {
-        if (
-            [
-                'vector',
-                'raster',
-                'raster-dem',
-                'geojson',
-                'image',
-                'video'
-            ].indexOf(section) > -1 &&
-            (name === '*' || name === 'type')
-        )
+    return entries(entry)
+        .sort()
+        .reduce((arr, [name]) => {
+            if (
+                [
+                    'vector',
+                    'raster',
+                    'raster-dem',
+                    'geojson',
+                    'image',
+                    'video'
+                ].indexOf(section) > -1 &&
+                (name === '*' || name === 'type')
+            )
+                return arr;
+            else {
+                const sectionName = section ? section.split('-')[0] : undefined;
+                const icon =
+                    section && sectionName ? icons[sectionName] : undefined;
+                arr.push({
+                    title: (
+                        <React.Fragment>
+                            {icon && (
+                                <span className="mr6 ml-neg12 w18 h18 align-middle inline-block bg-gray-faint round-full">
+                                    <Icon size={16} name={icon} />
+                                </span>
+                            )}
+                            {name}
+                        </React.Fragment>
+                    ),
+                    name: name,
+                    path: `${section ? `${section}-` : ''}${name}`
+                });
+            }
+
             return arr;
-        else
-            arr.push({
-                title: name,
-                path: `${section ? `${section}-` : ''}${name}`
-            });
-        return arr;
-    }, []);
+        }, []);
 }
 
 export const styleSpecNavigation = [
@@ -103,7 +127,7 @@ export const styleSpecNavigation = [
                 subnav: [
                     ...makeSubNav(ref[`layout_${type}`], `layout-${type}`),
                     ...makeSubNav(ref[`paint_${type}`], `paint-${type}`)
-                ]
+                ].sort((a, b) => a.name.localeCompare(b.name))
             };
         })
     },

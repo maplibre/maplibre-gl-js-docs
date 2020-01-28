@@ -29,11 +29,11 @@ export default class Property extends React.Component {
 }
 
 Property.defaultProps = {
-    headingLevel: 2
+    headingLevel: '2'
 };
 
 Property.propTypes = {
     id: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
-    headingLevel: PropTypes.oneOf('2', '3')
+    headingLevel: PropTypes.oneOf(['2', '3'])
 };
