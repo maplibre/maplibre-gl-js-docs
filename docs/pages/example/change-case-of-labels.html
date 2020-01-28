@@ -8,15 +8,15 @@
     });
 
     map.on('load', function() {
+        // data from opendata.cityofboise.org/
+        map.addSource('off-leash-areas', {
+            'type': 'geojson',
+            'data': 'https://docs.mapbox.com/mapbox-gl-js/assets/boise.geojson'
+        });
         map.addLayer({
             'id': 'off-leash-areas',
             'type': 'symbol',
-            // data from opendata.cityofboise.org/
-            'source': {
-                'type': 'geojson',
-                'data':
-                    'https://docs.mapbox.com/mapbox-gl-js/assets/boise.geojson'
-            },
+            'source': 'off-leash-areas',
             'layout': {
                 'icon-image': 'dog-park-11',
                 'text-field': [

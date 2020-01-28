@@ -10,18 +10,19 @@
     map.on('load', function() {
         // Add Mapillary sequence layer.
         // https://www.mapillary.com/developer/tiles-documentation/#sequence-layer
+        map.addSource('mapillary', {
+            'type': 'vector',
+            'tiles': [
+                'https://d25uarhxywzl1j.cloudfront.net/v0.1/{z}/{x}/{y}.mvt'
+            ],
+            'minzoom': 6,
+            'maxzoom': 14
+        });
         map.addLayer(
             {
                 'id': 'mapillary',
                 'type': 'line',
-                'source': {
-                    'type': 'vector',
-                    'tiles': [
-                        'https://d25uarhxywzl1j.cloudfront.net/v0.1/{z}/{x}/{y}.mvt'
-                    ],
-                    'minzoom': 6,
-                    'maxzoom': 14
-                },
+                'source': 'mapillary',
                 'source-layer': 'mapillary-sequences',
                 'layout': {
                     'line-cap': 'round',

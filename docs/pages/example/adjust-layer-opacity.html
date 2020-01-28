@@ -61,12 +61,13 @@
     var sliderValue = document.getElementById('slider-value');
 
     map.on('load', function() {
+        map.addSource('chicago', {
+            'type': 'raster',
+            'url': 'mapbox://mapbox.u8yyzaor'
+        });
         map.addLayer({
             'id': 'chicago',
-            'source': {
-                'type': 'raster',
-                'url': 'mapbox://mapbox.u8yyzaor'
-            },
+            'source': 'chicago',
             'type': 'raster'
         });
 

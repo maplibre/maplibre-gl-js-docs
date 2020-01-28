@@ -148,14 +148,15 @@
     description.textContent = locations[locations.length - 1].description;
 
     map.on('load', function() {
+        map.addSource('boroughs', {
+            'type': 'vector',
+            'url': 'mapbox://mapbox.8ibmsn6u'
+        });
         map.addLayer(
             {
                 'id': 'highlight',
                 'type': 'fill',
-                'source': {
-                    'type': 'vector',
-                    'url': 'mapbox://mapbox.8ibmsn6u'
-                },
+                'source': 'boroughs',
                 'source-layer': 'original',
                 'paint': {
                     'fill-color': '#fd6b50',

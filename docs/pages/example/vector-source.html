@@ -8,13 +8,14 @@
     });
 
     map.on('load', function() {
+        map.addSource('mapbox-terrain', {
+            type: 'vector',
+            url: 'mapbox://mapbox.mapbox-terrain-v2'
+        });
         map.addLayer({
             'id': 'terrain-data',
             'type': 'line',
-            'source': {
-                type: 'vector',
-                url: 'mapbox://mapbox.mapbox-terrain-v2'
-            },
+            'source': 'mapbox-terrain',
             'source-layer': 'contour',
             'layout': {
                 'line-join': 'round',

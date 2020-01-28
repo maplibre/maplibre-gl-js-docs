@@ -37,47 +37,49 @@
     });
 
     map.on('load', function() {
+        map.addSource('points', {
+            'type': 'geojson',
+            'data': {
+                'type': 'FeatureCollection',
+                'features': [
+                    {
+                        'type': 'Feature',
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [0, 0]
+                        },
+                        'properties': {
+                            'color': '255,0,0'
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [50, 0]
+                        },
+                        'properties': {
+                            'color': '255,209,28'
+                        }
+                    },
+                    {
+                        'type': 'Feature',
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-50, 0]
+                        },
+                        'properties': {
+                            'color': '242,127,32'
+                        }
+                    }
+                ]
+            }
+        });
+
         map.addLayer({
             'id': 'points',
             'type': 'symbol',
-            'source': {
-                'type': 'geojson',
-                'data': {
-                    'type': 'FeatureCollection',
-                    'features': [
-                        {
-                            'type': 'Feature',
-                            'geometry': {
-                                'type': 'Point',
-                                'coordinates': [0, 0]
-                            },
-                            'properties': {
-                                'color': '255,0,0'
-                            }
-                        },
-                        {
-                            'type': 'Feature',
-                            'geometry': {
-                                'type': 'Point',
-                                'coordinates': [50, 0]
-                            },
-                            'properties': {
-                                'color': '255,209,28'
-                            }
-                        },
-                        {
-                            'type': 'Feature',
-                            'geometry': {
-                                'type': 'Point',
-                                'coordinates': [-50, 0]
-                            },
-                            'properties': {
-                                'color': '242,127,32'
-                            }
-                        }
-                    ]
-                }
-            },
+            'source': 'points',
             'layout': {
                 'icon-image': ['concat', 'square-rgb-', ['get', 'color']]
             }

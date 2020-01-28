@@ -59,13 +59,14 @@
     });
 
     map.on('load', function() {
+        map.addSource('LineString', {
+            'type': 'geojson',
+            'data': geojson
+        });
         map.addLayer({
             'id': 'LineString',
             'type': 'line',
-            'source': {
-                'type': 'geojson',
-                'data': geojson
-            },
+            'source': 'LineString',
             'layout': {
                 'line-join': 'round',
                 'line-cap': 'round'

@@ -23,24 +23,25 @@
 
         map.addImage('gradient', { width: width, height: width, data: data });
 
+        map.addSource('point', {
+            'type': 'geojson',
+            'data': {
+                'type': 'FeatureCollection',
+                'features': [
+                    {
+                        'type': 'Feature',
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [0, 0]
+                        }
+                    }
+                ]
+            }
+        });
         map.addLayer({
             'id': 'points',
             'type': 'symbol',
-            'source': {
-                'type': 'geojson',
-                'data': {
-                    'type': 'FeatureCollection',
-                    'features': [
-                        {
-                            'type': 'Feature',
-                            'geometry': {
-                                'type': 'Point',
-                                'coordinates': [0, 0]
-                            }
-                        }
-                    ]
-                }
-            },
+            'source': 'point',
             'layout': {
                 'icon-image': 'gradient'
             }

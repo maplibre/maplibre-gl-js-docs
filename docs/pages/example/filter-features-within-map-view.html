@@ -157,12 +157,13 @@
     }
 
     map.on('load', function() {
+        map.addSource('airports', {
+            'type': 'vector',
+            'url': 'mapbox://mapbox.04w69w5j'
+        });
         map.addLayer({
             'id': 'airport',
-            'source': {
-                'type': 'vector',
-                'url': 'mapbox://mapbox.04w69w5j'
-            },
+            'source': 'airports',
             'source-layer': 'ne_10m_airports',
             'type': 'symbol',
             'layout': {

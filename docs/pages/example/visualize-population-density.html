@@ -8,14 +8,15 @@
     });
 
     map.on('load', function() {
+        map.addSource('rwanda-provinces', {
+            'type': 'geojson',
+            'data':
+                'https://docs.mapbox.com/mapbox-gl-js/assets/rwanda-provinces.geojson'
+        });
         map.addLayer({
             'id': 'rwanda-provinces',
             'type': 'fill',
-            'source': {
-                'type': 'geojson',
-                'data':
-                    'https://docs.mapbox.com/mapbox-gl-js/assets/rwanda-provinces.geojson'
-            },
+            'source': 'rwanda-provinces',
             'layout': {},
             'paint': {
                 'fill-color': [

@@ -18,10 +18,7 @@
                 // The two (blue) columns of pixels that can be stretched horizontally:
                 //   - the pixels between x: 25 and x: 55 can be stretched
                 //   - the pixels between x: 85 and x: 115 can be stretched.
-                stretchX: [
-                    [25, 55],
-                    [85, 115]
-                ],
+                stretchX: [[25, 55], [85, 115]],
                 // The one (red) row of pixels that can be stretched vertically:
                 //   - the pixels between y: 25 and y: 100 can be stretched
                 stretchY: [[25, 100]],
@@ -31,70 +28,68 @@
                 pixelRatio: 2
             });
             map.addImage('popup', loadedImages['popup'], {
-                stretchX: [
-                    [25, 55],
-                    [85, 115]
-                ],
+                stretchX: [[25, 55], [85, 115]],
                 stretchY: [[25, 100]],
                 content: [25, 25, 115, 100],
                 pixelRatio: 2
             });
 
+            map.addSource('points', {
+                'type': 'geojson',
+                'data': {
+                    'type': 'FeatureCollection',
+                    'features': [
+                        {
+                            'type': 'Feature',
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': [40, -30]
+                            },
+                            'properties': {
+                                'image-name': 'popup-debug',
+                                'name': 'Line 1\nLine 2\nLine 3'
+                            }
+                        },
+                        {
+                            'type': 'Feature',
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': [40, 30]
+                            },
+                            'properties': {
+                                'image-name': 'popup',
+                                'name': 'Line 1\nLine 2\nLine 3'
+                            }
+                        },
+                        {
+                            'type': 'Feature',
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': [-40, -30]
+                            },
+                            'properties': {
+                                'image-name': 'popup-debug',
+                                'name': 'One longer line'
+                            }
+                        },
+                        {
+                            'type': 'Feature',
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': [-40, 30]
+                            },
+                            'properties': {
+                                'image-name': 'popup',
+                                'name': 'One longer line'
+                            }
+                        }
+                    ]
+                }
+            });
             map.addLayer({
                 'id': 'points',
                 'type': 'symbol',
-                'source': {
-                    'type': 'geojson',
-                    'data': {
-                        'type': 'FeatureCollection',
-                        'features': [
-                            {
-                                'type': 'Feature',
-                                'geometry': {
-                                    'type': 'Point',
-                                    'coordinates': [40, -30]
-                                },
-                                'properties': {
-                                    'image-name': 'popup-debug',
-                                    'name': 'Line 1\nLine 2\nLine 3'
-                                }
-                            },
-                            {
-                                'type': 'Feature',
-                                'geometry': {
-                                    'type': 'Point',
-                                    'coordinates': [40, 30]
-                                },
-                                'properties': {
-                                    'image-name': 'popup',
-                                    'name': 'Line 1\nLine 2\nLine 3'
-                                }
-                            },
-                            {
-                                'type': 'Feature',
-                                'geometry': {
-                                    'type': 'Point',
-                                    'coordinates': [-40, -30]
-                                },
-                                'properties': {
-                                    'image-name': 'popup-debug',
-                                    'name': 'One longer line'
-                                }
-                            },
-                            {
-                                'type': 'Feature',
-                                'geometry': {
-                                    'type': 'Point',
-                                    'coordinates': [-40, 30]
-                                },
-                                'properties': {
-                                    'image-name': 'popup',
-                                    'name': 'One longer line'
-                                }
-                            }
-                        ]
-                    }
-                },
+                'source': 'points',
                 'layout': {
                     'text-field': ['get', 'name'],
                     'icon-text-fit': 'both',
@@ -105,24 +100,25 @@
             });
 
             // the original, unstretched image for comparison
+            map.addSource('original', {
+                'type': 'geojson',
+                'data': {
+                    'type': 'FeatureCollection',
+                    'features': [
+                        {
+                            'type': 'Feature',
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': [0, -70]
+                            }
+                        }
+                    ]
+                }
+            });
             map.addLayer({
                 'id': 'original',
                 'type': 'symbol',
-                'source': {
-                    'type': 'geojson',
-                    'data': {
-                        'type': 'FeatureCollection',
-                        'features': [
-                            {
-                                'type': 'Feature',
-                                'geometry': {
-                                    'type': 'Point',
-                                    'coordinates': [0, -70]
-                                }
-                            }
-                        ]
-                    }
-                },
+                'source': 'original',
                 'layout': {
                     'text-field': 'unstretched image',
                     'icon-image': 'popup-debug',
