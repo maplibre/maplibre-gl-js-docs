@@ -150,7 +150,7 @@
         var w = r * 2;
 
         var html =
-            '<svg width="' +
+            '<div><svg width="' +
             w +
             '" height="' +
             w +
@@ -184,7 +184,7 @@
             r +
             ')">' +
             total.toLocaleString() +
-            '</text></svg>';
+            '</text></svg></div>';
 
         var el = document.createElement('div');
         el.innerHTML = html;
