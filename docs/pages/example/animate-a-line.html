@@ -107,7 +107,7 @@
                 // append new coordinates to the lineString
                 geojson.features[0].geometry.coordinates.push([x, y]);
                 // then update the map
-                map.getSource('line-animation').setData(geojson);
+                map.getSource('line').setData(geojson);
             }
             // Request the next frame of the animation.
             animation = requestAnimationFrame(animateLine);
