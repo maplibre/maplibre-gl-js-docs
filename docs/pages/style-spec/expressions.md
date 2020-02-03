@@ -136,6 +136,20 @@ In most cases, this verification will occur automatically wherever it is needed.
 <!--copyeditor ignore perform-->
 Expressions perform only one kind of implicit type conversion: a data expression used in a context where a [color](#types-color) is expected will convert a string representation of a color to a color value. In all other cases, if you want to convert between types, you must use one of the _type conversion_ expression operators: [`to-boolean`](#types-to-boolean), [`to-number`](#types-to-number), [`to-string`](#types-to-string), or [`to-color`](#types-to-color). For example, if you have a feature property that stores numeric values in string format, and you want to use those values as numbers rather than strings, you can use an expression such as `["to-number", ["get", "property-name"]]`.
 
+If an expression accepts an array argument and the user supplies an array literal, that array _must_ be wrapped in a `literal` expression (see the examples below). When GL-JS encounters an array in a style-spec property value, it will assume that the array is an expression and try to parse it; the library has no way to distinguish between an expression which failed validation and an array literal unless the developer makes this distinction explicit with the `literal` operator. The `literal` operator is not necessary if the array is returned from a sub-expression, e.g. `["in", 1, ["get", "myArrayProp"]]`.
+
+```json
+// will throw an error
+{
+    "circle-color": ["in", 1, [1, 2, 3]]
+}
+
+// will work as expected
+{
+    "circle-color": ["in", 1, ["literal", [1, 2, 3]]]
+}
+```
+
 ## Expression reference
 
 ## Types

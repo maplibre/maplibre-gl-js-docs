@@ -85,10 +85,14 @@ A number value, often an integer or floating point (decimal number). Written wit
 
 ## Array
 
-Arrays are comma-separated lists of one or more numbers in a specific order. For example, they're used in line dash arrays, in which the numbers specify intervals of line, break, and line again.
+Arrays are comma-separated lists of one or more numbers in a specific order. For example, they're used in line dash arrays, in which the numbers specify intervals of line, break, and line again. If an array is used as an argument in an expression, the array must be wrapped in a `literal` expression.
 
 ```json
 {
     "line-dasharray": [2, 4]
+}
+
+{
+    "circle-color": ["in", 1, ["literal", [1, 2, 3]]]
 }
 ```
