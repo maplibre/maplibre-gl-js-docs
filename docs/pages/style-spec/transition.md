@@ -6,9 +6,10 @@ contentType: specification
 prependJs:
     - "import Items from '../../components/style-spec/items';"
     - "import ref from '../../../mapbox-gl-js/src/style-spec/reference/latest';"
+    - "import Icon from '@mapbox/mr-ui/icon';"
 ---
 
-A `transition` property controls timing for the interpolation between a transitionable style property's previous value and new value. A style's <a href="#root-transition" title="link to root-transition">root `transition`</a> property provides global transition defaults for that style. Any transitionable style property may also have its own `-transition` property that defines specific transition timing for that specific layer property, overriding the global `transition` values.
+A `transition` property controls timing for the interpolation between a transitionable style property's previous value and new value. A style's <a href="#root-transition" title="link to root-transition">root `transition`</a> property provides global transition defaults for that style. 
 
 ```json
 "transition": {{JSON.stringify(
@@ -17,7 +18,18 @@ A `transition` property controls timing for the interpolation between a transiti
     2
 )}}
 ```
+Any transitionable layer property, marked by {{<Icon
+        name="opacity"
+        inline={true}
+    />}}, may also have its own `*-transition` property that defines specific transition timing for that layer property, overriding the global `transition` values.
 
+```json
+"fill-opacity-transition": {{JSON.stringify(
+    ref.$root.transition.example,
+    null,
+    2
+)}}
+```
 <!--
 START GENERATED CONTENT:
 Content in this section is generated directly using the Mapbox Style
