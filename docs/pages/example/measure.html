@@ -21,7 +21,7 @@
 <div id="map"></div>
 <div id="distance" class="distance-container"></div>
 
-<script src="https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js"></script>
+<script src="https://npmcdn.com/@turf/turf@5.1.6/turf.min.js"></script>
 <script>
     var map = new mapboxgl.Map({
         container: 'map',
@@ -125,7 +125,7 @@
                 var value = document.createElement('pre');
                 value.textContent =
                     'Total distance: ' +
-                    turf.lineDistance(linestring).toLocaleString() +
+                    turf.length(linestring).toLocaleString() +
                     'km';
                 distanceContainer.appendChild(value);
             }
