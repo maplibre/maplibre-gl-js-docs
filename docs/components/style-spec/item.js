@@ -227,14 +227,30 @@ export default class Item extends React.Component {
                         </React.Fragment>
                     )}
 
-                    {this.props.function === 'interpolated' && (
+                    {this.props.expression && 
+                        (this.props.expression.interpolated || 
+                            this.props.expression.parameters.includes('feature-state')) && (
                         <React.Fragment>
                             Supports{' '}
-                            <a href="/mapbox-gl-js/style-spec/expressions/#interpolate">
+                            {this.props.expression.parameters.includes('feature-state') && (
+                                <em className="color-gray">
+                                    <a href="/mapbox-gl-js/style-spec/expressions/#feature-state">
+                                        <Icon name="combine" inline={true} />
+                                        <code>feature-state</code>
+                                    </a>
+                                </em>
+                            )}
+                            {this.props.expression.interpolated && 
+                             this.props.expression.parameters.includes('feature-state') && (
+                                ' and '
+                             )}
+                             {this.props.expression.interpolated && (
+                                <a href="/mapbox-gl-js/style-spec/expressions/#interpolate">
                                 <Icon name="smooth-ramp" inline={true} />
                                 <code>interpolate</code>
-                            </a>{' '}
-                            expressions.{' '}
+                            </a> 
+                             )}
+                            expressions. {' '}
                         </React.Fragment>
                     )}
 
@@ -316,5 +332,6 @@ Item.propTypes = {
     ]),
     'sdk-support': PropTypes.object,
     units: PropTypes.string,
-    headingLevel: PropTypes.oneOf(['2', '3'])
+    headingLevel: PropTypes.oneOf(['2', '3']),
+    expression: PropTypes.object
 };
