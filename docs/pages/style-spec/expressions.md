@@ -150,7 +150,10 @@ If an expression accepts an array argument and the user supplies an array litera
 }
 ```
 
-## Expression reference
+# Expression reference
+
+<!-- This h1 is an exception as the following headings need to be an h2 for scrollspy to work on the sidebar. See site.css for override styles for these headings. -->
+
 
 ## Types
 
