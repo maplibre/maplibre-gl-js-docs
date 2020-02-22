@@ -3,7 +3,8 @@
 <script>
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11'
+        style: 'mapbox://styles/mapbox/streets-v11',
+        zoom: 0.1
     });
 
     var images = {
@@ -18,7 +19,10 @@
                 // The two (blue) columns of pixels that can be stretched horizontally:
                 //   - the pixels between x: 25 and x: 55 can be stretched
                 //   - the pixels between x: 85 and x: 115 can be stretched.
-                stretchX: [[25, 55], [85, 115]],
+                stretchX: [
+                    [25, 55],
+                    [85, 115]
+                ],
                 // The one (red) row of pixels that can be stretched vertically:
                 //   - the pixels between y: 25 and y: 100 can be stretched
                 stretchY: [[25, 100]],
@@ -28,7 +32,10 @@
                 pixelRatio: 2
             });
             map.addImage('popup', loadedImages['popup'], {
-                stretchX: [[25, 55], [85, 115]],
+                stretchX: [
+                    [25, 55],
+                    [85, 115]
+                ],
                 stretchY: [[25, 100]],
                 content: [25, 25, 115, 100],
                 pixelRatio: 2
