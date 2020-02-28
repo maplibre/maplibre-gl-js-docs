@@ -33,6 +33,7 @@
         border-radius: 3px;
         padding: 10px;
         margin: 0;
+        box-sizing: border-box;
     }
 
     .map-overlay .listing {
@@ -96,6 +97,7 @@
     var listingEl = document.getElementById('feature-listing');
 
     function renderListings(features) {
+        var empty = document.createElement('p');
         // Clear any existing listings
         listingEl.innerHTML = '';
         if (features.length) {
@@ -122,8 +124,10 @@
 
             // Show the filter input
             filterEl.parentNode.style.display = 'block';
+        } else if (features.length === 0 && filterEl.value !== '') {
+            empty.textContent = 'No results found';
+            listingEl.appendChild(empty);
         } else {
-            var empty = document.createElement('p');
             empty.textContent = 'Drag the map to populate results';
             listingEl.appendChild(empty);
 
@@ -226,15 +230,17 @@
             renderListings(filtered);
 
             // Set the filter to populate features into the layer.
-            map.setFilter('airport', [
-                'match',
-                ['get', 'abbrev'],
-                filtered.map(function(feature) {
-                    return feature.properties.abbrev;
-                }),
-                true,
-                false
-            ]);
+            if (filtered.length) {
+                map.setFilter('airport', [
+                    'match',
+                    ['get', 'abbrev'],
+                    filtered.map(function(feature) {
+                        return feature.properties.abbrev;
+                    }),
+                    true,
+                    false
+                ]);
+            }
         });
 
         // Call this function on initialization
