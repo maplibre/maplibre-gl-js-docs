@@ -82,6 +82,24 @@ export default class Item extends React.Component {
                         </a>
                     </span>
                 );
+            case 'layout':
+                return (
+                    <span>
+                        {' '}
+                        <a href="/mapbox-gl-js/style-spec/layers/#layout-property">
+                            layout
+                        </a>
+                    </span>
+                );
+            case 'paint':
+                return (
+                    <span>
+                        {' '}
+                        <a href="/mapbox-gl-js/style-spec/layers/#paint-property">
+                            paint
+                        </a>
+                    </span>
+                );
             default:
                 return (
                     <span>
@@ -227,32 +245,43 @@ export default class Item extends React.Component {
                         </React.Fragment>
                     )}
 
-                    {this.props.expression && 
-                        (this.props.expression.interpolated || 
-                            this.props.expression.parameters.includes('feature-state')) && (
-                        <React.Fragment>
-                            Supports{' '}
-                            {this.props.expression.parameters.includes('feature-state') && (
-                                <em className="color-gray">
-                                    <a href="/mapbox-gl-js/style-spec/expressions/#feature-state">
-                                        <Icon name="combine" inline={true} />
-                                        <code>feature-state</code>
+                    {this.props.expression &&
+                        (this.props.expression.interpolated ||
+                            this.props.expression.parameters.includes(
+                                'feature-state'
+                            )) && (
+                            <React.Fragment>
+                                Supports{' '}
+                                {this.props.expression.parameters.includes(
+                                    'feature-state'
+                                ) && (
+                                    <em className="color-gray">
+                                        <a href="/mapbox-gl-js/style-spec/expressions/#feature-state">
+                                            <Icon
+                                                name="combine"
+                                                inline={true}
+                                            />
+                                            <code>feature-state</code>
+                                        </a>
+                                    </em>
+                                )}
+                                {this.props.expression.interpolated &&
+                                    this.props.expression.parameters.includes(
+                                        'feature-state'
+                                    ) &&
+                                    ' and '}
+                                {this.props.expression.interpolated && (
+                                    <a href="/mapbox-gl-js/style-spec/expressions/#interpolate">
+                                        <Icon
+                                            name="smooth-ramp"
+                                            inline={true}
+                                        />
+                                        <code>interpolate</code>
                                     </a>
-                                </em>
-                            )}
-                            {this.props.expression.interpolated && 
-                             this.props.expression.parameters.includes('feature-state') && (
-                                ' and '
-                             )}
-                             {this.props.expression.interpolated && (
-                                <a href="/mapbox-gl-js/style-spec/expressions/#interpolate">
-                                <Icon name="smooth-ramp" inline={true} />
-                                <code>interpolate</code>
-                            </a> 
-                             )}
-                            expressions. {' '}
-                        </React.Fragment>
-                    )}
+                                )}
+                                expressions.{' '}
+                            </React.Fragment>
+                        )}
 
                     {this.props.transition && (
                         <React.Fragment>
