@@ -18,7 +18,8 @@ const pageAllowList = [
     'layout',
     'types',
     'expressions',
-    'other'
+    'other',
+    'paint'
 ];
 
 function redirect(location) {
@@ -38,6 +39,13 @@ function redirect(location) {
     // keep #other-filter as is
     if (location.hash === '#other-filter') {
         return `/mapbox-gl-js/style-spec/other/#other-filter`;
+    }
+    // preserve hashes for #paint-* and #layout-* and send to "layers" page
+    if (
+        location.hash.split('-')[0] === '#paint' ||
+        location.hash.split('-')[0] === '#layout'
+    ) {
+        return `/mapbox-gl-js/style-spec/layers/${location.hash}`;
     }
     // split the hash by dashes
     const hash = location.hash.split('-');

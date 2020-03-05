@@ -74,7 +74,7 @@ test(`style-spec-redirect`, t => {
         redirect({
             hash: '#layout-background-visibility'
         }),
-        '/mapbox-gl-js/style-spec/layers/#background-visibility'
+        '/mapbox-gl-js/style-spec/layers/#layout-background-visibility'
     );
 
     t.equal(
@@ -110,6 +110,13 @@ test(`style-spec-redirect`, t => {
             hash: '#other-filter'
         }),
         '/mapbox-gl-js/style-spec/other/#other-filter'
+    );
+
+    t.equal(
+        redirect({
+            hash: '#paint-fill-fill-color'
+        }),
+        '/mapbox-gl-js/style-spec/layers/#paint-fill-fill-color'
     );
 
     t.equal(
