@@ -8,7 +8,7 @@ class MarkdownPageshell extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            userName: undefined
+            user: undefined
         };
     }
 
@@ -16,9 +16,7 @@ class MarkdownPageshell extends React.Component {
         MapboxPageShell.afterUserCheck(() => {
             // fetches username so we can identify them in segment
             this.setState({
-                userName: MapboxPageShell.getUser()
-                    ? MapboxPageShell.getUser().id
-                    : undefined
+                user: MapboxPageShell.getUser() || undefined
             });
         });
     }
@@ -39,7 +37,7 @@ class MarkdownPageshell extends React.Component {
                     <Feedback
                         site="Mapbox GL JS"
                         location={this.props.location}
-                        userName={this.state.userName}
+                        user={this.state.user}
                         webhook={constants.FORWARD_EVENT_WEBHOOK}
                     />
                 </div>

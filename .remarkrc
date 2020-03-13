@@ -3,11 +3,26 @@
     ["@mapbox/remark-lint-link-text", [2]],
     ["remark-frontmatter", ["yaml"]],
     ["@mapbox/remark-lint-mapbox/frontmatter", [2]],
-    ["@mapbox/remark-lint-mapbox/link-checker", {
+    ["@mapbox/remark-lint-mapbox/link-checker/skip-internal", [1, {
       "constants": "docs/constants.json",
       "pages": "docs/pages/",
       "siteBasePath": "mapbox-gl-js",
       "siteOrigin": "https://docs.mapbox.com"
-      }, [2]]
+    }]],
+    ["@mapbox/remark-lint-mapbox/link-checker/skip-external", [2, {
+      "constants": "docs/constants.json",
+      "pages": "docs/pages/",
+      "siteBasePath": "mapbox-gl-js",
+      "siteOrigin": "https://docs.mapbox.com"
+    }]],
+    [
+      "@mapbox/remark-lint-mapbox/constantly",
+      [
+        2,
+        {
+          "constants": "docs/constants.json"
+        }
+      ]
+    ]
   ]
 }

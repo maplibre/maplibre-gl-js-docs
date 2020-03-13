@@ -21,16 +21,14 @@ class ApiItem extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            userName: undefined
+            user: undefined
         };
     }
 
     componentDidMount() {
         MapboxPageShell.afterUserCheck(() => {
             this.setState({
-                userName: MapboxPageShell.getUser()
-                    ? MapboxPageShell.getUser().id
-                    : undefined
+                user: MapboxPageShell.getUser() || undefined
             });
         });
     }
@@ -381,7 +379,7 @@ class ApiItem extends React.Component {
                         section={section.name}
                         type={`section on ${section.name}`}
                         location={this.props.location}
-                        userName={this.state.userName}
+                        user={this.state.user}
                         webhook={constants.FORWARD_EVENT_WEBHOOK}
                     />
                 </div>

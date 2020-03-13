@@ -1,7 +1,5 @@
 import entries from 'object.entries';
-import React from 'react';
 import slug from 'slugg';
-import Icon from '@mapbox/mr-ui/icon';
 import ref from '../../mapbox-gl-js/src/style-spec/reference/latest';
 import { layerTypes, groupedExpressions } from './types';
 
@@ -37,16 +35,8 @@ function makeSubNav(entry, section) {
                 const icon =
                     section && sectionName ? icons[sectionName] : undefined;
                 arr.push({
-                    title: (
-                        <React.Fragment>
-                            {icon && (
-                                <span className="mr6 ml-neg12 w18 h18 align-middle inline-block bg-gray-faint round-full">
-                                    <Icon size={16} name={icon} />
-                                </span>
-                            )}
-                            {name}
-                        </React.Fragment>
-                    ),
+                    title: name,
+                    icon: icon || undefined,
                     name: name,
                     path: `${section ? `${section}-` : ''}${name}`
                 });

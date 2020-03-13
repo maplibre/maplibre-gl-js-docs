@@ -100,7 +100,7 @@ class TableOfContentsItem extends React.Component {
 class ApiNavigation extends React.Component {
     render() {
         return (
-            <div className="ml36">
+            <div className="mx24">
                 <ul
                     id="toc"
                     className="list-reset mb3 py1-ul"

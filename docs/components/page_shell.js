@@ -74,6 +74,7 @@ class PageShell extends React.Component {
                     thirdLevelItems: subNavItem.subnav
                         ? subNavItem.subnav.map(subSubNavItem => ({
                               title: subSubNavItem.title,
+                              icon: subSubNavItem.icon || undefined,
                               path:
                                   subSubNavItem.path ||
                                   `${section.path}-${subNavItem.title}-${subSubNavItem.title}`
@@ -117,7 +118,8 @@ class PageShell extends React.Component {
                 return {
                     title: data[topic],
                     url: `/mapbox-gl-js/examples/#${topic}`,
-                    items: subNavItems
+                    items: subNavItems,
+                    id: topic
                 };
             })
             .filter(topic => topic.items.length > 0);
@@ -163,12 +165,7 @@ class PageShell extends React.Component {
             activeTab.charAt(0).toUpperCase() +
             activeTab.substr(1).toLowerCase();
         const sidebarContent = (
-            <div className="ml36 mr12">
-                <SectionedNavigation
-                    sections={sections}
-                    includeFilterBar={true}
-                />
-            </div>
+            <SectionedNavigation sections={sections} includeFilterBar={true} />
         );
         return {
             contentType,
@@ -297,11 +294,7 @@ class PageShell extends React.Component {
                 </TopbarSticker>
                 <div className="limiter">
                     <PageLayout
-                        sidebarTitle={
-                            <div className="ml36">
-                                {sidebarProps.contentType}
-                            </div>
-                        }
+                        sidebarTitle={sidebarProps.contentType}
                         sidebarContent={sidebarProps.sidebarContent}
                         sidebarContentStickyTop={60}
                         sidebarContentStickyTopNarrow={0}

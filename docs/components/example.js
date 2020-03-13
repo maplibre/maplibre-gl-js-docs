@@ -10,7 +10,7 @@ export default function(html) {
         constructor(props) {
             super(props);
             this.state = {
-                userName: undefined
+                user: undefined
             };
         }
 
@@ -40,7 +40,7 @@ export default function(html) {
                             site="Mapbox GL JS"
                             type="example"
                             location={this.props.location}
-                            userName={this.state.userName}
+                            user={this.state.user}
                             webhook={constants.FORWARD_EVENT_WEBHOOK}
                         />
                     </div>
@@ -51,9 +51,7 @@ export default function(html) {
         componentDidMount() {
             MapboxPageShell.afterUserCheck(() => {
                 this.setState({
-                    userName: MapboxPageShell.getUser()
-                        ? MapboxPageShell.getUser().id
-                        : undefined
+                    user: MapboxPageShell.getUser() || undefined
                 });
             });
         }
