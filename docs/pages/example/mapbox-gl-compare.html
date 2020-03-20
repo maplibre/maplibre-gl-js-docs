@@ -24,9 +24,10 @@
     href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.css"
     type="text/css"
 />
-
-<div id="before" class="map"></div>
-<div id="after" class="map"></div>
+<div id="comparison-container">
+    <div id="before" class="map"></div>
+    <div id="after" class="map"></div>
+</div>
 <script>
     var beforeMap = new mapboxgl.Map({
         container: 'before',
@@ -42,7 +43,10 @@
         zoom: 0
     });
 
-    var map = new mapboxgl.Compare(beforeMap, afterMap, {
+    // A selector or reference to HTML element
+    var container = '#comparison-container';
+
+    var map = new mapboxgl.Compare(beforeMap, afterMap, container, {
         // Set this to enable comparing two maps by mouse movement:
         // mousemove: true
     });
