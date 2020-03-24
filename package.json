@@ -64,10 +64,11 @@
   "scripts": {
     "lint": "eslint --ext .html docs/pages/example --ext .js .",
     "lint-md": "remark docs/pages/",
+    "install-gl-js-deps": "cd mapbox-gl-js/ && npm install --ignore-scripts --no-package-lock --no-audit --loglevel=error",
     "install-spec-deps": "cd mapbox-gl-js/src/style-spec && npm install --ignore-scripts --no-package-lock --no-audit --loglevel=error",
     "build-api": "documentation build --github --format json --config ./docs/documentation.yml --output docs/components/api.json mapbox-gl-js/src/index.js",
     "build-images": "mkdir -p docs/img/dist && node docs/bin/build-image-config.js && node docs/bin/appropriate-images.js --all",
-    "build-docs": "run-s install-spec-deps build-api build-images",
+    "build-docs": "run-s install-spec-deps install-gl-js-deps build-api build-images",
     "prebuild": "npm run build-docs",
     "prestart": "npm run build-docs",
     "build": "batfish build",

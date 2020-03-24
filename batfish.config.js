@@ -83,7 +83,8 @@ module.exports = () => {
             }
         },
         devBrowserslist: false,
-        babelInclude: ['documentation']
+        babelInclude: ['documentation'],
+        webpackStaticIgnore: [/util\/util\.js$/]
     };
 
     // Local builds treat the `dist` directory as static assets, allowing you to test examples against the
