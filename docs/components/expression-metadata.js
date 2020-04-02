@@ -230,6 +230,12 @@ const types = {
             parameters: ['previously bound variable name']
         }
     ],
+    within: [
+        {
+            type: 'boolean',
+            parameters: ['object']
+        }
+    ],
     collator: [
         {
             type: 'collator',
