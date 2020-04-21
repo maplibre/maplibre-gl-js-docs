@@ -56,6 +56,7 @@ ${html.replace(
 <meta charset=utf-8 />
 <title>${this.props.frontMatter.title}</title>
 ${viewport}
+<script src='https://js.sentry-cdn.com/b4e18cb1943f46289f67ca6a771bd341.min.js' crossorigin="anonymous"></script>
 <script src='${urls.js({ local: true })}'></script>
 <link href='${urls.css({ local: true })}' rel='stylesheet' />
 <style>
