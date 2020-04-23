@@ -54,6 +54,7 @@
     });
 
     map.on('load', function() {
+        // add source and layer for museums
         map.addSource('museums', {
             type: 'vector',
             url: 'mapbox://mapbox.2opop9hr'
@@ -63,6 +64,7 @@
             'type': 'circle',
             'source': 'museums',
             'layout': {
+                // make layer visible by default
                 'visibility': 'visible'
             },
             'paint': {
@@ -72,6 +74,7 @@
             'source-layer': 'museum-cusco'
         });
 
+        // add source and layer for contours
         map.addSource('contours', {
             type: 'vector',
             url: 'mapbox://mapbox.mapbox-terrain-v2'
@@ -82,6 +85,7 @@
             'source': 'contours',
             'source-layer': 'contour',
             'layout': {
+                // make layer visible by default
                 'visibility': 'visible',
                 'line-join': 'round',
                 'line-cap': 'round'
@@ -93,8 +97,10 @@
         });
     });
 
+    // enumerate ids of the layers
     var toggleableLayerIds = ['contours', 'museums'];
 
+    // set up the corresponding toggle button for each layer
     for (var i = 0; i < toggleableLayerIds.length; i++) {
         var id = toggleableLayerIds[i];
 
@@ -110,6 +116,7 @@
 
             var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
 
+            // toggle layer visibility by changing the layout object's visibility property
             if (visibility === 'visible') {
                 map.setLayoutProperty(clickedLayer, 'visibility', 'none');
                 this.className = '';
