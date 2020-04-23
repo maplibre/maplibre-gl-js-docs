@@ -43,5 +43,4 @@ const groupedExpressions = [
         .map(name => expressions[name])
 }));
 
-
 export { sourceTypes, layerTypes, groupedExpressions };

@@ -65,12 +65,12 @@ pre + .style-spec-property {
 
 /* override "Expression" page headings: "# Expression reference" and "## Types" */
 .style-spec-page .section-h2 #types {
-  border-top: 0 !important;
-  margin-top: -30px !important;
+    border-top: 0 !important;
+    margin-top: -30px !important;
 }
 .style-spec-page #expression-reference {
-  margin-bottom: 0 !important;
-  margin-top: 30px !important;
+    margin-bottom: 0 !important;
+    margin-top: 30px !important;
 }
 
 /* turn off bolding on scroll-spy, since we cannot get it to highlight reliably across pages */

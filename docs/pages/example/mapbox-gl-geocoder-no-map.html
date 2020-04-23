@@ -8,36 +8,22 @@
 <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
 <style>
-    .geocoder {
-        position: absolute;
+    #geocoder {
         z-index: 1;
-        width: 50%;
-        left: 50%;
-        margin-left: -25%;
-        top: 10px;
+        width: 100%;
+        text-align: center;
+        top: 20px;
     }
     .mapboxgl-ctrl-geocoder {
         min-width: 100%;
     }
-    #map {
-        margin-top: 75px;
-    }
 </style>
-<div id="map"></div>
-<div id="geocoder" class="geocoder"></div>
-
+<div id="geocoder"></div>
 <script>
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [-79.4512, 43.6568],
-        zoom: 13
-    });
-
     var geocoder = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl
+        types: 'country,region,place,postcode,locality,neighborhood'
     });
 
-    document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+    geocoder.addTo('#geocoder');
 </script>
