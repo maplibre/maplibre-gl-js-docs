@@ -70,6 +70,10 @@
     "L7": {
       "website": "https://github.com/antvis/L7",
       "description": "Adds large-scale WebGL-powered geospatial data visualization framework to Mapbox GL JS."
+    },
+    "flowmap.blue": {
+      "website": "https://github.com/ilyabo/flowmap.blue",
+      "description": "Render a geographic flow map visualization from a spreadsheet published on Google Sheets."
     }
   },
   "Framework Integrations": {
