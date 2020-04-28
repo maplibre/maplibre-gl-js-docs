@@ -25,8 +25,7 @@ test(`Is latest version`, t => {
             res,
             `Mapbox GL JS submodule is not pinned to the latest stable release version.
              Latest: ${tags[0]}. Currently checked out: ${tags[1]}.
-             Check out the most recent with:
-             "git checkout tags/${tags[0]}"`
+            To proceed, pull the latest from publisher-production and merge with "git merge publisher-production" from the feature branch. Or, notify @mapbox/docs.`
         );
         t.end();
     });
