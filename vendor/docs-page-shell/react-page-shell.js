@@ -326,6 +326,28 @@ var nonMobile = {
 			}
 		]
 	},
+	vision: {
+		title: "Vision",
+		sdks: {
+			title: "Vision SDKs",
+			links: [
+				{
+					name: "for iOS",
+					to: "https://docs.mapbox.com/ios/vision/overview/"
+				},
+				{
+					name: "for Android",
+					to: "https://docs.mapbox.com/android/vision/overview/"
+				}
+			]
+		},
+		links: [
+			{
+				name: "Traffic signs",
+				to: "https://docs.mapbox.com/traffic-signs/overview/"
+			}
+		]
+	},
 	help: {
 		title: "Help",
 		links: [
@@ -412,6 +434,23 @@ var mobile = {
 			}
 		]
 	},
+	vision: {
+		title: "Vision",
+		links: [
+			{
+				name: "SDK for iOS",
+				to: "https://docs.mapbox.com/ios/vision/overview/"
+			},
+			{
+				name: "SDK for Android",
+				to: "https://docs.mapbox.com/android/vision/overview/"
+			},
+			{
+				name: "Traffic signs",
+				to: "https://docs.mapbox.com/traffic-signs/overview/"
+			}
+		]
+	},
 	help: {
 		title: "Help",
 		links: [
@@ -442,12 +481,28 @@ var navigationMenuData = {
 	mobile: mobile
 };
 
+function BetaTag() {
+  return React.createElement("div", {
+    className: "shell-beta-tag shell-ml6 shell-inline-block shell-txt-bold",
+    style: {
+      background: '#f1f3fd',
+      color: '#0c248d',
+      border: '1px solid #0428c8',
+      paddingLeft: 6,
+      paddingRight: 6,
+      borderRadius: 4,
+      fontSize: 10,
+      lineHeight: 1.5
+    }
+  }, "Beta");
+}
+
 function LinkList(props) {
   var title = props.title,
       links = props.links,
       bullets = props.bullets;
   var navigationHeading = !title ? null : React.createElement("div", {
-    className: "".concat(shellStyles.popupMenuNavHeading, " shell-mb12")
+    className: "inline-block ".concat(shellStyles.popupMenuNavHeading, " shell-mb12")
   }, title);
   var ulClasses = bullets ? 'shell-txt-ul shell-ml24' : '';
   var linkListItems = React.createElement("ul", {
@@ -464,7 +519,7 @@ function LinkList(props) {
       className: shellStyles.popupMenuLink
     }, link.name));
   }));
-  return React.createElement("div", null, navigationHeading, linkListItems);
+  return React.createElement("div", null, React.createElement("div", null, navigationHeading, props.beta && React.createElement(BetaTag, null)), linkListItems);
 }
 
 LinkList.propTypes = {
@@ -473,7 +528,8 @@ LinkList.propTypes = {
     to: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired
   })).isRequired,
-  bullets: PropTypes.bool
+  bullets: PropTypes.bool,
+  beta: PropTypes.bool
 };
 LinkList.defaultProps = {
   bullets: false
@@ -531,6 +587,34 @@ function MapsMenu(props) {
   }, standardLinkEls))));
 }
 MapsMenu.propTypes = {
+  title: PropTypes.string
+};
+
+function VisionMenu(props) {
+  var menuData = navigationMenuData.nonMobile.vision;
+  var standardLinks = menuData.links;
+  var sdkEls = React.createElement(LinkList, {
+    title: menuData.sdks.title,
+    links: menuData.sdks.links,
+    bullets: true,
+    beta: true
+  });
+  var standardLinkEls = React.createElement(LinkList, {
+    links: standardLinks
+  });
+  return React.createElement(PopupMenu, _extends({}, props, {
+    name: props.title
+  }), React.createElement("div", {
+    className: "shell-py30 shell-px30 w360"
+  }, React.createElement("div", {
+    className: "shell-grid shell-grid--gut24"
+  }, React.createElement("div", {
+    className: "shell-col shell-col--6"
+  }, sdkEls), React.createElement("div", {
+    className: "shell-col shell-col--6"
+  }, standardLinkEls))));
+}
+VisionMenu.propTypes = {
   title: PropTypes.string
 };
 
@@ -620,7 +704,7 @@ function MobileLinkList(props) {
   var title = props.title,
       links = props.links;
   var navigationHeading = !title ? null : React.createElement("div", {
-    className: "".concat(shellStyles.popupMenuNavHeading)
+    className: "inline-block ".concat(shellStyles.popupMenuNavHeading)
   }, title);
   var ulClasses = 'shell-txt-s shell-grid shell-grid--gut12';
   if (navigationHeading) ulClasses += ' shell-mb6';
@@ -636,11 +720,12 @@ function MobileLinkList(props) {
       className: "shell-color-gray-dark"
     }, link.name));
   }));
-  return React.createElement("div", null, navigationHeading, linkListItems);
+  return React.createElement("div", null, React.createElement("div", null, navigationHeading, props.beta ? React.createElement(BetaTag, null) : ''), linkListItems);
 }
 
 MobileLinkList.propTypes = {
   title: PropTypes.string,
+  beta: PropTypes.bool,
   links: PropTypes.arrayOf(PropTypes.shape({
     to: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired
@@ -694,6 +779,12 @@ function MobileNavigation() {
     links: navigationMenuData.mobile.search.links
   })), React.createElement("div", {
     className: "shell-mt24"
+  }, navigationMenuData.mobile.vision && React.createElement(MobileLinkList, {
+    beta: true,
+    title: navigationMenuData.mobile.vision.title,
+    links: navigationMenuData.mobile.vision.links
+  })), React.createElement("div", {
+    className: "shell-mt24"
   }, navigationMenuData.mobile.help && React.createElement(MobileLinkList, {
     title: navigationMenuData.mobile.help.title,
     links: navigationMenuData.mobile.help.links
@@ -718,6 +809,8 @@ function Logo(props) {
 
   if (mini) {
     logoStyles.width = 30;
+    logoStyles.height = 42;
+    logoStyles.backgroundSize = '132px 42px';
   }
 
   var border = null;
@@ -802,6 +895,9 @@ function PageHeader(props) {
   }), navigationMenuData.nonMobile.search && React.createElement(SearchMenu, {
     title: navigationMenuData.nonMobile.search.title,
     darkText: props.darkText
+  }), navigationMenuData.nonMobile.vision && React.createElement(VisionMenu, {
+    title: navigationMenuData.nonMobile.vision.title,
+    darkText: props.darkText
   }), React.createElement(NavigationItem, {
     href: ORIGIN_DOCS_PRODUCTION,
     darkText: props.darkText,
@@ -876,20 +972,20 @@ function FooterSocialMediaStrip(props) {
     className: props.className
   }, React.createElement("a", {
     "aria-label": "Github",
-    className: "shell-color-blue shell-color-blue-dark-on-hover",
+    className: "shell-color-blue shell-color-blue-dark-on-hover shell-inline-block shell-w36",
     href: "https://github.com/mapbox"
   }, React.createElement("svg", {
     viewBox: "0 0 1790 1790",
-    className: "shell-mr18 shell-icon shell-icon--s shell-inline"
+    className: "shell-icon shell-icon--s shell-inline"
   }, React.createElement("path", {
     d: "M704 1216q0 40-12.5 82t-43 76-72.5 34-72.5-34-43-76-12.5-82 12.5-82 43-76 72.5-34 72.5 34 43 76 12.5 82zm640 0q0 40-12.5 82t-43 76-72.5 34-72.5-34-43-76-12.5-82 12.5-82 43-76 72.5-34 72.5 34 43 76 12.5 82zm160 0q0-120-69-204t-187-84q-41 0-195 21-71 11-157 11t-157-11q-152-21-195-21-118 0-187 84t-69 204q0 88 32 153.5t81 103 122 60 140 29.5 149 7h168q82 0 149-7t140-29.5 122-60 81-103 32-153.5zm224-176q0 207-61 331-38 77-105.5 133t-141 86-170 47.5-171.5 22-167 4.5q-78 0-142-3t-147.5-12.5-152.5-30-137-51.5-121-81-86-115q-62-123-62-331 0-237 136-396-27-82-27-170 0-116 51-218 108 0 190 39.5t189 123.5q147-35 309-35 148 0 280 32 105-82 187-121t189-39q51 102 51 218 0 87-27 168 136 160 136 398z"
   }))), React.createElement("a", {
     "aria-label": "Twitter",
-    className: "shell-color-blue shell-color-blue-dark-on-hover ",
+    className: "shell-color-blue shell-color-blue-dark-on-hover shell-inline-block shell-w36",
     href: "https://twitter.com/mapbox/"
   }, React.createElement("svg", {
     viewBox: "0 0 50 50",
-    className: "shell-mr18 shell-icon shell-icon--s shell-inline"
+    className: "shell-icon shell-icon--s shell-inline"
   }, React.createElement("g", {
     id: "77744030-a5d8-4d71-88ad-2c70d4dcad7b",
     "data-name": "svg"
@@ -897,32 +993,24 @@ function FooterSocialMediaStrip(props) {
     d: "M15.72,45.31c18.87,0,29.19-15.63,29.19-29.19,0-.44,0-.89,0-1.33A20.87,20.87,0,0,0,50,9.49a20.48,20.48,0,0,1-5.89,1.61,10.29,10.29,0,0,0,4.51-5.67A20.56,20.56,0,0,1,42.1,7.92a10.27,10.27,0,0,0-17.48,9.36A29.12,29.12,0,0,1,3.48,6.56,10.27,10.27,0,0,0,6.66,20.25,10.18,10.18,0,0,1,2,19v.13a10.26,10.26,0,0,0,8.23,10.06,10.24,10.24,0,0,1-4.63.18,10.27,10.27,0,0,0,9.58,7.12,20.58,20.58,0,0,1-12.74,4.4A20.88,20.88,0,0,1,0,40.71a29,29,0,0,0,15.72,4.6"
   })))), React.createElement("a", {
     "aria-label": "LinkedIn",
-    className: "shell-color-blue shell-color-blue-dark-on-hover",
+    className: "shell-color-blue shell-color-blue-dark-on-hover shell-inline-block shell-w36",
     href: "https://www.linkedin.com/company/mapbox"
   }, React.createElement("svg", {
-    viewBox: "0 0 50 50",
-    className: "shell-mr18 shell-icon shell-icon--s shell-inline"
-  }, React.createElement("g", {
-    id: "875e301f-501b-48d2-a663-a3a855ad9d70",
-    "data-name": "svg"
-  }, React.createElement("rect", {
-    x: "1.32",
-    y: "13.16",
-    width: "10.53",
-    height: "36.84"
+    viewBox: "0 0 24 24",
+    className: "shell-icon shell-icon--s shell-inline"
+  }, React.createElement("path", {
+    d: "M5.68801 6.31665H0.633606V23.9998H5.68801V6.31665Z"
   }), React.createElement("path", {
-    d: "M36.84,13.16c-7.34,0-8.61,2.68-9.21,5.26V13.16H17.11V50H27.63V28.95c0-3.41,1.85-5.26,5.26-5.26s5.26,1.81,5.26,5.26V50H48.68V31.58C48.68,21.05,47.31,13.16,36.84,13.16Z"
-  }), React.createElement("circle", {
-    cx: "6.58",
-    cy: "5.26",
-    r: "5.26"
-  })))), React.createElement("a", {
+    d: "M17.6832 6.31665C14.16 6.31665 13.5504 7.60305 13.2624 8.84145V6.31665H8.21277V23.9998H13.2624V13.8959C13.2624 12.2591 14.1504 11.3711 15.7872 11.3711C17.424 11.3711 18.312 12.2399 18.312 13.8959V23.9998H23.3664V15.1582C23.3664 10.1039 22.7088 6.31665 17.6832 6.31665Z"
+  }), React.createElement("path", {
+    d: "M3.15841 5.0496C4.55281 5.0496 5.68321 3.91921 5.68321 2.5248C5.68321 1.13039 4.55281 0 3.15841 0C1.764 0 0.633606 1.13039 0.633606 2.5248C0.633606 3.91921 1.764 5.0496 3.15841 5.0496Z"
+  }))), React.createElement("a", {
     "aria-label": "Facebook",
-    className: "shell-color-blue shell-color-blue-dark-on-hover",
+    className: "shell-color-blue shell-color-blue-dark-on-hover shell-inline-block shell-w36",
     href: "https://www.facebook.com/Mapbox"
   }, React.createElement("svg", {
     viewBox: "0 0 50 50",
-    className: "shell-mr18 shell-icon shell-icon--s shell-inline"
+    className: "shell-icon shell-icon--s shell-inline"
   }, React.createElement("g", {
     id: "38f48a9c-03c5-4a1e-8aed-38100e1cd6a4",
     "data-name": "svg"
@@ -931,37 +1019,24 @@ function FooterSocialMediaStrip(props) {
     "data-name": "f",
     d: "M28.87,50V27.19h7.65l1.15-8.89h-8.8V12.63c0-2.57.71-4.33,4.41-4.33H38v-8A63.78,63.78,0,0,0,31.13,0C24.34,0,19.69,4.14,19.69,11.75V18.3H12v8.89h7.68V50Z"
   })))), React.createElement("a", {
-    "aria-label": "Dribbble",
-    className: "shell-color-blue shell-color-blue-dark-on-hover",
-    href: "https://dribbble.com/mapbox"
-  }, React.createElement("svg", {
-    viewBox: "0 0 216 216",
-    className: "shell-mr18 shell-icon shell-icon--s shell-inline"
-  }, React.createElement("g", {
-    id: "bce6e84c-15aa-4744-93d1-a9e4a673398a",
-    "data-name": "ball"
-  }, React.createElement("g", {
-    id: "99079e24-a239-40f3-bf61-84ebc8f0b2ce",
-    "data-name": "ball"
-  }, React.createElement("path", {
-    d: "M108,15.78a92.16,92.16,0,1,0,92.16,92.16A92.27,92.27,0,0,0,108,15.78ZM169,58.28a78.31,78.31,0,0,1,17.78,49c-2.6-.55-28.62-5.83-54.81-2.54-.55-1.35-1.12-2.7-1.7-4.06-1.63-3.84-3.39-7.65-5.22-11.4C154.1,77.44,167.29,60.53,169,58.28ZM108,29.34A78.41,78.41,0,0,1,160.2,49.18c-1.41,2-13.26,17.94-41.25,28.43A421.91,421.91,0,0,0,89.58,31.53,79,79,0,0,1,108,29.34ZM74.56,36.82a503.63,503.63,0,0,1,29.18,45.53A293.82,293.82,0,0,1,31,91.94,79,79,0,0,1,74.56,36.82ZM29.31,108.06c0-.8,0-1.61,0-2.41,3.44.08,41.59.57,80.9-11.2,2.25,4.41,4.4,8.89,6.38,13.36-1,.29-2.08.61-3.1.94-40.6,13.12-62.2,48.89-64,51.94A78.39,78.39,0,0,1,29.31,108.06ZM108,186.78a78.29,78.29,0,0,1-48.31-16.62c1.41-2.9,17.35-33.69,61.75-49.16l.52-.17a326.92,326.92,0,0,1,16.79,59.69A78.19,78.19,0,0,1,108,186.78Zm44-13.47a338.31,338.31,0,0,0-15.29-56.12c24.67-4,46.34,2.51,49,3.36A78.84,78.84,0,0,1,152,173.31Z"
-  }))))), React.createElement("a", {
     "aria-label": "Instagram",
-    className: "shell-color-blue shell-color-blue-dark-on-hover",
+    className: "shell-color-blue shell-color-blue-dark-on-hover shell-inline-block shell-w36",
     href: "https://www.instagram.com/Mapbox"
   }, React.createElement("svg", {
-    viewBox: "0 0 50 50",
+    viewBox: "0 0 24 24",
     className: "shell-icon shell-icon--s shell-inline"
-  }, React.createElement("g", {
-    id: "fb2f6c01-da64-4dee-86ea-29fec95d4f45",
-    "data-name": "svg"
   }, React.createElement("path", {
-    d: "M25,0c-6.79,0-7.64,0-10.31.15A18.35,18.35,0,0,0,8.62,1.31,12.25,12.25,0,0,0,4.2,4.2,12.25,12.25,0,0,0,1.31,8.62,18.35,18.35,0,0,0,.15,14.69C0,17.36,0,18.21,0,25s0,7.64.15,10.31a18.35,18.35,0,0,0,1.16,6.07A12.26,12.26,0,0,0,4.2,45.8a12.25,12.25,0,0,0,4.43,2.88,18.35,18.35,0,0,0,6.07,1.16C17.36,50,18.21,50,25,50s7.64,0,10.31-.15a18.35,18.35,0,0,0,6.07-1.16,12.78,12.78,0,0,0,7.31-7.31,18.35,18.35,0,0,0,1.16-6.07C50,32.64,50,31.79,50,25s0-7.64-.15-10.31a18.35,18.35,0,0,0-1.16-6.07A12.25,12.25,0,0,0,45.8,4.2a12.26,12.26,0,0,0-4.43-2.88A18.35,18.35,0,0,0,35.31.15C32.64,0,31.79,0,25,0Zm0,4.5c6.68,0,7.47,0,10.1.15a13.83,13.83,0,0,1,4.64.86,7.75,7.75,0,0,1,2.87,1.87,7.75,7.75,0,0,1,1.87,2.87,13.83,13.83,0,0,1,.86,4.64c.12,2.64.15,3.43.15,10.1s0,7.47-.15,10.1a13.83,13.83,0,0,1-.86,4.64,8.28,8.28,0,0,1-4.74,4.74,13.83,13.83,0,0,1-4.64.86c-2.64.12-3.43.15-10.1.15s-7.47,0-10.1-.15a13.83,13.83,0,0,1-4.64-.86,7.74,7.74,0,0,1-2.87-1.87,7.75,7.75,0,0,1-1.87-2.87,13.83,13.83,0,0,1-.86-4.64C4.53,32.47,4.5,31.68,4.5,25s0-7.47.15-10.1a13.83,13.83,0,0,1,.86-4.64A7.75,7.75,0,0,1,7.38,7.38a7.75,7.75,0,0,1,2.87-1.87,13.83,13.83,0,0,1,4.64-.86c2.64-.12,3.43-.15,10.1-.15"
-  }), React.createElement("path", {
-    d: "M25,33.33A8.33,8.33,0,1,1,33.33,25,8.33,8.33,0,0,1,25,33.33Zm0-21.17A12.84,12.84,0,1,0,37.84,25,12.84,12.84,0,0,0,25,12.16Z"
-  }), React.createElement("path", {
-    d: "M41.35,11.65a3,3,0,1,1-3-3,3,3,0,0,1,3,3Z"
-  })))));
+    d: "M11.9968 7.9983C9.79333 7.9983 7.99515 9.79651 7.99515 12C7.99515 14.2035 9.79333 16.0017 11.9968 16.0017C14.2002 16.0017 15.9984 14.2035 15.9984 12C15.9984 9.79651 14.2002 7.9983 11.9968 7.9983ZM23.9987 12C23.9987 10.3429 24.0137 8.70077 23.9206 7.04665C23.8275 5.12536 23.3893 3.4202 21.9843 2.01525C20.5764 0.607302 18.8743 0.172008 16.953 0.0789456C15.2959 -0.0141173 13.6539 0.000892936 11.9998 0.000892936C10.3427 0.000892936 8.70061 -0.0141173 7.04652 0.0789456C5.12526 0.172008 3.42014 0.610305 2.01522 2.01525C0.607291 3.42321 0.172005 5.12536 0.0789442 7.04665C-0.014117 8.70377 0.000892919 10.3459 0.000892919 12C0.000892919 13.6541 -0.014117 15.2992 0.0789442 16.9533C0.172005 18.8746 0.610293 20.5798 2.01522 21.9847C3.42314 23.3927 5.12526 23.828 7.04652 23.9211C8.70361 24.0141 10.3457 23.9991 11.9998 23.9991C13.6569 23.9991 15.2989 24.0141 16.953 23.9211C18.8743 23.828 20.5794 23.3897 21.9843 21.9847C23.3923 20.5768 23.8275 18.8746 23.9206 16.9533C24.0167 15.2992 23.9987 13.6571 23.9987 12ZM11.9968 18.1572C8.58954 18.1572 5.83973 15.4073 5.83973 12C5.83973 8.5927 8.58954 5.84284 11.9968 5.84284C15.404 5.84284 18.1538 8.5927 18.1538 12C18.1538 15.4073 15.404 18.1572 11.9968 18.1572ZM18.406 7.02864C17.6105 7.02864 16.968 6.38621 16.968 5.59067C16.968 4.79513 17.6105 4.1527 18.406 4.1527C19.2015 4.1527 19.8439 4.79513 19.8439 5.59067C19.8442 5.77957 19.8071 5.96667 19.735 6.14124C19.6628 6.31581 19.5569 6.47442 19.4233 6.608C19.2897 6.74157 19.1311 6.84748 18.9565 6.91967C18.782 6.99185 18.5949 7.02888 18.406 7.02864Z"
+  }))), React.createElement("a", {
+    "aria-label": "Dribbble",
+    className: "shell-color-blue shell-color-blue-dark-on-hover shell-inline-block shell-w36",
+    href: "https://dribbble.com/mapbox"
+  }, React.createElement("svg", {
+    viewBox: "0 0 24 24",
+    className: "shell-icon shell-icon--s shell-inline"
+  }, React.createElement("path", {
+    d: "M12 24C9.82812 24 7.82031 23.4648 5.97656 22.3945C4.13281 21.3242 2.67578 19.8672 1.60547 18.0234C0.535156 16.1797 0 14.1719 0 12C0 9.82812 0.535156 7.82031 1.60547 5.97656C2.67578 4.13281 4.13281 2.67578 5.97656 1.60547C7.82031 0.535156 9.82812 0 12 0C14.1719 0 16.1797 0.535156 18.0234 1.60547C19.8672 2.67578 21.3242 4.13281 22.3945 5.97656C23.4648 7.82031 24 9.82812 24 12C24 14.1719 23.4648 16.1797 22.3945 18.0234C21.3242 19.8672 19.8672 21.3242 18.0234 22.3945C16.1797 23.4648 14.1719 24 12 24ZM20.2734 15.5156C19.2266 15.1875 18.2109 15.0234 17.2266 15.0234C17.0703 15.0234 16.7812 15.0547 16.3594 15.1172C16.6562 16.5703 16.8125 18.0547 16.8281 19.5703C18.3906 18.5703 19.5391 17.2188 20.2734 15.5156ZM14.1562 20.7188C14.1875 19.125 14.0469 17.5156 13.7344 15.8906C13.2656 16.125 12.8359 16.3828 12.4453 16.6641C10.7578 17.8516 9.64844 19.1328 9.11719 20.5078C10.0547 20.8359 11.0156 21 12 21C12.7031 21 13.4219 20.9062 14.1562 20.7188ZM3.04688 11.2031C3.01562 11.5 3 11.7656 3 12C3 13.4531 3.32422 14.8086 3.97266 16.0664C4.62109 17.3242 5.50781 18.3672 6.63281 19.1953C7.42969 17.1484 8.70312 15.5078 10.4531 14.2734C11.2812 13.6953 12.1094 13.2266 12.9375 12.8672C12.6875 12.1641 12.4375 11.5234 12.1875 10.9453C10.6875 11.6641 9.125 12.0156 7.5 12C6.01562 11.9844 4.53125 11.7188 3.04688 11.2031ZM7.17188 4.42969C5.67188 5.38281 4.55469 6.66406 3.82031 8.27344C5.07031 8.75781 6.29688 9 7.5 9C8.60938 9 9.6875 8.75 10.7344 8.25C9.6875 6.60938 8.5 5.33594 7.17188 4.42969ZM12 3C11.2969 3 10.5625 3.10156 9.79688 3.30469C10.9531 4.21094 12.0156 5.38281 12.9844 6.82031C14.2031 5.86719 15.0469 4.83594 15.5156 3.72656C14.3906 3.24219 13.2188 3 12 3ZM17.9062 5.22656C17.1562 6.96094 16.0312 8.39844 14.5312 9.53906C14.9062 10.3516 15.25 11.2109 15.5625 12.1172C16.1406 12.0391 16.6953 12 17.2266 12C18.4297 12.0156 19.6719 12.2031 20.9531 12.5625C20.9844 12.2031 21 12.0156 21 12C21 10.6719 20.7266 9.42188 20.1797 8.25C19.6328 7.07812 18.875 6.07031 17.9062 5.22656Z"
+  }))));
 }
 
 FooterSocialMediaStrip.propTypes = {
