@@ -26,6 +26,18 @@ export default class ExampleCode extends React.Component {
     // Display HTML with production URLs and the logged-in user's access token (if available).
     // Render HTML with possibly-local URLs and a Mapbox access token (don't bill the user for looking at examples).
 
+    addToken(html) {
+        const addMissingTokenComment = this.state.token
+            ? ''
+            : `\n\t// TO MAKE THE MAP APPEAR YOU MUST\n\t// ADD YOUR ACCESS TOKEN FROM\n\t// https://account.mapbox.com`;
+
+        return html.replace(
+            '<script>',
+            `<script>${addMissingTokenComment}\n\tmapboxgl.accessToken = '${this
+                .state.token || '<your access token here>'}';`
+        );
+    }
+
     displayHTML(html) {
         return `<!DOCTYPE html>
 <html>
@@ -40,11 +52,7 @@ ${css}
 </style>
 </head>
 <body>
-${html.replace(
-    '<script>',
-    `<script>\n\tmapboxgl.accessToken = '${this.state.token ||
-        '<your access token here>'}';`
-)}
+${this.addToken(html)}
 </body>
 </html>`;
     }
