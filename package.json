@@ -40,6 +40,7 @@
     "execa": "^3.2.0",
     "github-slugger": "1.2.1",
     "husky": "^4.2.3",
+    "jest": "^26.0.1",
     "js-yaml": "^3.13.1",
     "lint-staged": "^9.5.0",
     "npm-run-all": "^4.1.5",
@@ -74,7 +75,7 @@
     "build": "batfish build",
     "serve-static": "batfish serve-static",
     "pretest": "yarn run lint",
-    "test": "tape test/*.test.js | tap-min && yarn run lint-md && yarn run test-content",
+    "test": "jest && tape test/*.test.js | tap-min && yarn run lint-md && yarn run test-content",
     "test-content": "copyeditor docs/pages/",
     "start": "NODE_OPTIONS=\"--max_old_space_size=2048\" DEPLOY_ENV=local batfish start",
     "create-image": "node docs/bin/create-image",
@@ -110,5 +111,11 @@
     "js-yaml": "^3.13.1",
     "regenerator-runtime": "^0.13.3",
     "rehype-slug": "^2.0.3"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/mapbox-gl-js/"
+    ],
+    "testRegex": "/__tests__/.*\\.test\\.js$"
   }
 }

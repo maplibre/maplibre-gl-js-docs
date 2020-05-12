@@ -1,4 +1,3 @@
-import ref from '../../mapbox-gl-js/src/style-spec/reference/latest';
 import { toString } from '../../mapbox-gl-js/src/style-spec/expression/types';
 import CompoundExpression from '../../mapbox-gl-js/src/style-spec/expression/compound_expression';
 
@@ -16,7 +15,7 @@ const comparisonSignatures = [
     }
 ];
 
-const types = {
+export const types = {
     '==': comparisonSignatures,
     '!=': comparisonSignatures,
     '<': comparisonSignatures,
@@ -267,12 +266,12 @@ const types = {
             parameters: ['object']
         }
     ],
-    distance: [
+    /*distance: [
         {
             type: 'number',
             parameters: ['object']
         }
-    ],
+    ],*/
     collator: [
         {
             type: 'collator',
@@ -324,20 +323,6 @@ for (const name in CompoundExpression.definitions) {
 }
 
 delete types['error'];
-
-export const expressions = {};
-export const expressionGroups = {};
-for (const name in types) {
-    const spec = ref['expression_name'].values[name];
-    expressionGroups[spec.group] = expressionGroups[spec.group] || [];
-    expressionGroups[spec.group].push(name);
-    expressions[name] = {
-        name,
-        doc: spec.doc,
-        type: types[name],
-        sdkSupport: spec['sdk-support']
-    };
-}
 
 function processParameters(params) {
     if (Array.isArray(params)) {

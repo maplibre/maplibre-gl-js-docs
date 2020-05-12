@@ -1,7 +1,4 @@
-import {
-    expressions,
-    expressionGroups
-} from '../components/expression-metadata';
+import { expressions, expressionGroups } from '../components/expressions';
 
 const sourceTypes = [
     'vector',
