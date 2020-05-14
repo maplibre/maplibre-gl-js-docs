@@ -1,6 +1,6 @@
 /*---
 title: Navigate the map with game-like controls
-description: Move around the map with game-like controls.
+description: Use the keyboard's arrow keys to move around the map with game-like controls.
 tags:
   - camera
 pathname: /mapbox-gl-js/example/game-controls/
