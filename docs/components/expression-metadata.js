@@ -266,12 +266,12 @@ export const types = {
             parameters: ['object']
         }
     ],
-    /*distance: [
+    distance: [
         {
             type: 'number',
             parameters: ['object']
         }
-    ],*/
+    ],
     collator: [
         {
             type: 'collator',
