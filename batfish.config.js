@@ -83,7 +83,7 @@ module.exports = () => {
             }
         },
         devBrowserslist: false,
-        babelInclude: ['documentation'],
+        babelInclude: ['documentation', '@mapbox/mapbox-gl-style-spec'],
         webpackStaticIgnore: [/util\/util\.js$/]
     };
 

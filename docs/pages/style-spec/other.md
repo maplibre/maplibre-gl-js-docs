@@ -5,7 +5,7 @@ description: The value for any layout or paint property may be specified as a fu
 contentType: specification
 prependJs:
     - "import SDKSupportTable from '../../components/sdk_support_table';"
-    - "import ref from '../../../mapbox-gl-js/src/style-spec/reference/latest';"
+    - "import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';"
     - "import Icon from '@mapbox/mr-ui/icon';"
     - "import Property from '../../components/style-spec/property.js';"
     - "import Subtitle from '../../components/style-spec/subtitle.js';"

@@ -1,4 +1,4 @@
-import ref from '../../mapbox-gl-js/src/style-spec/reference/latest';
+import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';
 import { types } from './expression-metadata';
 
 export const expressions = {};

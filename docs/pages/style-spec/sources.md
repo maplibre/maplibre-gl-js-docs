@@ -7,7 +7,7 @@ prependJs:
     - "import Items from '../../components/style-spec/items';"
     - "import { sourceTypes } from '../../data/types';"
     - "import SDKSupportTable from '../../components/sdk_support_table';"
-    - "import ref from '../../../mapbox-gl-js/src/style-spec/reference/latest';"
+    - "import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';"
 ---
 
 <!--copyeditor disable basic-->

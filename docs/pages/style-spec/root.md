@@ -5,7 +5,7 @@ description: Root level properties of a Mapbox style specify the map's layers, t
 contentType: specification
 prependJs:
     - "import Items from '../../components/style-spec/items';"
-    - "import ref from '../../../mapbox-gl-js/src/style-spec/reference/latest';"
+    - "import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';"
 ---
 
 Root level properties of a Mapbox style specify the map's layers, tile sources and other resources, and default values for the initial camera position when not specified elsewhere.

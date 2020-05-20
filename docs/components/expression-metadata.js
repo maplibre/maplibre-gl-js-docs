@@ -1,8 +1,8 @@
-import { toString } from '../../mapbox-gl-js/src/style-spec/expression/types';
-import CompoundExpression from '../../mapbox-gl-js/src/style-spec/expression/compound_expression';
+import { toString } from '@mapbox/mapbox-gl-style-spec/expression/types';
+import CompoundExpression from '@mapbox/mapbox-gl-style-spec/expression/compound_expression';
 
 // registers compound expressions
-import '../../mapbox-gl-js/src/style-spec/expression/definitions/index';
+import '@mapbox/mapbox-gl-style-spec/expression/definitions/index';
 
 const comparisonSignatures = [
     {

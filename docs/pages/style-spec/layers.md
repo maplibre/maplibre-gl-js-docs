@@ -7,7 +7,7 @@ prependJs:
     - "import Items from '../../components/style-spec/items';"
     - "import { layerTypes } from '../../data/types';"
     - "import combineItems from '../../util/combine-items';"
-    - "import ref from '../../../mapbox-gl-js/src/style-spec/reference/latest';"
+    - "import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';"
 ---
 
 A style's `layers` property lists all the layers available in that style. The type of layer is specified by the `"type"` property, and must be one of {{layerTypes.map((t, i) => <var key={i}>{t}</var>).reduce((prev, curr) => [prev, ', ', curr])}}.

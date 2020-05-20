@@ -5,7 +5,7 @@ description: A style's light property provides global light source for that styl
 contentType: specification
 prependJs:
     - "import Items from '../../components/style-spec/items';"
-    - "import ref from '../../../mapbox-gl-js/src/style-spec/reference/latest';"
+    - "import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';"
 ---
 
 A style's `light` property provides global light source for that style.

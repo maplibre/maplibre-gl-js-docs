@@ -4,7 +4,7 @@ id: sprite
 description: A style's sprite property supplies a URL template for loading small images to use in rendering background-pattern, fill-pattern, line-pattern,fill-extrusion-pattern and icon-image style properties.
 contentType: specification
 prependJs:
-    - "import ref from '../../../mapbox-gl-js/src/style-spec/reference/latest';"
+    - "import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';"
 ---
 
 A style's `sprite` property supplies a URL template for loading small images to use in rendering `background-pattern`, `fill-pattern`, `line-pattern`,`fill-extrusion-pattern` and `icon-image` style properties.

@@ -1,6 +1,6 @@
 import entries from 'object.entries';
 import slug from 'slugg';
-import ref from '../../mapbox-gl-js/src/style-spec/reference/latest';
+import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';
 import { layerTypes, groupedExpressions } from './types';
 
 /*
