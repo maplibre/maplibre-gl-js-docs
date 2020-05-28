@@ -286,6 +286,11 @@ var nonMobile = {
 				to: "https://docs.mapbox.com/mapbox-gl-js/style-spec/"
 			},
 			{
+				name: "Mapbox Tiling Service",
+				to: "https://docs.mapbox.com/mapbox-tiling-service/",
+				beta: true
+			},
+			{
 				name: "Vector tiles",
 				to: "https://docs.mapbox.com/vector-tiles/"
 			},
@@ -399,6 +404,11 @@ var mobile = {
 				to: "https://docs.mapbox.com/mapbox-gl-js/style-spec/"
 			},
 			{
+				name: "Mapbox Tiling Service",
+				to: "https://docs.mapbox.com/mapbox-tiling-service/",
+				beta: true
+			},
+			{
 				name: "Vector tiles",
 				to: "https://docs.mapbox.com/vector-tiles/"
 			},
@@ -482,8 +492,8 @@ var navigationMenuData = {
 };
 
 function BetaTag() {
-  return React.createElement("div", {
-    className: "shell-beta-tag shell-ml6 shell-inline-block shell-txt-bold",
+  return React.createElement(React.Fragment, null, "\xA0 ", React.createElement("div", {
+    className: "shell-beta-tag shell-txt-bold",
     style: {
       background: '#f1f3fd',
       color: '#0c248d',
@@ -492,9 +502,10 @@ function BetaTag() {
       paddingRight: 6,
       borderRadius: 4,
       fontSize: 10,
-      lineHeight: 1.5
+      lineHeight: 1.5,
+      display: 'inline'
     }
-  }, "Beta");
+  }, "Beta"));
 }
 
 function LinkList(props) {
@@ -517,7 +528,7 @@ function LinkList(props) {
       href: link.to,
       "data-nav-link": true,
       className: shellStyles.popupMenuLink
-    }, link.name));
+    }, link.name, link.beta ? React.createElement(BetaTag, null) : ''));
   }));
   return React.createElement("div", null, React.createElement("div", null, navigationHeading, props.beta && React.createElement(BetaTag, null)), linkListItems);
 }
@@ -581,9 +592,19 @@ function MapsMenu(props) {
   }, React.createElement("div", {
     className: "shell-grid shell-grid--gut24"
   }, React.createElement("div", {
-    className: "shell-col shell-col--6"
+    className: "shell-col",
+    style: {
+      width: '39%'
+      /* override "shell-col--6" to make beta tag fit */
+
+    }
   }, sdkEls), React.createElement("div", {
-    className: "shell-col shell-col--6"
+    className: "shell-col",
+    style: {
+      width: '61%'
+      /* override "shell-col--6" to make beta tag fit */
+
+    }
   }, standardLinkEls))));
 }
 MapsMenu.propTypes = {
@@ -718,7 +739,7 @@ function MobileLinkList(props) {
       href: link.to,
       "data-nav-link": true,
       className: "shell-color-gray-dark"
-    }, link.name));
+    }, link.name, link.beta ? React.createElement(BetaTag, null) : ''));
   }));
   return React.createElement("div", null, React.createElement("div", null, navigationHeading, props.beta ? React.createElement(BetaTag, null) : ''), linkListItems);
 }
