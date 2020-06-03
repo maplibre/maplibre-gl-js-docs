@@ -1,7 +1,4 @@
 const tabOrder = {
-    overview: {
-        title: 'Overview'
-    },
     api: {
         title: 'API Reference'
     },
@@ -18,7 +15,9 @@ const tabOrder = {
 
 export function listTabs(arrayOfFolders) {
     let alltheTabs = arrayOfFolders
-        .filter(folder => folder.path.indexOf('404') < 0)
+        .filter(
+            folder => folder.path.indexOf('404') < 0 && folder.frontMatter.title
+        ) // only evaluate pages that have frontMatter
         .map(tab => {
             const tabId = tab.path.split('/')[2];
             return {

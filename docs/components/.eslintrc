@@ -1,6 +1,0 @@
-{
-  "extends": "../../conf/eslint-config-browser.json",
-  "rules": {
-    "react/no-danger": "off"
-  }
-}

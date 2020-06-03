@@ -70,19 +70,13 @@ npm start
 
 The command will print the URL you can use to view the documentation.
 
-💡 If you receive an error related to `@mapbox/appropriate-images`, try `nvm use 8 && npm start`.
+💡 If you receive an error related to `@mapbox/appropriate-images`, try `nvm use && npm start`.
 
 The examples section of the locally run documentation will use the GL JS version located in `../mapbox-gl-js/dist`,
 so make sure to have a working minified build in your local copy of the `mapbox-gl-js` repo (not the submodule).
 
 ## Committing and Publishing Documentation
 
-When a new GL JS release goes out, the release manager will make a PR that updates this repo's `mapbox-gl-js` submodule to point to the new release.
+When a new GL JS release goes out, the release manager will make a PR that updates this repo's `mapbox-gl-js` submodule to point to the new release. When updating the submodule, you may need to run `npm test -- -u` to update Jest snapshots related to the sidebar navigation.
 
-To update the API documentation, PR the relevant changes to the `master` branch of the `mapbox-gl-js` repo.
-It reflects code that isn't yet released, but the changes will propagate to this repo when a new GL JS release goes out.
-If you absolutely have to make an API docs change between releases, make it in the corresponding release branch of `mapbox-gl-js`
-and update the `mapbox-gl-js` submodule here to point to the new commit.
-
-To update or add a new example, PR the relevant changes to this repo. The example will be live once the PR is merged.
-If this example uses a version of GL JS that isn't yet released, the PR should not be merged until the release is out.
+To update or add a new example, PR the relevant changes to this repo. The example will be live once the PR is merged.  If this example uses a version of GL JS that isn't yet released, the PR should not be merged until the release is out.

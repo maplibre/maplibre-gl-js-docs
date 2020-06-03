@@ -12,17 +12,21 @@ import SectionedNavigation from '@mapbox/dr-ui/sectioned-navigation';
 import NavigationAccordion from '@mapbox/dr-ui/navigation-accordion';
 import examples from '@mapbox/batfish/data/examples'; // eslint-disable-line
 import GithubSlugger from 'github-slugger';
-import ApiNavigation from './api-navigation';
 import TopNavTabs from './top-nav-tabs';
 import tags from '../data/tags.json';
-import { overviewNavigation } from '../data/overview-navigation';
-import { styleSpecNavigation } from '../data/style-spec-navigation';
 import plugins from '../data/plugins';
 import { routeToPrefixed } from '@mapbox/batfish/modules/route-to';
 import Search from '@mapbox/dr-ui/search';
 import * as Sentry from '@sentry/browser';
+import classnames from 'classnames';
+// NavigationAccordion datasets
+import apiNavigation from '@mapbox/batfish/data/api-navigation'; // eslint-disable-line
+import { styleSpecNavigation } from '../data/style-spec-navigation';
+import redirectApiRef from '../util/api-ref-redirect';
 
-const redirect = require('../util/style-spec-redirect');
+import ApiSearch from './api/search';
+
+const redirectStyleSpec = require('../util/style-spec-redirect');
 
 const slugger = new GithubSlugger();
 
@@ -35,8 +39,17 @@ class PageShell extends React.Component {
             this.props.location.pathname === '/mapbox-gl-js/style-spec/' &&
             this.props.location.hash
         ) {
-            if (redirect(this.props.location))
-                window.location = redirect(this.props.location);
+            if (redirectStyleSpec(this.props.location))
+                window.location = redirectStyleSpec(this.props.location);
+        }
+
+        // redirect hashes on /api/
+        if (
+            this.props.location.pathname === '/mapbox-gl-js/api/' &&
+            this.props.location.hash
+        ) {
+            if (redirectApiRef(this.props.location))
+                window.location = redirectApiRef(this.props.location);
         }
 
         // initialize analytics
@@ -85,6 +98,7 @@ class PageShell extends React.Component {
 
         const sidebarContent = (
             <div className="mx0-mm ml-neg24 mr-neg36 relative-mm absolute right left">
+                {slug === 'api' && <ApiSearch />}
                 <NavigationAccordion
                     currentPath={this.props.location.pathname}
                     contents={{
@@ -174,30 +188,18 @@ class PageShell extends React.Component {
         };
     }
 
-    apiNavProps() {
-        return {
-            contentType: 'API reference',
-            sidebarContent: <ApiNavigation />,
-            sidebarStackedOnNarrowScreens: false,
-            interactiveClass: 'toggle-sibling',
-            sidebarColSize: 3
-        };
-    }
-
     getSidebarProps(activeTab) {
-        if (activeTab === 'overview') {
-            return this.accordionNavProps(
-                overviewNavigation,
-                'overview',
-                'Overview'
-            );
-        } else if (activeTab === 'examples') {
+        if (activeTab === 'examples') {
             return this.sectionedNavProps(
                 activeTab,
                 this.getExampleSections(tags)
             );
         } else if (activeTab === 'api') {
-            return this.apiNavProps();
+            return this.accordionNavProps(
+                apiNavigation,
+                'api',
+                'API Reference'
+            );
         } else if (activeTab === 'plugins') {
             return this.sectionedNavProps(
                 activeTab,
@@ -255,13 +257,7 @@ class PageShell extends React.Component {
                 <TopbarSticker unStickWidth={980}>
                     <div className="limiter">
                         <div className="grid">
-                            <div
-                                className={`col col--4-mm ${
-                                    sidebarProps.sidebarColSize
-                                        ? `col--${sidebarProps.sidebarColSize}-ml`
-                                        : ''
-                                } col--12`}
-                            >
+                            <div className="col col--4-mm col--12">
                                 <div className="ml24-mm pt12">
                                     <ProductMenu
                                         productName={topbarContent.productName}
@@ -269,14 +265,7 @@ class PageShell extends React.Component {
                                     />
                                 </div>
                             </div>
-                            <div
-                                className={`col col--7-mm ${
-                                    sidebarProps.sidebarColSize
-                                        ? `col--${11 -
-                                              sidebarProps.sidebarColSize}-ml`
-                                        : ''
-                                } col--12`}
-                            >
+                            <div className="col col--7-mm col--12">
                                 <div style={{ height: '50px' }}>
                                     {topbarContent.topNav}
                                 </div>
@@ -299,33 +288,22 @@ class PageShell extends React.Component {
                         sidebarContentStickyTop={60}
                         sidebarContentStickyTopNarrow={0}
                         currentPath={location.pathname}
-                        interactiveClass={sidebarProps.interactiveClass}
-                        sideBarColSize={sidebarProps.sidebarColSize || 0}
                         sidebarStackedOnNarrowScreens={
                             sidebarProps.sidebarStackedOnNarrowScreens
                         }
                     >
                         <div
-                            className={`static-header-page ${activeTab}-page ${
-                                activeTab !== 'examples' ||
-                                activeTab !== 'plugins'
-                                    ? ''
-                                    : 'prose'
-                            } ${
-                                activeTab === 'overview'
-                                    ? 'mt60 pt30 mt0-mm pt0-mm'
-                                    : 'mt30 mt0-mm'
-                            }`}
+                            className={classnames(`${activeTab}-page `, {
+                                'mt60 pt30 mt0-mm pt0-mm': activeTab === 'api', // clear navigationbar
+                                'mt30 mt0-mm': activeTab !== 'api'
+                            })}
                         >
                             {this.props.children}
                         </div>
-                        {activeTab !== 'overview' ? (
-                            <div className="fixed block mx24 my24 z5 bottom right">
-                                <BackToTopButton />
-                            </div>
-                        ) : (
-                            ''
-                        )}
+
+                        <div className="fixed block none-mm mx24 my24 z5 bottom right">
+                            <BackToTopButton />
+                        </div>
                     </PageLayout>
                 </div>
             </ReactPageShell>

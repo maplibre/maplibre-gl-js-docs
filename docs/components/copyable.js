@@ -12,12 +12,11 @@ export default class Copyable extends React.Component {
             javascript: () => highlightJsx
         };
         return (
-            <div className="mb18">
-                <CodeSnippet
-                    code={this.props.children}
-                    highlighter={highlight[this.props.lang]}
-                />
-            </div>
+            <CodeSnippet
+                maxHeight={300}
+                code={this.props.children}
+                highlighter={highlight[this.props.lang]}
+            />
         );
     }
 }

@@ -7,13 +7,15 @@
       "constants": "docs/constants.json",
       "pages": "docs/pages/",
       "siteBasePath": "mapbox-gl-js",
-      "siteOrigin": "https://docs.mapbox.com"
+      "siteOrigin": "https://docs.mapbox.com",
+      "ignoreLinks": "conf/ignore-links.json"
     }]],
     ["@mapbox/remark-lint-mapbox/link-checker/skip-external", [2, {
       "constants": "docs/constants.json",
       "pages": "docs/pages/",
       "siteBasePath": "mapbox-gl-js",
-      "siteOrigin": "https://docs.mapbox.com"
+      "siteOrigin": "https://docs.mapbox.com",
+      "ignoreLinks": "conf/ignore-links.json"
     }]],
     [
       "@mapbox/remark-lint-mapbox/constantly",

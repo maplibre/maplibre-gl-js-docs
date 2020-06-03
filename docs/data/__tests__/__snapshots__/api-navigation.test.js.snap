@@ -1,0 +1,852 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`api-navigation 1`] = `
+Array [
+  Object {
+    "path": "",
+    "subnav": Array [
+      Object {
+        "path": "quickstart",
+        "title": "Quickstart",
+      },
+      Object {
+        "path": "reading-this-documentation",
+        "title": "Reading this documentation",
+      },
+      Object {
+        "path": "csp-directives",
+        "title": "CSP Directives",
+      },
+      Object {
+        "path": "referrer-policies",
+        "title": "Referrer Policies",
+      },
+      Object {
+        "path": "mapbox-css",
+        "title": "Mapbox CSS",
+      },
+    ],
+    "title": "Introduction",
+  },
+  Object {
+    "path": "map",
+    "subnav": Array [
+      Object {
+        "path": "map-parameters",
+        "title": "Parameters",
+      },
+      Object {
+        "path": "map-example",
+        "title": "Example",
+      },
+      Object {
+        "path": "map-instance-members",
+        "title": "Instance members",
+      },
+      Object {
+        "path": "map-events",
+        "title": "Events",
+      },
+      Object {
+        "path": "map-related",
+        "title": "Related",
+      },
+    ],
+    "title": "Map",
+  },
+  Object {
+    "path": "properties",
+    "subnav": Array [
+      Object {
+        "path": "accesstoken",
+        "subnav": Array [
+          Object {
+            "path": "accesstoken-returns",
+            "title": "Returns",
+          },
+          Object {
+            "path": "accesstoken-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "accesstoken-related",
+            "title": "Related",
+          },
+        ],
+        "title": "accessToken",
+      },
+      Object {
+        "path": "baseapiurl",
+        "subnav": Array [
+          Object {
+            "path": "baseapiurl-returns",
+            "title": "Returns",
+          },
+          Object {
+            "path": "baseapiurl-example",
+            "title": "Example",
+          },
+        ],
+        "title": "baseApiUrl",
+      },
+      Object {
+        "path": "workercount",
+        "subnav": Array [
+          Object {
+            "path": "workercount-returns",
+            "title": "Returns",
+          },
+          Object {
+            "path": "workercount-example",
+            "title": "Example",
+          },
+        ],
+        "title": "workerCount",
+      },
+      Object {
+        "path": "maxparallelimagerequests",
+        "subnav": Array [
+          Object {
+            "path": "maxparallelimagerequests-returns",
+            "title": "Returns",
+          },
+          Object {
+            "path": "maxparallelimagerequests-example",
+            "title": "Example",
+          },
+        ],
+        "title": "maxParallelImageRequests",
+      },
+      Object {
+        "path": "supported",
+        "subnav": Array [
+          Object {
+            "path": "supported-parameters",
+            "title": "Parameters",
+          },
+          Object {
+            "path": "supported-returns",
+            "title": "Returns",
+          },
+          Object {
+            "path": "supported-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "supported-related",
+            "title": "Related",
+          },
+        ],
+        "title": "supported",
+      },
+      Object {
+        "path": "version",
+        "subnav": Array [],
+        "title": "version",
+      },
+      Object {
+        "path": "setrtltextplugin",
+        "subnav": Array [
+          Object {
+            "path": "setrtltextplugin-parameters",
+            "title": "Parameters",
+          },
+          Object {
+            "path": "setrtltextplugin-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "setrtltextplugin-related",
+            "title": "Related",
+          },
+        ],
+        "title": "setRTLTextPlugin",
+      },
+      Object {
+        "path": "getrtltextpluginstatus",
+        "subnav": Array [
+          Object {
+            "path": "getrtltextpluginstatus-example",
+            "title": "Example",
+          },
+        ],
+        "title": "getRTLTextPluginStatus",
+      },
+      Object {
+        "path": "clearstorage",
+        "subnav": Array [
+          Object {
+            "path": "clearstorage-parameters",
+            "title": "Parameters",
+          },
+          Object {
+            "path": "clearstorage-example",
+            "title": "Example",
+          },
+        ],
+        "title": "clearStorage",
+      },
+      Object {
+        "path": "animationoptions",
+        "subnav": Array [
+          Object {
+            "path": "animationoptions-properties",
+            "title": "Properties",
+          },
+        ],
+        "title": "AnimationOptions",
+      },
+      Object {
+        "path": "cameraoptions",
+        "subnav": Array [
+          Object {
+            "path": "cameraoptions-properties",
+            "title": "Properties",
+          },
+          Object {
+            "path": "cameraoptions-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "cameraoptions-related",
+            "title": "Related",
+          },
+        ],
+        "title": "CameraOptions",
+      },
+      Object {
+        "path": "paddingoptions",
+        "subnav": Array [
+          Object {
+            "path": "paddingoptions-properties",
+            "title": "Properties",
+          },
+          Object {
+            "path": "paddingoptions-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "paddingoptions-related",
+            "title": "Related",
+          },
+        ],
+        "title": "PaddingOptions",
+      },
+      Object {
+        "path": "requestparameters",
+        "subnav": Array [
+          Object {
+            "path": "requestparameters-properties",
+            "title": "Properties",
+          },
+          Object {
+            "path": "requestparameters-example",
+            "title": "Example",
+          },
+        ],
+        "title": "RequestParameters",
+      },
+      Object {
+        "path": "styleimageinterface",
+        "subnav": Array [
+          Object {
+            "path": "styleimageinterface-properties",
+            "title": "Properties",
+          },
+          Object {
+            "path": "styleimageinterface-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "styleimageinterface-instance-members",
+            "title": "Instance members",
+          },
+          Object {
+            "path": "styleimageinterface-related",
+            "title": "Related",
+          },
+        ],
+        "title": "StyleImageInterface",
+      },
+      Object {
+        "path": "customlayerinterface",
+        "subnav": Array [
+          Object {
+            "path": "customlayerinterface-properties",
+            "title": "Properties",
+          },
+          Object {
+            "path": "customlayerinterface-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "customlayerinterface-instance-members",
+            "title": "Instance members",
+          },
+        ],
+        "title": "CustomLayerInterface",
+      },
+      Object {
+        "path": "prewarm",
+        "subnav": Array [
+          Object {
+            "path": "prewarm-example",
+            "title": "Example",
+          },
+        ],
+        "title": "prewarm",
+      },
+      Object {
+        "path": "clearprewarmedresources",
+        "subnav": Array [
+          Object {
+            "path": "clearprewarmedresources-example",
+            "title": "Example",
+          },
+        ],
+        "title": "clearPrewarmedResources",
+      },
+    ],
+    "title": "Properties and options",
+  },
+  Object {
+    "path": "markers",
+    "subnav": Array [
+      Object {
+        "path": "marker",
+        "subnav": Array [
+          Object {
+            "path": "marker-parameters",
+            "title": "Parameters",
+          },
+          Object {
+            "path": "marker-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "marker-instance-members",
+            "title": "Instance members",
+          },
+          Object {
+            "path": "marker-events",
+            "title": "Events",
+          },
+          Object {
+            "path": "marker-related",
+            "title": "Related",
+          },
+        ],
+        "title": "Marker",
+      },
+      Object {
+        "path": "popup",
+        "subnav": Array [
+          Object {
+            "path": "popup-parameters",
+            "title": "Parameters",
+          },
+          Object {
+            "path": "popup-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "popup-instance-members",
+            "title": "Instance members",
+          },
+          Object {
+            "path": "popup-events",
+            "title": "Events",
+          },
+          Object {
+            "path": "popup-related",
+            "title": "Related",
+          },
+        ],
+        "title": "Popup",
+      },
+      Object {
+        "path": "icontrol",
+        "subnav": Array [
+          Object {
+            "path": "icontrol-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "icontrol-instance-members",
+            "title": "Instance members",
+          },
+        ],
+        "title": "IControl",
+      },
+      Object {
+        "path": "navigationcontrol",
+        "subnav": Array [
+          Object {
+            "path": "navigationcontrol-parameters",
+            "title": "Parameters",
+          },
+          Object {
+            "path": "navigationcontrol-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "navigationcontrol-related",
+            "title": "Related",
+          },
+        ],
+        "title": "NavigationControl",
+      },
+      Object {
+        "path": "geolocatecontrol",
+        "subnav": Array [
+          Object {
+            "path": "geolocatecontrol-parameters",
+            "title": "Parameters",
+          },
+          Object {
+            "path": "geolocatecontrol-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "geolocatecontrol-instance-members",
+            "title": "Instance members",
+          },
+          Object {
+            "path": "geolocatecontrol-events",
+            "title": "Events",
+          },
+          Object {
+            "path": "geolocatecontrol-related",
+            "title": "Related",
+          },
+        ],
+        "title": "GeolocateControl",
+      },
+      Object {
+        "path": "attributioncontrol",
+        "subnav": Array [
+          Object {
+            "path": "attributioncontrol-parameters",
+            "title": "Parameters",
+          },
+          Object {
+            "path": "attributioncontrol-example",
+            "title": "Example",
+          },
+        ],
+        "title": "AttributionControl",
+      },
+      Object {
+        "path": "scalecontrol",
+        "subnav": Array [
+          Object {
+            "path": "scalecontrol-parameters",
+            "title": "Parameters",
+          },
+          Object {
+            "path": "scalecontrol-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "scalecontrol-instance-members",
+            "title": "Instance members",
+          },
+        ],
+        "title": "ScaleControl",
+      },
+      Object {
+        "path": "fullscreencontrol",
+        "subnav": Array [
+          Object {
+            "path": "fullscreencontrol-parameters",
+            "title": "Parameters",
+          },
+          Object {
+            "path": "fullscreencontrol-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "fullscreencontrol-related",
+            "title": "Related",
+          },
+        ],
+        "title": "FullscreenControl",
+      },
+    ],
+    "title": "Markers and controls",
+  },
+  Object {
+    "path": "geography",
+    "subnav": Array [
+      Object {
+        "path": "lnglat",
+        "subnav": Array [
+          Object {
+            "path": "lnglat-parameters",
+            "title": "Parameters",
+          },
+          Object {
+            "path": "lnglat-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "lnglat-static-members",
+            "title": "Static members",
+          },
+          Object {
+            "path": "lnglat-instance-members",
+            "title": "Instance members",
+          },
+          Object {
+            "path": "lnglat-related",
+            "title": "Related",
+          },
+        ],
+        "title": "LngLat",
+      },
+      Object {
+        "path": "lnglatlike",
+        "subnav": Array [
+          Object {
+            "path": "lnglatlike-example",
+            "title": "Example",
+          },
+        ],
+        "title": "LngLatLike",
+      },
+      Object {
+        "path": "lnglatbounds",
+        "subnav": Array [
+          Object {
+            "path": "lnglatbounds-parameters",
+            "title": "Parameters",
+          },
+          Object {
+            "path": "lnglatbounds-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "lnglatbounds-static-members",
+            "title": "Static members",
+          },
+          Object {
+            "path": "lnglatbounds-instance-members",
+            "title": "Instance members",
+          },
+        ],
+        "title": "LngLatBounds",
+      },
+      Object {
+        "path": "lnglatboundslike",
+        "subnav": Array [
+          Object {
+            "path": "lnglatboundslike-example",
+            "title": "Example",
+          },
+        ],
+        "title": "LngLatBoundsLike",
+      },
+      Object {
+        "path": "point",
+        "subnav": Array [
+          Object {
+            "path": "point-example",
+            "title": "Example",
+          },
+        ],
+        "title": "Point",
+      },
+      Object {
+        "path": "pointlike",
+        "subnav": Array [
+          Object {
+            "path": "pointlike-example",
+            "title": "Example",
+          },
+        ],
+        "title": "PointLike",
+      },
+      Object {
+        "path": "mercatorcoordinate",
+        "subnav": Array [
+          Object {
+            "path": "mercatorcoordinate-parameters",
+            "title": "Parameters",
+          },
+          Object {
+            "path": "mercatorcoordinate-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "mercatorcoordinate-static-members",
+            "title": "Static members",
+          },
+          Object {
+            "path": "mercatorcoordinate-instance-members",
+            "title": "Instance members",
+          },
+          Object {
+            "path": "mercatorcoordinate-related",
+            "title": "Related",
+          },
+        ],
+        "title": "MercatorCoordinate",
+      },
+      Object {
+        "path": "edgeinsets",
+        "subnav": Array [
+          Object {
+            "path": "edgeinsets-parameters",
+            "title": "Parameters",
+          },
+          Object {
+            "path": "edgeinsets-static-members",
+            "title": "Static members",
+          },
+        ],
+        "title": "EdgeInsets",
+      },
+    ],
+    "title": "Geography and geometry",
+  },
+  Object {
+    "path": "handlers",
+    "subnav": Array [
+      Object {
+        "path": "boxzoomhandler",
+        "subnav": Array [
+          Object {
+            "path": "boxzoomhandler-instance-members",
+            "title": "Instance members",
+          },
+        ],
+        "title": "BoxZoomHandler",
+      },
+      Object {
+        "path": "scrollzoomhandler",
+        "subnav": Array [
+          Object {
+            "path": "scrollzoomhandler-instance-members",
+            "title": "Instance members",
+          },
+        ],
+        "title": "ScrollZoomHandler",
+      },
+      Object {
+        "path": "dragpanhandler",
+        "subnav": Array [
+          Object {
+            "path": "dragpanhandler-instance-members",
+            "title": "Instance members",
+          },
+        ],
+        "title": "DragPanHandler",
+      },
+      Object {
+        "path": "dragrotatehandler",
+        "subnav": Array [
+          Object {
+            "path": "dragrotatehandler-instance-members",
+            "title": "Instance members",
+          },
+        ],
+        "title": "DragRotateHandler",
+      },
+      Object {
+        "path": "keyboardhandler",
+        "subnav": Array [],
+        "title": "KeyboardHandler",
+      },
+      Object {
+        "path": "doubleclickzoomhandler",
+        "subnav": Array [
+          Object {
+            "path": "doubleclickzoomhandler-instance-members",
+            "title": "Instance members",
+          },
+        ],
+        "title": "DoubleClickZoomHandler",
+      },
+      Object {
+        "path": "touchzoomrotatehandler",
+        "subnav": Array [
+          Object {
+            "path": "touchzoomrotatehandler-instance-members",
+            "title": "Instance members",
+          },
+        ],
+        "title": "TouchZoomRotateHandler",
+      },
+      Object {
+        "path": "touchpitchhandler",
+        "subnav": Array [
+          Object {
+            "path": "touchpitchhandler-instance-members",
+            "title": "Instance members",
+          },
+        ],
+        "title": "TouchPitchHandler",
+      },
+    ],
+    "title": "User interaction handlers",
+  },
+  Object {
+    "path": "sources",
+    "subnav": Array [
+      Object {
+        "path": "geojsonsource",
+        "subnav": Array [
+          Object {
+            "path": "geojsonsource-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "geojsonsource-instance-members",
+            "title": "Instance members",
+          },
+          Object {
+            "path": "geojsonsource-related",
+            "title": "Related",
+          },
+        ],
+        "title": "GeoJSONSource",
+      },
+      Object {
+        "path": "videosource",
+        "subnav": Array [
+          Object {
+            "path": "videosource-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "videosource-instance-members",
+            "title": "Instance members",
+          },
+          Object {
+            "path": "videosource-related",
+            "title": "Related",
+          },
+        ],
+        "title": "VideoSource",
+      },
+      Object {
+        "path": "imagesource",
+        "subnav": Array [
+          Object {
+            "path": "imagesource-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "imagesource-instance-members",
+            "title": "Instance members",
+          },
+          Object {
+            "path": "imagesource-related",
+            "title": "Related",
+          },
+        ],
+        "title": "ImageSource",
+      },
+      Object {
+        "path": "canvassource",
+        "subnav": Array [
+          Object {
+            "path": "canvassource-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "canvassource-instance-members",
+            "title": "Instance members",
+          },
+        ],
+        "title": "CanvasSource",
+      },
+      Object {
+        "path": "canvassourceoptions",
+        "subnav": Array [
+          Object {
+            "path": "canvassourceoptions-properties",
+            "title": "Properties",
+          },
+        ],
+        "title": "CanvasSourceOptions",
+      },
+    ],
+    "title": "Sources",
+  },
+  Object {
+    "path": "events",
+    "subnav": Array [
+      Object {
+        "path": "evented",
+        "subnav": Array [
+          Object {
+            "path": "evented-instance-members",
+            "title": "Instance members",
+          },
+        ],
+        "title": "Evented",
+      },
+      Object {
+        "path": "mapmouseevent",
+        "subnav": Array [
+          Object {
+            "path": "mapmouseevent-example",
+            "title": "Example",
+          },
+          Object {
+            "path": "mapmouseevent-instance-members",
+            "title": "Instance members",
+          },
+        ],
+        "title": "MapMouseEvent",
+      },
+      Object {
+        "path": "maptouchevent",
+        "subnav": Array [
+          Object {
+            "path": "maptouchevent-instance-members",
+            "title": "Instance members",
+          },
+        ],
+        "title": "MapTouchEvent",
+      },
+      Object {
+        "path": "mapboxzoomevent",
+        "subnav": Array [
+          Object {
+            "path": "mapboxzoomevent-properties",
+            "title": "Properties",
+          },
+        ],
+        "title": "MapBoxZoomEvent",
+      },
+      Object {
+        "path": "mapdataevent",
+        "subnav": Array [
+          Object {
+            "path": "mapdataevent-properties",
+            "title": "Properties",
+          },
+          Object {
+            "path": "mapdataevent-example",
+            "title": "Example",
+          },
+        ],
+        "title": "MapDataEvent",
+      },
+      Object {
+        "path": "mapwheelevent",
+        "subnav": Array [
+          Object {
+            "path": "mapwheelevent-instance-members",
+            "title": "Instance members",
+          },
+        ],
+        "title": "MapWheelEvent",
+      },
+    ],
+    "title": "Events",
+  },
+]
+`;

@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const mapboxAssembly = require('@mapbox/mbx-assembly');
 const path = require('path');
+const apiNavigation = require('./docs/data/api-navigation');
+const { buildApiSearch } = require('./docs/util/build-api-search');
 
 module.exports = () => {
     const config = {
@@ -55,6 +57,7 @@ module.exports = () => {
             ]
         },
         dataSelectors: {
+            apiSearch: () => buildApiSearch(),
             examples: ({ pages }) => {
                 return pages
                     .filter(
@@ -80,10 +83,17 @@ module.exports = () => {
                         return folder;
                     });
                 return folders;
+            },
+            apiNavigation: () => {
+                return apiNavigation;
             }
         },
         devBrowserslist: false,
-        babelInclude: ['documentation', '@mapbox/mapbox-gl-style-spec'],
+        babelInclude: [
+            'documentation',
+            '@mapbox/mapbox-gl-style-spec',
+            'fuse.js'
+        ],
         webpackStaticIgnore: [/util\/util\.js$/]
     };
 

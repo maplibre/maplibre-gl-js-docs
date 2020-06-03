@@ -15,10 +15,6 @@
     padding-top: 47px;
 }
 
-.toggle-target .mb24 {
-    margin-bottom: 0 !important;
-}
-
 /* api section styles */
 
 .api-section table code,
@@ -55,6 +51,7 @@ pre + .style-spec-property {
 }
 
 /* remove border from style spec <Property/> h2 */
+#docs-content h2.no-h2-border,
 #docs-content .style-spec-page .prose .style-spec-property h2 {
     border-top: 0 !important;
 }
@@ -76,4 +73,31 @@ pre + .style-spec-property {
 /* turn off bolding on scroll-spy, since we cannot get it to highlight reliably across pages */
 .sticky-inner-wrapper ul li a.txt-bold {
     font-weight: normal !important;
+}
+
+/* clear the topbar sticker */
+.scroll-margin-top {
+    scroll-margin-top: 50px;
+}
+/* increase margin for when topbar sticker breaks into two lines */
+@media screen and (min-width: 990px) and (max-width: 1230px) {
+    .scroll-margin-top {
+        scroll-margin-top: 100px;
+    }
+}
+
+/* compact table option */
+.table--compact td,
+.table--compact th {
+    padding: 6px !important;
+}
+
+/* add background on item-member tables to differentiate style */
+.item-member table {
+    background: #fbfcfe !important;
+}
+
+/* remove bottom margin from example code block */
+.api-example pre {
+    margin-bottom: 0 !important;
 }

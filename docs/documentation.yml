@@ -1,73 +1,95 @@
 toc:
-  - Map
-  - accessToken
-  - baseApiUrl
-  - workerCount
-  - maxParallelImageRequests
-  - supported
-  - version
-  - setRTLTextPlugin
-  - getRTLTextPluginStatus
-  - clearStorage
-  - AnimationOptions
-  - CameraOptions
-  - PaddingOptions
-  - RequestParameters
-  - StyleImageInterface
-  - CustomLayerInterface
-  - prewarm
-  - clearPrewarmedResources
-  - name: Geography & Geometry
+  - name: "Map class" # Note: changed to "map class" to get filtering to work for now to differentiate our page name "Map" from the mapbox-gl-js "Map"
+    page: 'map'
+    children:
+      - Map
+
+  - name: Properties and options
+    page: 'properties'
     description: |
-      `LngLat` and `LngLatBounds` represent points and rectangles in geographic
-      coordinates. `Point` represents points in screen coordinates.
-  - LngLat
-  - LngLatLike
-  - LngLatBounds
-  - LngLatBoundsLike
-  - Point
-  - PointLike
-  - MercatorCoordinate
-  - EdgeInsets
-  - name: User Interface
+      Mapbox GL JS's global properties and options that you can access while initializing your map or accessing information about its status.
+    children:
+      - accessToken
+      - baseApiUrl
+      - workerCount
+      - maxParallelImageRequests
+      - supported
+      - version
+      - setRTLTextPlugin
+      - getRTLTextPluginStatus
+      - clearStorage
+      - AnimationOptions
+      - CameraOptions
+      - PaddingOptions
+      - RequestParameters
+      - StyleImageInterface
+      - CustomLayerInterface
+      - prewarm
+      - clearPrewarmedResources
+
+  - name: Markers and controls
+    page: 'markers'
     description: |
-      Controls, markers, and popups add new user interface elements to the map.
-  - IControl
-  - NavigationControl
-  - GeolocateControl
-  - AttributionControl
-  - ScaleControl
-  - FullscreenControl
-  - Popup
-  - Marker
-  - name: User Interaction Handlers
+      User interface elements that can be added to the map. The items in this section exist outside of the map's `canvas` element.
+    children:
+      - Marker
+      - Popup
+      - IControl
+      - NavigationControl
+      - GeolocateControl
+      - AttributionControl
+      - ScaleControl
+      - FullscreenControl
+
+  - name: Geography and geometry
+    page: 'geography'
     description: |
-      Handlers add different kinds of interactivity to the map -
-      mouse interactivity, touch interactions, and other
-      gestures.
-  - BoxZoomHandler
-  - ScrollZoomHandler
-  - DragPanHandler
-  - DragRotateHandler
-  - KeyboardHandler
-  - DoubleClickZoomHandler
-  - TouchZoomRotateHandler
-  - TouchPitchHandler
+      General utilities and types that relate to working with and manipulating geographic information or geometries.
+    children:
+      - LngLat
+      - LngLatLike
+      - LngLatBounds
+      - LngLatBoundsLike
+      - Point
+      - PointLike
+      - MercatorCoordinate
+      - EdgeInsets
+
+  - name: User interaction handlers
+    page: 'handlers'
+    description: |
+      Items related to the ways in which the map responds to user input.
+    children:
+      - BoxZoomHandler
+      - ScrollZoomHandler
+      - DragPanHandler
+      - DragRotateHandler
+      - KeyboardHandler
+      - DoubleClickZoomHandler
+      - TouchZoomRotateHandler
+      - TouchPitchHandler
+
   - name: Sources
+    page: 'sources'
     description: |
-      Sources specify the geographic features to be rendered on the map. Source
-      objects may be obtained from `Map#getSource`.
-  - GeoJSONSource
-  - VideoSource
-  - ImageSource
-  - CanvasSource
-  - CanvasSourceOptions
+      The source types Mapbox GL JS can handle in addition to the ones described in the [Mapbox Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/).
+    children:
+      - GeoJSONSource
+      - VideoSource
+      - ImageSource
+      - CanvasSource
+      - CanvasSourceOptions
+
   - name: Events
+    page: 'events'
     description: |
-      `Map` (and some other classes) emit events in response to user interactions or changes in state. `Evented`
-      is the interface used to bind and unbind listeners for these events.
-  - Evented
-  - MapMouseEvent
-  - MapTouchEvent
-  - MapBoxZoomEvent
-  - MapDataEvent
+      The different types of events that Mapbox GL JS can raise.
+
+      You can also find additional event documentation for: [`Map`](/mapbox-gl-js/api/map/#map-events), [`Marker`](/mapbox-gl-js/api/markers/#marker-events), [`Popup`](/mapbox-gl-js/api/markers/#popup-events), and [`GeolocationControl`](/mapbox-gl-js/api/markers/#geolocatecontrol-events).
+    children:
+      - Evented
+      - MapMouseEvent
+      - MapTouchEvent
+      - MapBoxZoomEvent
+      - MapDataEvent
+      - MapWheelEvent

@@ -12,17 +12,33 @@ class Quickstart extends React.Component {
         };
     }
 
+    mapOptions = `{
+    container: '<your HTML element id>',
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    center: [-74.5, 40], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+}`;
+
     componentDidMount() {
         MapboxPageShell.afterUserCheck(() => {
+            const sessionToken = MapboxPageShell.getUserPublicAccessToken();
+
             this.setState({
-                userAccessToken:
-                    MapboxPageShell.getUserPublicAccessToken() ||
-                    `<your access token here>`
+                userAccessToken: sessionToken || `<your access token here>`,
+                tokenWarning: sessionToken
+                    ? ''
+                    : `// TO MAKE THE MAP APPEAR YOU MUST\n// ADD YOUR ACCESS TOKEN FROM\n// https://account.mapbox.com\n`
             });
         });
     }
 
     renderCdn() {
+        const cdnMapHtml = `
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+${this.state.tokenWarning}mapboxgl.accessToken = '${this.state.userAccessToken}';
+var map = new mapboxgl.Map(${this.mapOptions});
+</script>`;
         return (
             <div id="quickstart-cdn">
                 <p>
@@ -38,21 +54,17 @@ class Quickstart extends React.Component {
                     Include the following code in the <code>&lt;body&gt;</code>{' '}
                     of your HTML file.
                 </p>
-                <Copyable lang="markup">{`
-<div id='map' style='width: 400px; height: 300px;'></div>
-<script>
-mapboxgl.accessToken = '${this.state.userAccessToken}';
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9'
-});
-</script>
-`}</Copyable>
+                <Copyable lang="markup">{cdnMapHtml}</Copyable>
             </div>
         );
     }
 
     renderBundler() {
+        const bundlerMapJs = `
+import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
+
+${this.state.tokenWarning}mapboxgl.accessToken = '${this.state.userAccessToken}';
+const map = new mapboxgl.Map(${this.mapOptions});`;
         return (
             <div id="quickstart-bundler">
                 <p>Install the npm package.</p>
@@ -72,16 +84,7 @@ npm install --save mapbox-gl
                     Include the following code in the <code>&lt;body&gt;</code>{' '}
                     of your HTML file.
                 </p>
-                <Copyable lang="javascript">{`
-import mapboxgl from 'mapbox-gl';
-// or "const mapboxgl = require('mapbox-gl');"
-
-mapboxgl.accessToken = '${this.state.userAccessToken}';
-const map = new mapboxgl.Map({
-    container: '<your HTML element id>',
-    style: 'mapbox://styles/mapbox/streets-v9'
-});
-`}</Copyable>
+                <Copyable lang="javascript">{bundlerMapJs}</Copyable>
             </div>
         );
     }

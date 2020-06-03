@@ -1,19 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PageShell from './page_shell';
-import Feedback from '@mapbox/dr-ui/feedback';
-import constants from '../constants';
+import Feedback from './feedback';
 import ExampleCode from './example_code';
 
 export default function(html) {
     class ExampleComponent extends React.Component {
-        constructor(props) {
-            super(props);
-            this.state = {
-                user: undefined
-            };
-        }
-
         render() {
             const { frontMatter } = this.props;
             frontMatter.language = ['JavaScript'];
@@ -35,25 +27,9 @@ export default function(html) {
                             </div>
                         </div>
                     </div>
-                    <div className="mt18">
-                        <Feedback
-                            site="Mapbox GL JS"
-                            type="example"
-                            location={this.props.location}
-                            user={this.state.user}
-                            webhook={constants.FORWARD_EVENT_WEBHOOK}
-                        />
-                    </div>
+                    <Feedback type="example" location={this.props.location} />
                 </PageShell>
             );
-        }
-
-        componentDidMount() {
-            MapboxPageShell.afterUserCheck(() => {
-                this.setState({
-                    user: MapboxPageShell.getUser() || undefined
-                });
-            });
         }
     }
 

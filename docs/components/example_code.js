@@ -15,6 +15,10 @@ const css = `\tbody { margin: 0; padding: 0; }
 \t#map { position: absolute; top: 0; bottom: 0; width: 100%; }`;
 
 export default class ExampleCode extends React.Component {
+    static defaultProps = {
+        displaySnippet: true,
+        height: 400
+    };
     constructor(props) {
         super(props);
         this.state = {
@@ -78,14 +82,38 @@ ${html}
 </html>`;
     }
 
-    render() {
-        const { frontMatter, html } = this.props;
-
+    renderSnippet() {
+        const { html } = this.props;
         const code = this.displayHTML(html);
         const parsedCode = helpers.extractor(code);
         return (
+            <div className="bg-white">
+                <div id="code" className="relative">
+                    <CodeSnippet
+                        code={this.displayHTML(html)}
+                        highlighter={() => highlightHtml}
+                        edit={{
+                            frontMatter: this.props.frontMatter,
+                            head: viewport,
+                            js: parsedCode.js,
+                            html: parsedCode.html,
+                            css: parsedCode.css,
+                            resources: parsedCode.resources
+                        }}
+                    />
+                </div>
+            </div>
+        );
+    }
+
+    render() {
+        const { frontMatter, height } = this.props;
+
+        return (
             <div className="prose">
-                <div className="mb36">{md(frontMatter.description)}</div>
+                {frontMatter.description && (
+                    <div className="mb36">{md(frontMatter.description)}</div>
+                )}
                 {this.state.unsupported && (
                     <Note title="Mapbox GL unsupported" theme="warning">
                         Mapbox GL requires{' '}
@@ -107,7 +135,7 @@ ${html}
                 {supported() && (
                     <iframe
                         id="demo"
-                        style={{ height: 400 }}
+                        style={{ height: height }}
                         className="w-full"
                         allowFullScreen={true}
                         mozallowfullscreen="true"
@@ -115,25 +143,11 @@ ${html}
                         ref={iframe => {
                             this.iframe = iframe;
                         }}
+                        title={`${frontMatter.title} example`}
                     />
                 )}
 
-                <div className="bg-white">
-                    <div id="code" className="relative">
-                        <CodeSnippet
-                            code={this.displayHTML(html)}
-                            highlighter={() => highlightHtml}
-                            edit={{
-                                frontMatter: this.props.frontMatter,
-                                head: viewport,
-                                js: parsedCode.js,
-                                html: parsedCode.html,
-                                css: parsedCode.css,
-                                resources: parsedCode.resources
-                            }}
-                        />
-                    </div>
-                </div>
+                {this.props.displaySnippet && this.renderSnippet()}
             </div>
         );
     }
@@ -158,10 +172,12 @@ ${html}
 ExampleCode.propTypes = {
     html: PropTypes.string, // eslint-disable-line
     frontMatter: PropTypes.shape({
-        title: PropTypes.string,
+        title: PropTypes.string.isRequired,
         description: PropTypes.string
     }),
     location: PropTypes.shape({
         pathname: PropTypes.string
-    })
+    }),
+    displaySnippet: PropTypes.bool,
+    height: PropTypes.number
 };
