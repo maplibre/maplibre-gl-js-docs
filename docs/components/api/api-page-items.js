@@ -52,6 +52,7 @@ class Section extends React.Component {
                     <ApiItem headingLevel={2} {...child} />
                 </div>
                 <Feedback
+                    section={child.name}
                     type={`section on ${child.name}`}
                     location={child.location}
                 />

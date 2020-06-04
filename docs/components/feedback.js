@@ -27,6 +27,7 @@ export default class Feedback extends React.Component {
                 user={this.state.user}
                 type={this.props.type}
                 webhook={constants.FORWARD_EVENT_WEBHOOK}
+                section={this.props.section || undefined}
             />
         );
     }
@@ -34,5 +35,6 @@ export default class Feedback extends React.Component {
 
 Feedback.propTypes = {
     location: PropTypes.object.isRequired,
-    type: PropTypes.string
+    type: PropTypes.string,
+    section: PropTypes.string
 };
