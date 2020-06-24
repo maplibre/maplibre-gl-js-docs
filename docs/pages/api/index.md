@@ -23,7 +23,7 @@ prependJs:
     ]}
     title="Mapbox GL JS"
     version={version}
-    changelogLink="https://github.com/mapbox/mapbox-gl-js/blob/master/CHANGELOG.md"
+    changelogLink="https://github.com/mapbox/mapbox-gl-js/blob/main/CHANGELOG.md"
     ghLink="https://github.com/mapbox/mapbox-gl-js"
     installLink="https://www.mapbox.com/install/js/"
     image={<div />}

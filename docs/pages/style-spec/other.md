@@ -24,7 +24,7 @@ Some style properties are no longer the preferred method of accomplishing a part
 ## Function
 
 {{<Note theme="warning">}}
-As of [v0.41.0](https://github.com/mapbox/mapbox-gl-js/blob/master/CHANGELOG.md#0410-october-11-2017), [property expressions](/mapbox-gl-js/style-spec/expressions) is the preferred method for styling features based on zoom level or the feature's properties. Zoom and property functions are still supported, but will be phased out in a future release.
+As of [v0.41.0](https://github.com/mapbox/mapbox-gl-js/blob/main/CHANGELOG.md#0410-october-11-2017), [property expressions](/mapbox-gl-js/style-spec/expressions) is the preferred method for styling features based on zoom level or the feature's properties. Zoom and property functions are still supported, but will be phased out in a future release.
 {{</Note>}}
 
 The value for any layout or paint property may be specified as a _function_. Functions allow you to make the appearance of a map feature change with the current zoom level and/or the feature's properties.

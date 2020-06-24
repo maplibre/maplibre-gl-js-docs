@@ -26,7 +26,7 @@ Except for layers of the <var>background</var> type, each layer needs to refer t
 START GENERATED CONTENT:
 Content in this section is generated directly using the Mapbox Style
 Specification. To update any content displayed in this section, make edits to:
-https://github.com/mapbox/mapbox-gl-js/blob/master/src/style-spec/reference/v8.json.
+https://github.com/mapbox/mapbox-gl-js/blob/main/src/style-spec/reference/v8.json.
 -->
 {{ <Items entry={ref.layer} />}}
 <!-- END GENERATED CONTENT -->
@@ -46,7 +46,7 @@ _Paint properties_ are applied later in the rendering process. Paint properties 
 START GENERATED CONTENT:
 Content in this section is generated directly using the Mapbox Style
 Specification. To update any content displayed in this section, make edits to:
-https://github.com/mapbox/mapbox-gl-js/blob/master/src/style-spec/reference/v8.json.
+https://github.com/mapbox/mapbox-gl-js/blob/main/src/style-spec/reference/v8.json.
 -->
 
 ## background

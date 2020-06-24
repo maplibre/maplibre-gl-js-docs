@@ -72,7 +72,7 @@ A vector tile source. Tiles must be in [Mapbox Vector Tile format](https://docs.
 START GENERATED CONTENT:
 Content in this section is generated directly using the Mapbox Style
 Specification. To update any content displayed in this section, make edits to:
-https://github.com/mapbox/mapbox-gl-js/blob/master/src/style-spec/reference/v8.json.
+https://github.com/mapbox/mapbox-gl-js/blob/main/src/style-spec/reference/v8.json.
 -->
 {{<Items headingLevel='3' entry={ref.source_vector} section="vector" />}}
 <!-- END GENERATED CONTENT -->
@@ -109,7 +109,7 @@ A raster tile source. For raster tiles hosted by Mapbox, the `"url"` value shoul
 START GENERATED CONTENT:
 Content in this section is generated directly using the Mapbox Style
 Specification. To update any content displayed in this section, make edits to:
-https://github.com/mapbox/mapbox-gl-js/blob/master/src/style-spec/reference/v8.json.
+https://github.com/mapbox/mapbox-gl-js/blob/main/src/style-spec/reference/v8.json.
 -->
 {{<Items headingLevel='3' entry={ref.source_raster} section="raster" />}}
 <!-- END GENERATED CONTENT -->
@@ -144,7 +144,7 @@ A raster DEM source. Only supports [Mapbox Terrain RGB](https://blog.mapbox.com/
 START GENERATED CONTENT:
 Content in this section is generated directly using the Mapbox Style
 Specification. To update any content displayed in this section, make edits to:
-https://github.com/mapbox/mapbox-gl-js/blob/master/src/style-spec/reference/v8.json.
+https://github.com/mapbox/mapbox-gl-js/blob/main/src/style-spec/reference/v8.json.
 -->
 {{<Items headingLevel='3' entry={ref.source_raster_dem} section="raster-dem" />}}
 <!-- END GENERATED CONTENT -->
@@ -194,7 +194,7 @@ This example of a GeoJSON source refers to an external GeoJSON document via its 
 START GENERATED CONTENT:
 Content in this section is generated directly using the Mapbox Style
 Specification. To update any content displayed in this section, make edits to:
-https://github.com/mapbox/mapbox-gl-js/blob/master/src/style-spec/reference/v8.json.
+https://github.com/mapbox/mapbox-gl-js/blob/main/src/style-spec/reference/v8.json.
 -->
 {{<Items headingLevel='3' entry={ref.source_geojson} section="geojson" />}}
 <!-- END GENERATED CONTENT -->
@@ -246,7 +246,7 @@ The `"coordinates"` array contains `[longitude, latitude]` pairs for the image c
 START GENERATED CONTENT:
 Content in this section is generated directly using the Mapbox Style
 Specification. To update any content displayed in this section, make edits to:
-https://github.com/mapbox/mapbox-gl-js/blob/master/src/style-spec/reference/v8.json.
+https://github.com/mapbox/mapbox-gl-js/blob/main/src/style-spec/reference/v8.json.
 -->
 {{<Items headingLevel='3' entry={ref.source_image} section="image" />}}
 <!-- END GENERATED CONTENT -->
@@ -292,7 +292,7 @@ The `"coordinates"` array contains `[longitude, latitude]` pairs for the video c
 START GENERATED CONTENT:
 Content in this section is generated directly using the Mapbox Style
 Specification. To update any content displayed in this section, make edits to:
-https://github.com/mapbox/mapbox-gl-js/blob/master/src/style-spec/reference/v8.json.
+https://github.com/mapbox/mapbox-gl-js/blob/main/src/style-spec/reference/v8.json.
 -->
 {{<Items headingLevel='3' entry={ref.source_video} section="video" />}}
 <!-- END GENERATED CONTENT -->
