@@ -1,83 +1,144 @@
 <style>
-    label {
-        font-size: 20px;
-    }
-    .toggle-menu {
-        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    #menu {
         position: absolute;
-        width: 400px;
-        top: 0;
-        right: 0;
-        padding: 10px;
+        background: #fff;
+        padding: 20px;
+        margin: 20px;
+        font-family: 'Open Sans', sans-serif;
+        max-width: 180px;
     }
-
-    .toggle-menu .toggle-menu-inner {
-        text-align: center;
-        background-color: #fff;
-        border-radius: 5px;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-
-    .toggle-menu-inner button {
-        color: #000;
-        display: inline-block;
-        width: 50px;
-        height: 20px;
-        border: none;
-        margin: 10px;
-        cursor: pointer;
-    }
-
-    .toggle-menu-inner button:hover {
-        box-shadow: inset 0 0 0 4px pink;
+    #worldview-options {
+        margin-top: 10px;
     }
 </style>
 
 <div id="map"></div>
-<div class="toggle-menu top">
-    <div class="toggle-menu-inner">
-        <label>Toggle worldview:</label>
-        <div id="worldviews"></div>
+<div id="menu">
+    <div>
+        Display administrative boundaries consistent with the following
+        worldview:
     </div>
+    <!-- The worldview options will be built dynamically using JavaScript (below). -->
+    <div id="worldview-options"></div>
 </div>
 
 <script>
     var map = new mapboxgl.Map({
         container: 'map',
-        /* Note: The worldview data field is only available in styles that use the Mapbox Streets v8 tileset https://www.mapbox.com/vector-tiles/mapbox-streets-v8/ */
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [95.69, 25.251],
-        zoom: 3
+        // The worldview data field is only available in styles
+        // that use the Mapbox Streets v8 tileset
+        // https://docs.mapbox.com/vector-tiles/reference/mapbox-streets-v8/
+        // or Mapbox Boundaries v3 tileset
+        // https://docs.mapbox.com/vector-tiles/reference/mapbox-boundaries-v3/
+        style: 'mapbox://styles/mapbox/light-v10',
+        center: [88, 26],
+        zoom: 4
     });
 
-    var worldviewButtons = document.getElementById('worldviews');
+    // List the worldviews options you want users to select from. For
+    // available worldviews, see https://docs.mapbox.com/help/glossary/worldview/.
+    var availableWorldviews = [
+        {
+            code: 'CN',
+            name: 'China'
+        },
+        {
+            code: 'IN',
+            name: 'India'
+        },
+        {
+            code: 'JP',
+            name: 'Japan'
+        },
+        {
+            code: 'US',
+            name: 'United States'
+        }
+    ];
 
-    var worldviews = ['CN', 'IN', 'US'];
+    // Choose a worldview you want to use when the map is first loaded.
+    // Styles created by Mapbox default to "US" as the initial worldview.
+    var worldviewOnMapLoad = 'US';
 
+    // Build the menu.
+    // Alternatively, you could hard code the menu in your HTML directly.
+    var worldviewOptions = document.getElementById('worldview-options');
+    // Iterate through all availableWorldviews.
+    availableWorldviews.forEach(function(worldview) {
+        // Create three new elements for each worldview.
+        var radioItem = document.createElement('div');
+        var radioInput = document.createElement('input');
+        var radioLabel = document.createElement('label');
+        // Assign attributes based on the worldview.
+        radioInput.type = 'radio';
+        radioInput.name = 'toggle-worldview';
+        radioInput.id = worldview.code;
+        radioInput.value = worldview.code;
+        radioInput.checked = worldview.code === worldviewOnMapLoad;
+        radioLabel.htmlFor = worldview.code;
+        radioLabel.innerText = worldview.code + ' (' + worldview.name + ')';
+        // Append the input and label elements to the radioItem div.
+        radioItem.appendChild(radioInput);
+        radioItem.appendChild(radioLabel);
+        // Append the radioItem div to the worldviewOptions div that
+        // will contain all the radio buttons.
+        worldviewOptions.appendChild(radioItem);
+    });
+
+    // Wait for the map to finish loading.
     map.on('load', function() {
-        worldviews.forEach(function(worldview) {
-            var worldviewButton = document.createElement('button');
-            worldviewButton.innerHTML = worldview.toString();
-            worldviewButton.addEventListener('click', function() {
-                var adminLayers = [
-                    'admin-0-boundary',
-                    'admin-1-boundary',
-                    'admin-0-boundary-disputed',
-                    'admin-1-boundary-bg',
-                    'admin-0-boundary-bg'
-                ];
-                adminLayers.forEach(function(adminLayer) {
-                    map.setFilter(adminLayer, [
-                        'match',
-                        ['get', 'worldview'],
-                        ['all', worldview],
-                        true,
-                        false
-                    ]);
-                });
-            });
-            worldviewButtons.appendChild(worldviewButton);
-        });
+        // Filter the "admin-0-*" layers to display
+        // administrative boundaries consistent with the
+        // initial worldview defined above ("CN").
+        filterLayers(worldviewOnMapLoad);
+        // Get all the worldview option inputs and loop through them.
+        var inputs = worldviewOptions.getElementsByTagName('input');
+        for (var i = 0; i < inputs.length; i++) {
+            // Specify that the switchWorldview function
+            // (defined below) should run every time an input
+            // is clicked.
+            inputs[i].onclick = switchWorldview;
+        }
     });
+
+    // Create a function that will identify which worldview
+    // is currently selected and run the filterLayers function
+    // with that worldview as an argument.
+    function switchWorldview(option) {
+        filterLayers(option.target.id);
+    }
+
+    // Update the filter for each "admin-0-*" layer, which contain
+    // administrative boundaries at the country level.
+    // These are the same filters used in the Mapbox Light
+    // style except that the worldview is based on user input.
+    function filterLayers(worldview) {
+        // The "admin-0-boundary-disputed" layer shows boundaries
+        // at this level that are known to be disputed.
+        map.setFilter('admin-0-boundary-disputed', [
+            'all',
+            ['==', ['get', 'disputed'], 'true'],
+            ['==', ['get', 'admin_level'], 0],
+            ['==', ['get', 'maritime'], 'false'],
+            ['match', ['get', 'worldview'], ['all', worldview], true, false]
+        ]);
+        // The "admin-0-boundary" layer shows all boundaries at
+        // this level that are not disputed.
+        map.setFilter('admin-0-boundary', [
+            'all',
+            ['==', ['get', 'admin_level'], 0],
+            ['==', ['get', 'disputed'], 'false'],
+            ['==', ['get', 'maritime'], 'false'],
+            ['match', ['get', 'worldview'], ['all', worldview], true, false]
+        ]);
+        // The "admin-0-boundary-bg" layer helps features in both
+        // "admin-0-boundary" and "admin-0-boundary-disputed" stand
+        // out visually.
+        map.setFilter('admin-0-boundary-bg', [
+            'all',
+            ['==', ['get', 'admin_level'], 0],
+            ['==', ['get', 'maritime'], 'false'],
+            ['match', ['get', 'worldview'], ['all', worldview], true, false]
+        ]);
+    }
 </script>
