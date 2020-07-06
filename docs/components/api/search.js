@@ -4,6 +4,8 @@ import Downshift from 'downshift';
 import Fuse from 'fuse.js';
 import apiSearch from '@mapbox/batfish/data/api-search'; // eslint-disable-line
 import classnames from 'classnames';
+import * as Sentry from '@sentry/browser';
+import { routeTo } from '@mapbox/batfish/modules/route-to';
 
 export default class ApiSearch extends React.Component {
     constructor(props) {
@@ -33,17 +35,22 @@ export default class ApiSearch extends React.Component {
 
     // perform these functions when the users selects a menu item
     handleResultClick = selection => {
-        // track click so we can guage usage of this feature
-        if (window && window.analytics) {
-            analytics.track('Searched GL JS API Reference', {
-                query: this.state.filter,
-                clicked: selection.path
-            });
+        try {
+            // track click so we can guage usage of this feature
+            if (window && window.analytics) {
+                analytics.track('Searched GL JS API Reference', {
+                    query: this.state.filter,
+                    clicked: selection.path
+                });
+            }
+            // open selection in current window
+            routeTo(selection.path);
+            // clear search
+            this.setState({ filter: '' });
+        } catch (err) {
+            Sentry.setContext('selection', selection);
+            Sentry.captureException(err);
         }
-        // open selection in current window
-        window.open(selection.path, '_self');
-        // clear search
-        this.setState({ filter: '' });
     };
 
     render() {
