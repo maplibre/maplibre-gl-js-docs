@@ -16,7 +16,7 @@
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-flow": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
-    "@mapbox/appropriate-images": "^3.0.0",
+    "@mapbox/appropriate-images": "^4.0.0",
     "@mapbox/appropriate-images-react": "^1.0.0",
     "@mapbox/batfish": "1.9.8",
     "@mapbox/copyeditor": "^0.7.0",
