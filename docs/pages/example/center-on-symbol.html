@@ -4,66 +4,76 @@
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v10',
         center: [-90.96, -0.47],
-        zoom: 8
+        zoom: 7.5
     });
 
     map.on('load', function() {
-        // Add a GeoJSON source with 3 points.
-        map.addSource('points', {
-            'type': 'geojson',
-            'data': {
-                'type': 'FeatureCollection',
-                'features': [
-                    {
-                        'type': 'Feature',
-                        'properties': {},
-                        'geometry': {
-                            'type': 'Point',
-                            'coordinates': [
-                                -91.395263671875,
-                                -0.9145729757782163
-                            ]
-                        }
-                    },
-                    {
-                        'type': 'Feature',
-                        'properties': {},
-                        'geometry': {
-                            'type': 'Point',
-                            'coordinates': [
-                                -90.32958984375,
-                                -0.6344474832838974
-                            ]
-                        }
-                    },
-                    {
-                        'type': 'Feature',
-                        'properties': {},
-                        'geometry': {
-                            'type': 'Point',
-                            'coordinates': [
-                                -91.34033203125,
-                                0.01647949196029245
-                            ]
-                        }
+        // Add an image to use as a custom marker
+        map.loadImage(
+            'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+            function(error, image) {
+                if (error) throw error;
+                map.addImage('custom-marker', image);
+                // Add a GeoJSON source with 3 points.
+                map.addSource('points', {
+                    'type': 'geojson',
+                    'data': {
+                        'type': 'FeatureCollection',
+                        'features': [
+                            {
+                                'type': 'Feature',
+                                'properties': {},
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [
+                                        -91.395263671875,
+                                        -0.9145729757782163
+                                    ]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {},
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [
+                                        -90.32958984375,
+                                        -0.6344474832838974
+                                    ]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {},
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [
+                                        -91.34033203125,
+                                        0.01647949196029245
+                                    ]
+                                }
+                            }
+                        ]
                     }
-                ]
-            }
-        });
+                });
 
-        // Add a symbol layer.
-        map.addLayer({
-            'id': 'symbols',
-            'type': 'symbol',
-            'source': 'points',
-            'layout': {
-                'icon-image': 'rocket-15'
+                // Add a symbol layer
+                map.addLayer({
+                    'id': 'symbols',
+                    'type': 'symbol',
+                    'source': 'points',
+                    'layout': {
+                        'icon-image': 'custom-marker'
+                    }
+                });
             }
-        });
+        );
 
         // Center the map on the coordinates of any clicked symbol from the 'symbols' layer.
         map.on('click', 'symbols', function(e) {
-            map.flyTo({ center: e.features[0].geometry.coordinates });
+            map.flyTo({
+                center: e.features[0].geometry.coordinates
+            });
         });
 
         // Change the cursor to a pointer when the it enters a feature in the 'symbols' layer.
