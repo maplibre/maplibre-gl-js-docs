@@ -126,7 +126,7 @@
     "mapbox-gl-supported": {
       "website": "https://github.com/mapbox/mapbox-gl-supported",
       "description": "Determines if the current browser supports Mapbox GL JS.",
-      "example": "mapbox-gl-supported"
+      "example": "check-for-support"
     },
     "mapbox-gl-sync-move": {
       "website": "https://github.com/mapbox/mapbox-gl-sync-move",

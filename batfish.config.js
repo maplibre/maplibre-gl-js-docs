@@ -70,7 +70,7 @@ module.exports = () => {
                             title: example.frontMatter.title,
                             description: example.frontMatter.description,
                             tags: example.frontMatter.tags,
-                            pathname: example.frontMatter.pathname
+                            thumbnail: example.frontMatter.thumbnail
                         };
                     });
             },

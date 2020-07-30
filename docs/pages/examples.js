@@ -29,10 +29,10 @@ class ExamplesLandingPage extends React.PureComponent {
             const cardsForTopic = examples
                 .filter(example => example.tags.indexOf(topic) > -1)
                 .map((example, index) => {
-                    const filename = example.pathname.split('/')[3];
+                    const thumbnail = example.thumbnail;
                     // set default if thumbnail doesn't exist yet
-                    const imageId = imageConfig[filename]
-                        ? filename
+                    const imageId = imageConfig[thumbnail]
+                        ? thumbnail
                         : 'placeholder';
                     return (
                         <Card

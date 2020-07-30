@@ -34,7 +34,7 @@ Object.keys(categories).forEach(category => {
             t.ok(meta.website, `${plugin} has \`website\``);
             t.ok(isUrl(meta.website), `${plugin} \`website\` is a url`);
             if (meta.example) {
-                const path = `./docs/pages/example/${meta.example}.js`;
+                const path = `./docs/pages/example/${meta.example}.md`;
                 t.ok(fs.existsSync(path), `example ${path} exists`);
             }
             t.end();

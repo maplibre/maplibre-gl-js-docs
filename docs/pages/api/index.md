@@ -7,7 +7,7 @@ language:
 prependJs:
   - "import OverviewHeader from '@mapbox/dr-ui/overview-header';"
   - "import Quickstart from '../../components/quickstart';"
-  - "import ExampleCode from '../../components/example_code';"
+  - "import Example from '../../components/example';"
   - "import SimpleMapHtml from '../example/simple-map.html';"
   - "import Copyable from '../../components/copyable';"
   - "import urls from '../../components/urls';"
@@ -36,7 +36,7 @@ Mapbox GL JS is a JavaScript library that uses WebGL to render interactive maps 
 ## Quickstart
 
 {{
-    <ExampleCode
+    <Example
         frontMatter={{
           title: 'Mapbox GL JS map',
           description: ''

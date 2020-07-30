@@ -45,7 +45,8 @@ code for the example, and a `.js` file containing example boilerplate and front 
 * `title`: A short title for the example in **sentence case** as a **verb phrase**
 * `description`: A one sentence description of the example
 * `tags`: An array of tags for the example, which determine the sections it is listed in in the sidebar navigation, see `docs/data/tags.json` for a list of tags
-* `pathname`: The relative path of the example, including leading `/mapbox-gl-js/example/` path
+* `thumbnail`: The filename of the example's thumbnail image (without the file extension)
+* `contentType: example`: Set the contentType to equal example.
 
 In the `.html` file, write the HTML and JavaScript constituting the example.
 

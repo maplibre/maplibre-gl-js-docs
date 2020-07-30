@@ -233,7 +233,7 @@ class PageShell extends React.Component {
             meta.description = frontMatter.description;
         }
         if (!meta.pathname) {
-            meta.pathname = location ? location.pathname : frontMatter.pathname;
+            meta.pathname = location.pathname;
         }
         if (frontMatter.contentType) meta.contentType = frontMatter.contentType;
         if (frontMatter.language) meta.language = frontMatter.language;

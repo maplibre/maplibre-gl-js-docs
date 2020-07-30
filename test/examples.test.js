@@ -30,7 +30,7 @@ const readPost = filename => {
 const listExamplesJs = dir => {
     const files = fs.readdirSync(`${dir}`);
     return files.reduce((arr, file) => {
-        if (path.extname(file) === '.js') {
+        if (path.extname(file) === '.md') {
             arr.push(`${dir}${file}`);
         }
         return arr;
@@ -49,27 +49,10 @@ const listExamplesHtml = dir => {
 
 // Test .js files
 listExamplesJs('./docs/pages/example/').forEach(example => {
-    const file = readPost(example);
-    const metadata = file.metadata;
+    const { metadata, file } = readPost(example);
 
     if (metadata) {
         test(`Example metatdata: ${example}`, t => {
-            t.ok(metadata.title, 'has title');
-            t.notOk(
-                metadata.title.trim().endsWith('.'),
-                `title must not end with a period`
-            );
-            t.ok(metadata.description, 'has description');
-            t.ok(
-                metadata.description.trim().endsWith('.'),
-                `description must end with a period`
-            );
-            t.ok(metadata.pathname, 'has pathname');
-            t.ok(
-                metadata.pathname.startsWith('/mapbox-gl-js/example/'),
-                'pathname starts with /mapbox-gl-js/example/'
-            );
-            t.ok(metadata.pathname.endsWith('/'), 'pathname ends with /');
             t.ok(metadata.tags, 'has tags');
             metadata.tags.forEach(tag => {
                 t.notEqual(
@@ -83,18 +66,27 @@ listExamplesJs('./docs/pages/example/').forEach(example => {
             t.end();
         });
 
-        test(`Example image: ${example}`, t => {
-            // check that they saved an image for the example
-            const imagePathSrc = example
-                .replace('./docs/pages/example/', './docs/img/src/')
-                .replace('.js', '.png');
+        test(`Example thumbnail: ${example}`, t => {
+            t.ok(metadata.thumbnail, 'has thumbnail');
+            const imagePathSrc = `./docs/img/src/${metadata.thumbnail}.png`;
             t.ok(
                 fs.existsSync(imagePathSrc),
                 `example must have an image located at: ${imagePathSrc}`
             );
+
             t.end();
         });
     }
+    test(`Example content: ${example}`, t => {
+        const viewport = file.match(
+            /{{{\s?<Example html={html} {...this.props}\s?|\/>\s?}}/gim
+        );
+        t.ok(
+            viewport,
+            `Content must include: {{ <Example html={html} {...this.props} /> }}`
+        );
+        t.end();
+    });
 });
 
 // Test .html files
