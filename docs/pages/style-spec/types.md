@@ -3,6 +3,8 @@ title: Types
 id: types
 description: A Mapbox style contains values of various types, most commonly as values for the style properties of a layer.
 contentType: specification
+products:
+- Mapbox Style Specification
 ---
 
 A Mapbox style contains values of various types, most commonly as values for the style properties of a layer.

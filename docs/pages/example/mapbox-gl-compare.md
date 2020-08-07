@@ -8,6 +8,8 @@ thumbnail: mapbox-gl-compare
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './mapbox-gl-compare.html';"

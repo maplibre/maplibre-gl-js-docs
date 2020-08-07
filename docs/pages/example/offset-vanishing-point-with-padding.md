@@ -8,6 +8,8 @@ thumbnail: offset-vanishing-point-with-padding
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './offset-vanishing-point-with-padding.html';"

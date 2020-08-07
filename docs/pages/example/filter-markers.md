@@ -7,6 +7,8 @@ thumbnail: filter-markers
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './filter-markers.html';"

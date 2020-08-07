@@ -23,6 +23,7 @@ import classnames from 'classnames';
 import apiNavigation from '@mapbox/batfish/data/api-navigation'; // eslint-disable-line
 import { styleSpecNavigation } from '../data/style-spec-navigation';
 import redirectApiRef from '../util/api-ref-redirect';
+import mbxMeta from '@mapbox/batfish/data/mbx-meta'; // eslint-disable-line
 
 import ApiSearch from './api/search';
 
@@ -52,11 +53,14 @@ class PageShell extends React.Component {
                 window.location = redirectApiRef(this.props.location);
         }
 
+        // set mapbox metadata
+        window.mbxMetadata = mbxMeta[this.props.location.pathname] || {};
         // initialize analytics
-        if (typeof window !== 'undefined' && window.initializeMapboxAnalytics) {
+        if (window && window.initializeMapboxAnalytics) {
             window.initializeMapboxAnalytics({
                 segmentIntegrations: {
-                    'Facebook Pixel': true
+                    'Facebook Pixel': true,
+                    Drift: false
                 }
             });
         }

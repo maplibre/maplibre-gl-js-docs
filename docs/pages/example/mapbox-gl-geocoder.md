@@ -11,6 +11,9 @@ thumbnail: mapbox-gl-geocoder
 contentType: example
 language:
 - JavaScript
+products:
+- Geocoding API
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './mapbox-gl-geocoder.html';"

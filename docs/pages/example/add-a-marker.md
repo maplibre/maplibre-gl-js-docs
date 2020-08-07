@@ -8,6 +8,8 @@ thumbnail: add-a-marker
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './add-a-marker.html';"

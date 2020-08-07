@@ -7,6 +7,8 @@ thumbnail: custom-marker-icons
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './custom-marker-icons.html';"

@@ -9,6 +9,8 @@ thumbnail: mouse-position
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './mouse-position.html';"

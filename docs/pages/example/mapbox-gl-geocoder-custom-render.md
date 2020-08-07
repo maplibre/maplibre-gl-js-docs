@@ -9,6 +9,9 @@ thumbnail: mapbox-gl-geocoder-custom-render
 contentType: example
 language:
 - JavaScript
+products:
+- Geocoding API
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './mapbox-gl-geocoder-custom-render.html';"

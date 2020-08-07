@@ -3476,18 +3476,18 @@
     unified-lint-rule "^1.0.5"
     unist-util-visit "^2.0.2"
 
-"@mapbox/remark-lint-mapbox@^0.12.1":
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/@mapbox/remark-lint-mapbox/-/remark-lint-mapbox-0.12.1.tgz#2aff3e710c5556597331cc51d0e350ac2b239c29"
-  integrity sha512-/TqDi+YmCyP0wmBJKYkgYXTlBpXZVqDi0xy/AMJdv31XPU+yIwy8K7bLcG8/Kn7rme0EyFha4i64nChcRJFeaQ==
+"@mapbox/remark-lint-mapbox@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@mapbox/remark-lint-mapbox/-/remark-lint-mapbox-1.1.0.tgz#34d5849aabe0805b974203e5a9c88815e6dbd0a0"
+  integrity sha512-Av5HPEPmySrBmkxWV4RFmyxLi/8W8PtVLTIq054UlqFMtqSPdeCFpBq5VLHPdP8uA3Ix4jMpGpu5spBbCTpJig==
   dependencies:
     "@mapbox/jsxtreme-markdown" "^1.0.0"
     check-links "^1.1.8"
     js-yaml "^3.14.0"
     unified-lint-rule "^1.0.6"
     unist-util-generated "^1.1.5"
-    unist-util-visit "^2.0.2"
-    unist-util-visit-parents "^3.0.2"
+    unist-util-visit "^2.0.3"
+    unist-util-visit-parents "^3.1.0"
     valid-url "^1.0.9"
 
 "@mapbox/scroll-restorer@^1.0.0":
@@ -17925,10 +17925,18 @@ unist-util-visit-parents@^2.0.0:
   dependencies:
     unist-util-is "^2.1.2"
 
-unist-util-visit-parents@^3.0.0, unist-util-visit-parents@^3.0.2:
+unist-util-visit-parents@^3.0.0:
   version "3.0.2"
   resolved "https://registry.npmjs.org/unist-util-visit-parents/-/unist-util-visit-parents-3.0.2.tgz#d4076af3011739c71d2ce99d05de37d545f4351d"
   integrity sha512-yJEfuZtzFpQmg1OSCyS9M5NJRrln/9FbYosH3iW0MG402QbdbaB8ZESwUv9RO6nRfLAKvWcMxCwdLWOov36x/g==
+  dependencies:
+    "@types/unist" "^2.0.0"
+    unist-util-is "^4.0.0"
+
+unist-util-visit-parents@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/unist-util-visit-parents/-/unist-util-visit-parents-3.1.0.tgz#4dd262fb9dcfe44f297d53e882fc6ff3421173d5"
+  integrity sha512-0g4wbluTF93npyPrp/ymd3tCDTMnP0yo2akFD2FIBAYXq/Sga3lwaU1D8OYKbtpioaI6CkDcQ6fsMnmtzt7htw==
   dependencies:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
@@ -17951,6 +17959,15 @@ unist-util-visit@^2.0.0, unist-util-visit@^2.0.2:
   version "2.0.2"
   resolved "https://registry.npmjs.org/unist-util-visit/-/unist-util-visit-2.0.2.tgz#3843782a517de3d2357b4c193b24af2d9366afb7"
   integrity sha512-HoHNhGnKj6y+Sq+7ASo2zpVdfdRifhTgX2KTU3B/sO/TTlZchp7E3S4vjRzDJ7L60KmrCPsQkVK3lEF3cz36XQ==
+  dependencies:
+    "@types/unist" "^2.0.0"
+    unist-util-is "^4.0.0"
+    unist-util-visit-parents "^3.0.0"
+
+unist-util-visit@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-2.0.3.tgz#c3703893146df47203bb8a9795af47d7b971208c"
+  integrity sha512-iJ4/RczbJMkD0712mGktuGpm/U4By4FfDonL7N/9tATGIF4imikjOuagyMY53tnZq3NP6BcmlrHhEKAfGWjh7Q==
   dependencies:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"

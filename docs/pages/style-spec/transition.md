@@ -3,6 +3,8 @@ title: Transition
 id: transition
 description: A transition property controls timing for the interpolation between a transitionable style property's previous value and new value.
 contentType: specification
+products:
+- Mapbox Style Specification
 prependJs:
     - "import Items from '../../components/style-spec/items';"
     - "import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';"

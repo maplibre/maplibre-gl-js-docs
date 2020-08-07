@@ -7,6 +7,8 @@ thumbnail: change-building-color-based-on-zoom-level
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './change-building-color-based-on-zoom-level.html';"

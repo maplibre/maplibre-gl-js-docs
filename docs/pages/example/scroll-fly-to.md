@@ -7,6 +7,8 @@ thumbnail: scroll-fly-to
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './scroll-fly-to.html';"

@@ -8,6 +8,8 @@ thumbnail: add-image-stretchable
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './add-image-stretchable.html';"

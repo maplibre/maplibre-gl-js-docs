@@ -2,6 +2,8 @@
 title: Plugins
 description: Extend your Mapbox GL JS map with plugins.
 pathname: /mapbox-gl-js/plugins/
+products:
+- Mapbox GL JS
 ---*/
 
 import React from 'react';

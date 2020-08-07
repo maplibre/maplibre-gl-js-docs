@@ -7,6 +7,8 @@ thumbnail: polygon-popup-on-click
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './polygon-popup-on-click.html';"

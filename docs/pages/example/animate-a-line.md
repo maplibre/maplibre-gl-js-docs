@@ -8,6 +8,8 @@ thumbnail: animate-a-line
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './animate-a-line.html';"

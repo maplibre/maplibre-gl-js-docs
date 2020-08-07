@@ -10,6 +10,9 @@ thumbnail: mapbox-gl-directions
 contentType: example
 language:
 - JavaScript
+products:
+- Directions API
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './mapbox-gl-directions.html';"

@@ -3,6 +3,8 @@ title: Light
 id: light
 description: A style's light property provides global light source for that style.
 contentType: specification
+products:
+- Mapbox Style Specification
 prependJs:
     - "import Items from '../../components/style-spec/items';"
     - "import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';"

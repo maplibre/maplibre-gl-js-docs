@@ -8,6 +8,8 @@ thumbnail: add-image-missing-generated
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './add-image-missing-generated.html';"

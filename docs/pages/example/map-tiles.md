@@ -7,6 +7,8 @@ thumbnail: map-tiles
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './map-tiles.html';"

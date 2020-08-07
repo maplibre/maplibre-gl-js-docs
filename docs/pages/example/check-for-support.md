@@ -7,6 +7,8 @@ thumbnail: check-for-support
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './check-for-support.html';"

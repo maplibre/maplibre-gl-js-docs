@@ -30,7 +30,7 @@
     "@mapbox/prettier-config-docs": "^0.1.0",
     "@mapbox/remark-config-docs": "0.5.0",
     "@mapbox/remark-lint-link-text": "^0.5.0",
-    "@mapbox/remark-lint-mapbox": "^0.12.1",
+    "@mapbox/remark-lint-mapbox": "^1.1.0",
     "@sentry/browser": "^5.15.5",
     "babel-eslint": "^10.1.0",
     "documentation": "~12.1.0",

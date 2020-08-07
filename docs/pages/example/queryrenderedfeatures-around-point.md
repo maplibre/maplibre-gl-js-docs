@@ -7,6 +7,8 @@ thumbnail: queryrenderedfeatures-around-point
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './queryrenderedfeatures-around-point.html';"

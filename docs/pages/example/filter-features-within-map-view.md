@@ -9,6 +9,8 @@ thumbnail: filter-features-within-map-view
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './filter-features-within-map-view.html';"

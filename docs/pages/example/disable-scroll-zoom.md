@@ -7,6 +7,8 @@ thumbnail: disable-scroll-zoom
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './disable-scroll-zoom.html';"

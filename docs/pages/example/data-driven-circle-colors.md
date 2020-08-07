@@ -7,6 +7,8 @@ thumbnail: data-driven-circle-colors
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './data-driven-circle-colors.html';"

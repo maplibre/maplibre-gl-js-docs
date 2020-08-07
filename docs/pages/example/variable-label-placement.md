@@ -7,6 +7,8 @@ thumbnail: variable-label-placement
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './variable-label-placement.html';"

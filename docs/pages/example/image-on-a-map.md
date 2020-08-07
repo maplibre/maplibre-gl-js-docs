@@ -8,6 +8,8 @@ thumbnail: image-on-a-map
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './image-on-a-map.html';"

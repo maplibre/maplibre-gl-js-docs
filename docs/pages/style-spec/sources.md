@@ -3,6 +3,8 @@ title: Sources
 id: sources
 description: Sources supply data to be shown on the map.
 contentType: specification
+products:
+- Mapbox Style Specification
 prependJs:
     - "import Items from '../../components/style-spec/items';"
     - "import { sourceTypes } from '../../data/types';"

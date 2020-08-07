@@ -7,6 +7,8 @@ thumbnail: change-case-of-labels
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './change-case-of-labels.html';"

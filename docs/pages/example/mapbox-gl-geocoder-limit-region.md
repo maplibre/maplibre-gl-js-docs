@@ -10,6 +10,9 @@ thumbnail: mapbox-gl-geocoder-limit-region
 contentType: example
 language:
 - JavaScript
+products:
+- Geocoding API
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './mapbox-gl-geocoder-limit-region.html';"

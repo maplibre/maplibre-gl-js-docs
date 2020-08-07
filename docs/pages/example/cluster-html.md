@@ -7,6 +7,8 @@ thumbnail: cluster-html
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './cluster-html.html';"

@@ -7,6 +7,8 @@ thumbnail: toggle-layers
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './toggle-layers.html';"

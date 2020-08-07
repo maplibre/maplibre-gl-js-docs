@@ -3,15 +3,17 @@ title: Introduction
 description: The Mapbox GL JS API documentation to render interactive maps from vector tiles and Mapbox styles.
 contentType: API
 language:
-    - JavaScript
+- JavaScript
+products:
+- Mapbox GL JS
 prependJs:
-  - "import OverviewHeader from '@mapbox/dr-ui/overview-header';"
-  - "import Quickstart from '../../components/quickstart';"
-  - "import Example from '../../components/example';"
-  - "import SimpleMapHtml from '../example/simple-map.html';"
-  - "import Copyable from '../../components/copyable';"
-  - "import urls from '../../components/urls';"
-  - "import {version} from '../../../mapbox-gl-js/package.json';"
+- "import OverviewHeader from '@mapbox/dr-ui/overview-header';"
+- "import Quickstart from '../../components/quickstart';"
+- "import Example from '../../components/example';"
+- "import SimpleMapHtml from '../example/simple-map.html';"
+- "import Copyable from '../../components/copyable';"
+- "import urls from '../../components/urls';"
+- "import {version} from '../../../mapbox-gl-js/package.json';"
 ---
 
 {{

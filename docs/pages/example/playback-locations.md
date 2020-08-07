@@ -7,6 +7,8 @@ thumbnail: playback-locations
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './playback-locations.html';"

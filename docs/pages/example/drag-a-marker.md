@@ -9,6 +9,8 @@ thumbnail: drag-a-marker
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './drag-a-marker.html';"

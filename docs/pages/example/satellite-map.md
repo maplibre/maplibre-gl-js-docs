@@ -7,6 +7,9 @@ thumbnail: satellite-map
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
+- Mapbox Satellite tileset
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './satellite-map.html';"

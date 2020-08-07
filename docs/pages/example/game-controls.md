@@ -7,6 +7,8 @@ thumbnail: game-controls
 contentType: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './game-controls.html';"
