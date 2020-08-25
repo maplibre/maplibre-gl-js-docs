@@ -1,6 +1,6 @@
 ---
 title: Display a map with a custom style
-description: Using a custom Mapbox-hosted style.
+description: Using a Mapbox-hosted custom [style](/help/glossary/style/).
 tags:
   - styles
 thumbnail: custom-style-id
