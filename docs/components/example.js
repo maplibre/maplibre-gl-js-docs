@@ -82,7 +82,7 @@ ${viewport}
 ${html}
 </body>
 <script>
-if (window.map) {
+if (window.map instanceof mapboxgl.Map) {
     var i = new instrumentile(map, {
         token: '${MapboxPageShell.getMapboxAccessToken()}',
         api: 'https://api.tiles.mapbox.com',
