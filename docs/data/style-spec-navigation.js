@@ -135,7 +135,7 @@ export const styleSpecNavigation = [
             },
             {
                 title: 'ResolvedImage',
-                path: 'resolvedImage'
+                path: 'resolvedimage'
             },
             {
                 title: 'String',
