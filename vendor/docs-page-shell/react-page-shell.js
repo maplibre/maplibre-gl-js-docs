@@ -317,13 +317,27 @@ var nonMobile = {
 		},
 		links: [
 			{
-				name: "Directions APIs",
+				name: "Navigation APIs",
 				to: "https://docs.mapbox.com/api/navigation/"
 			}
 		]
 	},
 	search: {
 		title: "Search",
+		sdks: {
+			title: "Search SDKs",
+			beta: true,
+			links: [
+				{
+					name: "for iOS",
+					to: "https://docs.mapbox.com/ios/search/overview/"
+				},
+				{
+					name: "for Android",
+					to: "https://docs.mapbox.com/android/search/overview/"
+				}
+			]
+		},
 		links: [
 			{
 				name: "Geocoding API",
@@ -430,7 +444,7 @@ var mobile = {
 				to: "https://docs.mapbox.com/android/navigation/overview/"
 			},
 			{
-				name: "Directions APIs",
+				name: "Navigation APIs",
 				to: "https://docs.mapbox.com/api/navigation/"
 			}
 		]
@@ -438,6 +452,16 @@ var mobile = {
 	search: {
 		title: "Search",
 		links: [
+			{
+				name: "SDK for iOS",
+				to: "https://docs.mapbox.com/ios/search/overview/",
+				beta: true
+			},
+			{
+				name: "SDK for Android",
+				to: "https://docs.mapbox.com/android/search/overview/",
+				beta: true
+			},
 			{
 				name: "Geocoding API",
 				to: "https://docs.mapbox.com/api/search/"
@@ -547,14 +571,28 @@ LinkList.defaultProps = {
 };
 
 function SearchMenu(props) {
-  var navItems = navigationMenuData.nonMobile.search ? navigationMenuData.nonMobile.search.links : [];
+  var menuData = navigationMenuData.nonMobile.search;
+  var standardLinks = menuData.links;
+  var sdkEls = React.createElement(LinkList, {
+    title: menuData.sdks.title,
+    links: menuData.sdks.links,
+    beta: menuData.sdks.beta,
+    bullets: true
+  });
+  var standardLinkEls = React.createElement(LinkList, {
+    links: standardLinks
+  });
   return React.createElement(PopupMenu, _extends({}, props, {
     name: props.title
   }), React.createElement("div", {
-    className: "shell-py30 shell-px30"
-  }, React.createElement(LinkList, {
-    links: navItems
-  })));
+    className: "shell-py30 shell-px30 w360"
+  }, React.createElement("div", {
+    className: "shell-grid shell-grid--gut24"
+  }, React.createElement("div", {
+    className: "shell-col shell-col--6"
+  }, sdkEls), React.createElement("div", {
+    className: "shell-col shell-col--6"
+  }, standardLinkEls))));
 }
 SearchMenu.propTypes = {
   title: PropTypes.string
@@ -1089,9 +1127,9 @@ exports.titleGenerator = titleGenerator;
 
 function titleGenerator(title, subsite, site) {
   // create array for formatted title: {title} | {subsite} | {site}
-  var titleArr = []; // do not push a title that is "Introduction"
+  var titleArr = []; // do not push a title that is "Introduction" or "Overview"
 
-  if (title && title !== 'Introduction' && (subsite || site)) titleArr.push(title); // push subsite, if same value doesn't exist yet, strip "for (Product)" from name
+  if (title && title !== 'Introduction' && title !== 'Overview' && (subsite || site)) titleArr.push(title); // push subsite, if same value doesn't exist yet, strip "for (Product)" from name
 
   if (subsite && titleArr.indexOf(subsite) === -1) titleArr.push(subsite.replace(/\sfor\s(iOS|Android|Vision|Unity)/, '')); // push site, if same value doesn't exist yet
 
