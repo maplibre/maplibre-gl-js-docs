@@ -8,6 +8,6 @@ export function searchMembers(arr, search) {
         threshold: 0.3 // slightly stricter
     });
     return fuse.search(search)
-        ? fuse.search(search).map(result => result.item)
+        ? fuse.search(search).map((result) => result.item)
         : [];
 }

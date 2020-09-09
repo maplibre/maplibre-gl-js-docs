@@ -1,10 +1,11 @@
 ---
 title: Disable map rotation
 description: Prevent users from rotating a map.
-tags:
-  - user-interaction
+topics:
+  - User interaction
 thumbnail: disable-rotation
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

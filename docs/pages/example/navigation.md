@@ -1,10 +1,11 @@
 ---
 title: Display map navigation controls
 description: Zoom and rotation controls to make map navigation more obvious.
-tags:
-  - controls-and-overlays
+topics:
+  - Controls and overlays
 thumbnail: navigation
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

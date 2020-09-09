@@ -5,10 +5,11 @@ description: >-
   control to search for places using Mapbox Geocoding API, supplementing
   results from a local data source or function, in this case to match
   Chicago Park names with text input.
-tags:
-  - geocoder
+topics:
+  - Geocoder
 thumbnail: forward-geocode-custom-data
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

@@ -3,10 +3,11 @@ title: Filter features within map view
 description: >-
   Move the map to query viewable features in a vector tile layer and filter by
   typing in an input.
-tags:
-  - user-interaction
+topics:
+  - User interaction
 thumbnail: filter-features-within-map-view
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

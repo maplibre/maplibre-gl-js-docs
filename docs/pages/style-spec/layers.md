@@ -3,6 +3,8 @@ title: Layers
 id: layers
 description: A style's layers property lists all of the layers available in that style.
 contentType: specification
+order: 8
+layout: accordion
 products:
 - Mapbox Style Specification
 prependJs:

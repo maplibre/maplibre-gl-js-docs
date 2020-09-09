@@ -47,7 +47,7 @@
         }
     };
 
-    map.on('load', function() {
+    map.on('load', function () {
         map.addSource('geojson', {
             'type': 'geojson',
             'data': geojson
@@ -79,7 +79,7 @@
             filter: ['in', '$type', 'LineString']
         });
 
-        map.on('click', function(e) {
+        map.on('click', function (e) {
             var features = map.queryRenderedFeatures(e.point, {
                 layers: ['measure-points']
             });
@@ -94,7 +94,7 @@
             // If a feature was clicked, remove it from the map
             if (features.length) {
                 var id = features[0].properties.id;
-                geojson.features = geojson.features.filter(function(point) {
+                geojson.features = geojson.features.filter(function (point) {
                     return point.properties.id !== id;
                 });
             } else {
@@ -113,11 +113,11 @@
             }
 
             if (geojson.features.length > 1) {
-                linestring.geometry.coordinates = geojson.features.map(function(
-                    point
-                ) {
-                    return point.geometry.coordinates;
-                });
+                linestring.geometry.coordinates = geojson.features.map(
+                    function (point) {
+                        return point.geometry.coordinates;
+                    }
+                );
 
                 geojson.features.push(linestring);
 
@@ -134,7 +134,7 @@
         });
     });
 
-    map.on('mousemove', function(e) {
+    map.on('mousemove', function (e) {
         var features = map.queryRenderedFeatures(e.point, {
             layers: ['measure-points']
         });

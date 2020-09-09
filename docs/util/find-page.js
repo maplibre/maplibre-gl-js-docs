@@ -15,7 +15,7 @@ function findPage(namespace) {
 function scan(items, namespace, doc) {
     if (items.members) {
         return Object.keys(items.members).reduce((str, type) => {
-            items.members[type].forEach(member => {
+            items.members[type].forEach((member) => {
                 if (
                     member.namespace &&
                     member.namespace.toLowerCase() === namespace

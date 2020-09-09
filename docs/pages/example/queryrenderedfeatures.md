@@ -3,10 +3,11 @@ title: Get features under the mouse pointer
 description: >-
   Using [`queryRenderedFeatures`](/mapbox-gl-js/api/#map#queryrenderedfeatures)
   to show properties of hovered-over map elements.
-tags:
-  - user-interaction
+topics:
+  - User interaction
 thumbnail: queryrenderedfeatures
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

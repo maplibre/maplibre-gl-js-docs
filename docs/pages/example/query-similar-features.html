@@ -32,7 +32,7 @@
         closeButton: false
     });
 
-    map.on('load', function() {
+    map.on('load', function () {
         // Add the source to query. In this example we're using
         // county polygons uploaded as vector tiles
         map.addSource('counties', {
@@ -70,7 +70,7 @@
             'settlement-label'
         ); // Place polygon under these labels.
 
-        map.on('mousemove', 'counties', function(e) {
+        map.on('mousemove', 'counties', function (e) {
             // Change the cursor style as a UI indicator.
             map.getCanvas().style.cursor = 'pointer';
 
@@ -88,9 +88,13 @@
             overlay.innerHTML = '';
 
             // Total the population of all features
-            var populationSum = relatedFeatures.reduce(function(memo, feature) {
+            var populationSum = relatedFeatures.reduce(function (
+                memo,
+                feature
+            ) {
                 return memo + feature.properties.population;
-            }, 0);
+            },
+            0);
 
             var title = document.createElement('strong');
             title.textContent =
@@ -121,7 +125,7 @@
                 .addTo(map);
         });
 
-        map.on('mouseleave', 'counties', function() {
+        map.on('mouseleave', 'counties', function () {
             map.getCanvas().style.cursor = '';
             popup.remove();
             map.setFilter('counties-highlighted', ['in', 'COUNTY', '']);

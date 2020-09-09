@@ -61,9 +61,9 @@
         zoom: 9
     });
 
-    map.on('load', function() {
-        cities.features.forEach(function(city, index) {
-            setTimeout(function() {
+    map.on('load', function () {
+        cities.features.forEach(function (city, index) {
+            setTimeout(function () {
                 map.jumpTo({ center: city.geometry.coordinates });
             }, 2000 * index);
         });

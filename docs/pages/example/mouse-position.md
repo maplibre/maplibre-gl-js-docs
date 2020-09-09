@@ -3,10 +3,11 @@ title: Get coordinates of the mouse pointer
 description: >-
   Showing mouse position on hover with pixel and latitude and longitude
   coordinates.
-tags:
-  - user-interaction
+topics:
+  - User interaction
 thumbnail: mouse-position
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

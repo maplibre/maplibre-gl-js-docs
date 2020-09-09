@@ -93,10 +93,10 @@
         '#bd0026'
     ];
 
-    colors.forEach(function(color) {
+    colors.forEach(function (color) {
         var swatch = document.createElement('button');
         swatch.style.backgroundColor = color;
-        swatch.addEventListener('click', function() {
+        swatch.addEventListener('click', function () {
             map.setPaintProperty(layer.value, 'fill-color', color);
         });
         swatches.appendChild(swatch);

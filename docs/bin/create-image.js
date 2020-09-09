@@ -74,7 +74,7 @@ ${snippet}
         .then(() =>
             console.log(`Created ./docs/img/src/${fileNameFormatted}.png`)
         )
-        .catch(err => {
+        .catch((err) => {
             console.log(err);
         });
     await browser.close();

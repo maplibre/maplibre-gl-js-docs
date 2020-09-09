@@ -1,10 +1,11 @@
 ---
 title: Disable scroll zoom
 description: Prevents scroll from zooming a map.
-tags:
-  - controls-and-overlays
+topics:
+  - Controls and overlays
 thumbnail: disable-scroll-zoom
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

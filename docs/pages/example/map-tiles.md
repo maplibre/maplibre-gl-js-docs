@@ -1,10 +1,11 @@
 ---
 title: Add a raster tile source
 description: Add a third-party raster source to the map.
-tags:
-  - sources
+topics:
+  - Sources
 thumbnail: map-tiles
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

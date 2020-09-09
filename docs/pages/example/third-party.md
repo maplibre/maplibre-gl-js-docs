@@ -2,10 +2,11 @@
 title: Add a third party vector tile source
 description: >-
   Render vector data provided by [Mapillary](https://www.mapillary.com/developer/tiles-documentation/#sequence-layer).
-tags:
-  - sources
+topics:
+  - Sources
 thumbnail: third-party
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

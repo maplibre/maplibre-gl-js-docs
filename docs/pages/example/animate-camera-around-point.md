@@ -1,10 +1,11 @@
 ---
 title: Animate map camera around a point
 description: Animate the map camera around a point.
-tags:
-  - camera
+topics:
+  - Camera
 thumbnail: animate-camera-around-point
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

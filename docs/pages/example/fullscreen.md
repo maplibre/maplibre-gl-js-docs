@@ -1,10 +1,11 @@
 ---
 title: View a fullscreen map
 description: Toggle between current view and fullscreen mode.
-tags:
-  - controls-and-overlays
+topics:
+  - Controls and overlays
 thumbnail: fullscreen
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

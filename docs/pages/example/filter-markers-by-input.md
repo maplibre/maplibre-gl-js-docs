@@ -1,10 +1,11 @@
 ---
 title: Filter symbols by text input
 description: Filter [symbols](/mapbox-gl-js/style-spec#layers-symbol) by icon name by typing in a text input.
-tags:
-  - user-interaction
+topics:
+  - User interaction
 thumbnail: filter-markers-by-input
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

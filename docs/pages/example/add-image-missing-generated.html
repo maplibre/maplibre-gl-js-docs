@@ -6,7 +6,7 @@
         style: 'mapbox://styles/mapbox/streets-v9'
     });
 
-    map.on('styleimagemissing', function(e) {
+    map.on('styleimagemissing', function (e) {
         var id = e.id; // id of the missing image
 
         // check if this missing icon is one this function can generate
@@ -14,10 +14,7 @@
         if (id.indexOf(prefix) !== 0) return;
 
         // extract the color from the id
-        var rgb = id
-            .replace(prefix, '')
-            .split(',')
-            .map(Number);
+        var rgb = id.replace(prefix, '').split(',').map(Number);
 
         var width = 64; // The image will be 64 pixels square
         var bytesPerPixel = 4; // Each pixel is represented by 4 bytes: red, green, blue, and alpha.
@@ -36,7 +33,7 @@
         map.addImage(id, { width: width, height: width, data: data });
     });
 
-    map.on('load', function() {
+    map.on('load', function () {
         map.addSource('points', {
             'type': 'geojson',
             'data': {

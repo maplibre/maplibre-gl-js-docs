@@ -1,10 +1,11 @@
 ---
 title: Extrude polygons for 3D indoor mapping
 description: Create a 3D indoor map with the [`fill-extrude-height`](/mapbox-gl-js/style-spec/layers/#paint-fill-extrusion-fill-extrusion-height) paint property.
-tags:
-  - layers
+topics:
+  - Layers
 thumbnail: 3d-extrusion-floorplan
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

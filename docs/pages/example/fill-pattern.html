@@ -7,7 +7,7 @@
         zoom: 1
     });
 
-    map.on('load', function() {
+    map.on('load', function () {
         // Add GeoJSON data
         map.addSource('source', {
             'type': 'geojson',
@@ -32,7 +32,7 @@
         // Load an image to use as the pattern
         map.loadImage(
             'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cat_silhouette.svg/64px-Cat_silhouette.svg.png',
-            function(err, image) {
+            function (err, image) {
                 // Throw an error if something went wrong
                 if (err) throw err;
 

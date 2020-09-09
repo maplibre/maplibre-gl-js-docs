@@ -17,12 +17,12 @@ async function latestStableTag() {
     // Get the mapbox-gl package's servsions from npm, sorted by semver.
     const { stdout } = await execa(`npm info mapbox-gl versions --json`, {
         shell: true
-    }).catch(err => {
+    }).catch((err) => {
         console.error(`Failed to list tags. ${JSON.stringify(err, null, 2)}`);
     });
     const suffixRe = new RegExp(`(-([beta]+|[rc]+|[alpha]+)(\\.?[0-9]+?)?)`);
     const stableReleases = JSON.parse(stdout).filter(
-        ver => !ver.match(suffixRe)
+        (ver) => !ver.match(suffixRe)
     );
     return `v${stableReleases.pop()}`;
 }
@@ -38,7 +38,7 @@ async function currentTag() {
 
     const { stdout: revList } = await execa(`git rev-list -n 1 ${currentRev}`, {
         shell: true
-    }).catch(err => {
+    }).catch((err) => {
         console.error(
             `Failed to fetch rev list for current tag. ${JSON.stringify(
                 err,
@@ -50,7 +50,7 @@ async function currentTag() {
 
     const possibleTags = await execa(`git tag --contains ${revList}`, {
         shell: true
-    }).then(res => {
+    }).then((res) => {
         // Git returns the tag list in multiple lines
         return res.stdout.split('\n');
     });

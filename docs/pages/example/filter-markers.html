@@ -135,14 +135,14 @@
         zoom: 11.15
     });
 
-    map.on('load', function() {
+    map.on('load', function () {
         // Add a GeoJSON source containing place coordinates and information.
         map.addSource('places', {
             'type': 'geojson',
             'data': places
         });
 
-        places.features.forEach(function(feature) {
+        places.features.forEach(function (feature) {
             var symbol = feature.properties['icon'];
             var layerID = 'poi-' + symbol;
 
@@ -172,7 +172,7 @@
                 filterGroup.appendChild(label);
 
                 // When the checkbox changes, update the visibility of the layer.
-                input.addEventListener('change', function(e) {
+                input.addEventListener('change', function (e) {
                     map.setLayoutProperty(
                         layerID,
                         'visibility',

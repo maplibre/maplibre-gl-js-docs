@@ -13,7 +13,7 @@
         zoom: 11.15
     });
 
-    map.on('load', function() {
+    map.on('load', function () {
         map.addSource('places', {
             'type': 'geojson',
             'data': {
@@ -143,7 +143,7 @@
 
         // When a click event occurs on a feature in the places layer, open a popup at the
         // location of the feature, with description HTML from its properties.
-        map.on('click', 'places', function(e) {
+        map.on('click', 'places', function (e) {
             var coordinates = e.features[0].geometry.coordinates.slice();
             var description = e.features[0].properties.description;
 
@@ -161,12 +161,12 @@
         });
 
         // Change the cursor to a pointer when the mouse is over the places layer.
-        map.on('mouseenter', 'places', function() {
+        map.on('mouseenter', 'places', function () {
             map.getCanvas().style.cursor = 'pointer';
         });
 
         // Change it back to a pointer when it leaves.
-        map.on('mouseleave', 'places', function() {
+        map.on('mouseleave', 'places', function () {
             map.getCanvas().style.cursor = '';
         });
     });

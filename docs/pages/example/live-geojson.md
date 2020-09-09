@@ -1,10 +1,11 @@
 ---
 title: Add live realtime data
 description: Use realtime GeoJSON data streams to move a [`symbol`](/mapbox-gl-js/style-spec#layers-symbol) on your map.
-tags:
-  - sources
+topics:
+  - Sources
 thumbnail: live-geojson
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

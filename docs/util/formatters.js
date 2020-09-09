@@ -6,7 +6,7 @@ import docs from '../components/api.json';
 
 const { linker } = require('./linker');
 
-const linkerStack = new LinkerStack({}).namespaceResolver(docs, namespace => {
+const linkerStack = new LinkerStack({}).namespaceResolver(docs, (namespace) => {
     return linker(namespace);
 });
 

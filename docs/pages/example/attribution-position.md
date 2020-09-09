@@ -2,10 +2,11 @@
 title: Change the default position for attribution
 description: >-
   Place attribution in the `top-left` position when initializing a map.
-tags:
-  - controls-and-overlays
+topics:
+  - Controls and overlays
 thumbnail: attribution-position
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

@@ -3,6 +3,8 @@ title: Transition
 id: transition
 description: A transition property controls timing for the interpolation between a transitionable style property's previous value and new value.
 contentType: specification
+order: 7
+layout: accordion
 products:
 - Mapbox Style Specification
 prependJs:
@@ -11,7 +13,7 @@ prependJs:
     - "import Icon from '@mapbox/mr-ui/icon';"
 ---
 
-A `transition` property controls timing for the interpolation between a transitionable style property's previous value and new value. A style's <a href="#root-transition" title="link to root-transition">root `transition`</a> property provides global transition defaults for that style. 
+A `transition` property controls timing for the interpolation between a transitionable style property's previous value and new value. A style's <a href="#root-transition" title="link to root-transition">root `transition`</a> property provides global transition defaults for that style.
 
 ```json
 "transition": {{JSON.stringify(

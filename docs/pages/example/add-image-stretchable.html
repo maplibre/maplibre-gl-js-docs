@@ -13,8 +13,8 @@
             'https://docs.mapbox.com/mapbox-gl-js/assets/popup_debug.png'
     };
 
-    loadImages(images, function(loadedImages) {
-        map.on('load', function() {
+    loadImages(images, function (loadedImages) {
+        map.on('load', function () {
             map.addImage('popup-debug', loadedImages['popup-debug'], {
                 // The two (blue) columns of pixels that can be stretched horizontally:
                 //   - the pixels between x: 25 and x: 55 can be stretched
@@ -143,7 +143,7 @@
         }
 
         function makeCallback(name) {
-            return function(err, image) {
+            return function (err, image) {
                 results[name] = err ? null : image;
 
                 // if all images are loaded, call the callback

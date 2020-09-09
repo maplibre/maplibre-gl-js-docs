@@ -13,8 +13,7 @@ const imageConfig = require('fs')
             const key = image.replace(ext, '');
             // set sizes for all images
             const sizes = [{ width: 800 }, { width: 500 }];
-            // set additional sizes for specific images
-            if (key === 'simple-map') sizes.push({ width: 1200 });
+
             obj[key] = {
                 basename: image,
                 sizes

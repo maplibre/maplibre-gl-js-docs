@@ -1,10 +1,11 @@
 ---
 title: Display a map with a custom style
 description: Using a Mapbox-hosted custom [style](/help/glossary/style/).
-tags:
-  - styles
+topics:
+  - Styles
 thumbnail: custom-style-id
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

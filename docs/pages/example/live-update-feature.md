@@ -1,10 +1,11 @@
 ---
 title: Update a feature in realtime
 description: Change an existing feature on your map in realtime by updating its data.
-tags:
-  - sources
+topics:
+  - Sources
 thumbnail: live-update-feature
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

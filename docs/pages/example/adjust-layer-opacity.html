@@ -60,7 +60,7 @@
     var slider = document.getElementById('slider');
     var sliderValue = document.getElementById('slider-value');
 
-    map.on('load', function() {
+    map.on('load', function () {
         map.addSource('chicago', {
             'type': 'raster',
             'url': 'mapbox://mapbox.u8yyzaor'
@@ -71,7 +71,7 @@
             'type': 'raster'
         });
 
-        slider.addEventListener('input', function(e) {
+        slider.addEventListener('input', function (e) {
             // Adjust the layers opacity. layer here is arbitrary - this could
             // be another layer name found in your style or a custom layer
             // added on the fly using `addSource`.

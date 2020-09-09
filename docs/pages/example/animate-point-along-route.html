@@ -97,7 +97,7 @@
     // Used to increment the value of the point measurement against the route.
     var counter = 0;
 
-    map.on('load', function() {
+    map.on('load', function () {
         // Add a source and layer displaying a point which will be animated in a circle.
         map.addSource('route', {
             'type': 'geojson',
@@ -165,19 +165,21 @@
             counter = counter + 1;
         }
 
-        document.getElementById('replay').addEventListener('click', function() {
-            // Set the coordinates of the original point back to origin
-            point.features[0].geometry.coordinates = origin;
+        document
+            .getElementById('replay')
+            .addEventListener('click', function () {
+                // Set the coordinates of the original point back to origin
+                point.features[0].geometry.coordinates = origin;
 
-            // Update the source layer
-            map.getSource('point').setData(point);
+                // Update the source layer
+                map.getSource('point').setData(point);
 
-            // Reset the counter
-            counter = 0;
+                // Reset the counter
+                counter = 0;
 
-            // Restart the animation.
-            animate(counter);
-        });
+                // Restart the animation.
+                animate(counter);
+            });
 
         // Start the animation.
         animate(counter);

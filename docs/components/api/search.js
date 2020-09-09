@@ -14,7 +14,7 @@ export default class ApiSearch extends React.Component {
     }
 
     // set filter as user types
-    handleQuery = value => {
+    handleQuery = (value) => {
         this.setState({ filter: value }, () => {
             this.handleSearch();
         });
@@ -28,13 +28,13 @@ export default class ApiSearch extends React.Component {
         });
         this.setState({
             results: fuse.search(this.state.filter)
-                ? fuse.search(this.state.filter).map(result => result.item)
+                ? fuse.search(this.state.filter).map((result) => result.item)
                 : []
         });
     };
 
     // perform these functions when the users selects a menu item
-    handleResultClick = selection => {
+    handleResultClick = (selection) => {
         try {
             // track click so we can guage usage of this feature
             if (window && window.analytics) {
@@ -59,11 +59,11 @@ export default class ApiSearch extends React.Component {
             <Downshift
                 id="api-reference-search"
                 inputValue={filter}
-                onChange={selection => this.handleResultClick(selection)}
+                onChange={(selection) => this.handleResultClick(selection)}
                 onInputValueChange={this.handleQuery}
                 itemToString={() => filter}
             >
-                {downshiftProps => {
+                {(downshiftProps) => {
                     const {
                         getInputProps,
                         isOpen,
@@ -73,7 +73,7 @@ export default class ApiSearch extends React.Component {
                     } = downshiftProps;
 
                     return (
-                        <div className="px24 none block-mm mb6">
+                        <div className="px24 none block-mm my12">
                             <div className="relative">
                                 <Input
                                     getInputProps={getInputProps}

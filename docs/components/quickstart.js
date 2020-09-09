@@ -101,7 +101,7 @@ npm install --save mapbox-gl
                     id="select-quickstart"
                     themeToggleGroup="bg-blue py3 px3 my12"
                     themeToggle="txt-s py3 toggle--white toggle--active-blue"
-                    onChange={value => {
+                    onChange={(value) => {
                         this.setState({ selectedMethod: value });
                     }}
                     value={this.state.selectedMethod}

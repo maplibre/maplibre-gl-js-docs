@@ -1,11 +1,12 @@
 ---
 title: Add an image
 description: Dark vector baselayer with radar weather image overlay.
-tags:
-  - sources
-  - layers
+topics:
+  - Sources
+  - Layers
 thumbnail: image-on-a-map
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

@@ -9,7 +9,7 @@
         zoom: 3
     });
 
-    map.on('load', function() {
+    map.on('load', function () {
         // Add the source to query. In this example we're using
         // county polygons uploaded as vector tiles
         map.addSource('counties', {
@@ -47,7 +47,7 @@
             'settlement-label'
         ); // Place polygon under these labels.
 
-        map.on('click', function(e) {
+        map.on('click', function (e) {
             // set bbox as 5px reactangle area around clicked point
             var bbox = [
                 [e.point.x - 5, e.point.y - 5],
@@ -61,7 +61,7 @@
             // to match features with unique FIPS codes to activate
             // the `counties-highlighted` layer.
             var filter = features.reduce(
-                function(memo, feature) {
+                function (memo, feature) {
                     memo.push(feature.properties.FIPS);
                     return memo;
                 },

@@ -1,10 +1,11 @@
 ---
 title: Show and hide layers
 description: Create a custom layer switcher to display different datasets.
-tags:
-  - layers
+topics:
+  - Layers
 thumbnail: toggle-layers
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

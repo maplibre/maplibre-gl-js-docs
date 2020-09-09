@@ -13,7 +13,7 @@ export default class MembersList extends React.Component {
     }
 
     // close all item members so it's easier to read them
-    filterMembers = value => {
+    filterMembers = (value) => {
         this.setState({ filter: value, closeAll: true }, () => {
             this.setState({ closeAll: false });
         });

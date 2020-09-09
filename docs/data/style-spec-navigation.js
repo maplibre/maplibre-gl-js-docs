@@ -14,7 +14,7 @@ const icons = {
 };
 
 // generates subnav using the style-spec reference data
-function makeSubNav(entry, section) {
+function makeSubNav(entry, section, level) {
     return entries(entry)
         .sort()
         .reduce((arr, [name]) => {
@@ -28,17 +28,17 @@ function makeSubNav(entry, section) {
                     'video'
                 ].indexOf(section) > -1 &&
                 (name === '*' || name === 'type')
-            )
+            ) {
                 return arr;
-            else {
+            } else {
                 const sectionName = section ? section.split('-')[0] : undefined;
                 const icon =
                     section && sectionName ? icons[sectionName] : undefined;
                 arr.push({
-                    title: name,
-                    icon: icon || undefined,
-                    name: name,
-                    path: `${section ? `${section}-` : ''}${name}`
+                    text: name,
+                    slug: `${section ? `${section}-` : ''}${name}`,
+                    level,
+                    ...(icon && { icon: icon })
                 });
             }
 
@@ -47,169 +47,193 @@ function makeSubNav(entry, section) {
 }
 
 export const styleSpecNavigation = [
-    { title: 'Introduction', path: '' },
+    { title: 'Introduction', path: '/mapbox-gl-js/style-spec/' },
     {
         title: 'Root',
-        path: 'root',
-        subnav: makeSubNav(ref.$root)
+        path: '/mapbox-gl-js/style-spec/root/',
+        subnav: makeSubNav(ref.$root, null, 2)
     },
     {
         title: 'Light',
-        path: 'light',
-        subnav: makeSubNav(ref.light)
+        path: '/mapbox-gl-js/style-spec/light/',
+        subnav: makeSubNav(ref.light, null, 2)
     },
     {
         title: 'Sources',
-        path: 'sources',
+        path: '/mapbox-gl-js/style-spec/sources/',
         subnav: [
             {
-                title: 'vector',
-                path: 'vector',
-                subnav: makeSubNav(ref.source_vector, 'vector')
+                text: 'vector',
+                slug: 'vector',
+                level: 2
             },
+            ...makeSubNav(ref.source_vector, 'vector', 3),
             {
-                title: 'raster',
-                path: 'raster',
-                subnav: makeSubNav(ref.source_raster, 'raster')
+                text: 'raster',
+                slug: 'raster',
+                level: 2
             },
+            ...makeSubNav(ref.source_raster, 'raster', 3),
             {
-                title: 'raster-dem',
-                path: 'raster-dem',
-                subnav: makeSubNav(ref.source_raster_dem, 'raster-dem')
+                text: 'raster-dem',
+                slug: 'raster-dem',
+                level: 2
             },
+            ...makeSubNav(ref.source_raster_dem, 'raster-dem', 3),
             {
-                title: 'geojson',
-                path: 'geojson',
-                subnav: makeSubNav(ref.source_geojson, 'geojson')
+                text: 'geojson',
+                slug: 'geojson',
+                level: 2
             },
+            ...makeSubNav(ref.source_geojson, 'geojson', 3),
             {
-                title: 'image',
-                path: 'image',
-                subnav: makeSubNav(ref.source_image, 'image')
+                text: 'image',
+                slug: 'image',
+                level: 2
             },
+            ...makeSubNav(ref.source_image, 'image', 3),
             {
-                title: 'video',
-                path: 'video',
-                subnav: makeSubNav(ref.source_video, 'video')
-            }
+                text: 'video',
+                slug: 'video',
+                level: 2
+            },
+            ...makeSubNav(ref.source_video, 'video', 3)
         ]
     },
     {
         title: 'Sprite',
-        path: 'sprite'
+        path: '/mapbox-gl-js/style-spec/sprite/'
     },
     {
         title: 'Glyphs',
-        path: 'glyphs'
+        path: '/mapbox-gl-js/style-spec/glyphs/'
     },
     {
         title: 'Transition',
-        path: 'transition',
-        subnav: makeSubNav(ref.transition)
+        path: '/mapbox-gl-js/style-spec/transition/',
+        subnav: makeSubNav(ref.transition, null, 2)
     },
     {
         title: 'Layers',
-        path: 'layers',
-        subnav: layerTypes.map(type => {
-            return {
-                title: type,
-                path: type,
-                subnav: [
-                    ...makeSubNav(ref[`layout_${type}`], `layout-${type}`),
-                    ...makeSubNav(ref[`paint_${type}`], `paint-${type}`)
-                ].sort((a, b) => a.name.localeCompare(b.name))
-            };
-        })
+        path: '/mapbox-gl-js/style-spec/layers/',
+        subnav: layerTypes.reduce((arr, type) => {
+            arr.push({
+                text: type,
+                slug: type,
+                level: 2
+            });
+            const thirdLevelItems = [
+                ...makeSubNav(ref[`layout_${type}`], `layout-${type}`, 3),
+                ...makeSubNav(ref[`paint_${type}`], `paint-${type}`, 3)
+            ].sort((a, b) => a.text.localeCompare(b.text));
+            arr = arr.concat(thirdLevelItems);
+            return arr;
+        }, [])
     },
     {
         title: 'Types',
-        path: 'types',
+        path: '/mapbox-gl-js/style-spec/types/',
         subnav: [
             {
-                title: 'Color',
-                path: 'color'
+                text: 'Color',
+                slug: 'color',
+                level: 2
             },
             {
-                title: 'Formatted',
-                path: 'formatted'
+                text: 'Formatted',
+                slug: 'formatted',
+                level: 2
             },
             {
-                title: 'ResolvedImage',
-                path: 'resolvedimage'
+                text: 'ResolvedImage',
+                slug: 'resolvedimage',
+                level: 2
             },
             {
-                title: 'String',
-                path: 'string'
+                text: 'String',
+                slug: 'string',
+                level: 2
             },
             {
-                title: 'Boolean',
-                path: 'boolean'
+                text: 'Boolean',
+                slug: 'boolean',
+                level: 2
             },
             {
-                title: 'Number',
-                path: 'number'
+                text: 'Number',
+                slug: 'number',
+                level: 2
             },
             {
-                title: 'Array',
-                path: 'array'
+                text: 'Array',
+                slug: 'array',
+                level: 2
             }
         ]
     },
     {
         title: 'Expressions',
-        path: 'expressions',
-        subnav: groupedExpressions.map(group => {
-            return {
-                title: group.name,
-                path: `${slug(group.name)}`,
-                subnav: group.expressions.map(g => {
-                    return {
-                        title: g.name,
-                        path: `${group.name === 'Types' ? 'types-' : ''}${slug(
-                            g.name
-                        ) || g.name}`
-                    };
-                })
-            };
-        })
+        path: '/mapbox-gl-js/style-spec/expressions/',
+        subnav: groupedExpressions.reduce((arr, group) => {
+            arr.push({
+                text: group.name,
+                slug: `${slug(group.name)}`,
+                level: 2
+            });
+            const thirdLevelItems = group.expressions.map((g) => {
+                return {
+                    text: g.name,
+                    slug: `${group.name === 'Types' ? 'types-' : ''}${
+                        slug(g.name) || g.name
+                    }`,
+                    level: 3
+                };
+            });
+            arr = arr.concat(thirdLevelItems);
+            return arr;
+        }, [])
     },
     {
         title: 'Other',
-        path: 'other',
+        path: '/mapbox-gl-js/style-spec/other/',
         tag: 'legacy',
         subnav: [
             {
-                title: 'Function',
-                path: 'function',
-                subnav: [
-                    'stops',
-                    'property',
-                    'base',
-                    'type',
-                    'default',
-                    'colorSpace'
-                ].map(title => {
-                    return {
-                        title,
-                        path: `function-${title}`
-                    };
-                })
+                text: 'Function',
+                slug: 'function',
+                level: 2
             },
+            ...[
+                'stops',
+                'property',
+                'base',
+                'type',
+                'default',
+                'colorSpace'
+            ].map((text) => {
+                return {
+                    text,
+                    slug: `function-${text}`,
+                    level: 3
+                };
+            }),
             {
-                title: 'Other filter',
-                path: 'other-filter',
-                subnav: [
-                    'Existential filters',
-                    'Comparison filters',
-                    'Set membership filters',
-                    'Combining filters'
-                ].map(title => {
-                    return {
-                        title,
-                        path: slug(title)
-                    };
-                })
-            }
+                text: 'Other filter',
+                slug: 'other-filter',
+                level: 2
+            },
+            ...[
+                'Existential filters',
+                'Comparison filters',
+                'Set membership filters',
+                'Combining filters'
+            ].map((text) => {
+                return {
+                    text,
+                    slug: slug(text),
+                    level: 3
+                };
+            })
         ]
     }
 ];

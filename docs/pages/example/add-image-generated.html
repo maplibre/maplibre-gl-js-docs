@@ -6,7 +6,7 @@
         style: 'mapbox://styles/mapbox/streets-v11'
     });
 
-    map.on('load', function() {
+    map.on('load', function () {
         var width = 64; // The image will be 64 pixels square
         var bytesPerPixel = 4; // Each pixel is represented by 4 bytes: red, green, blue, and alpha.
         var data = new Uint8Array(width * width * bytesPerPixel);

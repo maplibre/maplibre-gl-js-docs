@@ -1,10 +1,11 @@
 ---
 title: Display a popup on hover
 description: 'When a user hovers over a custom marker, show a [`Popup`](/mapbox-gl-js/api/#popup) containing more information.'
-tags:
-  - controls-and-overlays
+topics:
+  - Controls and overlays
 thumbnail: popup-on-hover
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

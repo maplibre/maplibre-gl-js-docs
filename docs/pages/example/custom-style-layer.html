@@ -15,7 +15,7 @@
 
         // method called when the layer is added to the map
         // https://docs.mapbox.com/mapbox-gl-js/api/#styleimageinterface#onadd
-        onAdd: function(map, gl) {
+        onAdd: function (map, gl) {
             // create GLSL source for vertex shader
             var vertexSource =
                 '' +
@@ -83,7 +83,7 @@
 
         // method fired on each animation frame
         // https://docs.mapbox.com/mapbox-gl-js/api/#map.event:render
-        render: function(gl, matrix) {
+        render: function (gl, matrix) {
             gl.useProgram(this.program);
             gl.uniformMatrix4fv(
                 gl.getUniformLocation(this.program, 'u_matrix'),
@@ -100,7 +100,7 @@
     };
 
     // add the custom style layer to the map
-    map.on('load', function() {
+    map.on('load', function () {
         map.addLayer(highlightLayer, 'building');
     });
 </script>

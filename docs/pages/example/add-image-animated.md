@@ -1,11 +1,12 @@
 ---
 title: Add an animated icon to the map
 description: Add an animated icon to the map that was generated at runtime with a Canvas.
-tags:
-  - styles
-  - layers
+topics:
+  - Styles
+  - Layers
 thumbnail: add-image-animated
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

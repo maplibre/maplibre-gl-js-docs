@@ -3,11 +3,12 @@ title: Update a choropleth layer by zoom level
 description: >-
   Using 2014 census data, display state or county population depending on zoom
   level.
-tags:
-  - layers
-  - user-interaction
+topics:
+  - Layers
+  - User interaction
 thumbnail: updating-choropleth
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

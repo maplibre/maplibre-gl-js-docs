@@ -18,7 +18,7 @@
 
     map.addControl(new mapboxgl.FullscreenControl());
 
-    map.on('load', function() {
+    map.on('load', function () {
         var bins = 16;
         var maxHeight = 200;
         var binWidth = maxHeight / bins;
@@ -57,7 +57,7 @@
         // with getUserMedia as it would overwrite existing properties.
         // Here, we will just add the getUserMedia property if it's missing.
         if (navigator.mediaDevices.getUserMedia === undefined) {
-            navigator.mediaDevices.getUserMedia = function(constraints) {
+            navigator.mediaDevices.getUserMedia = function (constraints) {
                 // First get ahold of the legacy getUserMedia, if present
                 var getUserMedia =
                     navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
@@ -73,7 +73,7 @@
                 }
 
                 // Otherwise, wrap the call to the old navigator.getUserMedia with a Promise
-                return new Promise(function(resolve, reject) {
+                return new Promise(function (resolve, reject) {
                     getUserMedia.call(navigator, constraints, resolve, reject);
                 });
             };
@@ -81,7 +81,7 @@
 
         navigator.mediaDevices
             .getUserMedia({ audio: true })
-            .then(function(stream) {
+            .then(function (stream) {
                 // Set up a Web Audio AudioContext and AnalyzerNode, configured to return the
                 // same number of bins of audio frequency data.
                 var audioCtx = new (window.AudioContext ||
@@ -132,7 +132,7 @@
 
                 requestAnimationFrame(draw);
             })
-            .catch(function(err) {
+            .catch(function (err) {
                 console.log('The following gUM error occured: ' + err);
             });
     });

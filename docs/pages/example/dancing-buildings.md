@@ -3,10 +3,11 @@ title: Animate 3D buildings based on ambient sounds
 description: >-
   Connects the runtime styling API with the Web Audio API, creating a map where
   the 3D buildings dance to the rhythm of your ambient environment.
-tags:
-  - user-interaction
+topics:
+  - User interaction
 thumbnail: dancing-buildings
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

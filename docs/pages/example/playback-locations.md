@@ -1,10 +1,11 @@
 ---
 title: Play map locations as a slideshow
 description: Autoplay the locations of boroughs in New York City.
-tags:
-  - camera
+topics:
+  - Camera
 thumbnail: playback-locations
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

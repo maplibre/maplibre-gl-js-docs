@@ -16,7 +16,7 @@
         data: new Uint8Array(size * size * 4),
 
         // get rendering context for the map canvas when layer is added to the map
-        onAdd: function() {
+        onAdd: function () {
             var canvas = document.createElement('canvas');
             canvas.width = this.width;
             canvas.height = this.height;
@@ -24,7 +24,7 @@
         },
 
         // called once before every frame where the icon will be used
-        render: function() {
+        render: function () {
             var duration = 1000;
             var t = (performance.now() % duration) / duration;
 
@@ -76,7 +76,7 @@
         }
     };
 
-    map.on('load', function() {
+    map.on('load', function () {
         map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
 
         map.addSource('points', {

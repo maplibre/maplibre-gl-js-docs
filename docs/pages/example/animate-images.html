@@ -20,7 +20,7 @@
         );
     }
 
-    map.on('load', function() {
+    map.on('load', function () {
         map.addSource('radar', {
             type: 'image',
             url: getPath(),
@@ -40,7 +40,7 @@
             }
         });
 
-        setInterval(function() {
+        setInterval(function () {
             currentImage = (currentImage + 1) % frameCount;
             map.getSource('radar').updateImage({ url: getPath() });
         }, 200);

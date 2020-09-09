@@ -23,7 +23,7 @@ export default class ApiPageItems extends React.Component {
         if (this.children.length === 1) {
             return <SingleSection {...this.children[0]} {...this.props} />;
         }
-        return this.children.map(child => (
+        return this.children.map((child) => (
             <Section key={child.name} {...this.props} {...child} />
         ));
     };

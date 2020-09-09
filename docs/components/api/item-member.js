@@ -12,7 +12,7 @@ class ApiItemMember extends React.Component {
         this.hashChange = this.hashChange.bind(this);
     }
 
-    href = m => `#${m.namespace.toLowerCase()}`;
+    href = (m) => `#${m.namespace.toLowerCase()}`;
 
     render() {
         const member = this.props;
@@ -32,7 +32,7 @@ class ApiItemMember extends React.Component {
                                 'txt-bold': this.state.disclosed
                             }
                         )}
-                        onClick={e => {
+                        onClick={(e) => {
                             this.setState({ disclosed: !this.state.disclosed });
                             if (history.pushState) {
                                 history.pushState(

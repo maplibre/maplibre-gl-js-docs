@@ -1,10 +1,11 @@
 ---
 title: Display a satellite map
 description: Satellite raster baselayer.
-tags:
-  - styles
+topics:
+  - Styles
 thumbnail: satellite-map
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

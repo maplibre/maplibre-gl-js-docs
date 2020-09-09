@@ -1,11 +1,12 @@
 ---
 title: Change a map's style
 description: Switch to another map style.
-tags:
-  - styles
-  - user-interaction
+topics:
+  - Styles
+  - User interaction
 thumbnail: setstyle
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

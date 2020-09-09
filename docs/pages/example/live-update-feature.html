@@ -8,13 +8,13 @@
         zoom: 0
     });
 
-    map.on('load', function() {
+    map.on('load', function () {
         // We use D3 to fetch the JSON here so that we can parse and use it separately
         // from GL JS's use in the added source. You can use any request method (library
         // or otherwise) that you want.
         d3.json(
             'https://docs.mapbox.com/mapbox-gl-js/assets/hike.geojson',
-            function(err, data) {
+            function (err, data) {
                 if (err) throw err;
 
                 // save full coordinate list for later
@@ -42,7 +42,7 @@
 
                 // on a regular basis, add more coordinates from the saved list and update the map
                 var i = 0;
-                var timer = window.setInterval(function() {
+                var timer = window.setInterval(function () {
                     if (i < coordinates.length) {
                         data.features[0].geometry.coordinates.push(
                             coordinates[i]

@@ -64,7 +64,7 @@
     // Alternatively, you could hard code the menu in your HTML directly.
     var worldviewOptions = document.getElementById('worldview-options');
     // Iterate through all availableWorldviews.
-    availableWorldviews.forEach(function(worldview) {
+    availableWorldviews.forEach(function (worldview) {
         // Create three new elements for each worldview.
         var radioItem = document.createElement('div');
         var radioInput = document.createElement('input');
@@ -86,7 +86,7 @@
     });
 
     // Wait for the map to finish loading.
-    map.on('load', function() {
+    map.on('load', function () {
         // Filter the "admin-0-*" layers to display
         // administrative boundaries consistent with the
         // initial worldview defined above ("CN").

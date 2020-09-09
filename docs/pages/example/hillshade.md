@@ -1,11 +1,12 @@
 ---
 title: Add hillshading
 description: Adds raster hillshading to a map.
-tags:
-  - layers
-  - sources
+topics:
+  - Layers
+  - Sources
 thumbnail: hillshade
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

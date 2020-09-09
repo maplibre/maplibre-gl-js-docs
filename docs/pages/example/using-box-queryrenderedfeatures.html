@@ -29,7 +29,7 @@
         closeButton: false
     });
 
-    map.on('load', function() {
+    map.on('load', function () {
         var canvas = map.getCanvasContainer();
 
         // Variable to hold the starting xy coordinates
@@ -169,7 +169,7 @@
                 // to match features with unique FIPS codes to activate
                 // the `counties-highlighted` layer.
                 var filter = features.reduce(
-                    function(memo, feature) {
+                    function (memo, feature) {
                         memo.push(feature.properties.FIPS);
                         return memo;
                     },
@@ -182,7 +182,7 @@
             map.dragPan.enable();
         }
 
-        map.on('mousemove', function(e) {
+        map.on('mousemove', function (e) {
             var features = map.queryRenderedFeatures(e.point, {
                 layers: ['counties-highlighted']
             });

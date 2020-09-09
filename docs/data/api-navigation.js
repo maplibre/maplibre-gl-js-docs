@@ -8,7 +8,7 @@ const apiFilterItems = require('../util/api-filter-items.js');
 module.exports = [
     {
         title: 'Introduction',
-        path: '',
+        path: '/mapbox-gl-js/api/',
         subnav: [
             {
                 title: 'Quickstart',
@@ -34,55 +34,62 @@ module.exports = [
     },
     {
         title: 'Map',
-        path: 'map',
+        path: '/mapbox-gl-js/api/map/',
         subnav: buildSubSubNav(
             apiFilterItems('Map class')[0].members.static[0], // Hack to resolve naming documentaiton.yml conflict b/w the "Map" class and the "Map" section
-            'map'
+            'map',
+            2
         )
     },
     {
         title: 'Properties and options',
-        path: 'properties',
+        path: '/mapbox-gl-js/api/properties/',
         subnav: buldSubNav('Properties and options')
     },
     {
         title: 'Markers and controls',
-        path: 'markers',
+        path: '/mapbox-gl-js/api/markers/',
         subnav: buldSubNav('Markers and controls')
     },
 
     {
         title: 'Geography and geometry',
-        path: 'geography',
+        path: '/mapbox-gl-js/api/geography/',
         subnav: buldSubNav('Geography and geometry')
     },
     {
         title: 'User interaction handlers',
-        path: 'handlers',
+        path: '/mapbox-gl-js/api/handlers/',
         subnav: buldSubNav('User interaction handlers')
     },
     {
         title: 'Sources',
-        path: 'sources',
+        path: '/mapbox-gl-js/api/sources/',
         subnav: buldSubNav('Sources')
     },
     {
         title: 'Events',
-        path: 'events',
+        path: '/mapbox-gl-js/api/events/',
         subnav: buldSubNav('Events')
     }
 ];
 
 function buldSubNav(section) {
     const items = apiFilterItems(section)[0].members.static;
-    return items.map(item => ({
-        title: item.name,
-        path: slug(item.namespace),
-        subnav: buildSubSubNav(item, item.name)
-    }));
+    return items.reduce((arr, item) => {
+        arr.push({
+            text: item.name,
+            slug: slug(item.namespace),
+            level: 2
+        });
+        // append third level items right after second level items
+        const thirdLevelItems = buildSubSubNav(item, item.name, 3);
+        arr = arr.concat(thirdLevelItems);
+        return arr;
+    }, []);
 }
 
-function buildSubSubNav(item, section) {
+function buildSubSubNav(item, section, level) {
     const arr = [];
 
     if (
@@ -93,50 +100,58 @@ function buildSubSubNav(item, section) {
             item.constructorComment.access !== 'private')
     ) {
         arr.push({
-            title: 'Parameters',
-            path: slug(`${section} Parameters`)
+            text: 'Parameters',
+            slug: slug(`${section} Parameters`),
+            level
         });
     }
     if (item.properties && item.properties.length > 0) {
         arr.push({
-            title: 'Properties',
-            path: slug(`${section} Properties`)
+            text: 'Properties',
+            path: slug(`${section} Properties`),
+            level
         });
     }
     if (item.returns && item.returns.length > 0) {
         arr.push({
-            title: 'Returns',
-            path: slug(`${section} Returns`)
+            text: 'Returns',
+            slug: slug(`${section} Returns`),
+            level
         });
     }
     if (item.examples && item.examples.length > 0) {
         arr.push({
-            title: 'Example',
-            path: slug(`${section} Example`)
+            text: 'Example',
+            slug: slug(`${section} Example`),
+            level
         });
     }
     if (item.members && item.members.static.length > 0) {
         arr.push({
-            title: 'Static members',
-            path: slug(`${section} Static members`)
+            text: 'Static members',
+            slug: slug(`${section} Static members`),
+            level
         });
     }
     if (item.members && item.members.instance.length > 0) {
         arr.push({
-            title: 'Instance members',
-            path: slug(`${section} Instance members`)
+            text: 'Instance members',
+            slug: slug(`${section} Instance members`),
+            level
         });
     }
     if (item.members && item.members.events.length > 0) {
         arr.push({
-            title: 'Events',
-            path: slug(`${section} Events`)
+            text: 'Events',
+            slug: slug(`${section} Events`),
+            level
         });
     }
     if (item.sees && item.sees.length > 0) {
         arr.push({
-            title: 'Related',
-            path: slug(`${section} Related`)
+            text: 'Related',
+            slug: slug(`${section} Related`),
+            level
         });
     }
 

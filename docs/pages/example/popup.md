@@ -1,10 +1,11 @@
 ---
 title: Display a popup
 description: Add a [`Popup`](/mapbox-gl-js/api/#popup) to the map.
-tags:
-  - controls-and-overlays
+topics:
+  - Controls and overlays
 thumbnail: popup
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

@@ -4,10 +4,11 @@ description: >-
   Use the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder)
   control to search for places using Mapbox Geocoding API attached to an
   element outside the map.
-tags:
-  - geocoder
+topics:
+  - Geocoder
 thumbnail: mapbox-gl-geocoder-outside-the-map
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

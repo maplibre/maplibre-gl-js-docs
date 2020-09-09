@@ -43,7 +43,7 @@
     var resetTime = false; // indicator of whether time reset is needed for the animation
     var pauseButton = document.getElementById('pause');
 
-    map.on('load', function() {
+    map.on('load', function () {
         map.addSource('line', {
             'type': 'geojson',
             'data': geojson
@@ -70,7 +70,7 @@
         animateLine();
 
         // click the button to pause or play
-        pauseButton.addEventListener('click', function() {
+        pauseButton.addEventListener('click', function () {
             pauseButton.classList.toggle('pause');
             if (pauseButton.classList.contains('pause')) {
                 cancelAnimationFrame(animation);
@@ -82,7 +82,7 @@
 
         // reset startTime and progress once the tab loses or gains focus
         // requestAnimationFrame also pauses on hidden tabs by default
-        document.addEventListener('visibilitychange', function() {
+        document.addEventListener('visibilitychange', function () {
             resetTime = true;
         });
 

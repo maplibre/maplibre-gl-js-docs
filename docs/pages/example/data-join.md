@@ -1,10 +1,11 @@
 ---
 title: Join local JSON data with vector tile geometries
 description: Style a choropleth by merging local JSON data with vector tile geometries.
-tags:
-  - sources
+topics:
+  - Sources
 thumbnail: data-join
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

@@ -1,10 +1,11 @@
 ---
 title: Add a WMS source
 description: Adding an external Web Map Service layer to the map.
-tags:
-  - sources
+topics:
+  - Sources
 thumbnail: wms
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

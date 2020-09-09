@@ -1,10 +1,11 @@
 ---
 title: Add a canvas source 
 description: Add a [canvas source](/mapbox-gl-js/api/#canvassource) to the map.
-tags:
-  - sources
+topics:
+  - Sources
 thumbnail: canvas-source
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

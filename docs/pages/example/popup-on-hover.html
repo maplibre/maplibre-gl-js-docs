@@ -13,11 +13,11 @@
         zoom: 11.15
     });
 
-    map.on('load', function() {
+    map.on('load', function () {
         map.loadImage(
             'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
             // Add an image to use as a custom marker
-            function(error, image) {
+            function (error, image) {
                 if (error) throw error;
                 map.addImage('custom-marker', image);
 
@@ -148,7 +148,7 @@
             closeOnClick: false
         });
 
-        map.on('mouseenter', 'places', function(e) {
+        map.on('mouseenter', 'places', function (e) {
             // Change the cursor style as a UI indicator.
             map.getCanvas().style.cursor = 'pointer';
 
@@ -164,13 +164,10 @@
 
             // Populate the popup and set its coordinates
             // based on the feature found.
-            popup
-                .setLngLat(coordinates)
-                .setHTML(description)
-                .addTo(map);
+            popup.setLngLat(coordinates).setHTML(description).addTo(map);
         });
 
-        map.on('mouseleave', 'places', function() {
+        map.on('mouseleave', 'places', function () {
             map.getCanvas().style.cursor = '';
             popup.remove();
         });

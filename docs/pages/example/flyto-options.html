@@ -29,7 +29,7 @@
 
     var isAtStart = true;
 
-    document.getElementById('fly').addEventListener('click', function() {
+    document.getElementById('fly').addEventListener('click', function () {
         // depending on whether we're currently at point a or b, aim for
         // point a or b
         var target = isAtStart ? end : start;
@@ -52,7 +52,7 @@
 
             // This can be any easing function: it takes a number between
             // 0 and 1 and returns another number between 0 and 1.
-            easing: function(t) {
+            easing: function (t) {
                 return t;
             },
 

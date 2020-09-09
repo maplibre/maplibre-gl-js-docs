@@ -315,7 +315,7 @@ for (const name in CompoundExpression.definitions) {
             }
         ];
     } else {
-        types[name] = definition.overloads.map(o => ({
+        types[name] = definition.overloads.map((o) => ({
             type: toString(definition.type),
             parameters: processParameters(o[0])
         }));

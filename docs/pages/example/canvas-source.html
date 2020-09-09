@@ -15,14 +15,14 @@
 
         this.radius = radius;
 
-        this.draw = function() {
+        this.draw = function () {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
             ctx.strokeStyle = color;
             ctx.stroke();
         };
 
-        this.update = function() {
+        this.update = function () {
             if (this.x + this.radius > 400 || this.x - this.radius < 0) {
                 this.dx = -this.dx;
             }
@@ -70,7 +70,7 @@
         style: 'mapbox://styles/mapbox/streets-v11'
     });
 
-    map.on('load', function() {
+    map.on('load', function () {
         map.addSource('canvas-source', {
             type: 'canvas',
             canvas: 'canvasID',

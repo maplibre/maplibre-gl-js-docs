@@ -68,7 +68,7 @@
         map.off('touchmove', onMove);
     }
 
-    map.on('load', function() {
+    map.on('load', function () {
         // Add a single point to the map
         map.addSource('point', {
             'type': 'geojson',
@@ -86,17 +86,17 @@
         });
 
         // When the cursor enters a feature in the point layer, prepare for dragging.
-        map.on('mouseenter', 'point', function() {
+        map.on('mouseenter', 'point', function () {
             map.setPaintProperty('point', 'circle-color', '#3bb2d0');
             canvas.style.cursor = 'move';
         });
 
-        map.on('mouseleave', 'point', function() {
+        map.on('mouseleave', 'point', function () {
             map.setPaintProperty('point', 'circle-color', '#3887be');
             canvas.style.cursor = '';
         });
 
-        map.on('mousedown', 'point', function(e) {
+        map.on('mousedown', 'point', function (e) {
             // Prevent the default map drag behavior.
             e.preventDefault();
 
@@ -106,7 +106,7 @@
             map.once('mouseup', onUp);
         });
 
-        map.on('touchstart', 'point', function(e) {
+        map.on('touchstart', 'point', function (e) {
             if (e.points.length !== 1) return;
 
             // Prevent the default map drag behavior.

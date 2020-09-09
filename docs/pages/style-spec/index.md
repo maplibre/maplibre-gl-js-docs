@@ -1,8 +1,10 @@
 ---
 title: Style Specification
-id: intro
 description: 'This specification defines and describes the visual appearance of a map: what data to draw, the order to draw it in, and how to style the data when drawing it.'
 contentType: specification
+navOrder: 4
+order: 1
+layout: accordion
 products:
 - Mapbox Style Specification
 ---

@@ -2,10 +2,11 @@
 title: Restrict map panning to an area
 description: >-
   Prevent a map from being panned to a different place by setting [`maxBounds`](https://docs.mapbox.com/mapbox-gl-js/api#map#setmaxbounds).
-tags:
-  - user-interaction
+topics:
+  - User interaction
 thumbnail: restrict-bounds
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

@@ -21,7 +21,7 @@ function toString(ast) {
 function scan(items) {
     if (items.members) {
         return Object.keys(items.members).reduce((arr, type) => {
-            items.members[type].forEach(member => {
+            items.members[type].forEach((member) => {
                 arr = arr.concat({
                     name: member.name,
                     namespace: member.namespace,

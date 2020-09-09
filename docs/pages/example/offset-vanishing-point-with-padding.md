@@ -2,10 +2,11 @@
 title: Offset the vanishing point using padding
 description: >-
   Offset the apparent center or [vanishing point](https://en.wikipedia.org/wiki/Vanishing_point) of the map to reduce distortion when floating elements are displayed over the map.
-tags:
-  - camera
+topics:
+  - Camera
 thumbnail: offset-vanishing-point-with-padding
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

@@ -4,11 +4,12 @@ description: >-
   Use the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder)
   control to search for places using the [Mapbox Geocoding API](/api/search/#geocoding).
   Check out our [Search Playground](https://www.mapbox.com/search-playground/) to explore geocoding query parameters and how they affect the results.
-tags:
-  - controls-and-overlays
-  - geocoder
+topics:
+  - Controls and overlays
+  - Geocoder
 thumbnail: mapbox-gl-geocoder
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

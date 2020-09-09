@@ -37,8 +37,9 @@ export default class Example extends React.Component {
 
         return html.replace(
             '<script>',
-            `<script>${addMissingTokenComment}\n\tmapboxgl.accessToken = '${this
-                .state.token || '<your access token here>'}';`
+            `<script>${addMissingTokenComment}\n\tmapboxgl.accessToken = '${
+                this.state.token || '<your access token here>'
+            }';`
         );
     }
 
@@ -154,7 +155,7 @@ if (window.map instanceof mapboxgl.Map) {
                         allowFullScreen={true}
                         mozallowfullscreen="true"
                         webkitallowfullscreen="true"
-                        ref={iframe => {
+                        ref={(iframe) => {
                             this.iframe = iframe;
                         }}
                         title={`${frontMatter.title} example`}

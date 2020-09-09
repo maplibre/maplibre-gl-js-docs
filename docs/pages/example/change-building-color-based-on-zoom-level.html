@@ -24,7 +24,7 @@
         zoom: 13
     });
 
-    map.on('load', function() {
+    map.on('load', function () {
         map.setPaintProperty('building', 'fill-color', [
             'interpolate',
             ['exponential', 0.5],
@@ -46,7 +46,7 @@
         ]);
     });
 
-    document.getElementById('zoom').addEventListener('click', function() {
+    document.getElementById('zoom').addEventListener('click', function () {
         map.zoomTo(19, { duration: 9000 });
     });
 </script>

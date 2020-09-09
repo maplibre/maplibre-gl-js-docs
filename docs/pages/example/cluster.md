@@ -1,10 +1,11 @@
 ---
 title: Create and style clusters
 description: Use Mapbox GL JS' built-in functions to visualize points as clusters.
-tags:
-  - layers
+topics:
+  - Layers
 thumbnail: cluster
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

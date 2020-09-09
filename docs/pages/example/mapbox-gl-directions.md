@@ -4,10 +4,11 @@ description: >-
   Use the [mapbox-gl-directions](https://github.com/mapbox/mapbox-gl-directions)
   plugin to show results from the Mapbox Directions API. Click the map to add an
   origin and destination.
-tags:
-  - controls-and-overlays
+topics:
+  - Controls and overlays
 thumbnail: mapbox-gl-directions
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

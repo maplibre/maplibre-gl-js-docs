@@ -2,10 +2,11 @@
 title: Add a default marker
 description: >-
   Add a default [`Marker`](/mapbox-gl-js/api/#marker) to the map.
-tags:
-  - styles
+topics:
+  - Styles
 thumbnail: add-a-marker
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

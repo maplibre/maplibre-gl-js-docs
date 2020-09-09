@@ -133,9 +133,9 @@
         // Animate the map position based on camera properties
         map.flyTo(locations[index].camera);
 
-        map.once('moveend', function() {
+        map.once('moveend', function () {
             // Duration the slide is on screen after interaction
-            window.setTimeout(function() {
+            window.setTimeout(function () {
                 // Increment index
                 index = index + 1 === locations.length ? 0 : index + 1;
                 playback(index);
@@ -147,7 +147,7 @@
     title.textContent = locations[locations.length - 1].title;
     description.textContent = locations[locations.length - 1].description;
 
-    map.on('load', function() {
+    map.on('load', function () {
         map.addSource('boroughs', {
             'type': 'vector',
             'url': 'mapbox://mapbox.8ibmsn6u'

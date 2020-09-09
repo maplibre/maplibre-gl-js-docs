@@ -3,11 +3,12 @@ title: Create a time slider
 description: >-
   Drag the range slider to visualize earthquakes that were greater than 5.9
   magnitude in 2015.
-tags:
-  - user-interaction
-  - sources
+topics:
+  - User interaction
+  - Sources
 thumbnail: timeline-animation
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

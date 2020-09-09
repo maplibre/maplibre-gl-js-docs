@@ -3,6 +3,8 @@ title: Glyphs
 id: glyphs
 description: A style's glyphs property provides a URL template for loading signed-distance-field glyph sets in PBF format.
 contentType: specification
+order: 6
+layout: accordion
 products:
 - Mapbox Style Specification
 prependJs:

@@ -3,6 +3,8 @@ title: Light
 id: light
 description: A style's light property provides global light source for that style.
 contentType: specification
+order: 3
+layout: accordion
 products:
 - Mapbox Style Specification
 prependJs:

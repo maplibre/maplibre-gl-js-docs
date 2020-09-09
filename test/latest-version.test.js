@@ -19,8 +19,8 @@ async function tagsMatch() {
     }
 }
 
-test(`Is latest version`, t => {
-    tagsMatch().then(res => {
+test(`Is latest version`, (t) => {
+    tagsMatch().then((res) => {
         t.ok(
             res,
             `Mapbox GL JS submodule is not pinned to the latest stable release version.

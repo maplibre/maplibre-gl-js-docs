@@ -1,11 +1,12 @@
 ---
 title: Add a video
 description: Satellite raster baselayer with video on top. Click on the map to play and pause.
-tags:
-  - sources
-  - layers
+topics:
+  - Sources
+  - Layers
 thumbnail: video-on-a-map
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

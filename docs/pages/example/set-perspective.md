@@ -3,10 +3,11 @@ title: Set pitch and bearing
 description: >-
   Map options extend [`CameraOptions`](/mapbox-gl-js/api/#cameraoptions), so
   you can set more than just center and zoom.
-tags:
-  - camera
+topics:
+  - Camera
 thumbnail: set-perspective
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

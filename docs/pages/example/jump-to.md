@@ -1,10 +1,11 @@
 ---
 title: Jump to a series of locations
 description: Use the [jumpTo function](/mapbox-gl-js/api/#map#jumpto) to showcase multiple locations.
-tags:
-  - camera
+topics:
+  - Camera
 thumbnail: jump-to
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

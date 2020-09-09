@@ -1,10 +1,12 @@
 ---
 title: Display a map
 description: Initialize a map in an HTML element with Mapbox GL JS.
-tags:
-  - styles
+topics:
+  - Getting started
+  - Styles
 thumbnail: simple-map
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

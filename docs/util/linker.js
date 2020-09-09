@@ -9,7 +9,7 @@ function linker(namespace) {
     } else {
         const slugger = new GithubSlugger();
         const names = namespace.split('#');
-        const nv = names.map(v => `#${slugger.slug(v)}`).join('');
+        const nv = names.map((v) => `#${slugger.slug(v)}`).join('');
         return `${path}${nv}`;
     }
 }

@@ -7,8 +7,8 @@ function isUrl(value) {
     return regex.test(value);
 }
 
-Object.keys(categories).forEach(category => {
-    test(`Plugin category: ${category}`, t => {
+Object.keys(categories).forEach((category) => {
+    test(`Plugin category: ${category}`, (t) => {
         t.equal(
             category[0],
             category[0].toUpperCase(),
@@ -17,8 +17,8 @@ Object.keys(categories).forEach(category => {
         t.end();
     });
     const plugins = categories[category];
-    Object.keys(plugins).forEach(plugin => {
-        test(`Plugin: ${plugin}`, t => {
+    Object.keys(plugins).forEach((plugin) => {
+        test(`Plugin: ${plugin}`, (t) => {
             const meta = plugins[plugin];
             t.equal(typeof plugin, 'string');
             t.ok(meta.description, `${plugin} has \`description\``);

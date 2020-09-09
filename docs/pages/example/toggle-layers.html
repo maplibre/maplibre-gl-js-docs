@@ -53,7 +53,7 @@
         center: [-71.97722138410576, -13.517379300798098]
     });
 
-    map.on('load', function() {
+    map.on('load', function () {
         // add source and layer for museums
         map.addSource('museums', {
             type: 'vector',
@@ -109,7 +109,7 @@
         link.className = 'active';
         link.textContent = id;
 
-        link.onclick = function(e) {
+        link.onclick = function (e) {
             var clickedLayer = this.textContent;
             e.preventDefault();
             e.stopPropagation();

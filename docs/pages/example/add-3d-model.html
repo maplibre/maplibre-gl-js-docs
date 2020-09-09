@@ -42,7 +42,7 @@
         id: '3d-model',
         type: 'custom',
         renderingMode: '3d',
-        onAdd: function(map, gl) {
+        onAdd: function (map, gl) {
             this.camera = new THREE.Camera();
             this.scene = new THREE.Scene();
 
@@ -59,7 +59,7 @@
             var loader = new THREE.GLTFLoader();
             loader.load(
                 'https://docs.mapbox.com/mapbox-gl-js/assets/34M_17/34M_17.gltf',
-                function(gltf) {
+                function (gltf) {
                     this.scene.add(gltf.scene);
                 }.bind(this)
             );
@@ -74,7 +74,7 @@
 
             this.renderer.autoClear = false;
         },
-        render: function(gl, matrix) {
+        render: function (gl, matrix) {
             var rotationX = new THREE.Matrix4().makeRotationAxis(
                 new THREE.Vector3(1, 0, 0),
                 modelTransform.rotateX
@@ -113,7 +113,7 @@
         }
     };
 
-    map.on('style.load', function() {
+    map.on('style.load', function () {
         map.addLayer(customLayer, 'waterway-label');
     });
 </script>

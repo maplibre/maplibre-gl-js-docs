@@ -1,10 +1,11 @@
 ---
 title: Display a non-interactive map
 description: 'Setting interactive: false to create a static map.'
-tags:
-  - user-interaction
+topics:
+  - User interaction
 thumbnail: interactive-false
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

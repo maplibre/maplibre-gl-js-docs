@@ -1,10 +1,11 @@
 ---
 title: Toggle interactions
 description: Enable or disable UI handlers on a map.
-tags:
-  - user-interaction
+topics:
+  - User interaction
 thumbnail: toggle-interaction-handlers
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

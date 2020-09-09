@@ -1,10 +1,11 @@
 ---
 title: Draw GeoJSON points
 description: Draw points from a GeoJSON collection to a map.
-tags:
-  - layers
+topics:
+  - Layers
 thumbnail: geojson-markers
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

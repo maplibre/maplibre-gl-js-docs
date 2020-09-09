@@ -6,10 +6,17 @@ const { buildApiSearch } = require('./docs/util/build-api-search');
 const {
     mbxTaggerBatfish
 } = require('@mapbox/remark-lint-mapbox/frontmatter/mbx-tagger-batfish');
+const {
+    buildNavigation,
+    buildTopics
+} = require('@mapbox/dr-ui/helpers/batfish/index.js');
+const pluginTopics = require('./docs/data/build-plugin-topics');
+const topicsOrder = require('./docs/data/topics.json');
 
+const siteBasePath = '/mapbox-gl-js';
 module.exports = () => {
     const config = {
-        siteBasePath: '/mapbox-gl-js',
+        siteBasePath: siteBasePath,
         siteOrigin: 'https://docs.mapbox.com',
         pagesDirectory: `${__dirname}/docs/pages`,
         outputDirectory: path.join(__dirname, '_site'),
@@ -46,10 +53,7 @@ module.exports = () => {
         ],
         jsxtremeMarkdownOptions: {
             getWrapper: () => {
-                return path.join(
-                    __dirname,
-                    './docs/components/markdown-page-shell.js'
-                );
+                return path.join(__dirname, './docs/components/page-shell.js');
             },
             rehypePlugins: [
                 require('rehype-slug'),
@@ -61,37 +65,20 @@ module.exports = () => {
         },
         dataSelectors: {
             // generate mapbox metadata for every page
-            mbxMeta: data => mbxTaggerBatfish(data),
+            mbxMeta: (data) => mbxTaggerBatfish(data),
             apiSearch: () => buildApiSearch(),
-            examples: ({ pages }) => {
-                return pages
-                    .filter(
-                        ({ path, frontMatter }) =>
-                            /\/example\//.test(path) && frontMatter.tags
-                    )
-                    .map(example => {
-                        return {
-                            path: example.path,
-                            title: example.frontMatter.title,
-                            description: example.frontMatter.description,
-                            tags: example.frontMatter.tags,
-                            thumbnail: example.frontMatter.thumbnail
-                        };
-                    });
-            },
-            listSubfolders: data => {
-                const folders = data.pages
-                    .filter(file => {
-                        return file.path.split('/').length === 4;
-                    })
-                    .map(folder => {
-                        return folder;
-                    });
-                return folders;
-            },
-            apiNavigation: () => {
-                return apiNavigation;
-            }
+            apiNavigation: () => apiNavigation,
+            navigation: (data) => buildNavigation(siteBasePath, data),
+            topics: (data) =>
+                buildTopics(
+                    data,
+                    {
+                        // append plugin topics
+                        '/mapbox-gl-js/plugins/': { topics: pluginTopics }
+                    },
+                    // order of topics on examples page
+                    topicsOrder
+                )
         },
         devBrowserslist: false,
         babelInclude: [

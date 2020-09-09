@@ -210,7 +210,7 @@ export default class Item extends React.Component {
                     </React.Fragment>
 
                     {this.props.values &&
-                    !Array.isArray(this.props.values) && ( // skips $root.version
+                        !Array.isArray(this.props.values) && ( // skips $root.version
                             <React.Fragment>
                                 One of{' '}
                                 {Object.keys(this.props.values)
@@ -298,7 +298,7 @@ export default class Item extends React.Component {
                 )}
 
                 {this.props.values &&
-                !Array.isArray(this.props.values) && ( // skips $root.version
+                    !Array.isArray(this.props.values) && ( // skips $root.version
                         <div className="my12 style-spec-item-dl">
                             <dl>
                                 {entries(this.props.values).map(

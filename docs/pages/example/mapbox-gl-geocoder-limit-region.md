@@ -4,10 +4,11 @@ description: >-
   Use the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder)
   control to search for places using Mapbox Geocoding API limiting results
   to a region.
-tags:
-  - geocoder
+topics:
+  - Geocoder
 thumbnail: mapbox-gl-geocoder-limit-region
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

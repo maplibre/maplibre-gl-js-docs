@@ -21,12 +21,12 @@
         return t * (2 - t);
     }
 
-    map.on('load', function() {
+    map.on('load', function () {
         map.getCanvas().focus();
 
         map.getCanvas().addEventListener(
             'keydown',
-            function(e) {
+            function (e) {
                 e.preventDefault();
                 if (e.which === 38) {
                     // up

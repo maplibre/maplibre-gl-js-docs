@@ -20,7 +20,7 @@
     // colors to use for the categories
     var colors = ['#fed976', '#feb24c', '#fd8d3c', '#fc4e2a', '#e31a1c'];
 
-    map.on('load', function() {
+    map.on('load', function () {
         // add a clustered GeoJSON source for a sample set of earthquakes
         map.addSource('earthquakes', {
             'type': 'geojson',
@@ -119,7 +119,7 @@
         }
 
         // after the GeoJSON data is loaded, update markers on the screen and do so on every map move/moveend
-        map.on('data', function(e) {
+        map.on('data', function (e) {
             if (e.sourceId !== 'earthquakes' || !e.isSourceLoaded) return;
 
             map.on('move', updateMarkers);

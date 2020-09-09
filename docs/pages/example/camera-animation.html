@@ -143,21 +143,21 @@
     // state and 1 is the completed state.
     var easingFunctions = {
         // start slow and gradually increase speed
-        easeInCubic: function(t) {
+        easeInCubic: function (t) {
             return t * t * t;
         },
         // start fast with a long, slow wind-down
-        easeOutQuint: function(t) {
+        easeOutQuint: function (t) {
             return 1 - Math.pow(1 - t, 5);
         },
         // slow start and finish with fast middle
-        easeInOutCirc: function(t) {
+        easeInOutCirc: function (t) {
             return t < 0.5
                 ? (1 - Math.sqrt(1 - Math.pow(2 * t, 2))) / 2
                 : (Math.sqrt(1 - Math.pow(-2 * t + 2, 2)) + 1) / 2;
         },
         // fast start with a "bounce" at the end
-        easeOutBounce: function(t) {
+        easeOutBounce: function (t) {
             var n1 = 7.5625;
             var d1 = 2.75;
 
@@ -177,13 +177,13 @@
     var durationValueSpan = document.getElementById('durationValue');
     var durationInput = document.getElementById('duration');
     durationValueSpan.innerHTML = durationInput.value / 1000 + ' seconds';
-    durationInput.addEventListener('change', function(e) {
+    durationInput.addEventListener('change', function (e) {
         durationValueSpan.innerHTML = e.target.value / 1000 + ' seconds';
     });
 
     var animateLabel = document.getElementById('animateLabel');
     var animateValue = document.getElementById('animate');
-    animateValue.addEventListener('change', function(e) {
+    animateValue.addEventListener('change', function (e) {
         animateLabel.innerHTML = e.target.checked ? 'Yes' : 'No';
     });
 
@@ -194,7 +194,7 @@
         zoom: 3
     });
 
-    map.on('load', function() {
+    map.on('load', function () {
         // add a layer to display the map's center point
         map.addSource('center', {
             'type': 'geojson',
@@ -217,7 +217,7 @@
         });
 
         var animateButton = document.getElementById('animateButton');
-        animateButton.addEventListener('click', function() {
+        animateButton.addEventListener('click', function () {
             var easingInput = document.getElementById('easing');
             var easingFn =
                 easingFunctions[

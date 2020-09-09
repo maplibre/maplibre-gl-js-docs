@@ -5,10 +5,11 @@ description: >-
   [`LngLatBounds`](/mapbox-gl-js/api/#lnglatbounds)
   and chaining [`extend`](/mapbox-gl-js/api/#lnglatbounds#extend)
   to include the last coordinates.
-tags:
-  - user-interaction
+topics:
+  - User interaction
 thumbnail: zoomto-linestring
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

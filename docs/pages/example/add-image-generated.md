@@ -1,11 +1,12 @@
 ---
 title: Add a generated icon to the map
 description: Add an icon to the map that was generated at runtime.
-tags:
-  - styles
-  - layers
+topics:
+  - Styles
+  - Layers
 thumbnail: add-image-generated
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

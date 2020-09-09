@@ -1,10 +1,11 @@
 ---
 title: Animate a marker
 description: Animate the position of a [`Marker`](/mapbox-gl-js/api/#marker) by updating its location on each frame.
-tags:
-  - controls-and-overlays
+topics:
+  - Controls and overlays
 thumbnail: animate-marker
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

@@ -1,10 +1,11 @@
 ---
 title: Display buildings in 3D
 description: Use [extrusions](/mapbox-gl-js/style-spec#layers-fill-extrusion) to display buildings' height in 3D.
-tags:
-  - layers
+topics:
+  - Layers
 thumbnail: 3d-buildings
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

@@ -10,7 +10,7 @@ import Property from './property.js';
 export default class ExpressionReference extends React.Component {
     render() {
         const group = groupedExpressions.filter(
-            g => g.name === this.props.group
+            (g) => g.name === this.props.group
         )[0];
         return (
             <React.Fragment>

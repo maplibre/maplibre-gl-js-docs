@@ -1,10 +1,11 @@
 ---
 title: Add a custom style layer
 description: Use a custom style layer to render custom WebGL content.
-tags:
-  - layers
+topics:
+  - Layers
 thumbnail: custom-style-layer
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

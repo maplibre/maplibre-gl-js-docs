@@ -1,7 +1,7 @@
 const test = require('tape');
 const redirect = require('../docs/util/style-spec-redirect.js');
 
-test(`style-spec-redirect`, t => {
+test(`style-spec-redirect`, (t) => {
     t.equal(
         redirect({
             hash: '#light-anchor'

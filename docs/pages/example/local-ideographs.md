@@ -17,10 +17,11 @@ description: >-
   overriding this setting, keep in mind that the fonts you select may not be available
   on all users' devices. It is best to specify at least one broadly available
   fallback font class such as 'sans-serif'. Note that [Mapbox Studio](https://studio.mapbox.com/) sets this value to `false` by default.
-tags:
-  - internationalization
+topics:
+  - Internationalization support
 thumbnail: local-ideographs
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

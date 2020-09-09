@@ -3,7 +3,7 @@ import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';
 // helper function to:
 // combine properties, prepare them, and sort them for the <Items /> component
 export default function combineItems(properties, section) {
-    const arr = properties.map(property => {
+    const arr = properties.map((property) => {
         return {
             ref: ref[`${property}_${section}`],
             kind: property,
@@ -12,7 +12,7 @@ export default function combineItems(properties, section) {
     });
     // combine items
     const unsorted = arr.reduce((obj, group) => {
-        Object.keys(group.ref).map(o => {
+        Object.keys(group.ref).map((o) => {
             group.ref[o].kind = group.kind;
             group.ref[o].section = group.section;
             obj[o] = group.ref[o];

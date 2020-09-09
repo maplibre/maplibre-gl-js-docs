@@ -1,11 +1,12 @@
 ---
 title: Generate and add a missing icon to the map
 description: Dynamically generate a missing icon at runtime and add it to the map.
-tags:
-  - styles
-  - layers
+topics:
+  - Styles
+  - Layers
 thumbnail: add-image-missing-generated
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

@@ -8,7 +8,7 @@
         zoom: 3
     });
 
-    map.on('load', function() {
+    map.on('load', function () {
         // Add a new source from our GeoJSON data and
         // set the 'cluster' option to true. GL-JS will
         // add the point_count property to your source data.
@@ -81,14 +81,14 @@
         });
 
         // inspect a cluster on click
-        map.on('click', 'clusters', function(e) {
+        map.on('click', 'clusters', function (e) {
             var features = map.queryRenderedFeatures(e.point, {
                 layers: ['clusters']
             });
             var clusterId = features[0].properties.cluster_id;
             map.getSource('earthquakes').getClusterExpansionZoom(
                 clusterId,
-                function(err, zoom) {
+                function (err, zoom) {
                     if (err) return;
 
                     map.easeTo({
@@ -103,7 +103,7 @@
         // the unclustered-point layer, open a popup at
         // the location of the feature, with
         // description HTML from its properties.
-        map.on('click', 'unclustered-point', function(e) {
+        map.on('click', 'unclustered-point', function (e) {
             var coordinates = e.features[0].geometry.coordinates.slice();
             var mag = e.features[0].properties.mag;
             var tsunami;
@@ -129,10 +129,10 @@
                 .addTo(map);
         });
 
-        map.on('mouseenter', 'clusters', function() {
+        map.on('mouseenter', 'clusters', function () {
             map.getCanvas().style.cursor = 'pointer';
         });
-        map.on('mouseleave', 'clusters', function() {
+        map.on('mouseleave', 'clusters', function () {
             map.getCanvas().style.cursor = '';
         });
     });

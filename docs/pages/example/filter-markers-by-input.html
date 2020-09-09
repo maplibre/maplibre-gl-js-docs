@@ -115,14 +115,14 @@
         zoom: 11.15
     });
 
-    map.on('load', function() {
+    map.on('load', function () {
         // Add a GeoJSON source containing place coordinates and information.
         map.addSource('places', {
             'type': 'geojson',
             'data': places
         });
 
-        places.features.forEach(function(feature) {
+        places.features.forEach(function (feature) {
             var symbol = feature.properties['icon'];
             var layerID = 'poi-' + symbol;
 
@@ -157,11 +157,11 @@
             }
         });
 
-        filterInput.addEventListener('keyup', function(e) {
+        filterInput.addEventListener('keyup', function (e) {
             // If the input value matches a layerID set
             // it's visibility to 'visible' or else hide it.
             var value = e.target.value.trim().toLowerCase();
-            layerIDs.forEach(function(layerID) {
+            layerIDs.forEach(function (layerID) {
                 map.setLayoutProperty(
                     layerID,
                     'visibility',

@@ -8,10 +8,11 @@ description: >-
   By setting the `lazy` parameter to `true`, the plugin is only loaded when the map first encounters Hebrew or Arabic text.
   
   Mapbox Studio loads this plugin by default.
-tags:
-  - internationalization
+topics:
+  - Internationalization support
 thumbnail: mapbox-gl-rtl-text
 contentType: example
+layout: example
 language:
 - JavaScript
 products:

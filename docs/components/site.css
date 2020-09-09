@@ -52,7 +52,7 @@ pre + .style-spec-property {
 
 /* remove border from style spec <Property/> h2 */
 #docs-content h2.no-h2-border,
-#docs-content .style-spec-page .prose .style-spec-property h2 {
+#docs-content .style-spec-page .style-spec-property h2 {
     border-top: 0 !important;
 }
 /* remove extra padding from style spec <Property/> h3 */
@@ -100,4 +100,17 @@ pre + .style-spec-property {
 /* remove bottom margin from example code block */
 .api-example pre {
     margin-bottom: 0 !important;
+}
+
+/* plugins-page overrides */
+#docs-content .plugins-page h2 {
+    font-size: 15px !important;
+    line-height: 24px !important;
+    font-weight: bold !important;
+    padding: 0 !important;
+    margin: 0px !important;
+}
+/* remove underline from github/example links */
+.plugins-page .link {
+    text-decoration: none !important;
 }

@@ -3,6 +3,8 @@ title: Other
 id: other
 description: The value for any layout or paint property may be specified as a function.
 contentType: specification
+order: 11
+layout: accordion
 products:
 - Mapbox Style Specification
 prependJs:
