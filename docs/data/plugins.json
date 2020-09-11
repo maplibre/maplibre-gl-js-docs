@@ -27,6 +27,10 @@
       "description": "Adds support for drawing and editing features on Mapbox GL JS maps.",
       "example": "mapbox-gl-draw"
     },
+    "mapbox-gl-export": {
+      "website": "https://github.com/watergis/mapbox-gl-export",
+      "description": "Adds a control that exports the map as a PDF or PNG."
+    },
     "mapbox-gl-geocoder": {
       "website": "https://github.com/mapbox/mapbox-gl-geocoder",
       "description": "Adds a geocoder control to Mapbox GL JS.",
@@ -35,6 +39,10 @@
     "mapbox-gl-infobox": {
       "website": "https://github.com/el/infobox-control",
       "description": "Adds a control to display an infobox or a gradient."
+    },
+    "mapbox-gl-legend": {
+      "website": "https://github.com/watergis/mapbox-gl-legend",
+      "description": "Adds a control that shows a legend generated from the map style."
     },
     "mapbox-gl-opacity": {
       "website": "https://github.com/dayjournal/mapbox-gl-opacity",
