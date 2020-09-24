@@ -10,6 +10,8 @@
     map.on('load', function () {
         map.addSource('wms-test-source', {
             'type': 'raster',
+            // use the tiles option to specify a WMS tile source URL
+            // https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/
             'tiles': [
                 'https://img.nj.gov/imagerywms/Natural2015?bbox={bbox-epsg-3857}&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=256&height=256&layers=Natural2015'
             ],
