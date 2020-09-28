@@ -54,11 +54,6 @@ export const styleSpecNavigation = [
         subnav: makeSubNav(ref.$root, null, 2)
     },
     {
-        title: 'Light',
-        path: '/mapbox-gl-js/style-spec/light/',
-        subnav: makeSubNav(ref.light, null, 2)
-    },
-    {
         title: 'Sources',
         path: '/mapbox-gl-js/style-spec/sources/',
         subnav: [
@@ -101,19 +96,6 @@ export const styleSpecNavigation = [
         ]
     },
     {
-        title: 'Sprite',
-        path: '/mapbox-gl-js/style-spec/sprite/'
-    },
-    {
-        title: 'Glyphs',
-        path: '/mapbox-gl-js/style-spec/glyphs/'
-    },
-    {
-        title: 'Transition',
-        path: '/mapbox-gl-js/style-spec/transition/',
-        subnav: makeSubNav(ref.transition, null, 2)
-    },
-    {
         title: 'Layers',
         path: '/mapbox-gl-js/style-spec/layers/',
         subnav: layerTypes.reduce((arr, type) => {
@@ -126,6 +108,28 @@ export const styleSpecNavigation = [
                 ...makeSubNav(ref[`layout_${type}`], `layout-${type}`, 3),
                 ...makeSubNav(ref[`paint_${type}`], `paint-${type}`, 3)
             ].sort((a, b) => a.text.localeCompare(b.text));
+            arr = arr.concat(thirdLevelItems);
+            return arr;
+        }, [])
+    },
+    {
+        title: 'Expressions',
+        path: '/mapbox-gl-js/style-spec/expressions/',
+        subnav: groupedExpressions.reduce((arr, group) => {
+            arr.push({
+                text: group.name,
+                slug: `${slug(group.name)}`,
+                level: 2
+            });
+            const thirdLevelItems = group.expressions.map((g) => {
+                return {
+                    text: g.name,
+                    slug: `${group.name === 'Types' ? 'types-' : ''}${
+                        slug(g.name) || g.name
+                    }`,
+                    level: 3
+                };
+            });
             arr = arr.concat(thirdLevelItems);
             return arr;
         }, [])
@@ -172,26 +176,22 @@ export const styleSpecNavigation = [
         ]
     },
     {
-        title: 'Expressions',
-        path: '/mapbox-gl-js/style-spec/expressions/',
-        subnav: groupedExpressions.reduce((arr, group) => {
-            arr.push({
-                text: group.name,
-                slug: `${slug(group.name)}`,
-                level: 2
-            });
-            const thirdLevelItems = group.expressions.map((g) => {
-                return {
-                    text: g.name,
-                    slug: `${group.name === 'Types' ? 'types-' : ''}${
-                        slug(g.name) || g.name
-                    }`,
-                    level: 3
-                };
-            });
-            arr = arr.concat(thirdLevelItems);
-            return arr;
-        }, [])
+        title: 'Sprite',
+        path: '/mapbox-gl-js/style-spec/sprite/'
+    },
+    {
+        title: 'Glyphs',
+        path: '/mapbox-gl-js/style-spec/glyphs/'
+    },
+    {
+        title: 'Transition',
+        path: '/mapbox-gl-js/style-spec/transition/',
+        subnav: makeSubNav(ref.transition, null, 2)
+    },
+    {
+        title: 'Light',
+        path: '/mapbox-gl-js/style-spec/light/',
+        subnav: makeSubNav(ref.light, null, 2)
     },
     {
         title: 'Other',
