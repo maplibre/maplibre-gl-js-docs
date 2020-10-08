@@ -3,99 +3,94 @@
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v10',
-        center: [-99.9, 41.5],
-        zoom: 1
+        center: [12, 50],
+        zoom: 1.6
     });
 
-    // Join local JSON data with vector tile geometry
-    // USA unemployment rate in 2009
-    // Source https://data.bls.gov/timeseries/LNS14000000
-    var maxValue = 13;
-    var data = [
-        { 'STATE_ID': '01', 'unemployment': 13.17 },
-        { 'STATE_ID': '02', 'unemployment': 9.5 },
-        { 'STATE_ID': '04', 'unemployment': 12.15 },
-        { 'STATE_ID': '05', 'unemployment': 8.99 },
-        { 'STATE_ID': '06', 'unemployment': 11.83 },
-        { 'STATE_ID': '08', 'unemployment': 7.52 },
-        { 'STATE_ID': '09', 'unemployment': 6.44 },
-        { 'STATE_ID': '10', 'unemployment': 5.17 },
-        { 'STATE_ID': '12', 'unemployment': 9.67 },
-        { 'STATE_ID': '13', 'unemployment': 10.64 },
-        { 'STATE_ID': '15', 'unemployment': 12.38 },
-        { 'STATE_ID': '16', 'unemployment': 10.13 },
-        { 'STATE_ID': '17', 'unemployment': 9.58 },
-        { 'STATE_ID': '18', 'unemployment': 10.63 },
-        { 'STATE_ID': '19', 'unemployment': 8.09 },
-        { 'STATE_ID': '20', 'unemployment': 5.93 },
-        { 'STATE_ID': '21', 'unemployment': 9.86 },
-        { 'STATE_ID': '22', 'unemployment': 9.81 },
-        { 'STATE_ID': '23', 'unemployment': 7.82 },
-        { 'STATE_ID': '24', 'unemployment': 8.35 },
-        { 'STATE_ID': '25', 'unemployment': 9.1 },
-        { 'STATE_ID': '26', 'unemployment': 10.69 },
-        { 'STATE_ID': '27', 'unemployment': 11.53 },
-        { 'STATE_ID': '28', 'unemployment': 9.29 },
-        { 'STATE_ID': '29', 'unemployment': 9.94 },
-        { 'STATE_ID': '30', 'unemployment': 9.29 },
-        { 'STATE_ID': '31', 'unemployment': 5.45 },
-        { 'STATE_ID': '32', 'unemployment': 4.21 },
-        { 'STATE_ID': '33', 'unemployment': 4.27 },
-        { 'STATE_ID': '34', 'unemployment': 4.09 },
-        { 'STATE_ID': '35', 'unemployment': 7.83 },
-        { 'STATE_ID': '36', 'unemployment': 8.01 },
-        { 'STATE_ID': '37', 'unemployment': 9.34 },
-        { 'STATE_ID': '38', 'unemployment': 11.23 },
-        { 'STATE_ID': '39', 'unemployment': 7.08 },
-        { 'STATE_ID': '40', 'unemployment': 11.22 },
-        { 'STATE_ID': '41', 'unemployment': 6.2 },
-        { 'STATE_ID': '42', 'unemployment': 9.11 },
-        { 'STATE_ID': '44', 'unemployment': 10.42 },
-        { 'STATE_ID': '45', 'unemployment': 8.89 },
-        { 'STATE_ID': '46', 'unemployment': 11.03 },
-        { 'STATE_ID': '47', 'unemployment': 7.35 },
-        { 'STATE_ID': '48', 'unemployment': 8.92 },
-        { 'STATE_ID': '49', 'unemployment': 7.65 },
-        { 'STATE_ID': '50', 'unemployment': 8.01 },
-        { 'STATE_ID': '51', 'unemployment': 7.62 },
-        { 'STATE_ID': '53', 'unemployment': 7.77 },
-        { 'STATE_ID': '54', 'unemployment': 8.49 },
-        { 'STATE_ID': '55', 'unemployment': 9.42 },
-        { 'STATE_ID': '56', 'unemployment': 7.59 }
-    ];
+    // Data: UN Human Development Index 2017 Europe extract
+    // Source: https://ourworldindata.org/human-development-index
+    var data = [{ "code": "ROU", "hdi": 0.811 },
+                { "code": "RUS", "hdi": 0.816 },
+                { "code": "SRB", "hdi": 0.787 },
+                { "code": "SVK", "hdi": 0.855 },
+                { "code": "SVN", "hdi": 0.896 },
+                { "code": "ESP", "hdi": 0.891 },
+                { "code": "SWE", "hdi": 0.933 },
+                { "code": "CHE", "hdi": 0.944 },
+                { "code": "HRV", "hdi": 0.831 },
+                { "code": "CZE", "hdi": 0.888 },
+                { "code": "DNK", "hdi": 0.929 },
+                { "code": "EST", "hdi": 0.871 },
+                { "code": "FIN", "hdi": 0.92 },
+                { "code": "FRA", "hdi": 0.901 },
+                { "code": "DEU", "hdi": 0.936 },
+                { "code": "GRC", "hdi": 0.87 },
+                { "code": "ALB", "hdi": 0.785 },
+                { "code": "AND", "hdi": 0.858 },
+                { "code": "AUT", "hdi": 0.908 },
+                { "code": "BLR", "hdi": 0.808 },
+                { "code": "BEL", "hdi": 0.916 },
+                { "code": "BIH", "hdi": 0.768 },
+                { "code": "BGR", "hdi": 0.813 },
+                { "code": "MKD", "hdi": 0.757 },
+                { "code": "MLT", "hdi": 0.878 },
+                { "code": "MDA", "hdi": 0.7 },
+                { "code": "MNE", "hdi": 0.814 },
+                { "code": "NLD", "hdi": 0.931 },
+                { "code": "NOR", "hdi": 0.953 },
+                { "code": "POL", "hdi": 0.865 },
+                { "code": "PRT", "hdi": 0.847 },
+                { "code": "HUN", "hdi": 0.838 },
+                { "code": "ISL", "hdi": 0.935 },
+                { "code": "IRL", "hdi": 0.938 },
+                { "code": "ITA", "hdi": 0.88 },
+                { "code": "LVA", "hdi": 0.847 },
+                { "code": "LIE", "hdi": 0.916 },
+                { "code": "LTU", "hdi": 0.858 },
+                { "code": "LUX", "hdi": 0.904 },
+                { "code": "UKR", "hdi": 0.751 },
+                { "code": "GBR", "hdi": 0.922 } ]
 
     map.on('load', function () {
-        // Add source for state polygons hosted on Mapbox, based on US Census Data:
-        // https://www.census.gov/geo/maps-data/data/cbf/cbf_state.html
-        map.addSource('states', {
+
+        // Add source for country polygons using the Mapbox Countries tileset
+        // The polygons contain an ISO 3166 alpha-3 code which can be used to for joining the data
+        // https://docs.mapbox.com/vector-tiles/reference/mapbox-countries-v1
+        map.addSource('countries', {
             type: 'vector',
-            url: 'mapbox://mapbox.us_census_states_2015'
+            url: 'mapbox://mapbox.country-boundaries-v1'
         });
 
-        var expression = ['match', ['get', 'STATE_ID']];
+        // Build a GL match expression that defines the color for every vector tile feature
+        // Use the ISO 3166-1 alpha 3 code as the lookup key for the country shape
+        var matchExpression = ['match', ['get', 'iso_3166_1_alpha_3']];
 
-        // Calculate color for each state based on the unemployment rate
+        // Calculate color values for each country based on 'hdi' value
         data.forEach(function (row) {
-            var green = (row['unemployment'] / maxValue) * 255;
-            var color = 'rgba(' + 0 + ', ' + green + ', ' + 0 + ', 1)';
-            expression.push(row['STATE_ID'], color);
+
+            // Convert the range of data values to a suitable color
+            var green = row['hdi'] * 255;
+            var color = 'rgb(0, '+ green + ', 0)';
+
+            matchExpression.push(row['code'], color);
+
         });
 
         // Last value is the default, used where there is no data
-        expression.push('rgba(0,0,0,0)');
+        matchExpression.push('rgba(0, 0, 0, 0)');
 
-        // Add layer from the vector tile source with data-driven style
-        map.addLayer(
-            {
-                'id': 'states-join',
-                'type': 'fill',
-                'source': 'states',
-                'source-layer': 'states',
-                'paint': {
-                    'fill-color': expression
-                }
-            },
-            'waterway-label'
-        );
+        // Add layer from the vector tile source to create the choropleth
+        // Insert it below the 'admin-1-boundary-bg' layer in the style
+        map.addLayer({
+            'id': 'countries-join',
+            'type': 'fill',
+            'source': 'countries',
+            'source-layer': 'country_boundaries',
+            'paint': {
+                'fill-color': matchExpression
+            }
+        }, 'admin-1-boundary-bg');
+
     });
+
 </script>
