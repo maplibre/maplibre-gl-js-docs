@@ -1,8 +1,8 @@
 ---
 title: Create a time slider
 description: >-
-  Drag the range slider to visualize earthquakes that were greater than 5.9
-  magnitude in 2015.
+  Using [`Map#setFilter`](https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setfilter) and [D3.js](https://d3js.org/), create a range slider to visualize earthquakes in 2015 that were greater than 5.9
+  magnitude.
 topics:
   - User interaction
   - Sources
