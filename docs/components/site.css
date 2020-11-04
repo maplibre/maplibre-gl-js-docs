@@ -46,7 +46,7 @@ pre + .style-spec-property {
 }
 
 /* add padding to top of h3 to clear top bar sticker */
-.style-spec-page h3 {
+.style-spec-page h3:not(.unprose) {
     padding-top: 50px !important;
 }
 
