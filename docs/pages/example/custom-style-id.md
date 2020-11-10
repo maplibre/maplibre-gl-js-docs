@@ -1,6 +1,6 @@
 ---
 title: Display a map with a custom style
-description: Using a Mapbox-hosted custom [style](/help/glossary/style/).
+description: Use a Mapbox-hosted custom [style](/help/glossary/style/) in a Mapbox GL JS map. This examples uses [The Happy Map](https://blog.mapbox.com/doh-making-a-simspons-inspired-map-with-expressions-86e633b61ede) style by Taya Lavrinenko.
 topics:
   - Styles
 thumbnail: custom-style-id
