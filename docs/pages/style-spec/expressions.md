@@ -9,6 +9,8 @@ products:
 - Mapbox Style Specification
 prependJs:
     - "import ExpressionReference from '../../components/style-spec/expression-reference';"
+    - "import RelatedPage from '@mapbox/dr-ui/related-page';"
+
 ---
 
 The value for any [layout property](/mapbox-gl-js/style-spec/layers/#layout-property), [paint property](/mapbox-gl-js/style-spec/layers/#paint-property), or [filter](/mapbox-gl-js/style-spec/layers/#filter) may be specified as an _expression_. An expression defines a formula for computing the value of the property using the _operators_ described below. The set of expression operators provided by Mapbox GL includes:
@@ -25,6 +27,9 @@ Expressions are represented as JSON arrays. The first element of an expression a
 [expression_name, argument_0, argument_1, ...]
 ```
 
+{{<RelatedPage contentType="tutorial" title="Get started with Mapbox GL JS expressions" url="https://docs.mapbox.com/help/tutorials/mapbox-gl-js-expressions/">}}
+Learn how to write expressions in Mapbox GL JS to style custom data based on a data property and by zoom level.
+{{</RelatedPage>}}
 
 ## Data expressions
 
