@@ -11,7 +11,17 @@
       "href": "https://docs.mapbox.com/mapbox-gl-js/example/cluster-html/"
     }
   ],
+  "-": [
+    {
+      "title": "Get started with Mapbox GL JS expressions: Calculate the age of each landmark",
+      "href": "https://docs.mapbox.com/help/tutorials/mapbox-gl-js-expressions/#calculate-the-age-of-each-landmark"
+    }
+  ],
   "/": [
+    {
+      "title": "Get started with Mapbox GL JS expressions: Adjust the circle radius",
+      "href": "https://docs.mapbox.com/help/tutorials/mapbox-gl-js-expressions/#adjust-the-circle-radius"
+    },
     {
       "title": "Visualize population density",
       "href": "https://docs.mapbox.com/mapbox-gl-js/example/visualize-population-density/"
@@ -97,6 +107,10 @@
     {
       "title": "Use a fallback image",
       "href": "https://docs.mapbox.com/mapbox-gl-js/example/fallback-image/"
+    },
+    {
+      "title": "Video: Add bilingual labels to a map with expressions in Studio",
+      "href": "https://docs.mapbox.com/help/tutorials/add-bilingual-labels-to-a-map-using-expressions-video/"
     }
   ],
   "concat": [
@@ -273,6 +287,12 @@
     {
       "title": "Visualize population density",
       "href": "https://docs.mapbox.com/mapbox-gl-js/example/visualize-population-density/"
+    }
+  ],
+  "zoom": [
+    {
+      "title": "Get started with Mapbox GL JS expressions: Add a zoom expression",
+      "href": "https://docs.mapbox.com/help/tutorials/mapbox-gl-js-expressions/#add-a-zoom-expression"
     }
   ]
 }
