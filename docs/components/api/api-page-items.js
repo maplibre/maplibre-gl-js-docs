@@ -71,7 +71,7 @@ class SingleSection extends React.Component {
         const child = this.props;
         return (
             <React.Fragment>
-                <div className="mt-neg30">
+                <div className="mt30-mm mt-neg30-mxl">
                     <Github section={child} />
                 </div>
                 <div className="mb18">

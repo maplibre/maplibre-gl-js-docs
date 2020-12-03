@@ -9,12 +9,8 @@ export default class SectionHeading extends React.Component {
         return (
             <React.Fragment>
                 <HeadingLevel
-                    className="pt18 mt18 pb0 no-h2-border scroll-margin-top"
+                    className="mt36 mb18 txt-xl unprose anchor"
                     id={section.namespace.toLowerCase()}
-                    style={{
-                        fontSize: '24px',
-                        lineHeight: '36px'
-                    }}
                 >
                     <a
                         className="unprose color-blue-on-hover"

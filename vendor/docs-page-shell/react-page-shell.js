@@ -184,524 +184,9 @@ var shellStyles = {
   headerMenuName: 'shell-txt-s shell-txt-s-mxl shell-txt-bold shell-txt-nowrap shell-py6',
   // Medium to X-large navigation
   navigationItem: 'shell-mx6 shell-mx9-ml shell-mx18-mxl',
-  // Medium to X-large navigation popup menu
-  popupMenuBody: 'shell-shadow-darken10-bold shell-bg-white shell-absolute shell-inline-block shell-round shell-txt-s',
-  popupMenuNavHeading: 'shell-txt-uppercase shell-txt-s shell-txt-spacing1 shell-txt-fancy shell-color-light-blue',
-  popupMenuLink: 'shell-txt-bold shell-color-blue-on-hover shell-color-gray-dark',
   // User menu popup
   userNavLink: 'shell-color-gray-dark shell-color-blue-on-hover shell-txt-s shell-txt-bold shell-my12 shell-block',
   userAvatar: 'shell-border shell-border--2 shell-border--white shell-h30 shell-w30 shell-bg-darken25 shell-clip shell-round-full'
-};
-
-function PopupMenu(props) {
-  var name = props.name,
-      darkText = props.darkText,
-      children = props.children;
-  var menuNameClasses = shellStyles.headerMenuName;
-  menuNameClasses += darkText ? ' shell-navigation-menu-button shell-transition shell-color-gray-dark shell-color-blue-on-hover' : ' shell-navigation-menu-button shell-link shell-link--white';
-  return React.createElement("div", {
-    style: {
-      lineHeight: 1
-    }
-  }, React.createElement("div", {
-    id: "".concat(name, "-menu"),
-    className: "shell-relative ".concat(shellStyles.navigationItem)
-  }, React.createElement("button", {
-    id: "".concat(name, "-menu-trigger"),
-    "data-nav-trigger": name,
-    "data-test": "nav-menu-trigger-".concat(name),
-    "aria-haspopup": "true",
-    "aria-controls": "".concat(name, "-menu-container"),
-    "aria-expanded": "false",
-    "aria-label": "".concat(name, " menu"),
-    className: menuNameClasses
-  }, name)), React.createElement("div", {
-    id: "".concat(name, "-menu-container"),
-    "data-nav-menu": name,
-    "data-test": "nav-menu-".concat(name),
-    role: "group",
-    "aria-labelledby": "".concat(name, "-menu-trigger"),
-    className: "shell-absolute shell-z2 shell-disable-text-size-adjust shell-w-full shell-animated-menu",
-    style: {
-      right: 0,
-      top: '100%',
-      marginTop: '14px'
-    }
-  }, React.createElement("div", {
-    "data-nav-pointer": name,
-    className: "shell-triangle-wide shell-triangle-wide--u shell-color-white shell-z5 shell-animated-menu__pointer",
-    style: {
-      position: 'absolute',
-      top: 0
-    }
-  }), React.createElement("div", {
-    className: shellStyles.popupMenuBody,
-    "data-nav-menu-body": name
-  }, children)));
-}
-
-PopupMenu.propTypes = {
-  darkText: PropTypes.bool,
-  name: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired
-};
-PopupMenu.defaultProps = {
-  darkText: true
-};
-
-var language = "en";
-var logoSiteTitle = "Docs";
-var all = "All docs";
-var nonMobile = {
-	maps: {
-		title: "Maps",
-		sdks: {
-			title: "Maps SDKs",
-			links: [
-				{
-					name: "for iOS",
-					to: "https://docs.mapbox.com/ios/maps/overview/"
-				},
-				{
-					name: "for Android",
-					to: "https://docs.mapbox.com/android/maps/overview/"
-				},
-				{
-					name: "for Unity",
-					to: "https://docs.mapbox.com/unity/maps/overview/"
-				}
-			]
-		},
-		links: [
-			{
-				name: "Mapbox GL JS",
-				to: "https://docs.mapbox.com/mapbox-gl-js/"
-			},
-			{
-				name: "Mapbox Studio",
-				to: "https://docs.mapbox.com/studio-manual/overview/"
-			},
-			{
-				name: "Mapbox Style Spec",
-				to: "https://docs.mapbox.com/mapbox-gl-js/style-spec/"
-			},
-			{
-				name: "Mapbox Tiling Service",
-				to: "https://docs.mapbox.com/mapbox-tiling-service/",
-				beta: true
-			},
-			{
-				name: "Vector tiles",
-				to: "https://docs.mapbox.com/vector-tiles/"
-			},
-			{
-				name: "Maps APIs",
-				to: "https://docs.mapbox.com/api/maps/"
-			}
-		]
-	},
-	navigation: {
-		title: "Navigation",
-		sdks: {
-			title: "Navigation SDKs",
-			links: [
-				{
-					name: "for iOS",
-					to: "https://docs.mapbox.com/ios/navigation/overview/"
-				},
-				{
-					name: "for Android",
-					to: "https://docs.mapbox.com/android/navigation/overview/"
-				}
-			]
-		},
-		links: [
-			{
-				name: "Navigation APIs",
-				to: "https://docs.mapbox.com/api/navigation/"
-			}
-		]
-	},
-	search: {
-		title: "Search",
-		sdks: {
-			title: "Search SDKs",
-			beta: true,
-			links: [
-				{
-					name: "for iOS",
-					to: "https://docs.mapbox.com/ios/search/overview/"
-				},
-				{
-					name: "for Android",
-					to: "https://docs.mapbox.com/android/search/overview/"
-				}
-			]
-		},
-		links: [
-			{
-				name: "Geocoding API",
-				to: "https://docs.mapbox.com/api/search/"
-			}
-		]
-	},
-	vision: {
-		title: "Vision",
-		sdks: {
-			title: "Vision SDKs",
-			links: [
-				{
-					name: "for iOS",
-					to: "https://docs.mapbox.com/ios/vision/overview/"
-				},
-				{
-					name: "for Android",
-					to: "https://docs.mapbox.com/android/vision/overview/"
-				}
-			]
-		},
-		links: [
-			{
-				name: "Traffic signs",
-				to: "https://docs.mapbox.com/traffic-signs/overview/"
-			}
-		]
-	},
-	help: {
-		title: "Help",
-		links: [
-			{
-				name: "How Mapbox works",
-				to: "https://docs.mapbox.com/help/how-mapbox-works/"
-			},
-			{
-				name: "Tutorials",
-				to: "https://docs.mapbox.com/help/tutorials/"
-			},
-			{
-				name: "Troubleshooting",
-				to: "https://docs.mapbox.com/help/troubleshooting/"
-			},
-			{
-				name: "Glossary",
-				to: "https://docs.mapbox.com/help/glossary/"
-			}
-		]
-	}
-};
-var mobile = {
-	maps: {
-		title: "Maps",
-		links: [
-			{
-				name: "SDK for iOS",
-				to: "https://docs.mapbox.com/ios/maps/overview/"
-			},
-			{
-				name: "SDK for Android",
-				to: "https://docs.mapbox.com/android/maps/overview/"
-			},
-			{
-				name: "SDK for Unity",
-				to: "https://docs.mapbox.com/unity/maps/overview/"
-			},
-			{
-				name: "Mapbox GL JS",
-				to: "https://docs.mapbox.com/mapbox-gl-js/"
-			},
-			{
-				name: "Mapbox Studio",
-				to: "https://docs.mapbox.com/studio-manual/overview/"
-			},
-			{
-				name: "Mapbox Style Spec",
-				to: "https://docs.mapbox.com/mapbox-gl-js/style-spec/"
-			},
-			{
-				name: "Mapbox Tiling Service",
-				to: "https://docs.mapbox.com/mapbox-tiling-service/",
-				beta: true
-			},
-			{
-				name: "Vector tiles",
-				to: "https://docs.mapbox.com/vector-tiles/"
-			},
-			{
-				name: "Maps APIs",
-				to: "https://docs.mapbox.com/api/maps/"
-			}
-		]
-	},
-	navigation: {
-		title: "Navigation",
-		links: [
-			{
-				name: "SDK for iOS",
-				to: "https://docs.mapbox.com/ios/navigation/overview/"
-			},
-			{
-				name: "SDK for Android",
-				to: "https://docs.mapbox.com/android/navigation/overview/"
-			},
-			{
-				name: "Navigation APIs",
-				to: "https://docs.mapbox.com/api/navigation/"
-			}
-		]
-	},
-	search: {
-		title: "Search",
-		links: [
-			{
-				name: "SDK for iOS",
-				to: "https://docs.mapbox.com/ios/search/overview/",
-				beta: true
-			},
-			{
-				name: "SDK for Android",
-				to: "https://docs.mapbox.com/android/search/overview/",
-				beta: true
-			},
-			{
-				name: "Geocoding API",
-				to: "https://docs.mapbox.com/api/search/"
-			}
-		]
-	},
-	vision: {
-		title: "Vision",
-		links: [
-			{
-				name: "SDK for iOS",
-				to: "https://docs.mapbox.com/ios/vision/overview/"
-			},
-			{
-				name: "SDK for Android",
-				to: "https://docs.mapbox.com/android/vision/overview/"
-			},
-			{
-				name: "Traffic signs",
-				to: "https://docs.mapbox.com/traffic-signs/overview/"
-			}
-		]
-	},
-	help: {
-		title: "Help",
-		links: [
-			{
-				name: "How Mapbox works",
-				to: "https://docs.mapbox.com/help/how-mapbox-works/"
-			},
-			{
-				name: "Tutorials",
-				to: "https://docs.mapbox.com/help/tutorials/"
-			},
-			{
-				name: "Troubleshooting",
-				to: "https://docs.mapbox.com/help/troubleshooting/"
-			},
-			{
-				name: "Glossary",
-				to: "https://docs.mapbox.com/help/glossary/"
-			}
-		]
-	}
-};
-var navigationMenuData = {
-	language: language,
-	logoSiteTitle: logoSiteTitle,
-	all: all,
-	nonMobile: nonMobile,
-	mobile: mobile
-};
-
-function BetaTag() {
-  return React.createElement(React.Fragment, null, "\xA0 ", React.createElement("div", {
-    className: "shell-beta-tag shell-txt-bold",
-    style: {
-      background: '#f1f3fd',
-      color: '#0c248d',
-      border: '1px solid #0428c8',
-      paddingLeft: 6,
-      paddingRight: 6,
-      borderRadius: 4,
-      fontSize: 10,
-      lineHeight: 1.5,
-      display: 'inline'
-    }
-  }, "Beta"));
-}
-
-function LinkList(props) {
-  var title = props.title,
-      links = props.links,
-      bullets = props.bullets;
-  var navigationHeading = !title ? null : React.createElement("div", {
-    className: "inline-block ".concat(shellStyles.popupMenuNavHeading, " shell-mb12")
-  }, title);
-  var ulClasses = bullets ? 'shell-txt-ul shell-ml24' : '';
-  var linkListItems = React.createElement("ul", {
-    className: ulClasses
-  }, links.map(function (link, i) {
-    var liClasses = i === 0 ? '' : 'shell-mt12';
-    if (bullets) liClasses += ' shell-txt-li';
-    return React.createElement("li", {
-      key: i,
-      className: liClasses
-    }, React.createElement("a", {
-      href: link.to,
-      "data-nav-link": true,
-      className: shellStyles.popupMenuLink
-    }, link.name, link.beta ? React.createElement(BetaTag, null) : ''));
-  }));
-  return React.createElement("div", null, React.createElement("div", null, navigationHeading, props.beta && React.createElement(BetaTag, null)), linkListItems);
-}
-
-LinkList.propTypes = {
-  title: PropTypes.string,
-  links: PropTypes.arrayOf(PropTypes.shape({
-    to: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired
-  })).isRequired,
-  bullets: PropTypes.bool,
-  beta: PropTypes.bool
-};
-LinkList.defaultProps = {
-  bullets: false
-};
-
-function SearchMenu(props) {
-  var menuData = navigationMenuData.nonMobile.search;
-  var standardLinks = menuData.links;
-  var sdkEls = React.createElement(LinkList, {
-    title: menuData.sdks.title,
-    links: menuData.sdks.links,
-    beta: menuData.sdks.beta,
-    bullets: true
-  });
-  var standardLinkEls = React.createElement(LinkList, {
-    links: standardLinks
-  });
-  return React.createElement(PopupMenu, _extends({}, props, {
-    name: props.title
-  }), React.createElement("div", {
-    className: "shell-py30 shell-px30 w360"
-  }, React.createElement("div", {
-    className: "shell-grid shell-grid--gut24"
-  }, React.createElement("div", {
-    className: "shell-col shell-col--6"
-  }, sdkEls), React.createElement("div", {
-    className: "shell-col shell-col--6"
-  }, standardLinkEls))));
-}
-SearchMenu.propTypes = {
-  title: PropTypes.string
-};
-
-function HelpMenu(props) {
-  var navItems = navigationMenuData.nonMobile.help.links;
-  return React.createElement(PopupMenu, _extends({}, props, {
-    name: props.title
-  }), React.createElement("div", {
-    className: "shell-py30 shell-px30"
-  }, React.createElement(LinkList, {
-    links: navItems
-  })));
-}
-HelpMenu.propTypes = {
-  title: PropTypes.string
-};
-
-function MapsMenu(props) {
-  var menuData = navigationMenuData.nonMobile.maps;
-  var standardLinks = menuData.links;
-  var sdkEls = React.createElement(LinkList, {
-    title: menuData.sdks.title,
-    links: menuData.sdks.links,
-    bullets: true
-  });
-  var standardLinkEls = React.createElement(LinkList, {
-    links: standardLinks
-  });
-  return React.createElement(PopupMenu, _extends({}, props, {
-    name: props.title
-  }), React.createElement("div", {
-    className: "shell-py30 shell-px30 w360"
-  }, React.createElement("div", {
-    className: "shell-grid shell-grid--gut24"
-  }, React.createElement("div", {
-    className: "shell-col",
-    style: {
-      width: '39%'
-      /* override "shell-col--6" to make beta tag fit */
-
-    }
-  }, sdkEls), React.createElement("div", {
-    className: "shell-col",
-    style: {
-      width: '61%'
-      /* override "shell-col--6" to make beta tag fit */
-
-    }
-  }, standardLinkEls))));
-}
-MapsMenu.propTypes = {
-  title: PropTypes.string
-};
-
-function VisionMenu(props) {
-  var menuData = navigationMenuData.nonMobile.vision;
-  var standardLinks = menuData.links;
-  var sdkEls = React.createElement(LinkList, {
-    title: menuData.sdks.title,
-    links: menuData.sdks.links,
-    bullets: true,
-    beta: true
-  });
-  var standardLinkEls = React.createElement(LinkList, {
-    links: standardLinks
-  });
-  return React.createElement(PopupMenu, _extends({}, props, {
-    name: props.title
-  }), React.createElement("div", {
-    className: "shell-py30 shell-px30 w360"
-  }, React.createElement("div", {
-    className: "shell-grid shell-grid--gut24"
-  }, React.createElement("div", {
-    className: "shell-col shell-col--6"
-  }, sdkEls), React.createElement("div", {
-    className: "shell-col shell-col--6"
-  }, standardLinkEls))));
-}
-VisionMenu.propTypes = {
-  title: PropTypes.string
-};
-
-function NavigationMenu(props) {
-  var menuData = navigationMenuData.nonMobile.navigation ? navigationMenuData.nonMobile.navigation : undefined;
-  var standardLinks = menuData ? menuData.links : [];
-  var sdkEls = React.createElement(LinkList, {
-    title: menuData.sdks.title,
-    links: menuData.sdks.links,
-    bullets: true
-  });
-  var standardLinkEls = React.createElement(LinkList, {
-    links: standardLinks
-  });
-  return React.createElement(PopupMenu, _extends({}, props, {
-    name: props.title
-  }), React.createElement("div", {
-    className: "shell-py30 shell-px30 w360"
-  }, React.createElement("div", {
-    className: "shell-grid shell-grid--gut24"
-  }, React.createElement("div", {
-    className: "shell-col shell-col--6"
-  }, sdkEls), React.createElement("div", {
-    className: "shell-col shell-col--6"
-  }, standardLinkEls))));
-}
-NavigationMenu.propTypes = {
-  title: PropTypes.string
 };
 
 function NavigationItem(props) {
@@ -713,14 +198,12 @@ function NavigationItem(props) {
     }
   }, React.createElement("a", {
     className: "shell-py6 shell-txt-s shell-txt-bold ".concat(colorBasedClasses),
-    "data-test": "nav-menu-item-".concat(props.name),
     href: props.href
   }, props.children));
 }
 
 NavigationItem.propTypes = {
   darkText: PropTypes.bool,
-  name: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired
 };
@@ -759,36 +242,40 @@ MobileMenuButton.propTypes = {
   darkText: PropTypes.bool
 };
 
-function MobileLinkList(props) {
-  var title = props.title,
-      links = props.links;
-  var navigationHeading = !title ? null : React.createElement("div", {
-    className: "inline-block ".concat(shellStyles.popupMenuNavHeading)
-  }, title);
-  var ulClasses = 'shell-txt-s shell-grid shell-grid--gut12';
-  if (navigationHeading) ulClasses += ' shell-mb6';
-  var linkListItems = React.createElement("div", {
-    className: ulClasses
-  }, links.map(function (link, i) {
-    return React.createElement("div", {
-      key: i,
-      className: "shell-col shell-col--6 shell-mt6"
-    }, React.createElement("a", {
-      href: link.to,
-      "data-nav-link": true,
-      className: "shell-color-gray-dark"
-    }, link.name, link.beta ? React.createElement(BetaTag, null) : ''));
-  }));
-  return React.createElement("div", null, React.createElement("div", null, navigationHeading, props.beta ? React.createElement(BetaTag, null) : ''), linkListItems);
-}
-
-MobileLinkList.propTypes = {
-  title: PropTypes.string,
-  beta: PropTypes.bool,
-  links: PropTypes.arrayOf(PropTypes.shape({
-    to: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired
-  })).isRequired
+var language = "en";
+var logoSiteTitle = "Docs";
+var all = "All docs";
+var nav = [
+	{
+		title: "Maps",
+		href: "https://docs.mapbox.com/#maps"
+	},
+	{
+		title: "Navigation",
+		href: "https://docs.mapbox.com/#navigation"
+	},
+	{
+		title: "Search",
+		href: "https://docs.mapbox.com/#search"
+	},
+	{
+		title: "Vision",
+		href: "https://docs.mapbox.com/#vision"
+	},
+	{
+		title: "Data",
+		href: "https://docs.mapbox.com/#data"
+	},
+	{
+		title: "Help",
+		href: "https://docs.mapbox.com/help/"
+	}
+];
+var navigationMenuData = {
+	language: language,
+	logoSiteTitle: logoSiteTitle,
+	all: all,
+	nav: nav
 };
 
 var ORIGIN_DOCS_PRODUCTION = 'https://docs.mapbox.com';
@@ -823,31 +310,13 @@ function MobileNavigation() {
     }
   }, React.createElement("div", {
     className: "shell-pb24"
-  }, navigationMenuData.mobile.maps && React.createElement(MobileLinkList, {
-    title: navigationMenuData.mobile.maps.title,
-    links: navigationMenuData.mobile.maps.links
-  }), React.createElement("div", {
-    className: "shell-mt24"
-  }, navigationMenuData.mobile.navigation && React.createElement(MobileLinkList, {
-    title: navigationMenuData.mobile.navigation.title,
-    links: navigationMenuData.mobile.navigation.links
+  }, navigationMenuData.nav.map(function (nav$$1) {
+    return React.createElement("a", {
+      key: nav$$1.href,
+      href: nav$$1.href,
+      className: "block shell-py6"
+    }, nav$$1.title);
   })), React.createElement("div", {
-    className: "shell-mt24"
-  }, navigationMenuData.mobile.search && React.createElement(MobileLinkList, {
-    title: navigationMenuData.mobile.search.title,
-    links: navigationMenuData.mobile.search.links
-  })), React.createElement("div", {
-    className: "shell-mt24"
-  }, navigationMenuData.mobile.vision && React.createElement(MobileLinkList, {
-    beta: true,
-    title: navigationMenuData.mobile.vision.title,
-    links: navigationMenuData.mobile.vision.links
-  })), React.createElement("div", {
-    className: "shell-mt24"
-  }, navigationMenuData.mobile.help && React.createElement(MobileLinkList, {
-    title: navigationMenuData.mobile.help.title,
-    links: navigationMenuData.mobile.help.links
-  }))), React.createElement("div", {
     className: "shell-border-t shell-border--gray-light shell-py24"
   }, React.createElement("a", {
     href: ORIGIN_DOCS_PRODUCTION,
@@ -938,32 +407,19 @@ function PageHeader(props) {
     className: "shell-absolute shell-w-full shell-z1",
     "data-swiftype-index": "false"
   }, React.createElement("div", {
-    className: "shell-none limiter shell-mt24 shell-flex-parent-mm shell-flex-parent--center-cross"
+    className: "shell-none limiter limiter--wide shell-mt24 shell-flex-parent-mm shell-flex-parent--center-cross"
   }, React.createElement(Logo, {
     darkText: props.darkText
   }), React.createElement("div", {
     className: "shell-flex-child shell-flex-child--grow shell-flex-parent shell-flex-parent--center-cross shell-flex-parent--end-main"
   }, React.createElement("div", {
     className: "shell-flex-parent shell-flex-parent--center-cross shell-flex-parent--end-main"
-  }, navigationMenuData.nonMobile.maps && React.createElement(MapsMenu, {
-    title: navigationMenuData.nonMobile.maps.title,
-    darkText: props.darkText
-  }), navigationMenuData.nonMobile.navigation && React.createElement(NavigationMenu, {
-    title: navigationMenuData.nonMobile.navigation.title,
-    darkText: props.darkText
-  }), navigationMenuData.nonMobile.search && React.createElement(SearchMenu, {
-    title: navigationMenuData.nonMobile.search.title,
-    darkText: props.darkText
-  }), navigationMenuData.nonMobile.vision && React.createElement(VisionMenu, {
-    title: navigationMenuData.nonMobile.vision.title,
-    darkText: props.darkText
-  }), React.createElement(NavigationItem, {
-    href: ORIGIN_DOCS_PRODUCTION,
-    darkText: props.darkText,
-    name: "all"
-  }, navigationMenuData.all), navigationMenuData.nonMobile.help && React.createElement(HelpMenu, {
-    title: navigationMenuData.nonMobile.help.title,
-    darkText: props.darkText
+  }, navigationMenuData.nav.map(function (nav$$1) {
+    return React.createElement(NavigationItem, {
+      key: nav$$1.href,
+      href: nav$$1.href,
+      darkText: props.darkText
+    }, nav$$1.title);
   }))), React.createElement("div", {
     className: "shell-flex-child shell-ml6 shell-ml12-ml shell-ml18-mxl"
   }, React.createElement("div", {
@@ -1099,7 +555,7 @@ function PageFooter() {
     className: "shell-py12 shell-py48-ml",
     "data-swiftype-index": "false"
   }, React.createElement("div", {
-    className: "limiter"
+    className: "limiter limiter--wide"
   }, React.createElement("div", {
     id: "page-footer-legal-social",
     className: "shell-grid shell-txt-s shell-color-gray shell-py12 shell-py0-ml"
@@ -1124,12 +580,14 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.titleGenerator = titleGenerator;
+var contextlessTitles = ['Introduction', 'Overview', 'Guides'];
 
 function titleGenerator(title, subsite, site) {
   // create array for formatted title: {title} | {subsite} | {site}
   var titleArr = []; // do not push a title that is "Introduction" or "Overview"
 
-  if (title && title !== 'Introduction' && title !== 'Overview' && (subsite || site)) titleArr.push(title); // push subsite, if same value doesn't exist yet, strip "for (Product)" from name
+  if (title && contextlessTitles.indexOf(title) === -1 && ( // do not push a title that lacks context
+  subsite || site)) titleArr.push(title); // push subsite, if same value doesn't exist yet, strip "for (Product)" from name
 
   if (subsite && titleArr.indexOf(subsite) === -1) titleArr.push(subsite.replace(/\sfor\s(iOS|Android|Vision|Unity)/, '')); // push site, if same value doesn't exist yet
 
@@ -1189,7 +647,7 @@ function MetaTagger(props) {
   var title = titleGenerator_2(props.title, props.subsite, props.site).join(' | ');
   var suffixedTitle = "".concat(title, " | Mapbox");
   var preppedDescription = props.description.replace(/\s+/g, ' ');
-  var prodUrl = 'https://www.mapbox.com';
+  var prodUrl = 'https://docs.mapbox.com';
   if (props.pathname[0] !== '/') prodUrl += '/';
   prodUrl += props.pathname;
   var metaItems = [{
@@ -1198,10 +656,10 @@ function MetaTagger(props) {
   }];
   metaItems.push({
     name: 'twitter:title',
-    content: props.title
+    content: title
   }, {
     property: 'og:title',
-    content: props.title
+    content: title
   }, {
     name: 'twitter:description',
     content: removeMarkdown(preppedDescription)
@@ -1395,8 +853,7 @@ function (_React$Component) {
       }, React.createElement(BrowserCompatibilityWarning, null), React.createElement("div", {
         className: "shell-flex-parent shell-flex-parent--column",
         style: {
-          minHeight: '100vh',
-          overflowX: 'hidden'
+          minHeight: '100vh'
         }
       }, React.createElement(PageHelmet, null), React.createElement(MetaTagger, _extends({}, this.props.meta, {
         site: this.props.site,

@@ -73,7 +73,7 @@ export default class ApiSearch extends React.Component {
                     } = downshiftProps;
 
                     return (
-                        <div className="px24 none block-mm my12">
+                        <div className="none block-mm my12">
                             <div className="relative">
                                 <Input
                                     getInputProps={getInputProps}

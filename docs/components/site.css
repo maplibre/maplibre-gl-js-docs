@@ -6,15 +6,6 @@
     margin-bottom: 18px !important;
 }
 
-/* override */
-#docs-content .api-section h2 {
-    border: 0 !important;
-}
-
-#docs-content .api-section h3 {
-    padding-top: 47px;
-}
-
 /* api section styles */
 
 .api-section table code,
@@ -29,61 +20,10 @@ var {
     font-style: italic;
 }
 
-/* add spacing to bottom of each h2 section*/
-.style-spec-page .section-h2 {
-    padding-bottom: 30px;
-}
-
-/* bring h2|pre and first <Property> heading closer together */
-h2 + .body .section .body > .style-spec-property:first-child,
-pre + .style-spec-property {
-    margin-top: -30px;
-}
 /* bring style spec properties slightly closer together by clearing the previous item's mb12 */
 .style-spec-item-dl + .style-spec-property,
 .style-spec-item-doc + .style-spec-property {
     margin-top: -12px;
-}
-
-/* add padding to top of h3 to clear top bar sticker */
-.style-spec-page h3:not(.unprose) {
-    padding-top: 50px !important;
-}
-
-/* remove border from style spec <Property/> h2 */
-#docs-content h2.no-h2-border,
-#docs-content .style-spec-page .style-spec-property h2 {
-    border-top: 0 !important;
-}
-/* remove extra padding from style spec <Property/> h3 */
-.style-spec-page .style-spec-property h3 {
-    padding-top: 0 !important;
-}
-
-/* override "Expression" page headings: "# Expression reference" and "## Types" */
-.style-spec-page .section-h2 #types {
-    border-top: 0 !important;
-    margin-top: -30px !important;
-}
-.style-spec-page #expression-reference {
-    margin-bottom: 0 !important;
-    margin-top: 30px !important;
-}
-
-/* turn off bolding on scroll-spy, since we cannot get it to highlight reliably across pages */
-.sticky-inner-wrapper ul li a.txt-bold {
-    font-weight: normal !important;
-}
-
-/* clear the topbar sticker */
-.scroll-margin-top {
-    scroll-margin-top: 50px;
-}
-/* increase margin for when topbar sticker breaks into two lines */
-@media screen and (min-width: 990px) and (max-width: 1230px) {
-    .scroll-margin-top {
-        scroll-margin-top: 100px;
-    }
 }
 
 /* compact table option */
@@ -102,15 +42,15 @@ pre + .style-spec-property {
     margin-bottom: 0 !important;
 }
 
-/* plugins-page overrides */
-#docs-content .plugins-page h2 {
-    font-size: 15px !important;
-    line-height: 24px !important;
-    font-weight: bold !important;
-    padding: 0 !important;
-    margin: 0px !important;
-}
 /* remove underline from github/example links */
 .plugins-page .link {
     text-decoration: none !important;
+}
+
+/* override styles in the Browser in OverviewHeader */
+.overview-header-browser .block-mm.none {
+    display: none !important;
+}
+.overview-header-browser .h30-mm.h18 {
+    height: 18px !important;
 }

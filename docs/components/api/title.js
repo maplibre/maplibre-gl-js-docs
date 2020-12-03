@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import slug from 'slugg';
-import classnames from 'classnames';
 
 export default class Title extends React.Component {
     render() {
@@ -12,19 +11,7 @@ export default class Title extends React.Component {
         const HeadingLevel = `h${headingLevel}`;
 
         return (
-            <HeadingLevel
-                id={id}
-                className={classnames(
-                    'py6 mt12 txt-m my0 no-h2-border scroll-margin-top',
-                    {
-                        'pb6 pt18': headingLevel === 2
-                    }
-                )}
-                style={{
-                    lineHeight: '24px',
-                    fontSize: '15px'
-                }}
-            >
+            <HeadingLevel id={id} className="unprose txt-m mt24 mb3 anchor">
                 <a
                     className="unprose block color-blue-on-hover txt-bold"
                     href={`#${id}`}

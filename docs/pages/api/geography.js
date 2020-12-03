@@ -3,7 +3,7 @@ title: Geography and geometry
 description: LngLat and LngLatBounds represent points and rectangles in geographic coordinates. Point represents points in screen coordinates.
 contentType: API
 order: 5
-layout: accordion
+layout: page
 language:
 - JavaScript
 products:

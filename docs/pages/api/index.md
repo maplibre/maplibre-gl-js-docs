@@ -2,39 +2,31 @@
 title: API Reference
 description: The Mapbox GL JS API documentation to render interactive maps from vector tiles and Mapbox styles.
 contentType: API
-navOrder: 2
+navOrder: 1
 order: 1
-hideTitle: true # hide title because we are using OverviewHeader
-layout: accordion
+layout: page
 language:
 - JavaScript
 products:
 - Mapbox GL JS
 prependJs:
-- "import OverviewHeader from '@mapbox/dr-ui/overview-header';"
 - "import Quickstart from '../../components/quickstart';"
 - "import Example from '../../components/example';"
 - "import SimpleMapHtml from '../example/simple-map.html';"
 - "import Copyable from '../../components/copyable';"
 - "import urls from '../../components/urls';"
-- "import {version} from '../../../mapbox-gl-js/package.json';"
+overviewHeader:
+  title: Mapbox GL JS
+  features:
+    - "Custom map styles"
+    - "Fast vector maps"
+    - "Compatible with other Mapbox tools"
+  changelogLink: "https://github.com/mapbox/mapbox-gl-js/blob/main/CHANGELOG.md"
+  ghLink: "https://github.com/mapbox/mapbox-gl-js"
+  installLink: "https://www.mapbox.com/install/js/"
+  image: simple-map
+  # version="" version is set dynamically in page-shell.js
 ---
-
-{{
-    <OverviewHeader
-    features={[
-        "Custom map styles",
-        "Fast vector maps",
-        "Compatible with other Mapbox tools"
-    ]}
-    title="Mapbox GL JS"
-    version={version}
-    changelogLink="https://github.com/mapbox/mapbox-gl-js/blob/main/CHANGELOG.md"
-    ghLink="https://github.com/mapbox/mapbox-gl-js"
-    installLink="https://www.mapbox.com/install/js/"
-    image={<div />}
-    />
-}}
 
 Mapbox GL JS is a JavaScript library that uses WebGL to render interactive maps from [vector tiles](https://docs.mapbox.com/help/glossary/vector-tiles/) and [Mapbox styles](/mapbox-gl-js/style-spec/). It is part of the Mapbox GL ecosystem, which includes [Mapbox Mobile](https://www.mapbox.com/mobile/), a compatible renderer written in C++ with bindings for desktop and mobile platforms.
 

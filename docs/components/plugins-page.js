@@ -25,7 +25,7 @@ export default class Plugins extends React.Component {
                                 style={{ marginTop: '-30px' }}
                                 id={slug(title)}
                             >
-                                <h2 className="txt-bold no-h2-border">
+                                <h2 className="unprose txt-bold">
                                     {title} ({entries(plugins).length})
                                 </h2>
                             </a>

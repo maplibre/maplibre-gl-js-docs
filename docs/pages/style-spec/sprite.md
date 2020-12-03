@@ -4,7 +4,7 @@ id: sprite
 description: A style's sprite property supplies a URL template for loading small images to use in rendering background-pattern, fill-pattern, line-pattern,fill-extrusion-pattern and icon-image style properties.
 contentType: specification
 order: 5
-layout: accordion
+layout: page
 products:
 - Mapbox Style Specification
 prependJs:

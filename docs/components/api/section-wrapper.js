@@ -12,19 +12,15 @@ export default class SectionWrapper extends React.Component {
             titleComponent
         } = this.props;
         return (
-            <div className="section section-h2">
+            <React.Fragment>
                 {title && (
                     <Title headingLevel={headingLevel} section={section}>
                         {title}
                     </Title>
                 )}
                 {titleComponent ? titleComponent : ''}
-                <div className="body h3-section-list">
-                    <div className="section section-h3">
-                        <div className="body">{children}</div>
-                    </div>
-                </div>
-            </div>
+                {children}
+            </React.Fragment>
         );
     }
 }

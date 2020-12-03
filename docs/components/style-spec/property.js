@@ -6,24 +6,14 @@ export default class Property extends React.Component {
         const { headingLevel, id, children } = this.props;
         const Heading = `h${headingLevel}`;
         return (
-            <a
-                className="style-spec-property unprose cursor-default color-blue-on-hover mb3 block"
-                style={{ paddingTop: 50 }} // clear the topbar sticker
-                href={`#${id}`}
-                id={id}
-            >
-                <Heading
-                    className="txt-mono cursor-pointer"
-                    style={{
-                        padding: 0,
-                        margin: 0,
-                        fontSize: '18px',
-                        lineHeight: '30px'
-                    }}
+            <Heading id={id} className="unprose txt-mono anchor txt-l mb3 mt24">
+                <a
+                    className="style-spec-property unprose cursor-pointer color-blue-on-hover block"
+                    href={`#${id}`}
                 >
                     {children}
-                </Heading>
-            </a>
+                </a>
+            </Heading>
         );
     }
 }

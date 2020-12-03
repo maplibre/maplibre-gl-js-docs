@@ -4,7 +4,7 @@ id: sources
 description: Sources supply data to be shown on the map.
 contentType: specification
 order: 4
-layout: accordion
+layout: page
 products:
 - Mapbox Style Specification
 prependJs:

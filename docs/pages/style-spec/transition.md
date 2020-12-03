@@ -4,7 +4,7 @@ id: transition
 description: A transition property controls timing for the interpolation between a transitionable style property's previous value and new value.
 contentType: specification
 order: 7
-layout: accordion
+layout: page
 products:
 - Mapbox Style Specification
 prependJs:
