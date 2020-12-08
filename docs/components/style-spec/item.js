@@ -100,6 +100,13 @@ export default class Item extends React.Component {
                         </a>
                     </span>
                 );
+            case 'terrain':
+                return (
+                    <span>
+                        {' '}
+                        <a href="/mapbox-gl-js/style-spec/terrain/">terrain</a>
+                    </span>
+                );
             default:
                 return (
                     <span>
