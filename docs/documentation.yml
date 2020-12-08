@@ -20,6 +20,7 @@ toc:
       - clearStorage
       - AnimationOptions
       - CameraOptions
+      - FreeCameraOptions
       - PaddingOptions
       - RequestParameters
       - StyleImageInterface

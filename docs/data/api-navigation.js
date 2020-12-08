@@ -19,6 +19,14 @@ module.exports = [
                 path: 'reading-this-documentation'
             },
             {
+                title: 'New in v2',
+                path: 'new-in-v2'
+            },
+            {
+                title: 'Migrating to v2',
+                path: 'migrating-to-v2'
+            },
+            {
                 title: 'CSP Directives',
                 path: 'csp-directives'
             },

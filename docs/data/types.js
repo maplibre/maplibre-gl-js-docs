@@ -18,7 +18,8 @@ const layerTypes = [
     'circle',
     'fill-extrusion',
     'heatmap',
-    'hillshade'
+    'hillshade',
+    'sky'
 ];
 
 const groupedExpressions = [

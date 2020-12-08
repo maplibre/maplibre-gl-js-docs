@@ -194,6 +194,11 @@ export const styleSpecNavigation = [
         subnav: makeSubNav(ref.light, null, 2)
     },
     {
+        title: 'Terrain',
+        path: '/mapbox-gl-js/style-spec/terrain/',
+        subnav: makeSubNav(ref.terrain, null, 2)
+    },
+    {
         title: 'Other',
         path: '/mapbox-gl-js/style-spec/other/',
         tag: 'legacy',

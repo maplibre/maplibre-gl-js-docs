@@ -20,7 +20,9 @@
       "Uint8Array": true,
       "Float32Array": true,
       "MapboxDraw": true,
-      "mapboxSdk": true
+      "mapboxSdk": true,
+      "SunCalc": true,
+      "routes": true
     },
     "rules": {
       "flowtype/require-valid-file-annotation": [0],

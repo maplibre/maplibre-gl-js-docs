@@ -3,7 +3,7 @@ title: Layers
 id: layers
 description: A style's layers property lists all of the layers available in that style.
 contentType: specification
-order: 8
+order: 9
 layout: page
 products:
 - Mapbox Style Specification
@@ -208,4 +208,22 @@ This map of Mount Shasta uses a high value for the [`hillshade-exaggeration`](/m
 
 {{<Items headingLevel="3" entry={combineItems(['layout','paint'], 'hillshade')} /> }}
 
+## sky
+
+<!-- copyeditor disable represents -->
+A `sky` style layer renders a stylized spherical dome that encompasses the entire map and is automatically rendered behind all layers. This can be used to fill the area above the horizon with a simulated sky that represents a particular time-of-day, or stylized custom gradients.
+<!-- copyeditor enable represents -->
+
+{{
+  <AppropriateImage
+    imageId="layer-sky"
+    alt="A simulated sunrise over the deserts of California."
+  />
+}}
+
+{{<Caption>}}
+A simulated sunrise over the deserts of California using [`sky-type: 'atmosphere'`](/mapbox-gl-js/style-spec/layers/#paint-sky-sky-type) paint property.
+{{</Caption>}}
+
+{{<Items headingLevel="3" entry={combineItems(['layout','paint'], 'sky')} /> }}
 <!-- END GENERATED CONTENT -->

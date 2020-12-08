@@ -14,6 +14,14 @@ Array [
         "title": "Reading this documentation",
       },
       Object {
+        "path": "new-in-v2",
+        "title": "New in v2",
+      },
+      Object {
+        "path": "migrating-to-v2",
+        "title": "Migrating to v2",
+      },
+      Object {
         "path": "csp-directives",
         "title": "CSP Directives",
       },
@@ -231,6 +239,21 @@ Array [
         "level": 3,
         "slug": "cameraoptions-related",
         "text": "Related",
+      },
+      Object {
+        "level": 2,
+        "slug": "freecameraoptions",
+        "text": "FreeCameraOptions",
+      },
+      Object {
+        "level": 3,
+        "slug": "freecameraoptions-parameters",
+        "text": "Parameters",
+      },
+      Object {
+        "level": 3,
+        "slug": "freecameraoptions-instance-members",
+        "text": "Instance members",
       },
       Object {
         "level": 2,
@@ -714,6 +737,11 @@ Array [
         "level": 2,
         "slug": "keyboardhandler",
         "text": "KeyboardHandler",
+      },
+      Object {
+        "level": 3,
+        "slug": "keyboardhandler-instance-members",
+        "text": "Instance members",
       },
       Object {
         "level": 2,
