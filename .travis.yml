@@ -3,4 +3,4 @@ node_js:
   - 12
 
 before_script:
-  - yarn run build-api
+  - npm run build-api
