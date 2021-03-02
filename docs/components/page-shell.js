@@ -34,6 +34,7 @@ const styleSpecVersion = devDependencies[
 ].replace('^', '');
 
 const redirectStyleSpec = require('../util/style-spec-redirect');
+
 const pathRoot = '/maplibre-gl-js';
 
 class PageShell extends React.Component {

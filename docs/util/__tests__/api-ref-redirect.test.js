@@ -1,5 +1,6 @@
 import redirect from '../api-ref-redirect';
-import patRoot from '../api-ref-redirect';
+
+const pathRoot = '/maplibre-gl-js'
 
 it(`api-ref-redirect`, () => {
     expect(
@@ -12,65 +13,65 @@ it(`api-ref-redirect`, () => {
         redirect({
             hash: '#map'
         })
-    ).toEqual(`${patRoot}/api/map/#map`);
+    ).toEqual(`${pathRoot}/api/map/#map`);
 
     expect(
         redirect({
             hash: '#map#scrollzoom'
         })
-    ).toEqual(`${patRoot}/api/map/#map#scrollzoom`);
+    ).toEqual(`${pathRoot}/api/map/#map#scrollzoom`);
 
     expect(
         redirect({
             hash: '#map.event:mouseover'
         })
-    ).toEqual(`${patRoot}/api/map/#map.event:mouseover`);
+    ).toEqual(`${pathRoot}/api/map/#map.event:mouseover`);
 
     expect(
         redirect({
             hash: '#lnglat'
         })
-    ).toEqual(`${patRoot}/api/geography/#lnglat`);
+    ).toEqual(`${pathRoot}/api/geography/#lnglat`);
 
     expect(
         redirect({
             hash: '#icontrol'
         })
-    ).toEqual(`${patRoot}/api/markers/#icontrol`);
+    ).toEqual(`${pathRoot}/api/markers/#icontrol`);
 
     expect(
         redirect({
             hash: '#icontrol#getdefaultposition'
         })
-    ).toEqual(`${patRoot}/api/markers/#icontrol#getdefaultposition`);
+    ).toEqual(`${pathRoot}/api/markers/#icontrol#getdefaultposition`);
 
     expect(
         redirect({
             hash: '#touchpitchhandler#isenabled'
         })
-    ).toEqual(`${patRoot}/api/handlers/#touchpitchhandler#isenabled`);
+    ).toEqual(`${pathRoot}/api/handlers/#touchpitchhandler#isenabled`);
 
     expect(
         redirect({
             hash: '#canvassource#getcanvas'
         })
-    ).toEqual(`${patRoot}/api/sources/#canvassource#getcanvas`);
+    ).toEqual(`${pathRoot}/api/sources/#canvassource#getcanvas`);
 
     expect(
         redirect({
             hash: '#mapwheelevent'
         })
-    ).toEqual(`${patRoot}/api/events/#mapwheelevent`);
+    ).toEqual(`${pathRoot}/api/events/#mapwheelevent`);
 
     expect(
         redirect({
             hash: '#mapwheelevent#type'
         })
-    ).toEqual(`${patRoot}/api/events/#mapwheelevent#type`);
+    ).toEqual(`${pathRoot}/api/events/#mapwheelevent#type`);
 
     expect(
         redirect({
             hash: '#clearprewarmedresources'
         })
-    ).toEqual(`${patRoot}/api/properties/#clearprewarmedresources`);
+    ).toEqual(`${pathRoot}/api/properties/#clearprewarmedresources`);
 });

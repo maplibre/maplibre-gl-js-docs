@@ -4,6 +4,7 @@
 // when making changes to this file, you must rerun batfish (npm start)
 const slug = require('slugg');
 const apiFilterItems = require('../util/api-filter-items.js');
+
 const rootPath = '/maplibre-gl-js'
 
 module.exports = [

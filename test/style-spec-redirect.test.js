@@ -8,117 +8,117 @@ test(`style-spec-redirect`, (t) => {
         redirect({
             hash: '#light-anchor'
         }),
-        `${pathRoot}/style-spec/light/#anchor`
+        `${rootPath}/style-spec/light/#anchor`
     );
 
     t.equal(
         redirect({
             hash: '#root-version'
         }),
-        `${pathRoot}/style-spec/root/#version`
+        `${rootPath}/style-spec/root/#version`
     );
 
     t.equal(
         redirect({
             hash: '#sources-vector'
         }),
-        `${pathRoot}/style-spec/sources/#vector`
+        `${rootPath}/style-spec/sources/#vector`
     );
 
     t.equal(
         redirect({
             hash: '#sources-vector-url'
         }),
-        `${pathRoot}/style-spec/sources/#vector-url`
+        `${rootPath}/style-spec/sources/#vector-url`
     );
 
     t.equal(
         redirect({
             hash: '#sources-raster-dem-url'
         }),
-        `${pathRoot}/style-spec/sources/#raster-dem-url`
+        `${rootPath}/style-spec/sources/#raster-dem-url`
     );
 
     t.equal(
         redirect({
             hash: '#sprite'
         }),
-        `${pathRoot}/style-spec/sprite/`
+        `${rootPath}/style-spec/sprite/`
     );
 
     t.equal(
         redirect({
             hash: '#glyphs'
         }),
-        `${pathRoot}/style-spec/glyphs/`
+        `${rootPath}/style-spec/glyphs/`
     );
 
     t.equal(
         redirect({
             hash: '#transition-duration'
         }),
-        `${pathRoot}/style-spec/transition/#duration`
+        `${rootPath}/style-spec/transition/#duration`
     );
 
     t.equal(
         redirect({
             hash: '#layer-id'
         }),
-        `${pathRoot}/style-spec/layers/#id`
+        `${rootPath}/style-spec/layers/#id`
     );
     t.equal(
         redirect({
             hash: '#layers-background'
         }),
-        `${pathRoot}/style-spec/layers/#background`
+        `${rootPath}/style-spec/layers/#background`
     );
     t.equal(
         redirect({
             hash: '#layout-background-visibility'
         }),
-        `${pathRoot}/style-spec/layers/#layout-background-visibility`
+        `${rootPath}/style-spec/layers/#layout-background-visibility`
     );
 
     t.equal(
         redirect({
             hash: '#types-color'
         }),
-        `${pathRoot}/style-spec/types/#color`
+        `${rootPath}/style-spec/types/#color`
     );
 
     t.equal(
         redirect({
             hash: '#data-expressions'
         }),
-        `${pathRoot}/style-spec/expressions/#data-expressions`
+        `${rootPath}/style-spec/expressions/#data-expressions`
     );
 
     t.equal(
         redirect({
             hash: '#expressions-types-array'
         }),
-        `${pathRoot}/style-spec/expressions/#types-array`
+        `${rootPath}/style-spec/expressions/#types-array`
     );
 
     t.equal(
         redirect({
             hash: '#other-function'
         }),
-        `${pathRoot}/style-spec/other/#function`
+        `${rootPath}/style-spec/other/#function`
     );
 
     t.equal(
         redirect({
             hash: '#other-filter'
         }),
-        `${pathRoot}/style-spec/other/#other-filter`
+        `${rootPath}/style-spec/other/#other-filter`
     );
 
     t.equal(
         redirect({
             hash: '#paint-fill-fill-color'
         }),
-        `${pathRoot}/style-spec/layers/#paint-fill-fill-color`
+        `${rootPath}/style-spec/layers/#paint-fill-fill-color`
     );
 
     t.equal(
