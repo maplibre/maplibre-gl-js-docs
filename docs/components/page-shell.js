@@ -24,7 +24,7 @@ import AppropriateImage from './appropriate-image';
 import Browser from '@mapbox/dr-ui/browser';
 import redirectApiRef from '../util/api-ref-redirect';
 import classnames from 'classnames';
-import { version } from '../../mapbox-gl-js/package.json';
+import { version } from '../../maplibre-gl-js/package.json';
 
 import { devDependencies } from '../../package.json';
 import slug from 'slugg';
@@ -34,12 +34,13 @@ const styleSpecVersion = devDependencies[
 ].replace('^', '');
 
 const redirectStyleSpec = require('../util/style-spec-redirect');
+const pathRoot = '/maplibre-gl-js';
 
 class PageShell extends React.Component {
     componentDidMount() {
         // redirect hashes on /style-spec/
         if (
-            this.props.location.pathname === '/mapbox-gl-js/style-spec/' &&
+            this.props.location.pathname === `${pathRoot}/style-spec/` &&
             this.props.location.hash
         ) {
             if (redirectStyleSpec(this.props.location))
@@ -48,7 +49,7 @@ class PageShell extends React.Component {
 
         // redirect hashes on /api/
         if (
-            this.props.location.pathname === '/mapbox-gl-js/api/' &&
+            this.props.location.pathname === `${pathRoot}/api/` &&
             this.props.location.hash
         ) {
             if (redirectApiRef(this.props.location))
@@ -59,19 +60,19 @@ class PageShell extends React.Component {
         const { location, frontMatter } = this.props;
 
         const subSection = findParentPath(navigation, location.pathname);
-        if (subSection === '/mapbox-gl-js/api/')
+        if (subSection === `${pathRoot}/api/`)
             return (
                 frontMatter.headings ||
                 apiNavigation.filter((f) => f.path === location.pathname)[0]
                     .subnav
             );
-        else if (subSection === '/mapbox-gl-js/style-spec/') {
+        else if (subSection === `${pathRoot}/style-spec/`) {
             return (
                 styleSpecNavigation.filter(
                     (f) => f.path === location.pathname
                 )[0].subnav || frontMatter.headings
             );
-        } else if (subSection === '/mapbox-gl-js/plugins/') {
+        } else if (subSection === `${pathRoot}/plugins/`) {
             const headings = Object.keys(plugins).reduce((arr, key) => {
                 arr.push({
                     slug: slug(key),
@@ -91,7 +92,7 @@ class PageShell extends React.Component {
             navigation,
             this.props.location.pathname
         );
-        if (subSection === '/mapbox-gl-js/api/') return <Search />;
+        if (subSection === `${pathRoot}/api/`) return <Search />;
         else return undefined;
     };
     render() {

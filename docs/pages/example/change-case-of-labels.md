@@ -1,6 +1,6 @@
 ---
 title: Change the case of labels
-description: Use the [upcase](/mapbox-gl-js/style-spec#expressions-upcase) and [downcase](/mapbox-gl-js/style-spec#expressions-downcase) expressions to change the case of labels.
+description: Use the [upcase](/maplibre-gl-js/style-spec#expressions-upcase) and [downcase](/maplibre-gl-js/style-spec#expressions-downcase) expressions to change the case of labels.
 topics:
   - Layers
 thumbnail: change-case-of-labels

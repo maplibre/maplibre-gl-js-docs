@@ -4,11 +4,12 @@
 // when making changes to this file, you must rerun batfish (npm start)
 const slug = require('slugg');
 const apiFilterItems = require('../util/api-filter-items.js');
+const rootPath = '/maplibre-gl-js'
 
 module.exports = [
     {
         title: 'Introduction',
-        path: '/mapbox-gl-js/api/',
+        path: `${rootPath}/api/`,
         subnav: [
             {
                 title: 'Quickstart',
@@ -42,7 +43,7 @@ module.exports = [
     },
     {
         title: 'Map',
-        path: '/mapbox-gl-js/api/map/',
+        path: `${rootPath}/api/map/`,
         subnav: buildSubSubNav(
             apiFilterItems('Map class')[0].members.static[0], // Hack to resolve naming documentaiton.yml conflict b/w the "Map" class and the "Map" section
             'map',
@@ -51,33 +52,33 @@ module.exports = [
     },
     {
         title: 'Properties and options',
-        path: '/mapbox-gl-js/api/properties/',
+        path: `${rootPath}/api/properties/`,
         subnav: buldSubNav('Properties and options')
     },
     {
         title: 'Markers and controls',
-        path: '/mapbox-gl-js/api/markers/',
+        path: `${rootPath}/api/markers/`,
         subnav: buldSubNav('Markers and controls')
     },
 
     {
         title: 'Geography and geometry',
-        path: '/mapbox-gl-js/api/geography/',
+        path: `${rootPath}/api/geography/`,
         subnav: buldSubNav('Geography and geometry')
     },
     {
         title: 'User interaction handlers',
-        path: '/mapbox-gl-js/api/handlers/',
+        path: `${rootPath}/api/handlers/`,
         subnav: buldSubNav('User interaction handlers')
     },
     {
         title: 'Sources',
-        path: '/mapbox-gl-js/api/sources/',
+        path: `${rootPath}/api/sources/`,
         subnav: buldSubNav('Sources')
     },
     {
         title: 'Events',
-        path: '/mapbox-gl-js/api/events/',
+        path: `${rootPath}/api/events/`,
         subnav: buldSubNav('Events')
     }
 ];

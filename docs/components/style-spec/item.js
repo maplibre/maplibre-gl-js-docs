@@ -18,14 +18,14 @@ export default class Item extends React.Component {
                 return (
                     <span>
                         {' '}
-                        <a href="/mapbox-gl-js/style-spec/light/">light</a>
+                        <a href="/maplibre-gl-js/style-spec/light/">light</a>
                     </span>
                 );
             case 'transition':
                 return (
                     <span>
                         {' '}
-                        <a href="/mapbox-gl-js/style-spec/transition/">
+                        <a href="/maplibre-gl-js/style-spec/transition/">
                             transition
                         </a>
                     </span>
@@ -35,7 +35,7 @@ export default class Item extends React.Component {
                     <span>
                         {' '}
                         object with{' '}
-                        <a href="/mapbox-gl-js/style-spec/sources/">
+                        <a href="/maplibre-gl-js/style-spec/sources/">
                             source
                         </a>{' '}
                         values
@@ -45,7 +45,7 @@ export default class Item extends React.Component {
                 return (
                     <span>
                         {' '}
-                        <a href="/mapbox-gl-js/style-spec/layers/">
+                        <a href="/maplibre-gl-js/style-spec/layers/">
                             layer
                             {plural && 's'}
                         </a>
@@ -55,7 +55,7 @@ export default class Item extends React.Component {
                 return (
                     <span>
                         {' '}
-                        <a href="/mapbox-gl-js/style-spec/types/#array">
+                        <a href="/maplibre-gl-js/style-spec/types/#array">
                             array
                         </a>
                         {spec.value && (
@@ -76,7 +76,7 @@ export default class Item extends React.Component {
                 return (
                     <span>
                         {' '}
-                        <a href="/mapbox-gl-js/style-spec/expressions/">
+                        <a href="/maplibre-gl-js/style-spec/expressions/">
                             expression
                             {plural && 's'}
                         </a>
@@ -86,7 +86,7 @@ export default class Item extends React.Component {
                 return (
                     <span>
                         {' '}
-                        <a href="/mapbox-gl-js/style-spec/layers/#layout-property">
+                        <a href="/maplibre-gl-js/style-spec/layers/#layout-property">
                             layout
                         </a>
                     </span>
@@ -95,7 +95,7 @@ export default class Item extends React.Component {
                 return (
                     <span>
                         {' '}
-                        <a href="/mapbox-gl-js/style-spec/layers/#paint-property">
+                        <a href="/maplibre-gl-js/style-spec/layers/#paint-property">
                             paint
                         </a>
                     </span>
@@ -104,7 +104,7 @@ export default class Item extends React.Component {
                 return (
                     <span>
                         {' '}
-                        <a href="/mapbox-gl-js/style-spec/terrain/">terrain</a>
+                        <a href="/maplibre-gl-js/style-spec/terrain/">terrain</a>
                     </span>
                 );
             default:
@@ -112,7 +112,7 @@ export default class Item extends React.Component {
                     <span>
                         {' '}
                         <a
-                            href={`/mapbox-gl-js/style-spec/types/#${spec.type}`}
+                            href={`/maplibre-gl-js/style-spec/types/#${spec.type}`}
                         >
                             {spec.type}
                             {plural && 's'}
@@ -172,7 +172,7 @@ export default class Item extends React.Component {
                 <Subtitle>
                     {this.props.kind === 'paint' && (
                         <React.Fragment>
-                            <a href="/mapbox-gl-js/style-spec/layers/#paint-property">
+                            <a href="/maplibre-gl-js/style-spec/layers/#paint-property">
                                 Paint
                             </a>{' '}
                             property.{' '}
@@ -180,7 +180,7 @@ export default class Item extends React.Component {
                     )}
                     {this.props.kind === 'layout' && (
                         <React.Fragment>
-                            <a href="/mapbox-gl-js/style-spec/layers/#layout-property">
+                            <a href="/maplibre-gl-js/style-spec/layers/#layout-property">
                                 Layout
                             </a>{' '}
                             property.{' '}
@@ -263,7 +263,7 @@ export default class Item extends React.Component {
                                     'feature-state'
                                 ) && (
                                     <em className="color-gray">
-                                        <a href="/mapbox-gl-js/style-spec/expressions/#feature-state">
+                                        <a href="/maplibre-gl-js/style-spec/expressions/#feature-state">
                                             <Icon
                                                 name="combine"
                                                 inline={true}
@@ -278,7 +278,7 @@ export default class Item extends React.Component {
                                     ) &&
                                     ' and '}
                                 {this.props.expression.interpolated && (
-                                    <a href="/mapbox-gl-js/style-spec/expressions/#interpolate">
+                                    <a href="/maplibre-gl-js/style-spec/expressions/#interpolate">
                                         <Icon
                                             name="smooth-ramp"
                                             inline={true}

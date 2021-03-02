@@ -1,6 +1,6 @@
 ---
 title: Display a popup
-description: Add a [`Popup`](/mapbox-gl-js/api/#popup) to the map.
+description: Add a [`Popup`](/maplibre-gl-js/api/#popup) to the map.
 topics:
   - Controls and overlays
 thumbnail: popup

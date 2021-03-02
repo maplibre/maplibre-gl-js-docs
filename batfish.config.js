@@ -25,7 +25,7 @@ const addPages = [
     }
 ];
 
-const siteBasePath = '/mapbox-gl-js';
+const siteBasePath = '/maplibre-gl-js';
 module.exports = () => {
     const config = {
         siteBasePath: siteBasePath,

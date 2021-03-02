@@ -1,6 +1,6 @@
 ---
 title: Add a WMS source
-description: Add an external [Web Map Service raster layer](https://www.ogc.org/standards/wms) to the map using [`addSource`](/mapbox-gl-js/api/map/#map#addsource)'s [`tiles`](/mapbox-gl-js/style-spec/sources/#raster-tiles) option.
+description: Add an external [Web Map Service raster layer](https://www.ogc.org/standards/wms) to the map using [`addSource`](/maplibre-gl-js/api/map/#map#addsource)'s [`tiles`](/maplibre-gl-js/style-spec/sources/#raster-tiles) option.
 topics:
   - Sources
 thumbnail: wms

@@ -1,6 +1,6 @@
 ---
 title: Filter symbols by text input
-description: Filter [symbols](/mapbox-gl-js/style-spec#layers-symbol) by icon name by typing in a text input.
+description: Filter [symbols](/maplibre-gl-js/style-spec#layers-symbol) by icon name by typing in a text input.
 topics:
   - User interaction
 thumbnail: filter-markers-by-input

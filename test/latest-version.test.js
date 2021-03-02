@@ -5,7 +5,7 @@ const helpers = require('./helpers');
 let tags = [];
 
 async function tagsMatch() {
-    await process.chdir(path.join(process.cwd(), './mapbox-gl-js'));
+    await process.chdir(path.join(process.cwd(), './maplibre-gl-js'));
     const latest = await helpers.latestStableTag();
     const current = await helpers.currentTag();
     if (latest === current) {

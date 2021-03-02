@@ -1,6 +1,6 @@
 ---
 title: Add a marker using a place name
-description: Add a [`Marker`](/mapbox-gl-js/api#marker) using a place name or address for its location using the [forward geocoder](https://www.mapbox.com/api-documentation/search/#geocoding).
+description: Add a [`Marker`](/maplibre-gl-js/api#marker) using a place name or address for its location using the [forward geocoder](https://www.mapbox.com/api-documentation/search/#geocoding).
 topics:
   - Controls and overlays
 thumbnail: marker-from-geocode

@@ -1,6 +1,6 @@
 ---
 title: Fly to a location
-description: Using [`flyTo`](/mapbox-gl-js/api/#map#flyto) to smoothly interpolate between locations.
+description: Using [`flyTo`](/maplibre-gl-js/api/#map#flyto) to smoothly interpolate between locations.
 topics:
   - Camera
 thumbnail: flyto

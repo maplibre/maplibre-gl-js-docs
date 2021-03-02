@@ -1,7 +1,7 @@
 ---
 title: Create a draggable Marker
 description: >-
-  Drag the [`Marker`](/mapbox-gl-js/api/#marker) to a new location on a map and
+  Drag the [`Marker`](/maplibre-gl-js/api/#marker) to a new location on a map and
   populates its coordinates in a display.
 topics:
   - User interaction

@@ -1,6 +1,6 @@
 ---
 title: Add a 3D model
-description: Use a [custom style layer](/mapbox-gl-js/api/#customlayerinterface) with [three.js](https://threejs.org) to add a 3D model to the map.
+description: Use a [custom style layer](/maplibre-gl-js/api/#customlayerinterface) with [three.js](https://threejs.org) to add a 3D model to the map.
 topics:
   - Layers
 thumbnail: add-3d-model

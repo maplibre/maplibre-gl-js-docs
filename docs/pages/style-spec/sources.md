@@ -63,7 +63,7 @@ Tiled sources (vector and raster) must specify their details according to the [T
 ## vector
 
 
-A vector tile source. Tiles must be in [Mapbox Vector Tile format](https://docs.mapbox.com/vector-tiles/). All geometric coordinates in vector tiles must be between `-1 * extent` and `(extent * 2) - 1` inclusive. All layers that use a vector source must specify a [`"source-layer"`](/mapbox-gl-js/style-spec/layers/#source-layer) value. For vector tiles hosted by Mapbox, the `"url"` value should be of the form  `mapbox://tilesetid`.
+A vector tile source. Tiles must be in [Mapbox Vector Tile format](https://docs.mapbox.com/vector-tiles/). All geometric coordinates in vector tiles must be between `-1 * extent` and `(extent * 2) - 1` inclusive. All layers that use a vector source must specify a [`"source-layer"`](/maplibre-gl-js/style-spec/layers/#source-layer) value. For vector tiles hosted by Mapbox, the `"url"` value should be of the form  `mapbox://tilesetid`.
 
 ```json
 "mapbox-streets": {

@@ -8,5 +8,5 @@ export default function redirect(location) {
     const page = preparedHash ? findPage(preparedHash) : undefined;
     // if page path isn't defined, do nothing
     if (!page) return;
-    return `/mapbox-gl-js/api/${page}/${location.hash || ''}`;
+    return `/maplibre-gl-js/api/${page}/${location.hash || ''}`;
 }

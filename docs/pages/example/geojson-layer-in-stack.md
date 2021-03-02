@@ -1,6 +1,6 @@
 ---
 title: Add a new layer below labels
-description: 'Using the second argument of [`addLayer`](/mapbox-gl-js/api/#map#addlayer), you can be more precise.'
+description: 'Using the second argument of [`addLayer`](/maplibre-gl-js/api/#map#addlayer), you can be more precise.'
 topics:
   - Layers
 thumbnail: geojson-layer-in-stack

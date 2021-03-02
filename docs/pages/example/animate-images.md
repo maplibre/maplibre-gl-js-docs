@@ -1,6 +1,6 @@
 ---
 title: Animate a series of images
-description: Use a series of [image sources](/mapbox-gl-js/style-spec#sources-image) to create an animation.
+description: Use a series of [image sources](/maplibre-gl-js/style-spec#sources-image) to create an animation.
 topics:
   - Layers
   - Sources

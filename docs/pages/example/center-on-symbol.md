@@ -1,6 +1,6 @@
 ---
 title: Center the map on a clicked symbol
-description: Using events and [`flyTo`](/mapbox-gl-js/api/#map#flyto) to center the map on a [`symbol`](/mapbox-gl-js/style-spec#layers-symbol).
+description: Using events and [`flyTo`](/maplibre-gl-js/api/#map#flyto) to center the map on a [`symbol`](/maplibre-gl-js/style-spec#layers-symbol).
 topics:
   - Camera
   - User interaction

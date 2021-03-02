@@ -1,6 +1,6 @@
 ---
 title: Style ocean depth data
-description: Uses the [interpolate expression](/mapbox-gl-js/style-spec#expressions-interpolate) with a cubic bezier curve expression to style bathymetry data.
+description: Uses the [interpolate expression](/maplibre-gl-js/style-spec#expressions-interpolate) with a cubic bezier curve expression to style bathymetry data.
 topics:
   - Layers
 thumbnail: style-ocean-depth-data

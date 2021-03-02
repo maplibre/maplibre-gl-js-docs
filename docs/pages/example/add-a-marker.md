@@ -1,7 +1,7 @@
 ---
 title: Add a default marker
 description: >-
-  Add a default [`Marker`](/mapbox-gl-js/api/#marker) to the map.
+  Add a default [`Marker`](/maplibre-gl-js/api/#marker) to the map.
 topics:
   - Styles
 thumbnail: add-a-marker

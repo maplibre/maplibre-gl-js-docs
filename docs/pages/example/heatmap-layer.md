@@ -1,6 +1,6 @@
 ---
 title: Create a heatmap layer
-description: Visualize earthquake frequency by location using a [heatmap layer](/mapbox-gl-js/style-spec#layers-heatmap).
+description: Visualize earthquake frequency by location using a [heatmap layer](/maplibre-gl-js/style-spec#layers-heatmap).
 topics:
   - Layers
 thumbnail: heatmap-layer

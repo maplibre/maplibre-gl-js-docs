@@ -29,7 +29,7 @@ overviewHeader:
   # version="" version is set dynamically in page-shell.js
 ---
 
-Mapbox GL JS is a JavaScript library that uses WebGL to render interactive maps from [vector tiles](https://docs.mapbox.com/help/glossary/vector-tiles/) and [Mapbox styles](/mapbox-gl-js/style-spec/). It is part of the Mapbox GL ecosystem, which includes [Mapbox Mobile](https://www.mapbox.com/mobile/), a compatible renderer written in C++ with bindings for desktop and mobile platforms.
+Mapbox GL JS is a JavaScript library that uses WebGL to render interactive maps from [vector tiles](https://docs.mapbox.com/help/glossary/vector-tiles/) and [Mapbox styles](/maplibre-gl-js/style-spec/). It is part of the Mapbox GL ecosystem, which includes [Mapbox Mobile](https://www.mapbox.com/mobile/), a compatible renderer written in C++ with bindings for desktop and mobile platforms.
 
 
 ## Quickstart
@@ -58,13 +58,13 @@ To get started, you need an [access token](https://docs.mapbox.com/help/how-mapb
 
 This documentation is divided into several sections:
 
-* [**Map**](/mapbox-gl-js/api/map/). The `Map` object is the map on your page. It lets you access methods and properties for interacting with the map's style and layers, respond to events, and manipulate the user's perspective with the camera.
-* [**Properties and options**](/mapbox-gl-js/api/properties/). This section describes Mapbox GL JS's global properties and options that you might want to access while initializing your map or accessing information about its status.
-* [**Markers and controls**](/mapbox-gl-js/api/markers/). This section describes the user interface elements that you can add to your map. The items in this section exist outside of the map's `canvas` element.
-* [**Geography and geometry**](/mapbox-gl-js/api/geography/). This section includes general utilities and types that relate to working with and manipulating geographic information or geometries.
-* [**User interaction handlers**](/mapbox-gl-js/api/handlers/). The items in this section relate to the ways in which the map responds to user input.
-* [**Sources**](/mapbox-gl-js/api/sources/). This section describes the source types Mapbox GL JS can handle besides the ones described in the [Mapbox Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/).
-* [**Events**](/mapbox-gl-js/api/events/). This section describes the different types of events that Mapbox GL JS can raise.
+* [**Map**](/maplibre-gl-js/api/map/). The `Map` object is the map on your page. It lets you access methods and properties for interacting with the map's style and layers, respond to events, and manipulate the user's perspective with the camera.
+* [**Properties and options**](/maplibre-gl-js/api/properties/). This section describes Mapbox GL JS's global properties and options that you might want to access while initializing your map or accessing information about its status.
+* [**Markers and controls**](/maplibre-gl-js/api/markers/). This section describes the user interface elements that you can add to your map. The items in this section exist outside of the map's `canvas` element.
+* [**Geography and geometry**](/maplibre-gl-js/api/geography/). This section includes general utilities and types that relate to working with and manipulating geographic information or geometries.
+* [**User interaction handlers**](/maplibre-gl-js/api/handlers/). The items in this section relate to the ways in which the map responds to user input.
+* [**Sources**](/maplibre-gl-js/api/sources/). This section describes the source types Mapbox GL JS can handle besides the ones described in the [Mapbox Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/).
+* [**Events**](/maplibre-gl-js/api/events/). This section describes the different types of events that Mapbox GL JS can raise.
 
 Each section describes classes or objects as well as their **properties**, **parameters**, **instance members**, and associated **events**. Many sections also include inline code examples and related resources.
 
@@ -74,9 +74,9 @@ Each section describes classes or objects as well as their **properties**, **par
 
 Mapbox GL JS v2 enables 3D mapping with elevated terrain, customizable skies, a new camera, and performance enhancements.
 
-* [**3D terrain**](/mapbox-gl-js/example/add-terrain/): Mapbox GL JS v2 adds elevated terrain rendering. Existing layer types and APIs will continue to work with the new 3D terrain. The new Mapbox Raster Data API service provides raster terrain tiles for use with the new 3D terrain.
-* [**Sky layer**](/mapbox-gl-js/example/atmospheric-sky/): To allow for highly pitched 3D maps, Mapbox GL JS v2 adds a sky layer that enables a customizable sky filling the space above the map horizon. The sky layer can have a custom color gradient or simulate real-world atmospheric scattering of light.
-* [**`FreeCamera` API**](/mapbox-gl-js/example/free-camera-point/): Mapbox GL JS v2 provides a new low-level camera API known as the `FreeCamera` API. The `FreeCamera` allows you to move and animate the camera location and camera target independently of each other.
+* [**3D terrain**](/maplibre-gl-js/example/add-terrain/): Mapbox GL JS v2 adds elevated terrain rendering. Existing layer types and APIs will continue to work with the new 3D terrain. The new Mapbox Raster Data API service provides raster terrain tiles for use with the new 3D terrain.
+* [**Sky layer**](/maplibre-gl-js/example/atmospheric-sky/): To allow for highly pitched 3D maps, Mapbox GL JS v2 adds a sky layer that enables a customizable sky filling the space above the map horizon. The sky layer can have a custom color gradient or simulate real-world atmospheric scattering of light.
+* [**`FreeCamera` API**](/maplibre-gl-js/example/free-camera-point/): Mapbox GL JS v2 provides a new low-level camera API known as the `FreeCamera` API. The `FreeCamera` allows you to move and animate the camera location and camera target independently of each other.
 * **Improved performance**: Compared to v1, Mapbox GL JS v2 improves load time by up to 50% and renders more tile content during camera animations. In benchmark tests, the median map load time improved by 30%. v2 also optimizes resource loading and task scheduling to leave more CPU resources available for your application.
 
 ## Migrating to v2
@@ -84,7 +84,7 @@ Mapbox GL JS v2 enables 3D mapping with elevated terrain, customizable skies, a 
 Mapbox GL JS v2 is backwards-compatible and existing layers and APIs will continue to work as expected, but there are some things to be aware of before upgrading to v2.
 
 * Mapbox GL JS v2 ends support for Internet Explorer 11. If you need to support Internet Explorer, consider using the [Mapbox Static Images API](https://docs.mapbox.com/api/maps/static-images/) for non-interactive maps or using the [Mapbox Static Tiles API](https://docs.mapbox.com/api/maps/static-tiles/) with another library (for example, [Mapbox.js](https://docs.mapbox.com/mapbox.js/) or [Leaflet](https://leafletjs.com/)) for interactive maps.
-* The default `maxPitch` is increased from 60° to 85°. This change will make it possible to view above the horizon when the map is fully pitched. By default, this area will be transparent to any pixels behind the map on a website or in an application. A [sky layer](/mapbox-gl-js/style-spec/layers/#sky) can be added to the map to fill this space with a realistic, customizable sky.
+* The default `maxPitch` is increased from 60° to 85°. This change will make it possible to view above the horizon when the map is fully pitched. By default, this area will be transparent to any pixels behind the map on a website or in an application. A [sky layer](/maplibre-gl-js/style-spec/layers/#sky) can be added to the map to fill this space with a realistic, customizable sky.
 * A valid Mapbox access token is required to instantiate a `Map` object. Assign a token using `mapboxgl.accessToken` or in the `Map` constructor options. To create an account or a new access token, visit [https://account.mapbox.com](https://account.mapbox.com/).
 * The action that triggers a map load has changed. In v1, a map load would occur whenever a `Map` instance is created *and* the map requested Mapbox-hosted tile resources. In v2, a map load occurs whenever a `Map` instance is created regardless of whether the map requests any Mapbox-hosted tile resources. Before updating an existing implementation of GL JS to v2, review the [pricing documentation](https://docs.mapbox.com/accounts/guides/pricing/#web-maps).
 * **Known issues:**
@@ -139,6 +139,6 @@ If you limit the referrer to the origin, make sure that the URL you restrict you
 
 The CSS referenced in the Quickstart is used to style DOM elements created by Mapbox code. Without the CSS, elements like Popups and Markers won't work.
 
-Including it with a `<link>` in the head of the document via the Mapbox CDN is the simplest and easiest way to provide the CSS, but it is also bundled in the Mapbox module, meaning that if you have a bundler that can handle CSS, you can import the CSS from `mapbox-gl/dist/mapbox-gl.css`.
+Including it with a `<link>` in the head of the document via the Mapbox CDN is the simplest and easiest way to provide the CSS, but it is also bundled in the Mapbox module, meaning that if you have a bundler that can handle CSS, you can import the CSS from `maplibre-gl/dist/mapbox-gl.css`.
 
 Note too that if the CSS isn't available by the first render, as soon as the CSS is provided, the DOM elements that depend on this CSS should recover.

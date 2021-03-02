@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer'); // eslint-disable-line
 const path = require('path'); // eslint-disable-line
-const pack = require('../../mapbox-gl-js/package.json'); // eslint-disable-line
+const pack = require('../../maplibre-gl-js/package.json'); // eslint-disable-line
 
 const fileName = process.argv[2];
 const token =
@@ -51,7 +51,7 @@ ${snippet}
 (async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    // set html for page and then wait until mapbox-gl-js loads
+    // set html for page and then wait until maplibre-gl-js loads
     await page.setContent(html, { waitUntil: 'networkidle2' }); // eslint-disable-line
     // set viewport and double deviceScaleFactor to get a closer shot of the map
     await page.setViewport({

@@ -10,7 +10,7 @@ f0
 fn
 spritezero-cli
 pre-built
-mapbox-gl-js
+maplibre-gl-js
 raster-dem
 geojson
 ResolvedImage

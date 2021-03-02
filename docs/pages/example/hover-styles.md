@@ -1,6 +1,6 @@
 ---
 title: Create a hover effect
-description: Using events and [feature states](/mapbox-gl-js/api/#map#setfeaturestate) to create a per feature hover effect.
+description: Using events and [feature states](/maplibre-gl-js/api/#map#setfeaturestate) to create a per feature hover effect.
 topics:
   - User interaction
 thumbnail: hover-styles

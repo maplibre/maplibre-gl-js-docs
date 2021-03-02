@@ -1,6 +1,6 @@
 ---
 title: Display and style rich text labels
-description: Uses the [format expression](/mapbox-gl-js/style-spec#expressions-types-format) to display country labels in both English and in the local language.
+description: Uses the [format expression](/maplibre-gl-js/style-spec#expressions-types-format) to display country labels in both English and in the local language.
 topics:
   - Layers
 thumbnail: display-and-style-rich-text-labels

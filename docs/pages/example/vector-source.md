@@ -1,6 +1,6 @@
 ---
 title: Add a vector tile source
-description: Add a [vector source](/mapbox-gl-js/style-spec#sources-vector) to a map.
+description: Add a [vector source](/maplibre-gl-js/style-spec#sources-vector) to a map.
 topics:
   - Sources
 thumbnail: vector-source

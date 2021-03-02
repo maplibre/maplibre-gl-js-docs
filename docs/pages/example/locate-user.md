@@ -1,6 +1,6 @@
 ---
 title: Locate the user
-description: Geolocate the user and then track their current location on the map using the [`GeolocateControl`](/mapbox-gl-js/api/#geolocatecontrol).
+description: Geolocate the user and then track their current location on the map using the [`GeolocateControl`](/maplibre-gl-js/api/#geolocatecontrol).
 topics:
   - Controls and overlays
 thumbnail: locate-user
