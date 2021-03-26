@@ -80,6 +80,7 @@
     "prebuild": "npm run build-docs",
     "prestart": "npm run build-docs",
     "build": "batfish build",
+    "deploy": "cp _config.yml _site && gh-pages -d _site",
     "serve-static": "batfish serve-static",
     "pretest": "yarn run lint",
     "test": "tape test/*.test.js | tap-min && yarn run lint-md && yarn run test-content && jest",

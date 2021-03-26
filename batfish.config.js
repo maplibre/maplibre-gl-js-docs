@@ -25,11 +25,11 @@ const addPages = [
     }
 ];
 
-const siteBasePath = '/mapbox-gl-js';
+const siteBasePath = '/maplibre-gl-js-docs';
 module.exports = () => {
     const config = {
         siteBasePath: siteBasePath,
-        siteOrigin: 'https://docs.mapbox.com',
+        siteOrigin: 'https://maplibre.github.io',
         pagesDirectory: `${__dirname}/docs/pages`,
         outputDirectory: path.join(__dirname, '_site'),
         browserslist: mapboxAssembly.browsersList,
