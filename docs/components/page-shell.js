@@ -24,7 +24,7 @@ import AppropriateImage from './appropriate-image';
 import Browser from '@mapbox/dr-ui/browser';
 import redirectApiRef from '../util/api-ref-redirect';
 import classnames from 'classnames';
-import { version } from '../../mapbox-gl-js/package.json';
+import { version } from '../../maplibre-gl-js/package.json';
 
 import { devDependencies } from '../../package.json';
 import slug from 'slugg';
