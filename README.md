@@ -84,11 +84,22 @@ To update or add a new example, PR the relevant changes to this repo. The exampl
 
 ## Deploy to GitHub Pages
 
-After building the documentation with ```npm run build``` the static site files are located in ```_site```. 
+After building the documentation with:
+
+```bash
+npm run build
+``` 
+
+the static site files are located in ```_site```. 
+
+Test that everything is fine with:
+
+```bash
+npm run test
+```
 
 Publish the build output to GitHub Pages at [https://maplibre.github.io/maplibre-gl-js-docs/](https://maplibre.github.io/maplibre-gl-js-docs/) with:
 
 ```bash
-npm install -g gh-pages
 npm run deploy
 ```
