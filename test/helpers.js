@@ -14,8 +14,8 @@ async function latestStableTag() {
         shell: true
     });
 
-    // Get the mapbox-gl package's servsions from npm, sorted by semver.
-    const { stdout } = await execa(`npm info mapbox-gl versions --json`, {
+    // Get the maplibre-gl package's servsions from npm, sorted by semver.
+    const { stdout } = await execa(`npm info maplibre-gl versions --json`, {
         shell: true
     }).catch((err) => {
         console.error(`Failed to list tags. ${JSON.stringify(err, null, 2)}`);
