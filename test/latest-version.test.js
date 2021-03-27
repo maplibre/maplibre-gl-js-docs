@@ -5,7 +5,7 @@ const helpers = require('./helpers');
 let tags = [];
 
 async function tagsMatch() {
-    await process.chdir(path.join(process.cwd(), './mapbox-gl-js'));
+    await process.chdir(path.join(process.cwd(), './maplibre-gl-js'));
     const latest = await helpers.latestStableTag();
     const current = await helpers.currentTag();
     if (latest === current) {
@@ -23,9 +23,9 @@ test(`Is latest version`, (t) => {
     tagsMatch().then((res) => {
         t.ok(
             res,
-            `Mapbox GL JS submodule is not pinned to the latest stable release version.
+            `MapLibre GL JS submodule is not pinned to the latest stable release version.
              Latest: ${tags[0]}. Currently checked out: ${tags[1]}.
-            To proceed, pull the latest from publisher-production and merge with "git merge publisher-production" from the feature branch. Or, notify @mapbox/docs.`
+            To proceed, pull the latest from publisher-production and merge with "git merge publisher-production" from the feature branch.`
         );
         t.end();
     });
