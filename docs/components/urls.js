@@ -1,4 +1,4 @@
-import { version } from '../../mapbox-gl-js/package.json';
+import { version } from '../../maplibre-gl-js/package.json';
 import { prefixUrl } from '@mapbox/batfish/modules/prefix-url';
 
 function url(ext, options) {
