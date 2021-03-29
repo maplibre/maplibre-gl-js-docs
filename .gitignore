@@ -11,4 +11,4 @@ _site
 yarn-error.log
 yarn-debug.log
 npm-debug.log
-package-lock.json
+yarn.lock

@@ -6,7 +6,7 @@ import imageConfig from '../img/dist/image.config.json'; // eslint-disable-line
 // The required prop is `imageId`, which must correspond to a key in the
 // imageConfig.
 const AppropriateImage = scopeAppropriateImage(imageConfig, {
-    transformUrl: (url) => require(`../img/dist/${url}`) // eslint-disable-line
+    transformUrl: (url) => require(`../img/dist/${url}`).default // eslint-disable-line
 });
 
 export default AppropriateImage;

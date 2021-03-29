@@ -14,7 +14,7 @@ If you're not sure if your Node and NPM versions are up to date, run `nvm use` b
 After cloning this repository, run:
 
 ```bash
-yarn # install dependencies with Yarn
+npm ci # install dependencies with npm
 git submodule update --init # initialize mapbox-gl-js git submodule
 ```
 
