@@ -50,8 +50,17 @@ listExamplesMd('./docs/pages/example/')
         const { metadata, file } = readPost(example);
 
         if (metadata) {
-            test(`Example metatdata: ${example}`, (t) => {
+            test(`Example topics: ${example}`, (t) => {
                 t.ok(metadata.topics, 'has topics');
+                t.end();
+            });
+
+            test(`Example description: ${example}`, (t) => {
+                const regex = /\[|]|`/g;
+                t.ok(
+                    !metadata.description.match(regex),
+                    'description is plain text and does not use markdown'
+                );
                 t.end();
             });
 

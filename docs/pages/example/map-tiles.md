@@ -15,4 +15,6 @@ prependJs:
 - "import html from './map-tiles.html';"
 ---
 
+Add a third-party raster source to the map.
+
 {{ <Example html={html} {...this.props} /> }}

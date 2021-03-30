@@ -15,4 +15,6 @@ prependJs:
 - "import html from './game-controls.html';"
 ---
 
+Use the keyboard's arrow keys to move around the map with game-like controls.
+
 {{ <Example html={html} {...this.props} /> }}

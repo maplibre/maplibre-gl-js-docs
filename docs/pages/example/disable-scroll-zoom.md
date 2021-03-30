@@ -1,6 +1,6 @@
 ---
 title: Disable scroll zoom
-description: Prevents scroll from zooming a map.
+description: Prevent scroll from zooming a map.
 topics:
   - Controls and overlays
 thumbnail: disable-scroll-zoom
@@ -14,5 +14,7 @@ prependJs:
 - "import Example from '../../components/example';"
 - "import html from './disable-scroll-zoom.html';"
 ---
+
+Disable scroll zoom to prevent scroll from zooming a map.
 
 {{ <Example html={html} {...this.props} /> }}

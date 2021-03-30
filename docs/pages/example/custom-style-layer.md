@@ -15,4 +15,6 @@ prependJs:
 - "import html from './custom-style-layer.html';"
 ---
 
+Use a custom style layer to render custom WebGL content.
+
 {{ <Example html={html} {...this.props} /> }}

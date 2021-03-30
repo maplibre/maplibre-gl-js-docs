@@ -15,4 +15,6 @@ prependJs:
 - "import html from './scroll-fly-to.html';"
 ---
 
+Scroll down through the story and the map will fly to the chapter's location.
+
 {{ <Example html={html} {...this.props} /> }}

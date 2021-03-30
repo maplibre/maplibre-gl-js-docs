@@ -15,4 +15,6 @@ prependJs:
 - "import html from './data-join.html';"
 ---
 
+Style a choropleth by merging local JSON data with vector tile geometries.
+
 {{ <Example html={html} {...this.props} /> }}

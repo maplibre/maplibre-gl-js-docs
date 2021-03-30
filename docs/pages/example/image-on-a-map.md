@@ -1,6 +1,6 @@
 ---
 title: Add an image
-description: Dark vector baselayer with radar weather image overlay.
+description: Add a radar weather image overlay on top of a dark vector baselayer.
 topics:
   - Sources
   - Layers
@@ -15,5 +15,7 @@ prependJs:
 - "import Example from '../../components/example';"
 - "import html from './image-on-a-map.html';"
 ---
+
+Add a radar weather image overlay on top of a dark vector baselayer.
 
 {{ <Example html={html} {...this.props} /> }}

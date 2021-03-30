@@ -16,4 +16,6 @@ prependJs:
 - "import html from './simple-map.html';"
 ---
 
+Initialize a map in an HTML element with Mapbox GL JS.
+
 {{ <Example html={html} {...this.props} /> }}

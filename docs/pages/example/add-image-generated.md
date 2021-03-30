@@ -16,4 +16,6 @@ prependJs:
 - "import html from './add-image-generated.html';"
 ---
 
+Add an icon to the map that was generated at runtime.
+
 {{ <Example html={html} {...this.props} /> }}

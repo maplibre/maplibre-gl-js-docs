@@ -16,4 +16,6 @@ prependJs:
 - "import html from './setstyle.html';"
 ---
 
+Switch to another map style.
+
 {{ <Example html={html} {...this.props} /> }}

@@ -1,6 +1,6 @@
 ---
 title: Display map navigation controls
-description: Zoom and rotation controls to make map navigation more obvious.
+description: Add zoom and rotation controls to the map.
 topics:
   - Controls and overlays
 thumbnail: navigation
@@ -14,5 +14,7 @@ prependJs:
 - "import Example from '../../components/example';"
 - "import html from './navigation.html';"
 ---
+
+Add zoom and rotation controls to the map.
 
 {{ <Example html={html} {...this.props} /> }}

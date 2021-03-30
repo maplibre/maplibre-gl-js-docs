@@ -3,7 +3,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import urls from './urls';
-import md from './md';
 import supported from '@mapbox/mapbox-gl-supported';
 import CodeSnippet from '@mapbox/dr-ui/code-snippet';
 import Note from '@mapbox/dr-ui/note';
@@ -126,9 +125,6 @@ if (window.map instanceof mapboxgl.Map) {
 
         return (
             <div className="prose">
-                {frontMatter.description && (
-                    <div className="mb36">{md(frontMatter.description)}</div>
-                )}
                 {this.state.unsupported && (
                     <Note title="Mapbox GL unsupported" theme="warning">
                         Mapbox GL requires{' '}
@@ -151,7 +147,7 @@ if (window.map instanceof mapboxgl.Map) {
                     <iframe
                         id="demo"
                         style={{ height: height }}
-                        className="w-full"
+                        className="w-full mt18"
                         allowFullScreen={true}
                         mozallowfullscreen="true"
                         webkitallowfullscreen="true"
@@ -187,8 +183,7 @@ if (window.map instanceof mapboxgl.Map) {
 Example.propTypes = {
     html: PropTypes.string, // eslint-disable-line
     frontMatter: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        description: PropTypes.string
+        title: PropTypes.string.isRequired
     }),
     location: PropTypes.shape({
         pathname: PropTypes.string

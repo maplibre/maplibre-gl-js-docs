@@ -15,4 +15,6 @@ prependJs:
 - "import html from './playback-locations.html';"
 ---
 
+Autoplay the locations of boroughs in New York City.
+
 {{ <Example html={html} {...this.props} /> }}

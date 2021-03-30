@@ -1,6 +1,6 @@
 ---
 title: Display a non-interactive map
-description: 'Setting interactive: false to create a static map.'
+description: Disable interactivity to create a static map.
 topics:
   - User interaction
 thumbnail: interactive-false
@@ -14,5 +14,7 @@ prependJs:
 - "import Example from '../../components/example';"
 - "import html from './interactive-false.html';"
 ---
+
+Set `interactive: false` to create a static map.
 
 {{ <Example html={html} {...this.props} /> }}

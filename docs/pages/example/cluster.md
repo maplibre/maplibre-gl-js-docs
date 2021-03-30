@@ -15,4 +15,6 @@ prependJs:
 - "import html from './cluster.html';"
 ---
 
+Use Mapbox GL JS' built-in functions to visualize points as clusters.
+
 {{ <Example html={html} {...this.props} /> }}

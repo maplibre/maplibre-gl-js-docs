@@ -15,4 +15,6 @@ prependJs:
 - "import html from './toggle-interaction-handlers.html';"
 ---
 
+Enable or disable UI handlers on a map.
+
 {{ <Example html={html} {...this.props} /> }}

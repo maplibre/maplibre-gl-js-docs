@@ -15,4 +15,6 @@ prependJs:
 - "import html from './fullscreen.html';"
 ---
 
+Toggle between current view and fullscreen mode.
+
 {{ <Example html={html} {...this.props} /> }}
