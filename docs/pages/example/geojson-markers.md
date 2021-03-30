@@ -15,4 +15,6 @@ prependJs:
 - "import html from './geojson-markers.html';"
 ---
 
+Draw points from a GeoJSON collection to a map.
+
 {{ <Example html={html} {...this.props} /> }}

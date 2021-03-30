@@ -16,4 +16,6 @@ prependJs:
 - "import html from './animate-point-along-line.html';"
 ---
 
+Animate the position of a point by updating a GeoJSON source on each frame.
+
 {{ <Example html={html} {...this.props} /> }}

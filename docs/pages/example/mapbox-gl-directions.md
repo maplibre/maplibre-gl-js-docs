@@ -1,9 +1,6 @@
 ---
 title: Display driving directions
-description: >-
-  Use the [mapbox-gl-directions](https://github.com/mapbox/mapbox-gl-directions)
-  plugin to show results from the Mapbox Directions API. Click the map to add an
-  origin and destination.
+description: Use the mapbox-gl-directions plugin to show results from the Mapbox Directions API.
 topics:
   - Controls and overlays
 thumbnail: mapbox-gl-directions
@@ -18,5 +15,7 @@ prependJs:
 - "import Example from '../../components/example';"
 - "import html from './mapbox-gl-directions.html';"
 ---
+
+Use the [mapbox-gl-directions](https://github.com/mapbox/mapbox-gl-directions) plugin to show results from the Mapbox Directions API. Click the map to add an origin and destination.
 
 {{ <Example html={html} {...this.props} /> }}

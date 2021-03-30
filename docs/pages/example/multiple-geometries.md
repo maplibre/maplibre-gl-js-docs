@@ -15,4 +15,6 @@ prependJs:
 - "import html from './multiple-geometries.html';"
 ---
 
+Add a polygon and circle layer from the same GeoJSON source.
+
 {{ <Example html={html} {...this.props} /> }}

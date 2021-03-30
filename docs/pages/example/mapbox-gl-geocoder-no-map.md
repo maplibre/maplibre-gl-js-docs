@@ -1,8 +1,6 @@
 ---
 title: Use the geocoder without a map
-description: >-
-  Use the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder)
-  control to search for places using Mapbox Search API without an associated map view.
+description: Use the mapbox-gl-geocoder control to search for places using Mapbox Search API without an associated map view.
 topics:
   - Geocoder
 thumbnail: mapbox-gl-geocoder-no-map
@@ -17,5 +15,7 @@ prependJs:
 - "import Example from '../../components/example';"
 - "import html from './mapbox-gl-geocoder-no-map.html';"
 ---
+
+Use the [mapbox-gl-geocoder](https://github.com/mapbox/mapbox-gl-geocoder) control to search for places using Mapbox Search API without an associated map view.
 
 {{ <Example html={html} {...this.props} /> }}

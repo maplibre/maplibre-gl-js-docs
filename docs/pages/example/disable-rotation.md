@@ -15,4 +15,6 @@ prependJs:
 - "import html from './disable-rotation.html';"
 ---
 
+Prevent users from rotating a map.
+
 {{ <Example html={html} {...this.props} /> }}

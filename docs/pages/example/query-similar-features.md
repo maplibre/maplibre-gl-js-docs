@@ -15,4 +15,6 @@ prependJs:
 - "import html from './query-similar-features.html';"
 ---
 
+Hover over counties to highlight counties that share the same name.
+
 {{ <Example html={html} {...this.props} /> }}

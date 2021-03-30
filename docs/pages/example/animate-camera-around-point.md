@@ -15,4 +15,6 @@ prependJs:
 - "import html from './animate-camera-around-point.html';"
 ---
 
+Animate the map camera around a point.
+
 {{ <Example html={html} {...this.props} /> }}

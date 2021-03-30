@@ -1,6 +1,6 @@
 ---
 title: Add a video
-description: Satellite raster baselayer with video on top. Click on the map to play and pause.
+description: Display a video on top of a satellite raster baselayer.
 topics:
   - Sources
   - Layers
@@ -15,5 +15,7 @@ prependJs:
 - "import Example from '../../components/example';"
 - "import html from './video-on-a-map.html';"
 ---
+
+Display a video on top of a satellite raster baselayer. Click the map to play and pause the video.
 
 {{ <Example html={html} {...this.props} /> }}

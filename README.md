@@ -42,11 +42,13 @@ API documentation is written as [JSDoc comments](http://usejsdoc.org/) and proce
 Examples are written as [Batfish](https://github.com/mapbox/batfish) pages in `docs/pages/example`. Each example requires two files: an `.html` file containing the source
 code for the example, and a `.js` file containing example boilerplate and front matter. The front matter should include the following items:
 
-* `title`: A short title for the example in **sentence case** as a **verb phrase**
-* `description`: A one sentence description of the example
-* `tags`: An array of tags for the example, which determine the sections it is listed in in the sidebar navigation, see `docs/data/tags.json` for a list of tags
-* `thumbnail`: The filename of the example's thumbnail image (without the file extension)
+* `title`: A short title for the example in **sentence case** as a **verb phrase**.
+* `description`: A one sentence description of the example in plain text. This description will appear alongside a thumbnail and title on the examples page.
+* `topics`: An array of topics for the example, see `docs/data/topics.json` for a list of topics.
+* `thumbnail`: The filename of the example's thumbnail image (without the file extension).
 * `contentType: example`: Set the contentType to equal example.
+
+In content area of the markdown page include an extended description of the example and add links to documentation or other important resources where possible.
 
 In the `.html` file, write the HTML and JavaScript constituting the example.
 

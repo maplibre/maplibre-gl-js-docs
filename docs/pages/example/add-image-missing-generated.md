@@ -16,4 +16,6 @@ prependJs:
 - "import html from './add-image-missing-generated.html';"
 ---
 
+Dynamically generate a missing icon at runtime and add it to the map.
+
 {{ <Example html={html} {...this.props} /> }}

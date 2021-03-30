@@ -15,4 +15,6 @@ prependJs:
 - "import html from './toggle-layers.html';"
 ---
 
+Create a custom layer switcher to display different datasets.
+
 {{ <Example html={html} {...this.props} /> }}

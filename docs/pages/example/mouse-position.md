@@ -1,8 +1,6 @@
 ---
 title: Get coordinates of the mouse pointer
-description: >-
-  Showing mouse position on hover with pixel and latitude and longitude
-  coordinates.
+description: Show mouse position on hover with pixel and latitude and longitude coordinates.
 topics:
   - User interaction
 thumbnail: mouse-position
@@ -16,5 +14,7 @@ prependJs:
 - "import Example from '../../components/example';"
 - "import html from './mouse-position.html';"
 ---
+
+Show mouse position on hover with pixel and latitude and longitude coordinates.
 
 {{ <Example html={html} {...this.props} /> }}

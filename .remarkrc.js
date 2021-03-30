@@ -6,7 +6,6 @@ const config = {
     pages: 'docs/pages/',
     constants: 'docs/constants.json',
     ignoreLinks: 'conf/ignore-links.json',
-    descriptionLength: 1200,
     topicOptions: topicsOrder
 };
 

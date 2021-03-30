@@ -1,6 +1,6 @@
 ---
 title: Add hillshading
-description: Adds raster hillshading to a map.
+description: Add raster hillshading to a map.
 topics:
   - Layers
   - Sources
@@ -16,5 +16,7 @@ prependJs:
 - "import Example from '../../components/example';"
 - "import html from './hillshade.html';"
 ---
+
+Add raster hillshading to a map.
 
 {{ <Example html={html} {...this.props} /> }}
