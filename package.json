@@ -103,7 +103,7 @@
   },
   "jest": {
     "testPathIgnorePatterns": [
-      "/mapbox-gl-js/"
+      "/maplibre-gl-js/"
     ],
     "transformIgnorePatterns": [
       "/node_modules\\/(?!(mapbox-gl-style-spec))/"
