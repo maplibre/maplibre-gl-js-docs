@@ -716,6 +716,11 @@ Array [
         "text": "KeyboardHandler",
       },
       Object {
+        "level": 3,
+        "slug": "keyboardhandler-instance-members",
+        "text": "Instance members",
+      },
+      Object {
         "level": 2,
         "slug": "doubleclickzoomhandler",
         "text": "DoubleClickZoomHandler",
