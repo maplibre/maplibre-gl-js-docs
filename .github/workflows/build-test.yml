@@ -1,0 +1,20 @@
+name: build-test
+
+on: 
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - run: npm ci
+    - run: git submodule update --init
+    - run: npm run build
+    - run: npm run test
