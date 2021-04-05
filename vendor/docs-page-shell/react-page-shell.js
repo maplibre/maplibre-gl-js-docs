@@ -366,8 +366,8 @@ function Logo(props) {
   return React.createElement("div", {
     className: "shell-flex-parent shell-flex-parent--center-cross"
   }, React.createElement("a", {
-    href: "https://www.mapbox.com",
-    "aria-label": "Mapbox",
+    href: "https://www.maplibre.org",
+    "aria-label": "MapLibre",
     className: logoClasses,
     style: logoStyles
   }), border, React.createElement("a", {
