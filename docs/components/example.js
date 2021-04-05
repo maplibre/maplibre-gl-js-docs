@@ -21,25 +21,8 @@ export default class Example extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            token: undefined,
             unsupported: false
         };
-    }
-
-    // Display HTML with production URLs and the logged-in user's access token (if available).
-    // Render HTML with possibly-local URLs and a Mapbox access token (don't bill the user for looking at examples).
-
-    addToken(html) {
-        const addMissingTokenComment = this.state.token
-            ? ''
-            : `\n\t// TO MAKE THE MAP APPEAR YOU MUST\n\t// ADD YOUR ACCESS TOKEN FROM\n\t// https://account.mapbox.com`;
-
-        return html.replace(
-            '<script>',
-            `<script>${addMissingTokenComment}\n\tmapboxgl.accessToken = '${
-                this.state.token || '<your access token here>'
-            }';`
-        );
     }
 
     displayHTML(html) {
@@ -56,7 +39,7 @@ ${css}
 </style>
 </head>
 <body>
-${this.addToken(html)}
+${html}
 </body>
 </html>`;
     }
@@ -76,7 +59,6 @@ ${viewport}
 <style>
     ${css}
 </style>
-<script>mapboxgl.accessToken = '${MapboxPageShell.getMapboxAccessToken()}'</script>
 </head>
 <body>
 ${html}
@@ -171,12 +153,6 @@ if (window.map instanceof mapboxgl.Map) {
         doc.open();
         doc.write(this.renderHTML(this.props.html));
         doc.close();
-
-        MapboxPageShell.afterUserCheck(() => {
-            this.setState({
-                token: MapboxPageShell.getUserPublicAccessToken()
-            });
-        });
     }
 }
 
