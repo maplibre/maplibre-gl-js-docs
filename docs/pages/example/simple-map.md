@@ -10,7 +10,7 @@ layout: example
 language:
 - JavaScript
 products:
-- MapLibre GL JS
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './simple-map.html';"
