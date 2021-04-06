@@ -1,6 +1,6 @@
 ---
 title: Display a map
-description: Initialize a map in an HTML element with Mapbox GL JS.
+description: Initialize a map in an HTML element with MapLibre GL JS.
 topics:
   - Getting started
   - Styles
@@ -16,6 +16,6 @@ prependJs:
 - "import html from './simple-map.html';"
 ---
 
-Initialize a map in an HTML element with Mapbox GL JS.
+Initialize a map in an HTML element with MapLibre GL JS.
 
 {{ <Example html={html} {...this.props} /> }}
