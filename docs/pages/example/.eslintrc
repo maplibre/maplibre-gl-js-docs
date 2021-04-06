@@ -12,6 +12,7 @@
     },
     "plugins": ["html"],
     "globals": {
+      "maplibregl": true,
       "mapboxgl": true,
       "MapboxGeocoder": true,
       "MapboxDirections": true,
