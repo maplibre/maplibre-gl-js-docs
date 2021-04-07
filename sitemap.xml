@@ -415,9 +415,6 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/layers</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/light</loc>
-    </url>
-    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/other</loc>
     </url>
     <url>
@@ -434,5 +431,8 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/types</loc>
+    </url>
+    <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/light</loc>
     </url>
 </urlset>
