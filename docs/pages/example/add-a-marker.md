@@ -15,6 +15,6 @@ prependJs:
 - "import html from './add-a-marker.html';"
 ---
 
-Add a default [`Marker`](/mapbox-gl-js/api/markers/#marker) to the map.
+Add a default [`Marker`](/maplibre-gl-js-docs/api/markers/#marker) to the map.
 
 {{ <Example html={html} {...this.props} /> }}
