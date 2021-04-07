@@ -1,7 +1,8 @@
 <div id="map"></div>
 <script>
-    var map = new mapboxgl.Map({
-        style: 'mapbox://styles/mapbox/light-v10',
+    var map = new maplibregl.Map({
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [-74.0066, 40.7135],
         zoom: 15.5,
         pitch: 45,
@@ -10,7 +11,7 @@
         antialias: true
     });
 
-    // The 'building' layer in the mapbox-streets vector source contains building-height
+    // The 'building' layer in the streets vector source contains building-height
     // data from OpenStreetMap.
     map.on('load', function () {
         // Insert the layer beneath any symbol layer.
