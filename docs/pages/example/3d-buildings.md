@@ -16,6 +16,6 @@ prependJs:
 - "import html from './3d-buildings.html';"
 ---
 
-Use [extrusions](/mapbox-gl-js/style-spec#layers-fill-extrusion) to display buildings' height in 3D.
+Use [extrusions](https://maplibre.org/maplibre-gl-js-docs/style-spec/layers/#fill-extrusion) to display buildings' height in 3D.
 
 {{ <Example html={html} {...this.props} /> }}
