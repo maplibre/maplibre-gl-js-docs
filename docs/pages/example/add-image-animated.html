@@ -1,15 +1,16 @@
 <div id="map"></div>
 
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9'
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL'
     });
 
     var size = 200;
 
     // implementation of CustomLayerInterface to draw a pulsing dot icon on the map
-    // see https://docs.mapbox.com/mapbox-gl-js/api/#customlayerinterface for more info
+    // see https://maplibre.org/maplibre-gl-js-docs/api/properties/#customlayerinterface for more info
     var pulsingDot = {
         width: size,
         height: size,
