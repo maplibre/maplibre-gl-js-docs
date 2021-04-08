@@ -1,8 +1,9 @@
 <div id="map"></div>
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/dark-v10',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         maxZoom: 5.99,
         minZoom: 4,
         zoom: 5,
@@ -14,7 +15,7 @@
 
     function getPath() {
         return (
-            'https://docs.mapbox.com/mapbox-gl-js/assets/radar' +
+            'https://maplibre.org/maplibre-gl-js-docs/assets/radar' +
             currentImage +
             '.gif'
         );
