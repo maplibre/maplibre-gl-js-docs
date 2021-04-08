@@ -62,12 +62,13 @@
 
     animate();
 
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
         zoom: 5,
         minZoom: 4,
         center: [95.899147, 18.088694],
-        style: 'mapbox://styles/mapbox/streets-v11'
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL'
     });
 
     map.on('load', function () {

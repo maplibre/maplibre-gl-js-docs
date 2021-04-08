@@ -15,6 +15,6 @@ prependJs:
 - "import html from './canvas-source.html';"
 ---
 
-Add a [`CanvasSource`](/mapbox-gl-js/api/sources/#canvassource) to the map.
+Add a [`CanvasSource`](https://maplibre.org/maplibre-gl-js-docs/api/sources/#canvassource) to the map.
 
 {{ <Example html={html} {...this.props} /> }}
