@@ -31,6 +31,11 @@ overviewHeader:
 Mapbox GL JS is a JavaScript library that uses WebGL to render interactive maps from [vector tiles](https://docs.mapbox.com/help/glossary/vector-tiles/) and [Mapbox styles](/mapbox-gl-js/style-spec/). It is part of the Mapbox GL ecosystem, which includes [Mapbox Mobile](https://www.mapbox.com/mobile/), a compatible renderer written in C++ with bindings for desktop and mobile platforms.
 
 
+## Migration Note
+
+We are now migrating this documentation from Mapbox to MapLibre. If you want to contribute feel free to open an [issue](https://github.com/maplibre/maplibre-gl-js-docs/issues) on GitHub or submit a [pull request](https://github.com/maplibre/maplibre-gl-js-docs/pulls) to propose directly your changes.
+
+
 ## Quickstart
 
 {{
