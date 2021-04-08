@@ -1,16 +1,17 @@
 <div id="map"></div>
 
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         zoom: 0.1
     });
 
     var images = {
-        'popup': 'https://docs.mapbox.com/mapbox-gl-js/assets/popup.png',
+        'popup': 'https://maplibre.org/maplibre-gl-js-docs/assets/popup.png',
         'popup-debug':
-            'https://docs.mapbox.com/mapbox-gl-js/assets/popup_debug.png'
+            'https://maplibre.org/maplibre-gl-js-docs/assets/popup_debug.png'
     };
 
     loadImages(images, function (loadedImages) {
