@@ -1,13 +1,14 @@
 <div id="map"></div>
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [0, 0],
         zoom: 2
     });
 
-    var marker = new mapboxgl.Marker();
+    var marker = new maplibregl.Marker();
 
     function animateMarker(timestamp) {
         var radius = 20;
