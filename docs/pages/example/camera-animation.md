@@ -16,6 +16,6 @@ prependJs:
 - "import html from './camera-animation.html';"
 ---
 
-Customize camera animations using [`AnimationOptions`](/mapbox-gl-js/api/properties/#animationoptions).
+Customize camera animations using [`AnimationOptions`](https://maplibre.org/maplibre-gl-js-docs/api/properties/#animationoptions).
 
 {{ <Example html={html} {...this.props} /> }}
