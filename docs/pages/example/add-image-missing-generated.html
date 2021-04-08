@@ -1,9 +1,10 @@
 <div id="map"></div>
 
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9'
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL'
     });
 
     map.on('styleimagemissing', function (e) {
