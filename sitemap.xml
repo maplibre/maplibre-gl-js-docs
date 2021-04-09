@@ -61,6 +61,9 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-image-animated</loc>
     </url>
     <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-image-generated</loc>
+    </url>
+    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-image-missing-generated</loc>
     </url>
     <url>
@@ -73,10 +76,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-a-line</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-camera-around-point</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-images</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-images</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-camera-around-point</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-marker</loc>
@@ -98,9 +101,6 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/center-on-symbol</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-image-generated</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/change-building-color-based-on-zoom-level</loc>
