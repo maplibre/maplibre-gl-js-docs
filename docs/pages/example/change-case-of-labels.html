@@ -1,8 +1,9 @@
 <div id="map"></div>
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map', // container id
-        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL', // stylesheet location
         center: [-116.231, 43.604], // starting position [lng, lat]
         zoom: 11 // starting zoom
     });
@@ -11,7 +12,8 @@
         // data from opendata.cityofboise.org/
         map.addSource('off-leash-areas', {
             'type': 'geojson',
-            'data': 'https://docs.mapbox.com/mapbox-gl-js/assets/boise.geojson'
+            'data':
+                'https://maplibre.org/maplibre-gl-js-docs/assets/boise.geojson'
         });
         map.addLayer({
             'id': 'off-leash-areas',

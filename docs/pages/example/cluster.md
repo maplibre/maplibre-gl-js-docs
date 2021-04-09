@@ -1,6 +1,6 @@
 ---
 title: Create and style clusters
-description: Use Mapbox GL JS' built-in functions to visualize points as clusters.
+description: Use MapLibre GL JS' built-in functions to visualize points as clusters.
 topics:
   - Layers
 thumbnail: cluster
@@ -15,6 +15,6 @@ prependJs:
 - "import html from './cluster.html';"
 ---
 
-Use Mapbox GL JS' built-in functions to visualize points as clusters.
+Use MapLibre GL JS' built-in functions to visualize points as clusters.
 
 {{ <Example html={html} {...this.props} /> }}

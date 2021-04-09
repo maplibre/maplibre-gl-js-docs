@@ -50,9 +50,10 @@
         ]
     };
 
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [-65.017, -16.457],
         zoom: 5
     });
@@ -74,7 +75,7 @@
         });
 
         // add marker to map
-        new mapboxgl.Marker(el)
+        new maplibregl.Marker(el)
             .setLngLat(marker.geometry.coordinates)
             .addTo(map);
     });

@@ -1,9 +1,10 @@
 <div id="map"></div>
 
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/dark-v10',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [-103.59179687498357, 40.66995747013945],
         zoom: 3
     });
@@ -17,7 +18,7 @@
             // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
             // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
             data:
-                'https://docs.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson',
+                'https://maplibre.org/maplibre-gl-js-docs/assets/earthquakes.geojson',
             cluster: true,
             clusterMaxZoom: 14, // Max zoom to cluster points on
             clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
@@ -29,7 +30,7 @@
             source: 'earthquakes',
             filter: ['has', 'point_count'],
             paint: {
-                // Use step expressions (https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-step)
+                // Use step expressions (https://maplibre.org/maplibre-gl-js-docs/style-spec/#expressions-step)
                 // with three steps to implement three types of circles:
                 //   * Blue, 20px circles when point count is less than 100
                 //   * Yellow, 30px circles when point count is between 100 and 750
@@ -121,7 +122,7 @@
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
 
-            new mapboxgl.Popup()
+            new maplibregl.Popup()
                 .setLngLat(coordinates)
                 .setHTML(
                     'magnitude: ' + mag + '<br>Was there a tsunami?: ' + tsunami
