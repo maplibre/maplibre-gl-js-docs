@@ -15,6 +15,6 @@ prependJs:
 - "import html from './custom-marker-icons.html';"
 ---
 
-Use [`Marker`](/mapbox-gl-js/api/markers/#marker) to add custom icons to your map.
+Use [`Marker`](https://maplibre.org/maplibre-gl-js-docs/api/markers/#marker) to add custom icons to your map.
 
 {{ <Example html={html} {...this.props} /> }}
