@@ -16,6 +16,6 @@ prependJs:
 - "import html from './color-switcher.html';"
 ---
 
-Use [`setPaintProperty`](/mapbox-gl-js/api/map/#map#setpaintproperty) to change a layer's fill color.
+Use [`setPaintProperty`](https://maplibre.org/maplibre-gl-js-docs/api/map/#map#setpaintproperty) to change a layer's fill color.
 
 {{ <Example html={html} {...this.props} /> }}
