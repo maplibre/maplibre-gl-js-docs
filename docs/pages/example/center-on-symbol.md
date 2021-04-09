@@ -16,6 +16,6 @@ prependJs:
 - "import html from './center-on-symbol.html';"
 ---
 
-Use events and [`flyTo`](/mapbox-gl-js/api/map/#map#flyto) to center the map on a [`symbol`](/mapbox-gl-js/style-spec/layers/#symbol).
+Use events and [`flyTo`](https://maplibre.org/maplibre-gl-js-docs/api/map/#map#flyto) to center the map on a [`symbol`](https://maplibre.org/maplibre-gl-js-docs/style-spec/layers/#symbol).
 
 {{ <Example html={html} {...this.props} /> }}

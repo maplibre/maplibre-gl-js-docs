@@ -1,12 +1,13 @@
 <div id="map"></div>
 
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/light-v10',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [-77.04, 38.907],
         zoom: 11.15,
         attributionControl: false
     });
-    map.addControl(new mapboxgl.AttributionControl(), 'top-left');
+    map.addControl(new maplibregl.AttributionControl(), 'top-left');
 </script>
