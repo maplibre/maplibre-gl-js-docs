@@ -1,8 +1,9 @@
 <div id="map"></div>
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [-122.48383155304096, 37.82882682974591],
         zoom: 16
     });
@@ -76,7 +77,7 @@
             'source': 'lines',
             'paint': {
                 'line-width': 3,
-                // Use a get expression (https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-get)
+                // Use a get expression (https://maplibre.org/maplibre-gl-js-docs/style-spec/expressions/#get)
                 // to set the line-color to a feature property value.
                 'line-color': ['get', 'color']
             }
