@@ -1,6 +1,6 @@
 ---
 title: API Reference
-description: The Mapbox GL JS API documentation to render interactive maps from vector tiles and Mapbox styles.
+description: The MapLibre GL JS API documentation to render interactive maps from vector tiles and MapLibre styles.
 contentType: API
 navOrder: 1
 order: 1
@@ -16,19 +16,19 @@ prependJs:
 - "import Copyable from '../../components/copyable';"
 - "import urls from '../../components/urls';"
 overviewHeader:
-  title: Mapbox GL JS
+  title: MapLibre GL JS
   features:
     - "Custom map styles"
     - "Fast vector maps"
-    - "Compatible with other Mapbox tools"
-  changelogLink: "https://github.com/mapbox/mapbox-gl-js/blob/main/CHANGELOG.md"
-  ghLink: "https://github.com/mapbox/mapbox-gl-js"
+    - "Compatible with other MapLibre tools"
+  changelogLink: "https://github.com/maplibre/maplibre-gl-js/blob/main/CHANGELOG.md"
+  ghLink: "https://github.com/maplibre/maplibre-gl-js"
   installLink: "https://www.mapbox.com/install/js/"
   image: simple-map
   # version="" version is set dynamically in page-shell.js
 ---
 
-Mapbox GL JS is a JavaScript library that uses WebGL to render interactive maps from [vector tiles](https://docs.mapbox.com/help/glossary/vector-tiles/) and [Mapbox styles](/mapbox-gl-js/style-spec/). It is part of the Mapbox GL ecosystem, which includes [Mapbox Mobile](https://www.mapbox.com/mobile/), a compatible renderer written in C++ with bindings for desktop and mobile platforms.
+MapLibre GL JS is a JavaScript library that uses WebGL to render interactive maps from [vector tiles](https://docs.mapbox.com/help/glossary/vector-tiles/) and [MapLibre styles](https://maplibre.org/maplibre-gl-js-docs/style-spec/). It is part of the [MapLibre GL ecosystem](https://github.com/maplibre).
 
 
 ## Migration Note
@@ -41,7 +41,7 @@ We are now migrating this documentation from Mapbox to MapLibre. If you want to 
 {{
     <Example
         frontMatter={{
-          title: 'Mapbox GL JS map',
+          title: 'MapLibre GL JS map',
           description: ''
         }}
         location={this.props.location}
@@ -51,7 +51,7 @@ We are now migrating this documentation from Mapbox to MapLibre. If you want to 
     />
 }}
 
-To get started, you need an [access token](https://docs.mapbox.com/help/how-mapbox-works/access-tokens/) and a [style URL](https://docs.mapbox.com/help/glossary/style-url/). You can choose from one of our [professionally designed styles](https://docs.mapbox.com/api/maps/#styles) or create your own using [Mapbox Studio](https://studio.mapbox.com/).
+In the examples we use vector tiles from [MapTiler](https://maptiler.com). Get your own API key if you want to use MapTiler data in your project.
 
 {{
 <Quickstart />
@@ -62,13 +62,13 @@ To get started, you need an [access token](https://docs.mapbox.com/help/how-mapb
 
 This documentation is divided into several sections:
 
-* [**Map**](/mapbox-gl-js/api/map/). The `Map` object is the map on your page. It lets you access methods and properties for interacting with the map's style and layers, respond to events, and manipulate the user's perspective with the camera.
-* [**Properties and options**](/mapbox-gl-js/api/properties/). This section describes Mapbox GL JS's global properties and options that you might want to access while initializing your map or accessing information about its status.
-* [**Markers and controls**](/mapbox-gl-js/api/markers/). This section describes the user interface elements that you can add to your map. The items in this section exist outside of the map's `canvas` element.
-* [**Geography and geometry**](/mapbox-gl-js/api/geography/). This section includes general utilities and types that relate to working with and manipulating geographic information or geometries.
-* [**User interaction handlers**](/mapbox-gl-js/api/handlers/). The items in this section relate to the ways in which the map responds to user input.
-* [**Sources**](/mapbox-gl-js/api/sources/). This section describes the source types Mapbox GL JS can handle besides the ones described in the [Mapbox Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/).
-* [**Events**](/mapbox-gl-js/api/events/). This section describes the different types of events that Mapbox GL JS can raise.
+* [**Map**](https://maplibre.org/maplibre-gl-js-docs/api/map/). The `Map` object is the map on your page. It lets you access methods and properties for interacting with the map's style and layers, respond to events, and manipulate the user's perspective with the camera.
+* [**Properties and options**](https://maplibre.org/maplibre-gl-js-docs/api/properties/). This section describes MapLibre GL JS's global properties and options that you might want to access while initializing your map or accessing information about its status.
+* [**Markers and controls**](https://maplibre.org/maplibre-gl-js-docs/api/markers/). This section describes the user interface elements that you can add to your map. The items in this section exist outside of the map's `canvas` element.
+* [**Geography and geometry**](https://maplibre.org/maplibre-gl-js-docs/api/geography/). This section includes general utilities and types that relate to working with and manipulating geographic information or geometries.
+* [**User interaction handlers**](https://maplibre.org/maplibre-gl-js-docs/api/handlers/). The items in this section relate to the ways in which the map responds to user input.
+* [**Sources**](https://maplibre.org/maplibre-gl-js-docs/api/sources/). This section describes the source types MapLibre GL JS can handle besides the ones described in the [MapLibre Style Specification](https://maplibre.org/maplibre-gl-js-docs/style-spec/).
+* [**Events**](https://maplibre.org/maplibre-gl-js-docs/api/events/). This section describes the different types of events that MapLibre GL JS can raise.
 
 Each section describes classes or objects as well as their **properties**, **parameters**, **instance members**, and associated **events**. Many sections also include inline code examples and related resources.
 
@@ -99,7 +99,7 @@ mapboxgl.workerUrl = "${urls.js().replace('.js', '-csp-worker.js')}";
 </script>`}</Copyable>
 }}
 
-If you use the `sandbox` directive, and your [access token is restricted to certain URLs](https://docs.mapbox.com/accounts/overview/tokens/#url-restrictions), the `allow-same-origin` value is required. This allows requests to have a `Referer` header that is not `null`. See the section on [Referrer Policies](https://docs.mapbox.com/mapbox-gl-js/overview/#referrer-policies) for further information.
+If you use the `sandbox` directive, and your [access token is restricted to certain URLs](https://docs.mapbox.com/accounts/overview/tokens/#url-restrictions), the `allow-same-origin` value is required. This allows requests to have a `Referer` header that is not `null`. See the section on [Referrer Policies](https://maplibre.org/maplibre-gl-js-docs/overview/#referrer-policies) for further information.
 
 ## Referrer Policies
 

@@ -7,37 +7,22 @@ class Quickstart extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            userAccessToken: undefined,
             selectedMethod: 'cdn-select'
         };
     }
 
     mapOptions = `{
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    style: 'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL', // stylesheet location
     center: [-74.5, 40], // starting position [lng, lat]
     zoom: 9 // starting zoom
 }`;
-
-    componentDidMount() {
-        MapboxPageShell.afterUserCheck(() => {
-            const sessionToken = MapboxPageShell.getUserPublicAccessToken();
-
-            this.setState({
-                userAccessToken: sessionToken || `<your access token here>`,
-                tokenWarning: sessionToken
-                    ? ''
-                    : `// TO MAKE THE MAP APPEAR YOU MUST\n// ADD YOUR ACCESS TOKEN FROM\n// https://account.mapbox.com\n`
-            });
-        });
-    }
 
     renderCdn() {
         const cdnMapHtml = `
 <div id='map' style='width: 400px; height: 300px;'></div>
 <script>
-${this.state.tokenWarning}mapboxgl.accessToken = '${this.state.userAccessToken}';
-var map = new mapboxgl.Map(${this.mapOptions});
+var map = new maplibregl.Map(${this.mapOptions});
 </script>`;
         return (
             <div id="quickstart-cdn">
@@ -61,15 +46,14 @@ var map = new mapboxgl.Map(${this.mapOptions});
 
     renderBundler() {
         const bundlerMapJs = `
-import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
+import maplibregl from 'maplibre-gl'; // or "const maplibregl = require('maplibre-gl');"
 
-${this.state.tokenWarning}mapboxgl.accessToken = '${this.state.userAccessToken}';
-const map = new mapboxgl.Map(${this.mapOptions});`;
+const map = new maplibregl.Map(${this.mapOptions});`;
         return (
             <div id="quickstart-bundler">
                 <p>Install the npm package.</p>
                 <Copyable lang="markup">{`
-npm install --save mapbox-gl
+npm install --save maplibre-gl
 `}</Copyable>
 
                 <p>
@@ -107,7 +91,7 @@ npm install --save mapbox-gl
                     value={this.state.selectedMethod}
                     options={[
                         {
-                            label: 'Mapbox CDN',
+                            label: 'CDN',
                             value: 'cdn-select'
                         },
                         {
