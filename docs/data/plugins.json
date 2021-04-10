@@ -44,8 +44,8 @@
       "website": "https://github.com/watergis/mapbox-gl-legend",
       "description": "Adds a control that shows a legend generated from the map style."
     },
-    "mapbox-gl-opacity": {
-      "website": "https://github.com/dayjournal/mapbox-gl-opacity",
+    "maplibre-gl-opacity": {
+      "website": "https://github.com/dayjournal/maplibre-gl-opacity",
       "description": "Make multiple tile layers transparent."
     },
     "mapbox-gl-style-switcher": {
