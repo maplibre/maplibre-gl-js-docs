@@ -15,6 +15,6 @@ prependJs:
 - "import html from './flyto.html';"
 ---
 
-Use [`flyTo`](/mapbox-gl-js/api/map/#map#flyto) to smoothly interpolate between locations.
+Use [`flyTo`](https://maplibre.org/maplibre-gl-js-docs/api/map/#map#flyto) to smoothly interpolate between locations.
 
 {{ <Example html={html} {...this.props} /> }}
