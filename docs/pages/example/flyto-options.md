@@ -15,6 +15,6 @@ prependJs:
 - "import html from './flyto-options.html';"
 ---
 
-Use [`flyTo`](/mapbox-gl-js/api/map/#map#flyto) with flyOptions to slowly zoom to a location.
+Use [`flyTo`](https://maplibre.org/maplibre-gl-js-docs/api/map/#map#flyto) with flyOptions to slowly zoom to a location.
 
 {{ <Example html={html} {...this.props} /> }}
