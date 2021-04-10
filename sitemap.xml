@@ -280,9 +280,6 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-geocoder-with-flyto</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-geocoder-with-language</loc>
-    </url>
-    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-rtl-text</loc>
     </url>
     <url>
@@ -434,5 +431,8 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/types</loc>
+    </url>
+    <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-geocoder-with-language</loc>
     </url>
 </urlset>
