@@ -15,6 +15,6 @@ prependJs:
 - "import html from './geojson-layer-in-stack.html';"
 ---
 
-Use the second argument of [`addLayer`](/mapbox-gl-js/api/#map#addlayer), you can be more precise when adding a new layer below labels.
+Use the second argument of [`addLayer`]https://maplibre.org/maplibre-gl-js-docs/api/map/#map#addlayer), you can be more precise when adding a new layer below labels.
 
 {{ <Example html={html} {...this.props} /> }}
