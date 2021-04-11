@@ -2,9 +2,10 @@
 <script src="https://unpkg.com/three@0.106.2/examples/js/loaders/GLTFLoader.js"></script>
 <div id="map"></div>
 <script>
-    var map = (window.map = new mapboxgl.Map({
+    var map = (window.map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/light-v10',
+        style:
+            'https://api.maptiler.com/maps/basic/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         zoom: 18,
         center: [148.9819, -35.3981],
         pitch: 60,
@@ -16,7 +17,7 @@
     var modelAltitude = 0;
     var modelRotate = [Math.PI / 2, 0, 0];
 
-    var modelAsMercatorCoordinate = mapboxgl.MercatorCoordinate.fromLngLat(
+    var modelAsMercatorCoordinate = maplibregl.MercatorCoordinate.fromLngLat(
         modelOrigin,
         modelAltitude
     );
@@ -58,14 +59,14 @@
             // use the three.js GLTF loader to add the 3D model to the three.js scene
             var loader = new THREE.GLTFLoader();
             loader.load(
-                'https://docs.mapbox.com/mapbox-gl-js/assets/34M_17/34M_17.gltf',
+                'https://maplibre.org/maplibre-gl-js-docs/assets/34M_17/34M_17.gltf',
                 function (gltf) {
                     this.scene.add(gltf.scene);
                 }.bind(this)
             );
             this.map = map;
 
-            // use the Mapbox GL JS map canvas for three.js
+            // use the MapLibre GL JS map canvas for three.js
             this.renderer = new THREE.WebGLRenderer({
                 canvas: map.getCanvas(),
                 context: gl,
@@ -114,6 +115,6 @@
     };
 
     map.on('style.load', function () {
-        map.addLayer(customLayer, 'waterway-label');
+        map.addLayer(customLayer, 'road_area_bridge');
     });
 </script>
