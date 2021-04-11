@@ -246,30 +246,6 @@ var language = "en";
 var logoSiteTitle = "Docs";
 var all = "MapLibre";
 var nav = [
-	{
-		title: "Maps",
-		href: "https://docs.mapbox.com/#maps"
-	},
-	{
-		title: "Navigation",
-		href: "https://docs.mapbox.com/#navigation"
-	},
-	{
-		title: "Search",
-		href: "https://docs.mapbox.com/#search"
-	},
-	{
-		title: "Vision",
-		href: "https://docs.mapbox.com/#vision"
-	},
-	{
-		title: "Data",
-		href: "https://docs.mapbox.com/#data"
-	},
-	{
-		title: "Help",
-		href: "https://docs.mapbox.com/help/"
-	}
 ];
 var navigationMenuData = {
 	language: language,
