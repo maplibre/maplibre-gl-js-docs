@@ -1,15 +1,16 @@
 <div id="map"></div>
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map', // container id
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [-96, 37.8], // starting position
         zoom: 3 // starting zoom
     });
 
     // Add geolocate control to the map.
     map.addControl(
-        new mapboxgl.GeolocateControl({
+        new maplibregl.GeolocateControl({
             positionOptions: {
                 enableHighAccuracy: true
             },
