@@ -51,9 +51,10 @@
         ]
     };
 
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/light-v10',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [-77.0214, 38.897],
         zoom: 12
     });
@@ -90,7 +91,7 @@
                 // requires wrapping all the coordinates with the extend method.
                 var bounds = coordinates.reduce(function (bounds, coord) {
                     return bounds.extend(coord);
-                }, new mapboxgl.LngLatBounds(coordinates[0], coordinates[0]));
+                }, new maplibregl.LngLatBounds(coordinates[0], coordinates[0]));
 
                 map.fitBounds(bounds, {
                     padding: 20
