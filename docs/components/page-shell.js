@@ -116,6 +116,7 @@ class PageShell extends React.Component {
                             title: 'MapLibre',
                             path: 'https://maplibre.org/'
                         }}
+                        hideSearch={true}
                         location={location}
                         frontMatter={{
                             ...frontMatter,
