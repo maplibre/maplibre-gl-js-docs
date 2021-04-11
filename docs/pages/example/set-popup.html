@@ -1,6 +1,6 @@
 <style>
     #marker {
-        background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/washington-monument.jpg');
+        background-image: url('https://maplibre.org/maplibre-gl-js-docs/assets/washington-monument.jpg');
         background-size: cover;
         width: 50px;
         height: 50px;
@@ -17,15 +17,16 @@
 
 <script>
     var monument = [-77.0353, 38.8895];
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/light-v10',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: monument,
         zoom: 15
     });
 
     // create the popup
-    var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+    var popup = new maplibregl.Popup({ offset: 25 }).setText(
         'Construction on the Washington Monument began in 1848.'
     );
 
@@ -34,7 +35,7 @@
     el.id = 'marker';
 
     // create the marker
-    new mapboxgl.Marker(el)
+    new maplibregl.Marker(el)
         .setLngLat(monument)
         .setPopup(popup) // sets a popup on this marker
         .addTo(map);

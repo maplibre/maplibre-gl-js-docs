@@ -15,6 +15,6 @@ prependJs:
 - "import html from './set-popup.html';"
 ---
 
-Attach a [`Popup`](/mapbox-gl-js/api/markers/#popup) to a [Marker](/mapbox-gl-js/api/markers/#marker) and display it on click.
+Attach a [`Popup`](https://maplibre.org/maplibre-gl-js-docs/api/markers/#popup) to a [Marker](https://maplibre.org/maplibre-gl-js-docs/api/markers/#marker) and display it on click.
 
 {{ <Example html={html} {...this.props} /> }}
