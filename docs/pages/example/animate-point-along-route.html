@@ -32,9 +32,10 @@
 </div>
 
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [-96, 37.8],
         zoom: 3
     });
@@ -124,7 +125,7 @@
             'source': 'point',
             'type': 'symbol',
             'layout': {
-                'icon-image': 'airport-15',
+                'icon-image': 'airport_15',
                 'icon-rotate': ['get', 'bearing'],
                 'icon-rotation-alignment': 'map',
                 'icon-allow-overlap': true,
