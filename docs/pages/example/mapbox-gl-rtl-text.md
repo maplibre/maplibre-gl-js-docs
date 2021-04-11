@@ -19,6 +19,4 @@ Use the [mapbox-gl-rtl-text](https://github.com/mapbox/mapbox-gl-rtl-text) plugi
 
 By setting the `lazy` parameter to `true`, the plugin is only loaded when the map first encounters Hebrew or Arabic text.
 
-Mapbox Studio loads this plugin by default.
-
 {{ <Example html={html} {...this.props} /> }}
