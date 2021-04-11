@@ -465,17 +465,8 @@ function FooterLegalStrip(props) {
     className: props.className
   }, React.createElement("a", {
     className: "shell-link shell-color-gray shell-color-gray-dark-on-hover shell-mr18",
-    href: "https://www.mapbox.com/"
-  }, "\xA9 Mapbox"), React.createElement("a", {
-    className: "shell-link shell-color-gray shell-color-gray-dark-on-hover shell-mr18",
-    href: "https://www.mapbox.com/tos/"
-  }, "Terms"), React.createElement("a", {
-    className: "shell-link shell-color-gray shell-color-gray-dark-on-hover shell-mr18",
-    href: "https://www.mapbox.com/privacy/"
-  }, "Privacy"), React.createElement("a", {
-    className: "shell-link shell-color-gray shell-color-gray-dark-on-hover",
-    href: "https://www.mapbox.com/platform/security/"
-  }, "Security"));
+    href: "https://maplibre.org/"
+  }, "MapLibre"));
 }
 
 FooterLegalStrip.propTypes = {
@@ -488,7 +479,7 @@ function FooterSocialMediaStrip(props) {
   }, React.createElement("a", {
     "aria-label": "Github",
     className: "shell-color-blue shell-color-blue-dark-on-hover shell-inline-block shell-w36",
-    href: "https://github.com/mapbox"
+    href: "https://github.com/maplibre"
   }, React.createElement("svg", {
     viewBox: "0 0 1790 1790",
     className: "shell-icon shell-icon--s shell-inline"
@@ -497,7 +488,7 @@ function FooterSocialMediaStrip(props) {
   }))), React.createElement("a", {
     "aria-label": "Twitter",
     className: "shell-color-blue shell-color-blue-dark-on-hover shell-inline-block shell-w36",
-    href: "https://twitter.com/mapbox/"
+    href: "https://twitter.com/maplibre/"
   }, React.createElement("svg", {
     viewBox: "0 0 50 50",
     className: "shell-icon shell-icon--s shell-inline"
@@ -506,43 +497,7 @@ function FooterSocialMediaStrip(props) {
     "data-name": "svg"
   }, React.createElement("path", {
     d: "M15.72,45.31c18.87,0,29.19-15.63,29.19-29.19,0-.44,0-.89,0-1.33A20.87,20.87,0,0,0,50,9.49a20.48,20.48,0,0,1-5.89,1.61,10.29,10.29,0,0,0,4.51-5.67A20.56,20.56,0,0,1,42.1,7.92a10.27,10.27,0,0,0-17.48,9.36A29.12,29.12,0,0,1,3.48,6.56,10.27,10.27,0,0,0,6.66,20.25,10.18,10.18,0,0,1,2,19v.13a10.26,10.26,0,0,0,8.23,10.06,10.24,10.24,0,0,1-4.63.18,10.27,10.27,0,0,0,9.58,7.12,20.58,20.58,0,0,1-12.74,4.4A20.88,20.88,0,0,1,0,40.71a29,29,0,0,0,15.72,4.6"
-  })))), React.createElement("a", {
-    "aria-label": "LinkedIn",
-    className: "shell-color-blue shell-color-blue-dark-on-hover shell-inline-block shell-w36",
-    href: "https://www.linkedin.com/company/mapbox"
-  }, React.createElement("svg", {
-    viewBox: "0 0 24 24",
-    className: "shell-icon shell-icon--s shell-inline"
-  }, React.createElement("path", {
-    d: "M5.68801 6.31665H0.633606V23.9998H5.68801V6.31665Z"
-  }), React.createElement("path", {
-    d: "M17.6832 6.31665C14.16 6.31665 13.5504 7.60305 13.2624 8.84145V6.31665H8.21277V23.9998H13.2624V13.8959C13.2624 12.2591 14.1504 11.3711 15.7872 11.3711C17.424 11.3711 18.312 12.2399 18.312 13.8959V23.9998H23.3664V15.1582C23.3664 10.1039 22.7088 6.31665 17.6832 6.31665Z"
-  }), React.createElement("path", {
-    d: "M3.15841 5.0496C4.55281 5.0496 5.68321 3.91921 5.68321 2.5248C5.68321 1.13039 4.55281 0 3.15841 0C1.764 0 0.633606 1.13039 0.633606 2.5248C0.633606 3.91921 1.764 5.0496 3.15841 5.0496Z"
-  }))), React.createElement("a", {
-    "aria-label": "Facebook",
-    className: "shell-color-blue shell-color-blue-dark-on-hover shell-inline-block shell-w36",
-    href: "https://www.facebook.com/Mapbox"
-  }, React.createElement("svg", {
-    viewBox: "0 0 50 50",
-    className: "shell-icon shell-icon--s shell-inline"
-  }, React.createElement("g", {
-    id: "38f48a9c-03c5-4a1e-8aed-38100e1cd6a4",
-    "data-name": "svg"
-  }, React.createElement("path", {
-    id: "c5d5da0e-6004-406b-ad77-825ffd134c21",
-    "data-name": "f",
-    d: "M28.87,50V27.19h7.65l1.15-8.89h-8.8V12.63c0-2.57.71-4.33,4.41-4.33H38v-8A63.78,63.78,0,0,0,31.13,0C24.34,0,19.69,4.14,19.69,11.75V18.3H12v8.89h7.68V50Z"
-  })))), React.createElement("a", {
-    "aria-label": "Instagram",
-    className: "shell-color-blue shell-color-blue-dark-on-hover shell-inline-block shell-w36",
-    href: "https://www.instagram.com/Mapbox"
-  }, React.createElement("svg", {
-    viewBox: "0 0 24 24",
-    className: "shell-icon shell-icon--s shell-inline"
-  }, React.createElement("path", {
-    d: "M11.9968 7.9983C9.79333 7.9983 7.99515 9.79651 7.99515 12C7.99515 14.2035 9.79333 16.0017 11.9968 16.0017C14.2002 16.0017 15.9984 14.2035 15.9984 12C15.9984 9.79651 14.2002 7.9983 11.9968 7.9983ZM23.9987 12C23.9987 10.3429 24.0137 8.70077 23.9206 7.04665C23.8275 5.12536 23.3893 3.4202 21.9843 2.01525C20.5764 0.607302 18.8743 0.172008 16.953 0.0789456C15.2959 -0.0141173 13.6539 0.000892936 11.9998 0.000892936C10.3427 0.000892936 8.70061 -0.0141173 7.04652 0.0789456C5.12526 0.172008 3.42014 0.610305 2.01522 2.01525C0.607291 3.42321 0.172005 5.12536 0.0789442 7.04665C-0.014117 8.70377 0.000892919 10.3459 0.000892919 12C0.000892919 13.6541 -0.014117 15.2992 0.0789442 16.9533C0.172005 18.8746 0.610293 20.5798 2.01522 21.9847C3.42314 23.3927 5.12526 23.828 7.04652 23.9211C8.70361 24.0141 10.3457 23.9991 11.9998 23.9991C13.6569 23.9991 15.2989 24.0141 16.953 23.9211C18.8743 23.828 20.5794 23.3897 21.9843 21.9847C23.3923 20.5768 23.8275 18.8746 23.9206 16.9533C24.0167 15.2992 23.9987 13.6571 23.9987 12ZM11.9968 18.1572C8.58954 18.1572 5.83973 15.4073 5.83973 12C5.83973 8.5927 8.58954 5.84284 11.9968 5.84284C15.404 5.84284 18.1538 8.5927 18.1538 12C18.1538 15.4073 15.404 18.1572 11.9968 18.1572ZM18.406 7.02864C17.6105 7.02864 16.968 6.38621 16.968 5.59067C16.968 4.79513 17.6105 4.1527 18.406 4.1527C19.2015 4.1527 19.8439 4.79513 19.8439 5.59067C19.8442 5.77957 19.8071 5.96667 19.735 6.14124C19.6628 6.31581 19.5569 6.47442 19.4233 6.608C19.2897 6.74157 19.1311 6.84748 18.9565 6.91967C18.782 6.99185 18.5949 7.02888 18.406 7.02864Z"
-  }))));
+  })))));
 }
 
 FooterSocialMediaStrip.propTypes = {
