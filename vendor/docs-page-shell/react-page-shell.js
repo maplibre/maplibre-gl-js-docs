@@ -398,13 +398,7 @@ function PageHeader(props) {
     }, nav$$1.title);
   }))), React.createElement("div", {
     className: "shell-flex-child shell-ml6 shell-ml12-ml shell-ml18-mxl"
-  }, React.createElement("div", {
-    id: "mbx-user-menu",
-    style: {
-      width: USER_MENU_WIDTH
-    },
-    "data-user-menu-trigger": true
-  }))), React.createElement("div", {
+  })), React.createElement("div", {
     id: "page-header-content",
     className: "shell-none-mm limiter shell-py12 shell-z2 shell-relative"
   }, React.createElement("div", {
@@ -420,13 +414,7 @@ function PageHeader(props) {
     mini: true
   }), logoOverlay), React.createElement("div", {
     className: "shell-flex-child shell-flex-child--no-shrink"
-  }, React.createElement("div", {
-    id: "mbx-user-menu-mobile",
-    style: {
-      width: USER_MENU_WIDTH
-    },
-    "data-user-menu-trigger": true
-  })))), React.createElement(MobileNavigation, null));
+  }))), React.createElement(MobileNavigation, null));
 }
 
 PageHeader.propTypes = {
