@@ -1,9 +1,10 @@
 <div id="map"></div>
 
 <script>
-    var map = (window.map = new mapboxgl.Map({
+    var map = (window.map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/light-v10',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [-77.035, 38.875],
         zoom: 12
     }));

@@ -15,6 +15,6 @@ prependJs:
 - "import html from './locate-user.html';"
 ---
 
-Geolocate the user and then track their current location on the map using the [`GeolocateControl`](/mapbox-gl-js/api/markers/#geolocatecontrol).
+Geolocate the user and then track their current location on the map using the [`GeolocateControl`](https://maplibre.org/maplibre-gl-js-docs/api/markers/#geolocatecontrol).
 
 {{ <Example html={html} {...this.props} /> }}

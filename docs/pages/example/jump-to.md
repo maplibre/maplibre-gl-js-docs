@@ -15,6 +15,6 @@ prependJs:
 - "import html from './jump-to.html';"
 ---
 
-Use the [`jumpTo` function](/mapbox-gl-js/api/map/#map#jumpto) to showcase multiple locations.
+Use the [`jumpTo` function](https://maplibre.org/maplibre-gl-js-docs/api/map/#map#jumpto) to showcase multiple locations.
 
 {{ <Example html={html} {...this.props} /> }}

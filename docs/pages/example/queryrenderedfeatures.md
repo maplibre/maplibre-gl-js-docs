@@ -15,6 +15,6 @@ prependJs:
 - "import html from './queryrenderedfeatures.html';"
 ---
 
-Use [`queryRenderedFeatures`](/mapbox-gl-js/api/map/#map#queryrenderedfeatures) to show properties of hovered-over map elements.
+Use [`queryRenderedFeatures`](https://maplibre.org/maplibre-gl-js-docs/api/map/#map#queryrenderedfeatures) to show properties of hovered-over map elements.
 
 {{ <Example html={html} {...this.props} /> }}

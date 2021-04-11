@@ -6,16 +6,17 @@
 </style>
 <div id="map"></div>
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [-77.04, 38.907],
         zoom: 11.15
     });
 
     map.on('load', function () {
         map.loadImage(
-            'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+            'https://maplibre.org/maplibre-gl-js-docs/assets/custom_marker.png',
             // Add an image to use as a custom marker
             function (error, image) {
                 if (error) throw error;
@@ -143,7 +144,7 @@
         );
 
         // Create a popup, but don't add it to the map yet.
-        var popup = new mapboxgl.Popup({
+        var popup = new maplibregl.Popup({
             closeButton: false,
             closeOnClick: false
         });

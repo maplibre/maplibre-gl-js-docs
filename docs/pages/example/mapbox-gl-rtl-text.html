@@ -1,15 +1,16 @@
 <div id="map"></div>
 
 <script>
-    mapboxgl.setRTLTextPlugin(
+    maplibregl.setRTLTextPlugin(
         'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js',
         null,
         true // Lazy load the plugin
     );
 
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [44.3763, 33.2788],
         zoom: 11
     });

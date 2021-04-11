@@ -6,9 +6,10 @@
 </style>
 <div id="map"></div>
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [-100.04, 38.907],
         zoom: 3
     });
@@ -35,7 +36,7 @@
         // When a click event occurs on a feature in the states layer, open a popup at the
         // location of the click, with description HTML from its properties.
         map.on('click', 'states-layer', function (e) {
-            new mapboxgl.Popup()
+            new maplibregl.Popup()
                 .setLngLat(e.lngLat)
                 .setHTML(e.features[0].properties.name)
                 .addTo(map);

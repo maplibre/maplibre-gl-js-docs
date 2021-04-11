@@ -2,9 +2,10 @@
 
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/satellite-v9',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         zoom: 0
     });
 
@@ -13,7 +14,7 @@
         // from GL JS's use in the added source. You can use any request method (library
         // or otherwise) that you want.
         d3.json(
-            'https://docs.mapbox.com/mapbox-gl-js/assets/hike.geojson',
+            'https://maplibre.org/maplibre-gl-js-docs/assets/hike.geojson',
             function (err, data) {
                 if (err) throw err;
 

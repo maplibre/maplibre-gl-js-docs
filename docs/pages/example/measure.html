@@ -23,9 +23,10 @@
 
 <script src="https://npmcdn.com/@turf/turf@5.1.6/turf.min.js"></script>
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [2.3399, 48.8555],
         zoom: 12
     });
