@@ -244,7 +244,7 @@ MobileMenuButton.propTypes = {
 
 var language = "en";
 var logoSiteTitle = "Docs";
-var all = "All docs";
+var all = "MapLibre";
 var nav = [
 	{
 		title: "Maps",
@@ -278,7 +278,7 @@ var navigationMenuData = {
 	nav: nav
 };
 
-var ORIGIN_DOCS_PRODUCTION = 'https://docs.mapbox.com';
+var ORIGIN_DOCS_PRODUCTION = 'https://maplibre.org/maplibre-gl-js-docs';
 var DEFAULT_SOCIAL_IMAGE_URL = 'https://static-assets.mapbox.com/branding/social/social-1200x630.v1.png';
 var DEFAULT_SOCIAL_IMAGE_THUMBNAIL_URL = 'https://static-assets.mapbox.com/branding/social/social-120x120.v1.png';
 
