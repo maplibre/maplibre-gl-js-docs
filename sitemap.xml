@@ -43,10 +43,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/api/sources</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/3d-extrusion-floorplan</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/3d-buildings</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/3d-buildings</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/3d-extrusion-floorplan</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-3d-model</loc>
@@ -184,9 +184,6 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/flyto-options</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/forward-geocode-custom-data</loc>
-    </url>
-    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/fullscreen</loc>
     </url>
     <url>
@@ -259,37 +256,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-draw</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-geocoder</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-geocoder-accept-coordinates</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-geocoder-custom-render</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-geocoder-limit-region</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-geocoder-no-map</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-geocoder-outside-the-map</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-geocoder-with-flyto</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-geocoder-with-language</loc>
-    </url>
-    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-rtl-text</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-supported</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/marker-from-geocode</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/marker-popup</loc>
@@ -311,9 +281,6 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/playback-locations</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/point-from-geocoder-result</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/polygon-popup-on-click</loc>
