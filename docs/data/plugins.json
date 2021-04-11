@@ -33,8 +33,7 @@
     },
     "mapbox-gl-geocoder": {
       "website": "https://github.com/mapbox/mapbox-gl-geocoder",
-      "description": "Adds a geocoder control to Mapbox GL JS.",
-      "example": "mapbox-gl-geocoder"
+      "description": "Adds a geocoder control to Mapbox GL JS."
     },
     "mapbox-gl-infobox": {
       "website": "https://github.com/el/infobox-control",
