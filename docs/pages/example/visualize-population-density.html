@@ -1,8 +1,9 @@
 <div id="map"></div>
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map', // container id
-        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL', // stylesheet location
         center: [30.0222, -1.9596], // starting position [lng, lat]
         zoom: 7 // starting zoom
     });
@@ -11,7 +12,7 @@
         map.addSource('rwanda-provinces', {
             'type': 'geojson',
             'data':
-                'https://docs.mapbox.com/mapbox-gl-js/assets/rwanda-provinces.geojson'
+                'https://maplibre.org/maplibre-gl-js-docs/assets/rwanda-provinces.geojson'
         });
         map.addLayer({
             'id': 'rwanda-provinces',
