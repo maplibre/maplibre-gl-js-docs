@@ -5,6 +5,7 @@ description: A style's light property provides global light source for that styl
 contentType: specification
 order: 3
 layout: page
+hideFeedback: true
 products:
 - Mapbox Style Specification
 prependJs:

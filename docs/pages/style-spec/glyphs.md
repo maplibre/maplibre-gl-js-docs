@@ -5,6 +5,7 @@ description: A style's glyphs property provides a URL template for loading signe
 contentType: specification
 order: 6
 layout: page
+hideFeedback: true
 products:
 - Mapbox Style Specification
 prependJs:

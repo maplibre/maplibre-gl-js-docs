@@ -5,6 +5,7 @@ contentType: API
 navOrder: 1
 order: 1
 layout: page
+hideFeedback: true
 language:
 - JavaScript
 products:
