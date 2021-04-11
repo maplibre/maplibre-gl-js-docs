@@ -22,13 +22,13 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec</loc>
     </url>
     <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/api/events</loc>
+    </url>
+    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/api/geography</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/api/handlers</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/api/events</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/api/map</loc>
@@ -97,10 +97,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/canvas-source</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/change-building-color-based-on-zoom-level</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/center-on-symbol</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/center-on-symbol</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/change-building-color-based-on-zoom-level</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/change-case-of-labels</loc>
@@ -229,10 +229,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-rtl-text</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/marker-popup</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-supported</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-supported</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/marker-popup</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/measure</loc>
