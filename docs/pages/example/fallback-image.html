@@ -1,8 +1,9 @@
 <div id="map"></div>
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/light-v10',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [-77, 38.75],
         zoom: 5
     });
@@ -59,7 +60,7 @@
                 'icon-image': [
                     'coalesce',
                     ['image', ['concat', ['get', 'icon'], '-15']],
-                    ['image', 'marker-15']
+                    ['image', 'marker_15']
                 ],
                 'text-field': ['get', 'title'],
                 'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],

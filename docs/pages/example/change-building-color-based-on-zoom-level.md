@@ -15,6 +15,6 @@ prependJs:
 - "import html from './change-building-color-based-on-zoom-level.html';"
 ---
 
-Use the [`interpolate` expression](/mapbox-gl-js/style-spec/expressions/#interpolate) to ease-in the building layer and smoothly fade from one color to the next.
+Use the [`interpolate` expression](https://maplibre.org/maplibre-gl-js-docs/style-spec/expressions/#interpolate) to ease-in the building layer and smoothly fade from one color to the next.
 
 {{ <Example html={html} {...this.props} /> }}

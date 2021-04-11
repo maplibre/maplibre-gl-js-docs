@@ -1,9 +1,10 @@
 <div id="map"></div>
 
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/dark-v10',
+        style:
+            'https://api.maptiler.com/maps/basic/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [-120, 50],
         zoom: 2
     });
@@ -14,7 +15,7 @@
         map.addSource('earthquakes', {
             'type': 'geojson',
             'data':
-                'https://docs.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson'
+                'https://maplibre.org/maplibre-gl-js-docs/assets/earthquakes.geojson'
         });
 
         map.addLayer(
@@ -87,7 +88,7 @@
                     ]
                 }
             },
-            'waterway-label'
+            'waterway'
         );
 
         map.addLayer(
@@ -139,7 +140,7 @@
                     ]
                 }
             },
-            'waterway-label'
+            'waterway'
         );
     });
 </script>

@@ -6,9 +6,10 @@
 </style>
 <div id="map"></div>
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [-77.04, 38.907],
         zoom: 11.15
     });
@@ -136,7 +137,7 @@
             'type': 'symbol',
             'source': 'places',
             'layout': {
-                'icon-image': '{icon}-15',
+                'icon-image': '{icon}_15',
                 'icon-allow-overlap': true
             }
         });
@@ -154,7 +155,7 @@
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
 
-            new mapboxgl.Popup()
+            new maplibregl.Popup()
                 .setLngLat(coordinates)
                 .setHTML(description)
                 .addTo(map);

@@ -15,6 +15,6 @@ prependJs:
 - "import html from './popup-on-click.html';"
 ---
 
-When a user clicks a symbol, show a [`Popup`](/mapbox-gl-js/api/markers/#popup) containing more information. The symbols are from the [Maki](https://labs.mapbox.com/maki-icons/) symbol set used in the Mapbox Streets style.
+When a user clicks a symbol, show a [`Popup`](https://maplibre.org/maplibre-gl-js-docs/api/markers/#popup) containing more information.
 
 {{ <Example html={html} {...this.props} /> }}

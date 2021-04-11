@@ -15,6 +15,6 @@ prependJs:
 - "import html from './filter-markers-by-input.html';"
 ---
 
-Filter [symbols](/mapbox-gl-js/style-spec/layers/#symbol) by icon name by typing in a text input.
+Filter [symbols](https://maplibre.org/maplibre-gl-js-docs/style-spec/layers/#symbol) by icon name by typing in a text input.
 
 {{ <Example html={html} {...this.props} /> }}

@@ -15,6 +15,6 @@ prependJs:
 - "import html from './fallback-image.html';"
 ---
 
-Use a [`coalesce`](/mapbox-gl-js/style-spec/expressions/#coalesce) expression to display another image when a requested image is not available.
+Use a [`coalesce`](https://maplibre.org/maplibre-gl-js-docs/style-spec/expressions/#coalesce) expression to display another image when a requested image is not available.
 
 {{ <Example html={html} {...this.props} /> }}

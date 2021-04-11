@@ -15,6 +15,6 @@ prependJs:
 - "import html from './live-geojson.html';"
 ---
 
-Use realtime GeoJSON data streams to move a [`symbol`](/mapbox-gl-js/style-spec/layers/#symbol) on your map.
+Use realtime GeoJSON data streams to move a [`symbol`](https://maplibre.org/maplibre-gl-js-docs/style-spec/layers/#symbol) on your map.
 
 {{ <Example html={html} {...this.props} /> }}
