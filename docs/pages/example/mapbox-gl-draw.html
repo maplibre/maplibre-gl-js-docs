@@ -31,9 +31,10 @@
 </div>
 
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map', // container id
-        style: 'mapbox://styles/mapbox/satellite-v9', //hosted style id
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL', //hosted style id
         center: [-91.874, 42.76], // starting position
         zoom: 12 // starting zoom
     });
