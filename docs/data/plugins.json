@@ -10,8 +10,7 @@
     },
     "mapbox-gl-compare": {
       "website": "https://github.com/mapbox/mapbox-gl-compare",
-      "description": "Enables users to compare two maps by swiping left and right.",
-      "example": "mapbox-gl-compare"
+      "description": "Enables users to compare two maps by swiping left and right."
     },
     "mapbox-gl-controls": {
       "website": "https://github.com/bravecow/mapbox-gl-controls",
@@ -19,8 +18,7 @@
     },
     "mapbox-gl-directions": {
       "website": "https://github.com/mapbox/mapbox-gl-directions",
-      "description": "Adds a control to allow users to plot driving, walking, and cycling directions on the map.",
-      "example": "mapbox-gl-directions"
+      "description": "Adds a control to allow users to plot driving, walking, and cycling directions on the map."
     },
     "mapbox-gl-draw": {
       "website": "https://github.com/mapbox/mapbox-gl-draw",
