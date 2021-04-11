@@ -15,6 +15,6 @@ prependJs:
 - "import html from './popup.html';"
 ---
 
-Add a [`Popup`](/mapbox-gl-js/api/markers/#popup) to the map.
+Add a [`Popup`](https://maplibre.org/maplibre-gl-js-docs/api/markers/#popup) to the map.
 
 {{ <Example html={html} {...this.props} /> }}
