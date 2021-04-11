@@ -112,6 +112,10 @@ class PageShell extends React.Component {
                     location={location}
                 >
                     <PageLayout
+                        domain={{
+                            title: 'MapLibre',
+                            path: 'https://maplibre.org/'
+                        }}
                         location={location}
                         frontMatter={{
                             ...frontMatter,
