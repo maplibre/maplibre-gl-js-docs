@@ -5,6 +5,7 @@ description: A Mapbox style contains values of various types, most commonly as v
 contentType: specification
 order: 9
 layout: page
+hideFeedback: true
 products:
 - Mapbox Style Specification
 ---

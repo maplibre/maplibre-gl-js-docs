@@ -22,7 +22,7 @@ export default class Api extends React.Component {
 Api.propTypes = {
     frontMatter: PropTypes.shape({
         title: PropTypes.string.isRequired,
-        hideFeedback: PropTypes.bool
+        hideFeedback: true
     }).isRequired,
     location: PropTypes.object.isRequired,
     name: PropTypes.string // when the documentation.yml `name` doesn't match the page's title, use this prop to define the documentation.yml `name`

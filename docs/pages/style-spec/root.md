@@ -5,6 +5,7 @@ description: Root level properties of a Mapbox style specify the map's layers, t
 contentType: specification
 order: 2
 layout: page
+hideFeedback: true
 products:
 - Mapbox Style Specification
 prependJs:

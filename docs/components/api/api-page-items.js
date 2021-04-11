@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import ApiItem from './item';
 import ApiItemContents from './item-contents';
 import Github from './github';
-import Feedback from '../feedback';
 import { toHtml } from '../../util/formatters';
 
 const apiFilterItems = require('../../util/api-filter-items.js');
@@ -51,11 +50,6 @@ class Section extends React.Component {
                 <div className="mb18">
                     <ApiItem headingLevel={2} {...child} />
                 </div>
-                <Feedback
-                    section={child.name}
-                    type={`section on ${child.name}`}
-                    location={child.location}
-                />
             </React.Fragment>
         );
     }
@@ -77,7 +71,6 @@ class SingleSection extends React.Component {
                 <div className="mb18">
                     <ApiItemContents {...child} headingLevel={2} />
                 </div>
-                <Feedback location={child.location} />
             </React.Fragment>
         );
     }
