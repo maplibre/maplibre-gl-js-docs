@@ -1,8 +1,9 @@
 <div id="map"></div>
 <script>
-    var map = new mapboxgl.Map({
+    var map = new maplibregl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/light-v10',
+        style:
+            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         zoom: 12,
         center: [-87.622088, 41.878781]
     });
@@ -34,9 +35,9 @@
                     'line-width': 2
                 }
             },
-            'waterway-label'
+            'water_name_line'
         );
     });
 
-    map.addControl(new mapboxgl.NavigationControl());
+    map.addControl(new maplibregl.NavigationControl());
 </script>
