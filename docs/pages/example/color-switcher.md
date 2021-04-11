@@ -7,6 +7,7 @@ topics:
 thumbnail: color-switcher
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

@@ -6,6 +6,7 @@ topics:
 thumbnail: data-driven-lines
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

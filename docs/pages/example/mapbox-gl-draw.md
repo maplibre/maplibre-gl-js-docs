@@ -6,6 +6,7 @@ topics:
 thumbnail: mapbox-gl-draw
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

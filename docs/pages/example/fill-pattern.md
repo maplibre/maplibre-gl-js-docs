@@ -6,6 +6,7 @@ topics:
 thumbnail: fill-pattern
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

@@ -6,6 +6,7 @@ topics:
 thumbnail: check-for-support
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

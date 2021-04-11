@@ -6,6 +6,7 @@ topics:
 thumbnail: display-and-style-rich-text-labels
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

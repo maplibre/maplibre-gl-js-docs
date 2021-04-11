@@ -6,6 +6,7 @@ topics:
 thumbnail: polygon-popup-on-click
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

@@ -6,6 +6,7 @@ topics:
 thumbnail: heatmap-layer
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

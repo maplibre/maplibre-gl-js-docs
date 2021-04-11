@@ -6,6 +6,7 @@ topics:
 thumbnail: render-world-copies
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

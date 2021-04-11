@@ -6,6 +6,7 @@ topics:
 thumbnail: measure
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

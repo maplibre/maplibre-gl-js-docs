@@ -6,6 +6,7 @@ topics:
 thumbnail: popup-on-hover
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

@@ -7,6 +7,7 @@ topics:
 thumbnail: center-on-symbol
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

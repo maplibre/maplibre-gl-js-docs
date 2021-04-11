@@ -6,6 +6,7 @@ topics:
 thumbnail: offset-vanishing-point-with-padding
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:
