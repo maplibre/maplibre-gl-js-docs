@@ -15,6 +15,6 @@ prependJs:
 - "import html from './restrict-bounds.html';"
 ---
 
-Prevent a map from being panned to a different place by setting [`maxBounds`](/mapbox-gl-js/api/map/#map#setmaxbounds).
+Prevent a map from being panned to a different place by setting [`maxBounds`](https://maplibre.org/maplibre-gl-js-docs/api/map/#map#setmaxbounds).
 
 {{ <Example html={html} {...this.props} /> }}
