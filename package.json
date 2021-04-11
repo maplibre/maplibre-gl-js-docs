@@ -1,10 +1,10 @@
 {
-  "name": "mapbox-gl-js-docs",
-  "description": "Mapbox GL JS documentation website",
+  "name": "maplibre-gl-js-docs",
+  "description": "MapLibre GL JS documentation website",
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mapbox/mapbox-gl-js-docs.git"
+    "url": "git://github.com/maplibre/maplibre-gl-js-docs.git"
   },
   "engines": {
     "node": ">=12"
@@ -87,7 +87,7 @@
     "test-content": "copyeditor docs/pages/",
     "start": "NODE_OPTIONS=\"--max_old_space_size=4096\" DEPLOY_ENV=local batfish start",
     "create-image": "node docs/bin/create-image",
-    "open-changed-examples": "git diff --name-only docs/pages/example/*.html | awk '{print \"http://localhost:8080/mapbox-gl-js\" substr($0,11,length($0)-15)}' | xargs open",
+    "open-changed-examples": "git diff --name-only docs/pages/example/*.html | awk '{print \"http://localhost:8080/maplibre-gl-js-docs\" substr($0,11,length($0)-15)}' | xargs open",
     "format": "prettier --write '**/*.{js,css,html,json}'"
   },
   "husky": {
