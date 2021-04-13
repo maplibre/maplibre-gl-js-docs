@@ -566,7 +566,7 @@ function MetaTagger(props) {
   var title = titleGenerator_2(props.title, props.subsite, props.site).join(' | ');
   var suffixedTitle = "".concat(title, " | Mapbox");
   var preppedDescription = props.description.replace(/\s+/g, ' ');
-  var prodUrl = 'https://docs.mapbox.com';
+  var prodUrl = 'https://maplibre.org';
   if (props.pathname[0] !== '/') prodUrl += '/';
   prodUrl += props.pathname;
   var metaItems = [{

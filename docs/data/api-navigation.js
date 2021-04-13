@@ -8,7 +8,7 @@ const apiFilterItems = require('../util/api-filter-items.js');
 module.exports = [
     {
         title: 'Introduction',
-        path: '/mapbox-gl-js/api/',
+        path: '/maplibre-gl-js-docs/api/',
         subnav: [
             {
                 title: 'Quickstart',
@@ -34,7 +34,7 @@ module.exports = [
     },
     {
         title: 'Map',
-        path: '/mapbox-gl-js/api/map/',
+        path: '/maplibre-gl-js-docs/api/map/',
         subnav: buildSubSubNav(
             apiFilterItems('Map class')[0].members.static[0], // Hack to resolve naming documentaiton.yml conflict b/w the "Map" class and the "Map" section
             'map',
@@ -43,33 +43,33 @@ module.exports = [
     },
     {
         title: 'Properties and options',
-        path: '/mapbox-gl-js/api/properties/',
+        path: '/maplibre-gl-js-docs/api/properties/',
         subnav: buldSubNav('Properties and options')
     },
     {
         title: 'Markers and controls',
-        path: '/mapbox-gl-js/api/markers/',
+        path: '/maplibre-gl-js-docs/api/markers/',
         subnav: buldSubNav('Markers and controls')
     },
 
     {
         title: 'Geography and geometry',
-        path: '/mapbox-gl-js/api/geography/',
+        path: '/maplibre-gl-js-docs/api/geography/',
         subnav: buldSubNav('Geography and geometry')
     },
     {
         title: 'User interaction handlers',
-        path: '/mapbox-gl-js/api/handlers/',
+        path: '/maplibre-gl-js-docs/api/handlers/',
         subnav: buldSubNav('User interaction handlers')
     },
     {
         title: 'Sources',
-        path: '/mapbox-gl-js/api/sources/',
+        path: '/maplibre-gl-js-docs/api/sources/',
         subnav: buldSubNav('Sources')
     },
     {
         title: 'Events',
-        path: '/mapbox-gl-js/api/events/',
+        path: '/maplibre-gl-js-docs/api/events/',
         subnav: buldSubNav('Events')
     }
 ];
