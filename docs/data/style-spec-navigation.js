@@ -47,15 +47,15 @@ function makeSubNav(entry, section, level) {
 }
 
 export const styleSpecNavigation = [
-    { title: 'Introduction', path: '/mapbox-gl-js/style-spec/' },
+    { title: 'Introduction', path: '/maplibre-gl-js-docs/style-spec/' },
     {
         title: 'Root',
-        path: '/mapbox-gl-js/style-spec/root/',
+        path: '/maplibre-gl-js-docs/style-spec/root/',
         subnav: makeSubNav(ref.$root, null, 2)
     },
     {
         title: 'Sources',
-        path: '/mapbox-gl-js/style-spec/sources/',
+        path: '/maplibre-gl-js-docs/style-spec/sources/',
         subnav: [
             {
                 text: 'vector',
@@ -97,7 +97,7 @@ export const styleSpecNavigation = [
     },
     {
         title: 'Layers',
-        path: '/mapbox-gl-js/style-spec/layers/',
+        path: '/maplibre-gl-js-docs/style-spec/layers/',
         subnav: layerTypes.reduce((arr, type) => {
             arr.push({
                 text: type,
@@ -114,7 +114,7 @@ export const styleSpecNavigation = [
     },
     {
         title: 'Expressions',
-        path: '/mapbox-gl-js/style-spec/expressions/',
+        path: '/maplibre-gl-js-docs/style-spec/expressions/',
         subnav: groupedExpressions.reduce((arr, group) => {
             arr.push({
                 text: group.name,
@@ -136,7 +136,7 @@ export const styleSpecNavigation = [
     },
     {
         title: 'Types',
-        path: '/mapbox-gl-js/style-spec/types/',
+        path: '/maplibre-gl-js-docs/style-spec/types/',
         subnav: [
             {
                 text: 'Color',
@@ -177,25 +177,25 @@ export const styleSpecNavigation = [
     },
     {
         title: 'Sprite',
-        path: '/mapbox-gl-js/style-spec/sprite/'
+        path: '/maplibre-gl-js-docs/style-spec/sprite/'
     },
     {
         title: 'Glyphs',
-        path: '/mapbox-gl-js/style-spec/glyphs/'
+        path: '/maplibre-gl-js-docs/style-spec/glyphs/'
     },
     {
         title: 'Transition',
-        path: '/mapbox-gl-js/style-spec/transition/',
+        path: '/maplibre-gl-js-docs/style-spec/transition/',
         subnav: makeSubNav(ref.transition, null, 2)
     },
     {
         title: 'Light',
-        path: '/mapbox-gl-js/style-spec/light/',
+        path: '/maplibre-gl-js-docs/style-spec/light/',
         subnav: makeSubNav(ref.light, null, 2)
     },
     {
         title: 'Other',
-        path: '/mapbox-gl-js/style-spec/other/',
+        path: '/maplibre-gl-js-docs/style-spec/other/',
         tag: 'legacy',
         subnav: [
             {

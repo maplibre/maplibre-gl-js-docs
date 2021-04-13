@@ -3,7 +3,7 @@
 exports[`api-navigation 1`] = `
 Array [
   Object {
-    "path": "/mapbox-gl-js/api/",
+    "path": "/maplibre-gl-js-docs/api/",
     "subnav": Array [
       Object {
         "path": "quickstart",
@@ -29,7 +29,7 @@ Array [
     "title": "Introduction",
   },
   Object {
-    "path": "/mapbox-gl-js/api/map/",
+    "path": "/maplibre-gl-js-docs/api/map/",
     "subnav": Array [
       Object {
         "level": 2,
@@ -60,7 +60,7 @@ Array [
     "title": "Map",
   },
   Object {
-    "path": "/mapbox-gl-js/api/properties/",
+    "path": "/maplibre-gl-js-docs/api/properties/",
     "subnav": Array [
       Object {
         "level": 2,
@@ -336,7 +336,7 @@ Array [
     "title": "Properties and options",
   },
   Object {
-    "path": "/mapbox-gl-js/api/markers/",
+    "path": "/maplibre-gl-js-docs/api/markers/",
     "subnav": Array [
       Object {
         "level": 2,
@@ -522,7 +522,7 @@ Array [
     "title": "Markers and controls",
   },
   Object {
-    "path": "/mapbox-gl-js/api/geography/",
+    "path": "/maplibre-gl-js-docs/api/geography/",
     "subnav": Array [
       Object {
         "level": 2,
@@ -668,7 +668,7 @@ Array [
     "title": "Geography and geometry",
   },
   Object {
-    "path": "/mapbox-gl-js/api/handlers/",
+    "path": "/maplibre-gl-js-docs/api/handlers/",
     "subnav": Array [
       Object {
         "level": 2,
@@ -754,7 +754,7 @@ Array [
     "title": "User interaction handlers",
   },
   Object {
-    "path": "/mapbox-gl-js/api/sources/",
+    "path": "/maplibre-gl-js-docs/api/sources/",
     "subnav": Array [
       Object {
         "level": 2,
@@ -845,7 +845,7 @@ Array [
     "title": "Sources",
   },
   Object {
-    "path": "/mapbox-gl-js/api/events/",
+    "path": "/maplibre-gl-js-docs/api/events/",
     "subnav": Array [
       Object {
         "level": 2,

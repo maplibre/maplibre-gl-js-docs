@@ -3,7 +3,7 @@ const GithubSlugger = require('github-slugger');
 
 function linker(namespace) {
     const page = findPage(namespace);
-    const path = page ? `/mapbox-gl-js/api/${page}/` : '';
+    const path = page ? `/maplibre-gl-js-docs/api/${page}/` : '';
     if (namespace.indexOf('.') > -1) {
         return `${path}#${namespace.toLowerCase()}`;
     } else {
