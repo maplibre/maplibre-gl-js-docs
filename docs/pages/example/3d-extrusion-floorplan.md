@@ -6,6 +6,7 @@ topics:
 thumbnail: 3d-extrusion-floorplan
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

@@ -6,6 +6,7 @@ topics:
 thumbnail: satellite-map
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

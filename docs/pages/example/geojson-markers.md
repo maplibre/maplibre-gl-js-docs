@@ -6,6 +6,7 @@ topics:
 thumbnail: geojson-markers
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

@@ -6,6 +6,7 @@ topics:
 thumbnail: custom-marker-icons
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

@@ -6,6 +6,7 @@ topics:
 thumbnail: mapbox-gl-rtl-text
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

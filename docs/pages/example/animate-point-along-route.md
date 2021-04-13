@@ -6,6 +6,7 @@ topics:
 thumbnail: animate-point-along-route
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

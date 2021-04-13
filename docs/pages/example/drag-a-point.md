@@ -6,6 +6,7 @@ topics:
 thumbnail: drag-a-point
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

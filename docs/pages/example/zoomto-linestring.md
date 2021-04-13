@@ -6,6 +6,7 @@ topics:
 thumbnail: zoomto-linestring
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

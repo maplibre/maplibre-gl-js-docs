@@ -7,6 +7,7 @@ topics:
 thumbnail: add-image-generated
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

@@ -6,6 +6,7 @@ topics:
 thumbnail: third-party
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

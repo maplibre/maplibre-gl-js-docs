@@ -6,6 +6,7 @@ topics:
 thumbnail: vector-source
 contentType: example
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:
