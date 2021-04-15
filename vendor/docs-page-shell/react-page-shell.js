@@ -165,17 +165,11 @@ function PageHelmet() {
     name: "theme-color",
     content: "#ffffff"
   }), React.createElement("meta", {
-    name: "p:domain_verify",
-    content: "57838af58c8045c2c024bc2f9d1577f9"
-  }), React.createElement("meta", {
-    name: "google-site-verification",
-    content: "umPiCFUc_EX8CJ7xWQDPgQwApDxNi59w6riFZPNZj4w"
-  }), React.createElement("meta", {
     name: "twitter:site",
-    content: "@Mapbox"
+    content: "@MapLibre"
   }), React.createElement("meta", {
     property: "og:site_name",
-    content: "Mapbox"
+    content: "MapLibre"
   }));
 }
 
@@ -564,7 +558,7 @@ var removeMarkdown = function (md, options) {
 
 function MetaTagger(props) {
   var title = titleGenerator_2(props.title, props.subsite, props.site).join(' | ');
-  var suffixedTitle = "".concat(title, " | Mapbox");
+  var suffixedTitle = "".concat(title, " | MapLibre");
   var preppedDescription = props.description.replace(/\s+/g, ' ');
   var prodUrl = 'https://maplibre.org';
   if (props.pathname[0] !== '/') prodUrl += '/';
@@ -706,7 +700,7 @@ MetaTagger.propTypes = {
 MetaTagger.defaultProps = {
   imageUrl: DEFAULT_SOCIAL_IMAGE_URL,
   imageUrlThumbnail: DEFAULT_SOCIAL_IMAGE_THUMBNAIL_URL,
-  imageAlt: 'Mapbox',
+  imageAlt: 'MapLibre',
   largeImage: true
 };
 
