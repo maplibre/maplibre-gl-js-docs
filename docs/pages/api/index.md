@@ -24,7 +24,6 @@ overviewHeader:
     - "Compatible with other MapLibre tools"
   changelogLink: "https://github.com/maplibre/maplibre-gl-js/blob/main/CHANGELOG.md"
   ghLink: "https://github.com/maplibre/maplibre-gl-js"
-  installLink: "https://www.mapbox.com/install/js/"
   image: simple-map
   # version="" version is set dynamically in page-shell.js
 ---
