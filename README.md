@@ -1,6 +1,6 @@
 # MapLibre GL JS Documentation
 
-The source code for the website that hosts [API documentation](#writing-api-documentation) and [examples](#writing-examples) for [MapLibre GL JS](https://github.com/maplibre/maplibre-gl-js).
+The source code for https://maplibre.org/maplibre-gl-js-docs/, the website that hosts [API documentation](#writing-api-documentation) and [examples](#writing-examples) for [MapLibre GL JS](https://github.com/maplibre/maplibre-gl-js).
 
 ## Migration Note
 
@@ -87,14 +87,3 @@ so make sure to have a working minified build in your local copy of the `maplibr
 When a new GL JS release goes out, the release manager will make a PR that updates this repo's `maplibre-gl-js` submodule to point to the new release. When updating the submodule, you may need to run `npm test -- -u` to update Jest snapshots related to the sidebar navigation.
 
 To update or add a new example, PR the relevant changes to this repo. The example will be live once the PR is merged.  If this example uses a version of GL JS that isn't yet released, the PR should not be merged until the release is out.
-
-## Deploy to GitHub Pages
-
-After building the documentation with ```npm run build``` the static site files are located in ```_site```. 
-
-Publish the build output to GitHub Pages at [https://maplibre.github.io/maplibre-gl-js-docs/](https://maplibre.github.io/maplibre-gl-js-docs/) with:
-
-```bash
-npm install -g gh-pages
-npm run deploy
-```
