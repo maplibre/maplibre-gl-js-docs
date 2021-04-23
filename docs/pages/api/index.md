@@ -119,7 +119,7 @@ Note too that if the CSS isn't available by the first render, as soon as the CSS
 
 The dependencies for MapLibre GL JS (`.js` & `.css`) are distributed via [UNPKG.com](https://unpkg.com).  UNPKG can distribute a fixed version, a [semver range](https://semver.org/), a tag, or omit the version/tag entirely to use the `latest` tag.
 
-You can view a listing of all the files in the MapLibre GL JS package by appending a `/` at the end of the MapLibre slug.  This is useful to review other revisions or older `CHANGELOG`'s.
+You can view a listing of all the files in the MapLibre GL JS package by appending a `/` at the end of the MapLibre slug.  This is useful to review other revisions or older `CHANGELOG`s.
 
 * [https://unpkg.com/maplibre-gl/](https://unpkg.com/maplibre-gl/)
 
