@@ -114,3 +114,22 @@ The CSS referenced in the Quickstart is used to style DOM elements created by Ma
 Including it with a `<link>` in the head of the document via the Mapbox CDN is the simplest and easiest way to provide the CSS, but it is also bundled in the Mapbox module, meaning that if you have a bundler that can handle CSS, you can import the CSS from `mapbox-gl/dist/mapbox-gl.css`.
 
 Note too that if the CSS isn't available by the first render, as soon as the CSS is provided, the DOM elements that depend on this CSS should recover.
+
+## Dependencies
+
+The dependencies for MapLibre GL JS (`.js` & `.css`) are distributed via [UNPKG.com](https://unpkg.com).  UNPKG can distribute a fixed version, a [semver range](https://semver.org/), a tag, or omit the version/tag entirely to use the `latest` tag.
+
+You can view a listing of all the files in the MapLibre GL JS package by appending a `/` at the end of the MapLibre slug.  This is useful to review other revisions or older `CHANGELOG`s.
+
+* [https://unpkg.com/maplibre-gl/](https://unpkg.com/maplibre-gl/)
+
+*Examples*
+
+| Use Case  | `.js` | `.css` |
+| :------- | :---: | :----: |
+| `latest` | [https://unpkg.com/maplibre-gl/dist/maplibre-gl.js](https://unpkg.com/maplibre-gl/dist/maplibre-gl.js) | [https://unpkg.com/maplibre-gl/dist/maplibre-gl.css](https://unpkg.com/maplibre-gl/dist/maplibre-gl.css) |
+| Use a fixed version `1.14.0` | [https://unpkg.com/maplibre-gl@1.14.0/dist/maplibre-gl.js](https://unpkg.com/maplibre-gl@1.14.0/dist/maplibre-gl.js) | [https://unpkg.com/maplibre-gl@1.14.0/dist/maplibre-gl.css](https://unpkg.com/maplibre-gl@1.14.0/dist/maplibre-gl.css) |
+| Use at least `1.14.x` | [https://unpkg.com/maplibre-gl@^1.14/dist/maplibre-gl.js](https://unpkg.com/maplibre-gl@^1.14/dist/maplibre-gl.js) | [https://unpkg.com/maplibre-gl@^1.14/dist/maplibre-gl.css](https://unpkg.com/maplibre-gl@^1.14/dist/maplibre-gl.css) |
+| Return metadata as JSON on `latest` to review `lastModified` & `size`. | [https://unpkg.com/maplibre-gl/dist/maplibre-gl.js?meta](https://unpkg.com/maplibre-gl/dist/maplibre-gl.js?meta) | [https://unpkg.com/maplibre-gl/dist/maplibre-gl.css?meta](https://unpkg.com/maplibre-gl/dist/maplibre-gl.css?meta)  |
+| `CHANGELOG.md` for `latest` | [https://unpkg.com/browse/maplibre-gl/CHANGELOG.md](https://unpkg.com/browse/maplibre-gl/CHANGELOG.md) |  |
+| `LICENSE.txt` for `latest` | [https://unpkg.com/browse/maplibre-gl/LICENSE.txt](https://unpkg.com/browse/maplibre-gl/LICENSE.txt) |  |
