@@ -1,4 +1,4 @@
-import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';
+import ref from '@maplibre/maplibre-gl-style-spec/reference/latest';
 
 // helper function to:
 // combine properties, prepare them, and sort them for the <Items /> component
