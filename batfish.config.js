@@ -50,7 +50,7 @@ module.exports = () => {
                 use: 'raw-loader'
             },
             {
-                test: /@mapbox\/mapbox-gl-style-spec\/expression\/definitions\/index.js$/,
+                test: /@maplibre\/maplibre-gl-style-spec\/expression\/definitions\/index.js$/,
                 sideEffects: true
             }
         ],
@@ -90,7 +90,7 @@ module.exports = () => {
         devBrowserslist: false,
         babelInclude: [
             'documentation',
-            '@mapbox/mapbox-gl-style-spec',
+            '@maplibre/maplibre-gl-style-spec',
             'fuse.js'
         ],
         webpackStaticIgnore: [/util\/util\.js$/]

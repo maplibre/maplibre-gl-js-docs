@@ -30,7 +30,7 @@ import { devDependencies } from '../../package.json';
 import slug from 'slugg';
 
 const styleSpecVersion = devDependencies[
-    '@mapbox/mapbox-gl-style-spec'
+    '@maplibre/maplibre-gl-style-spec'
 ].replace('^', '');
 
 const redirectStyleSpec = require('../util/style-spec-redirect');
