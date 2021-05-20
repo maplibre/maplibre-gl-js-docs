@@ -1,7 +1,7 @@
 ---
 title: Types
 id: types
-description: A Mapbox style contains values of various types, most commonly as values for the style properties of a layer.
+description: A MapLibre style contains values of various types, most commonly as values for the style properties of a layer.
 contentType: specification
 order: 9
 layout: page
@@ -10,7 +10,7 @@ products:
 - Mapbox Style Specification
 ---
 
-A Mapbox style contains values of various types, most commonly as values for the style properties of a layer.
+A MapLibre style contains values of various types, most commonly as values for the style properties of a layer.
 
 ## Color
 
@@ -57,7 +57,7 @@ The `resolvedImage` type is an image (e.g., an icon or pattern) which is used in
 
 ## String
 
-A string is text. In Mapbox styles, strings are in quotes.
+A string is text. In MapLibre styles, strings are in quotes.
 
 ```json
 {

@@ -10,11 +10,10 @@ products:
 - Mapbox Style Specification
 prependJs:
     - "import ExpressionReference from '../../components/style-spec/expression-reference';"
-    - "import RelatedPage from '@mapbox/dr-ui/related-page';"
 
 ---
 
-The value for any [layout property](/maplibre-gl-js-docs/style-spec/layers/#layout-property), [paint property](/maplibre-gl-js-docs/style-spec/layers/#paint-property), or [filter](/maplibre-gl-js-docs/style-spec/layers/#filter) may be specified as an _expression_. An expression defines a formula for computing the value of the property using the _operators_ described below. The set of expression operators provided by Mapbox GL includes:
+The value for any [layout property](/maplibre-gl-js-docs/style-spec/layers/#layout-property), [paint property](/maplibre-gl-js-docs/style-spec/layers/#paint-property), or [filter](/maplibre-gl-js-docs/style-spec/layers/#filter) may be specified as an _expression_. An expression defines a formula for computing the value of the property using the _operators_ described below. The set of expression operators provided by MapLibre GL includes:
 
 - Mathematical operators for performing arithmetic and other operations on numeric values
 - Logical operators for manipulating boolean values and making conditional decisions
@@ -27,10 +26,6 @@ Expressions are represented as JSON arrays. The first element of an expression a
 ```json
 [expression_name, argument_0, argument_1, ...]
 ```
-
-{{<RelatedPage contentType="tutorial" title="Get started with Mapbox GL JS expressions" url="https://docs.mapbox.com/help/tutorials/mapbox-gl-js-expressions/">}}
-Learn how to write expressions in Mapbox GL JS to style custom data based on a data property and by zoom level.
-{{</RelatedPage>}}
 
 ## Data expressions
 

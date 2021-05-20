@@ -37,7 +37,7 @@ Any transitionable layer property, marked by {{<Icon
 ```
 <!--
 START GENERATED CONTENT:
-Content in this section is generated directly using the Mapbox Style
+Content in this section is generated directly using the MapLibre Style
 Specification. To update any content displayed in this section, make edits to:
 https://github.com/maplibre/maplibre-gl-js/blob/main/src/style-spec/reference/v8.json.
 -->
