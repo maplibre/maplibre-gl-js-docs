@@ -75,7 +75,7 @@ A vector tile source. Tiles must be in [Mapbox Vector Tile format](https://docs.
 
 <!--
 START GENERATED CONTENT:
-Content in this section is generated directly using the Mapbox Style
+Content in this section is generated directly using the MapLibre Style
 Specification. To update any content displayed in this section, make edits to:
 https://github.com/maplibre/maplibre-gl-js/blob/main/src/style-spec/reference/v8.json.
 -->
@@ -112,7 +112,7 @@ A raster tile source. For raster tiles hosted by Mapbox, the `"url"` value shoul
 
 <!--
 START GENERATED CONTENT:
-Content in this section is generated directly using the Mapbox Style
+Content in this section is generated directly using the MapLibre Style
 Specification. To update any content displayed in this section, make edits to:
 https://github.com/maplibre/maplibre-gl-js/blob/main/src/style-spec/reference/v8.json.
 -->
@@ -147,7 +147,7 @@ A raster DEM source. Only supports [Mapbox Terrain RGB](https://blog.mapbox.com/
 
 <!--
 START GENERATED CONTENT:
-Content in this section is generated directly using the Mapbox Style
+Content in this section is generated directly using the MapLibre Style
 Specification. To update any content displayed in this section, make edits to:
 https://github.com/maplibre/maplibre-gl-js/blob/main/src/style-spec/reference/v8.json.
 -->
@@ -197,7 +197,7 @@ This example of a GeoJSON source refers to an external GeoJSON document via its 
 ```
 <!--
 START GENERATED CONTENT:
-Content in this section is generated directly using the Mapbox Style
+Content in this section is generated directly using the MapLibre Style
 Specification. To update any content displayed in this section, make edits to:
 https://github.com/maplibre/maplibre-gl-js/blob/main/src/style-spec/reference/v8.json.
 -->
@@ -249,7 +249,7 @@ The `"coordinates"` array contains `[longitude, latitude]` pairs for the image c
 ```
 <!--
 START GENERATED CONTENT:
-Content in this section is generated directly using the Mapbox Style
+Content in this section is generated directly using the MapLibre Style
 Specification. To update any content displayed in this section, make edits to:
 https://github.com/maplibre/maplibre-gl-js/blob/main/src/style-spec/reference/v8.json.
 -->
@@ -295,7 +295,7 @@ The `"coordinates"` array contains `[longitude, latitude]` pairs for the video c
 
 <!--
 START GENERATED CONTENT:
-Content in this section is generated directly using the Mapbox Style
+Content in this section is generated directly using the MapLibre Style
 Specification. To update any content displayed in this section, make edits to:
 https://github.com/maplibre/maplibre-gl-js/blob/main/src/style-spec/reference/v8.json.
 -->
