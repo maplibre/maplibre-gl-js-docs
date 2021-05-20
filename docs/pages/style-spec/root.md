@@ -1,7 +1,7 @@
 ---
 title: Root
 id: root
-description: Root level properties of a Mapbox style specify the map's layers, tile sources and other resources, and default values for the initial camera position when not specified elsewhere.
+description: Root level properties of a MapLibre style specify the map's layers, tile sources and other resources, and default values for the initial camera position when not specified elsewhere.
 contentType: specification
 order: 2
 layout: page
@@ -13,7 +13,7 @@ prependJs:
     - "import ref from '@maplibre/maplibre-gl-style-spec/reference/latest';"
 ---
 
-Root level properties of a Mapbox style specify the map's layers, tile sources and other resources, and default values for the initial camera position when not specified elsewhere.
+Root level properties of a MapLibre style specify the map's layers, tile sources and other resources, and default values for the initial camera position when not specified elsewhere.
 
 ```json
 {
@@ -28,7 +28,7 @@ Root level properties of a Mapbox style specify the map's layers, tile sources a
 
 <!--
 START GENERATED CONTENT:
-Content in this section is generated directly using the Mapbox Style
+Content in this section is generated directly using the MapLibre Style
 Specification. To update any content displayed in this section, make edits to:
 https://github.com/maplibre/maplibre-gl-js/blob/main/src/style-spec/reference/v8.json.
 -->
