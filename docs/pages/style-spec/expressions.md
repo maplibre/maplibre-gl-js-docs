@@ -10,7 +10,6 @@ products:
 - Mapbox Style Specification
 prependJs:
     - "import ExpressionReference from '../../components/style-spec/expression-reference';"
-    - "import RelatedPage from '@mapbox/dr-ui/related-page';"
 
 ---
 
