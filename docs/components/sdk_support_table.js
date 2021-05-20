@@ -26,7 +26,7 @@ export default class SDKSupportTable extends React.Component {
                             <th style={{ borderTopLeftRadius: '4px' }}>
                                 SDK Support
                             </th>
-                            <td>Mapbox GL JS</td>
+                            <td>MapLibre GL JS</td>
                             <td>Android SDK</td>
                             <td>iOS SDK</td>
                             <td style={{ borderTopRightRadius: '4px' }}>
