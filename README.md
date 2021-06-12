@@ -13,6 +13,12 @@ We are now migrating this documentation from Mapbox to MapLibre. If you want to 
 
 If you're not sure if your Node and NPM versions are up to date, run `nvm use` before installing dependencies. If you don't have NVM installed, you can [find installation instructions here](https://github.com/nvm-sh/nvm/blob/master/README.md#installing-and-updating).
 
+## Build against a local copy of `maplibre-gl-js`
+
+There should be a local copy of the files `maplibre-gl.js` and `maplibre-gl.css` in `../../../maplibre-gl-js/dist/`.  
+
+This repository contains the symlink [`dist -> ../../../maplibre-gl-js/dist/`](https://github.com/maplibre/maplibre-gl-js-docs/blob/main/docs/pages/dist). Usually this is a link to [maplibre-gl-js](https://github.com/maplibre/maplibre-gl-js) repository. Actually, it should point to `../../maplibre-gl-js/dist` as we expect [maplibre-gl-js](https://github.com/maplibre/maplibre-gl-js) repository to be a sibling of this repo.
+
 ## Setting up the Development Environment
 
 After cloning this repository, run:
