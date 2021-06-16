@@ -8,8 +8,8 @@
       "website": "https://github.com/mapbox/mapbox-gl-boundaries",
       "description": "Enables users to show/hide disputed borders."
     },
-    "mapbox-gl-compare": {
-      "website": "https://github.com/mapbox/mapbox-gl-compare",
+    "maplibre-gl-compare": {
+      "website": "https://github.com/maplibre/maplibre-gl-compare",
       "description": "Enables users to compare two maps by swiping left and right."
     },
     "mapbox-gl-controls": {
