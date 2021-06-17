@@ -14,7 +14,7 @@
         map.addSource('mapillary', {
             'type': 'vector',
             'tiles': [
-                'https://d25uarhxywzl1j.cloudfront.net/v0.1/{z}/{x}/{y}.mvt'
+                'https://tiles.mapillary.com/maps/vtp/mly1_public/2/{z}/{x}/{y}'
             ],
             'minzoom': 6,
             'maxzoom': 14
@@ -24,7 +24,7 @@
                 'id': 'mapillary',
                 'type': 'line',
                 'source': 'mapillary',
-                'source-layer': 'mapillary-sequences',
+                'source-layer': 'sequence',
                 'layout': {
                     'line-cap': 'round',
                     'line-join': 'round'
