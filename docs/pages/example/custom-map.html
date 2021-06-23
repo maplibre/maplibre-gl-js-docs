@@ -1,18 +1,14 @@
 <div id="map"></div>
 <script>
-    // http://localhost:8080/maplibre-gl-js-docs/demotiles/style.json
     maplibregl.addProtocol('custom', (params, callback) => {
-        //console.log(`http://localhost:8080/${params.url.split("://")[1]}`);
-        fetch(`http://localhost:8080/${params.url.split('://')[1]}`)
+        fetch(`../../${params.url.split('://')[1]}`)
             .then((t) => {
                 if (t.status == 200) {
                     t.arrayBuffer().then((arr) => {
                         callback(null, arr, null, null);
-                        //console.log('status 200');
                     });
                 } else {
                     callback(new Error(`Tile fetch error: ${t.statusText}`));
-                    //console.log('error')
                 }
             })
             .catch((e) => {
@@ -23,7 +19,7 @@
 
     var map = new maplibregl.Map({
         container: 'map', // container id
-        style: 'custom://maplibre-gl-js-docs/demotiles/style.json', // style URL
+        style: '../../demotiles/custom_style.json', // style URL
         center: [0, 0], // starting position [lng, lat]
         zoom: 1 // starting zoom
     });
