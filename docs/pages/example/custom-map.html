@@ -1,20 +1,22 @@
 <div id="map"></div>
 <script>
-    maplibregl.addProtocol('custom', (params, callback) => {
-        fetch(`../../${params.url.split('://')[1]}`)
-            .then((t) => {
+    maplibregl.addProtocol('custom', function (params, callback) {
+        fetch('../../' + params.url.split('://')[1])
+            .then(function (t) {
                 if (t.status == 200) {
-                    t.arrayBuffer().then((arr) => {
+                    t.arrayBuffer().then(function (arr) {
                         callback(null, arr, null, null);
                     });
                 } else {
-                    callback(new Error(`Tile fetch error: ${t.statusText}`));
+                    callback(new Error('Tile fetch error: ' + t.statusText));
                 }
             })
-            .catch((e) => {
+            ['catch'](function (e) {
                 callback(new Error(e));
             });
-        return { cancel: () => {} };
+        return {
+            cancel: function cancel() {}
+        };
     });
 
     var map = new maplibregl.Map({
