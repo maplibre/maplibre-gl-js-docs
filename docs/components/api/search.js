@@ -36,13 +36,6 @@ export default class ApiSearch extends React.Component {
     // perform these functions when the users selects a menu item
     handleResultClick = (selection) => {
         try {
-            // track click so we can guage usage of this feature
-            if (window && window.analytics) {
-                analytics.track('Searched GL JS API Reference', {
-                    query: this.state.filter,
-                    clicked: selection.path
-                });
-            }
             // open selection in current window
             routeTo(selection.path);
             // clear search
