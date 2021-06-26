@@ -52,7 +52,6 @@ ${html}
 <title>${this.props.frontMatter.title}</title>
 ${viewport}
 <script src='https://js.sentry-cdn.com/b4e18cb1943f46289f67ca6a771bd341.min.js' crossorigin="anonymous"></script>
-<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-instrumentile/v3.0.0/mapbox-gl-instrumentile.js' crossorigin="anonymous"></script>
 
 <script src='${urls.js({ local: true })}'></script>
 <link href='${urls.css({ local: true })}' rel='stylesheet' />
@@ -63,15 +62,6 @@ ${viewport}
 <body>
 ${html}
 </body>
-<script>
-if (window.map instanceof maplibregl.Map) {
-    var i = new instrumentile(map, {
-        token: '${MapboxPageShell.getMapboxAccessToken()}',
-        api: 'https://api.tiles.mapbox.com',
-        source: 'docs-examples'
-    });
-}
-</script>
 </html>`;
     }
 
