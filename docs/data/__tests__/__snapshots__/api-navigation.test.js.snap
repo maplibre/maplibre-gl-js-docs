@@ -812,11 +812,6 @@ Array [
         "text": "Instance members",
       },
       Object {
-        "level": 3,
-        "slug": "imagesource-related",
-        "text": "Related",
-      },
-      Object {
         "level": 2,
         "slug": "canvassource",
         "text": "CanvasSource",
