@@ -1,0 +1,28 @@
+<div id="map"></div>
+<script>
+    maplibregl.addProtocol('custom', function (params, callback) {
+        fetch('../../' + params.url.split('://')[1])
+            .then(function (t) {
+                if (t.status === 200) {
+                    t.arrayBuffer().then(function (arr) {
+                        callback(null, arr, null, null);
+                    });
+                } else {
+                    callback(new Error('Tile fetch error: ' + t.statusText));
+                }
+            })
+            ['catch'](function (e) {
+                callback(new Error(e));
+            });
+        return {
+            cancel: function cancel() {}
+        };
+    });
+
+    var map = new maplibregl.Map({
+        container: 'map', // container id
+        style: '../../demotiles/custom_style.json', // style URL
+        center: [0, 0], // starting position [lng, lat]
+        zoom: 1 // starting zoom
+    });
+</script>
