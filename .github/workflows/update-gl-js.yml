@@ -1,7 +1,9 @@
 name: update-gl-js
 
 on: 
-  workflow_dispatch
+  workflow_dispatch:
+  repository_dispatch:
+    types: [release-maplibre-gl-js]
 
 jobs:
   update-gl-js:
