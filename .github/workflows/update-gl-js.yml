@@ -19,9 +19,7 @@ jobs:
     - name: Prepare
       id: prepare
       run: |
-        $LatestVersionTag=$(npm show maplibre-gl version)
-        echo "Latest version tag=$LatestVersionTag"
-        echo "::set-output name=version_tag::$LatestVersionTag"
+        echo "::set-output name=version_tag::$(npm show maplibre-gl version)"
     - run: git checkout -b v${{ steps.prepare.outputs.version_tag }}
     - run: |
         git submodule update --init
