@@ -1,0 +1,27 @@
+name: update-gl-js
+
+on: 
+  workflow_dispatch
+
+jobs:
+  update-gl-js:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - run: git config --global user.email "mail@example.com"
+    - run: git config --global user.name "GitHub Action"
+    - run: git checkout -b v$(npm show maplibre-gl version)
+    - run: |
+        cd maplibre-gl-js
+        git pull
+        cd ..
+        git add -u
+        git commit -m "Update MapLibre GL JS to v$(npm show maplibre-gl version)"
+    - run: git push --set-upstream origin v$(npm show maplibre-gl version)
+    - run: gh pr create --base main --fill
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
