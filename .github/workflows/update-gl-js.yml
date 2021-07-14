@@ -17,6 +17,7 @@ jobs:
     - run: git checkout -b v$(npm show maplibre-gl version)
     - run: |
         cd maplibre-gl-js
+        git checkout main
         git pull
         cd ..
         git add -u
