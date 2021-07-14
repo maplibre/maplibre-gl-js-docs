@@ -14,14 +14,17 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 14.x
-    - run: git config --global user.email "mail@example.com"
-    - run: git config --global user.name "GitHub Action"
+
     - name: Prepare
       id: prepare
       run: |
         echo "::set-output name=version_tag::$(npm show maplibre-gl version)"
-    - run: git checkout -b v${{ steps.prepare.outputs.version_tag }}
-    - run: |
+
+    - name: Update submodule, commit, push
+      run: |
+        git config --global user.email "mail@example.com"
+        git config --global user.name "GitHub Action"
+        git checkout -b v${{ steps.prepare.outputs.version_tag }}
         git submodule update --init
         cd maplibre-gl-js
         git checkout main
@@ -29,7 +32,9 @@ jobs:
         cd ..
         git add -u
         git commit -m "Update MapLibre GL JS to v${{ steps.prepare.outputs.version_tag }}"
-    - run: git push --set-upstream origin v${{ steps.prepare.outputs.version_tag }}
-    - run: gh pr create --base main --fill
-      env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        git push --set-upstream origin v${{ steps.prepare.outputs.version_tag }}
+
+    - name: Create pull request
+      run: gh pr create --base main --fill
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
