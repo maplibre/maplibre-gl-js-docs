@@ -16,6 +16,7 @@ jobs:
     - run: git config --global user.name "GitHub Action"
     - run: git checkout -b v$(npm show maplibre-gl version)
     - run: |
+        git submodule update --init
         cd maplibre-gl-js
         git checkout main
         git pull
