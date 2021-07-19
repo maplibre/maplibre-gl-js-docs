@@ -7,10 +7,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/api</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/examples</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/examples</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/overview</loc>
@@ -100,9 +100,6 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/center-on-symbol</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/change-building-color-based-on-zoom-level</loc>
-    </url>
-    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/change-case-of-labels</loc>
     </url>
     <url>
@@ -125,6 +122,9 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/data-driven-lines</loc>
+    </url>
+    <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/change-building-color-based-on-zoom-level</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/disable-rotation</loc>
