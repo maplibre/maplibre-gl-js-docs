@@ -72,7 +72,7 @@ toc:
   - name: Sources
     page: 'sources'
     description: |
-      The source types Mapbox GL JS can handle in addition to the ones described in the [Mapbox Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/).
+      The source types MapLibre GL JS can handle in addition to the ones described in the [MapLibre Style Specification](/maplibre-gl-js-docs/style-spec/).
     children:
       - GeoJSONSource
       - VideoSource
