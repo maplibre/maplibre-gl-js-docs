@@ -20,6 +20,7 @@
 
     if (typeof window.showOpenFilePicker == 'function') {
         viewbutton.addEventListener('click', async () => {
+            let fileHandle;
             [fileHandle] = await window.showOpenFilePicker({
                 // allow only single file
                 multiple: false,
