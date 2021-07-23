@@ -11,14 +11,6 @@ export default class Feedback extends React.Component {
         };
     }
 
-    componentDidMount() {
-        MapboxPageShell.afterUserCheck(() => {
-            // fetches username so we can identify them in segment
-            this.setState({
-                user: MapboxPageShell.getUser() || undefined
-            });
-        });
-    }
     render() {
         return (
             <DrFeedback

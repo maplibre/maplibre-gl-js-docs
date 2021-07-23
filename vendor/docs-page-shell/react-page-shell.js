@@ -742,11 +742,6 @@ function (_React$Component) {
       var _this = this;
 
       MapboxPageShell.initialize();
-      MapboxPageShell.afterUserCheck(function () {
-        if (_this.props.onUser) {
-          _this.props.onUser(MapboxPageShell.getUser(), MapboxPageShell.getUserPublicAccessToken());
-        }
-      });
     }
   }, {
     key: "render",
