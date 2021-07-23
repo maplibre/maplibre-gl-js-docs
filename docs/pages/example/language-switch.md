@@ -6,7 +6,6 @@ topics:
 thumbnail: language-switch
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

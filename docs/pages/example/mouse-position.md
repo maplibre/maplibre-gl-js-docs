@@ -6,7 +6,6 @@ topics:
 thumbnail: mouse-position
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

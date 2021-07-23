@@ -6,7 +6,6 @@ topics:
 thumbnail: filter-markers-by-input
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

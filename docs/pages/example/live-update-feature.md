@@ -6,7 +6,6 @@ topics:
 thumbnail: live-update-feature
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

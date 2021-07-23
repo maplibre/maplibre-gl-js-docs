@@ -6,7 +6,6 @@ topics:
 thumbnail: locate-user
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

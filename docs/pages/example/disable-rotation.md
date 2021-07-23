@@ -6,7 +6,6 @@ topics:
 thumbnail: disable-rotation
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

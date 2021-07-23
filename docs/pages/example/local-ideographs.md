@@ -6,7 +6,6 @@ topics:
 thumbnail: local-ideographs
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

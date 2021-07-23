@@ -5,7 +5,6 @@ description: Sources supply data to be shown on the map.
 contentType: specification
 order: 4
 layout: page
-hideFeedback: true
 products:
 - Mapbox Style Specification
 prependJs:

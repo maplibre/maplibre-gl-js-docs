@@ -6,7 +6,6 @@ topics:
 thumbnail: cluster
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

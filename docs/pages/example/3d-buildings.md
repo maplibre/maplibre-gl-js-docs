@@ -6,7 +6,6 @@ topics:
 thumbnail: 3d-buildings
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

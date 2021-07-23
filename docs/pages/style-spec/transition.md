@@ -5,7 +5,6 @@ description: A transition property controls timing for the interpolation between
 contentType: specification
 order: 7
 layout: page
-hideFeedback: true
 products:
 - Mapbox Style Specification
 prependJs:

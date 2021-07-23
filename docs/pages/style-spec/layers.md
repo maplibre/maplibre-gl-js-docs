@@ -5,7 +5,6 @@ description: A style's layers property lists all of the layers available in that
 contentType: specification
 order: 8
 layout: page
-hideFeedback: true
 products:
 - Mapbox Style Specification
 prependJs:

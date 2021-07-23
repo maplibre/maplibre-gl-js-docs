@@ -6,7 +6,6 @@ topics:
 thumbnail: live-geojson
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

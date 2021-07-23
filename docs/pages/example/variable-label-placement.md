@@ -6,7 +6,6 @@ topics:
 thumbnail: variable-label-placement
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

@@ -7,7 +7,6 @@ topics:
 thumbnail: animate-a-line
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

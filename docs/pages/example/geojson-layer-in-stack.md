@@ -6,7 +6,6 @@ topics:
 thumbnail: geojson-layer-in-stack
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

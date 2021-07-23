@@ -6,7 +6,6 @@ topics:
 thumbnail: flyto-options
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

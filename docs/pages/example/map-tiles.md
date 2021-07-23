@@ -6,7 +6,6 @@ topics:
 thumbnail: map-tiles
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

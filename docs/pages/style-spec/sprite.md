@@ -5,7 +5,6 @@ description: A style's sprite property supplies a URL template for loading small
 contentType: specification
 order: 5
 layout: page
-hideFeedback: true
 products:
 - Mapbox Style Specification
 prependJs:

@@ -6,7 +6,6 @@ topics:
 thumbnail: custom-style-layer
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

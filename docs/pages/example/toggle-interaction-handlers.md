@@ -6,7 +6,6 @@ topics:
 thumbnail: toggle-interaction-handlers
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

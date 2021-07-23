@@ -7,7 +7,6 @@ topics:
 thumbnail: simple-map
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

@@ -6,7 +6,6 @@ topics:
 thumbnail: change-building-color-based-on-zoom-level
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

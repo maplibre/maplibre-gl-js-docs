@@ -6,7 +6,6 @@ topics:
 thumbnail: change-case-of-labels
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

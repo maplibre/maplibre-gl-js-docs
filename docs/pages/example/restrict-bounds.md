@@ -6,7 +6,6 @@ topics:
 thumbnail: restrict-bounds
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:
