@@ -18,48 +18,51 @@
 
     var viewbutton = document.getElementById('viewbutton');
 
-    if (typeof window.showOpenFilePicker == 'function') {
-        viewbutton.addEventListener('click', async () => {
-            let fileHandle;
-            [fileHandle] = await window.showOpenFilePicker({
-                // allow only single file
-                multiple: false,
+    async function buttonClickHandler() {
+        let fileHandle;
+        [fileHandle] = await window.showOpenFilePicker({
+            // allow only single file
+            multiple: false,
 
-                // apply filter for GeoJSON files
-                types: [
-                    {
-                        description: 'GeoJSON',
-                        accept: { 'application/geo+json': ['.geojson'] }
-                    }
-                ],
+            // apply filter for GeoJSON files
+            types: [
+                {
+                    description: 'GeoJSON',
+                    accept: { 'application/geo+json': ['.geojson'] }
+                }
+            ],
 
-                // start in download directory
-                startIn: 'downloads'
-            });
-
-            // get file handle and read content
-            const file = await fileHandle.getFile();
-            const contents = await file.text();
-
-            // parse file as json and add as source to the map
-            map.addSource('uploaded-source', {
-                'type': 'geojson',
-                'data': JSON.parse(contents)
-            });
-
-            map.addLayer({
-                'id': 'uploaded-polygons',
-                'type': 'fill',
-                'source': 'uploaded-source',
-                'paint': {
-                    'fill-color': '#888888',
-                    'fill-outline-color': 'red',
-                    'fill-opacity': 0.4
-                },
-                // filter for (multi)polygons; for also displaying linestrings or points add more layers with different filters
-                'filter': ['==', '$type', 'Polygon']
-            });
+            // start in download directory
+            startIn: 'downloads'
         });
+
+        // get file handle and read content
+        const file = await fileHandle.getFile();
+        const contents = await file.text();
+
+        // parse file as json and add as source to the map
+        map.addSource('uploaded-source', {
+            'type': 'geojson',
+            'data': JSON.parse(contents)
+        });
+
+        map.addLayer({
+            'id': 'uploaded-polygons',
+            'type': 'fill',
+            'source': 'uploaded-source',
+            'paint': {
+                'fill-color': '#888888',
+                'fill-outline-color': 'red',
+                'fill-opacity': 0.4
+            },
+            // filter for (multi)polygons; for also displaying linestrings
+            // or points add more layers with different filters
+            'filter': ['==', '$type', 'Polygon']
+        });
+    }
+
+    if (typeof window.showOpenFilePicker == 'function') {
+        viewbutton.addEventListener('click', buttonClickHandler);
     } else {
         viewbutton.innerText =
             'Your browser does not support File System Access API';
