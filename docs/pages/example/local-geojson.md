@@ -3,7 +3,6 @@ title: View local GeoJSON
 description: View local GeoJSON without server upload
 topics:
   - Sources
-  - PWA
 thumbnail: local-geojson
 contentType: example
 layout: example
