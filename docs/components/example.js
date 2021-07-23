@@ -51,10 +51,10 @@ ${html}
 <meta charset=utf-8 />
 <title>${this.props.frontMatter.title}</title>
 ${viewport}
-<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-instrumentile/v3.0.0/mapbox-gl-instrumentile.js' crossorigin="anonymous"></script>
+
 
 <script src='${urls.js({ local: true })}'></script>
-<link href='${urls.css({ local: true })}' rel='stylesheet' />
+<link href='https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.css' rel='stylesheet' />
 <style>
     ${css}
 </style>
@@ -62,15 +62,6 @@ ${viewport}
 <body>
 ${html}
 </body>
-<script>
-if (window.map instanceof mapboxgl.Map) {
-    var i = new instrumentile(map, {
-        token: '${MapboxPageShell.getMapboxAccessToken()}',
-        api: 'https://api.tiles.mapbox.com',
-        source: 'docs-examples'
-    });
-}
-</script>
 </html>`;
     }
 

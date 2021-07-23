@@ -746,10 +746,6 @@ function (_React$Component) {
         if (_this.props.onUser) {
           _this.props.onUser(MapboxPageShell.getUser(), MapboxPageShell.getUserPublicAccessToken());
         }
-
-        MapboxPageShell.loadUserMenu({
-          dark: _this.props.darkHeaderText
-        });
       });
     }
   }, {

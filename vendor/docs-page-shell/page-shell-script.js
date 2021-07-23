@@ -9,8 +9,8 @@
             e && t && ((e.style.height = ""), (e.style.overflow = ""), (e.style.overflowX = "hidden"), t.classList.remove("shell-mobile-nav__backdrop--visible"), (o = !1));
         }
     }
-    var t = "https://www.mapbox.com",
-        a = "https://fastly-staging.tilestream.net",
+    var mapbox_url = "https://www.mapbox.com",
+        tilestream_url = "https://fastly-staging.tilestream.net",
         e = 640,
         c = window.document.createElement("div"),
         s = ["webkit", "moz", "o", "ms"],
@@ -105,7 +105,7 @@
             n(),
             window.removeEventListener("resize", w));
     }
-    function b(e) {
+    function clickHandler(e) {
         var t = document.getElementById("mobile-nav-trigger-toggle"),
             n = document.getElementById("mobile-nav-menu"),
             i = document.getElementById("page-header-content"),
@@ -123,8 +123,8 @@
     var k,
         S,
         E = !1;
-    function x() {
-        E && ((E = !1), n(), y(), document.removeEventListener("click", b));
+    function removeNavigation() {
+        E && ((E = !1), n(), y(), document.removeEventListener("click", clickHandler));
     }
     function I(e) {
         return (I =
@@ -161,7 +161,7 @@
         else {
             j = !0;
             var i = new XMLHttpRequest();
-            i.open("GET", (C() ? t : a) + "/api/session"),
+            i.open("GET", (C() ? mapbox_url : tilestream_url) + "/api/session"),
                 i.setRequestHeader("Accept", "application/json"),
                 (i.onload = function () {
                     if (((B = !0), 200 === i.status)) {
@@ -179,12 +179,11 @@
                 i.send();
         }
     }
-    var L = "user-menu-script";
     function R() {
-        return !0 === window.MapboxPageShellProduction || /mapbox\.com$/.test(window.location.hostname);
+        return !0 === window.MapboxPageShellProduction || /maplibre\.org$/.test(window.location.hostname);
     }
     var N = !1;
-    var T = {
+    var MapboxPageShell = {
         afterUserCheck: function (e) {
             P() ? e() : A(e);
         },
@@ -197,13 +196,12 @@
         getUser: function () {
             return k;
         },
-        removeNavigation: x,
+        removeNavigation: removeNavigation,
         initialize: function () {
             var e;
             (e = function () {
-                z(),
-                    x(),
-                    E || ((E = !0), document.addEventListener("click", b)),
+                    removeNavigation(),
+                    E || ((E = !0), document.addEventListener("click", clickHandler)),
                     (function () {
                         if ((null == i.doesCutMustard && f(!0), !(l || i.doesCutMustard || ("localStorage" in window && "true" === window.localStorage.getItem("suppress-browser-compatibility-warning"))))) {
                             var e = window.document.getElementById("page-shell-compatibility-warning");
@@ -217,33 +215,10 @@
             }),
                 "loading" !== document.readyState ? e() : document.addEventListener("DOMContentLoaded", e);
         },
-        loadUserMenu: function () {
-            var e = 0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : {},
-                t = e.dark,
-                n = void 0 === t || t,
-                i = e.userCallback;
-            if (!N) {
-                var o = function () {
-                    MapboxUserMenu.initialize({ elementId: "mbx-user-menu", isProduction: R(), dark: n, userCallback: i }), MapboxUserMenu.initialize({ elementId: "mbx-user-menu-mobile", isProduction: R(), dark: n });
-                };
-                if (document.getElementById(L)) o();
-                else {
-                    N = !0;
-                    var a = document.createElement("script");
-                    (a.id = L),
-                        (a.src = "https://static-assets.mapbox.com/user-menu/user-menu.js"),
-                        (a.async = !0),
-                        (a.onload = function () {
-                            o(), (N = !1);
-                        }),
-                        document.body.appendChild(a);
-                }
-            }
-        },
         generateCompatibilitySummary: f,
         getCompatibilitySummary: function () {
             return i;
         },
     };
-    (window.MapboxPageShell = T).initialize();
+    (window.MapboxPageShell = MapboxPageShell).initialize();
 })();
