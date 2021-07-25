@@ -88,7 +88,7 @@
     },
     "mapbox-gl-esri-sources": {
       "website": "https://github.com/frontiersi/mapbox-gl-esri-sources",
-      "description": "A library for making it easier to use Esri services in mapbox-gl or maplibre-gl. Supports Esri Map Services (Dynamic & Tiled), Esri Vector Tile Services & Esri Vector Basemap Styles"
+      "description": "A library for making it easier to use Esri services in mapbox-gl or maplibre-gl. Supports Esri Map Services (Dynamic & Tiled), Esri Vector Tile Services & Esri Vector Basemap Styles."
     }
   },
   "Framework Integrations": {
