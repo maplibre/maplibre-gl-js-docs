@@ -5,6 +5,7 @@ topics:
   - Camera
 thumbnail: flyto-options
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

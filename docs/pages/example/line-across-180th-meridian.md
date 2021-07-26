@@ -5,6 +5,7 @@ topics:
   - Sources
   - Layers
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

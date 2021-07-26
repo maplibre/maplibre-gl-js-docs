@@ -5,6 +5,7 @@ topics:
   - Layers
 thumbnail: variable-label-placement
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

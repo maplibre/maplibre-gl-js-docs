@@ -5,6 +5,7 @@ topics:
   - User interaction
 thumbnail: toggle-interaction-handlers
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

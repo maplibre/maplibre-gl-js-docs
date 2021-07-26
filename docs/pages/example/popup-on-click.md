@@ -5,6 +5,7 @@ topics:
   - Controls and overlays
 thumbnail: popup-on-click
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

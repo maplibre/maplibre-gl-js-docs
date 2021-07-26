@@ -5,6 +5,7 @@ topics:
   - Layers
 thumbnail: add-3d-model
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

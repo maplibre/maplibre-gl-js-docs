@@ -5,6 +5,7 @@ topics:
   - Layers
 thumbnail: fill-pattern
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

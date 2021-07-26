@@ -5,6 +5,7 @@ topics:
   - User interaction
 thumbnail: filter-markers
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

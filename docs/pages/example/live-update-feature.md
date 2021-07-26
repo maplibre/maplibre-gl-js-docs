@@ -5,6 +5,7 @@ topics:
   - Sources
 thumbnail: live-update-feature
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

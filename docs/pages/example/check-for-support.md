@@ -5,6 +5,7 @@ topics:
   - Browser support
 thumbnail: check-for-support
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

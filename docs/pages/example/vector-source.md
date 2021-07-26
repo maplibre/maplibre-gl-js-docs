@@ -5,6 +5,7 @@ topics:
   - Sources
 thumbnail: vector-source
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

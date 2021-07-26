@@ -5,6 +5,7 @@ topics:
   - User interaction
 thumbnail: zoomto-linestring
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

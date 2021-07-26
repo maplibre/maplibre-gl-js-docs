@@ -5,6 +5,7 @@ topics:
   - Layers
 thumbnail: multiple-geometries
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

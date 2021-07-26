@@ -6,6 +6,7 @@ topics:
   - Sources
 thumbnail: timeline-animation
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

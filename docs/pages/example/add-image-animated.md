@@ -6,6 +6,7 @@ topics:
   - Layers
 thumbnail: add-image-animated
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

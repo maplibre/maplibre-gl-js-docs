@@ -5,6 +5,7 @@ topics:
   - Camera
 thumbnail: animate-point-along-route
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

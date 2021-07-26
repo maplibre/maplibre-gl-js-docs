@@ -5,6 +5,7 @@ topics:
   - Internationalization support
 thumbnail: mapbox-gl-rtl-text
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

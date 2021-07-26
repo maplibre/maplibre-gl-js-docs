@@ -5,6 +5,7 @@ topics:
   - Sources
 thumbnail: third-party
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

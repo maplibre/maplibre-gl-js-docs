@@ -5,6 +5,7 @@ topics:
   - Layers
 thumbnail: change-building-color-based-on-zoom-level
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

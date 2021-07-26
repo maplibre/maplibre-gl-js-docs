@@ -5,6 +5,7 @@ topics:
   - Camera
 thumbnail: animate-camera-around-point
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

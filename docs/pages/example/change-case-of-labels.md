@@ -5,6 +5,7 @@ topics:
   - Layers
 thumbnail: change-case-of-labels
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

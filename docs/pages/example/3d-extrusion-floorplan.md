@@ -5,6 +5,7 @@ topics:
   - Layers
 thumbnail: 3d-extrusion-floorplan
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

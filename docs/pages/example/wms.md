@@ -5,6 +5,7 @@ topics:
   - Sources
 thumbnail: wms
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

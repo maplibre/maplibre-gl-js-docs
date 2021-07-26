@@ -5,6 +5,7 @@ topics:
   - User interaction
 thumbnail: drag-a-point
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

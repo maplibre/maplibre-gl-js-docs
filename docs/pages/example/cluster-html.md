@@ -5,6 +5,7 @@ topics:
   - Layers
 thumbnail: cluster-html
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

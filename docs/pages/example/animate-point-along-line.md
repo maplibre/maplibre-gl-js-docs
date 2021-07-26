@@ -6,6 +6,7 @@ topics:
   - Sources
 thumbnail: animate-point-along-line
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

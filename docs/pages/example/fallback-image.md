@@ -5,6 +5,7 @@ topics:
   - Layers
 thumbnail: fallback-image
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

@@ -5,6 +5,7 @@ topics:
   - Layers
 thumbnail: line-gradient
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

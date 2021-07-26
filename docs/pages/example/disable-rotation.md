@@ -5,6 +5,7 @@ topics:
   - User interaction
 thumbnail: disable-rotation
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

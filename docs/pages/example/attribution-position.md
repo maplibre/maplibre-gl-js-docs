@@ -5,6 +5,7 @@ topics:
   - Controls and overlays
 thumbnail: attribution-position
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

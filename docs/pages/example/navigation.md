@@ -5,6 +5,7 @@ topics:
   - Controls and overlays
 thumbnail: navigation
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

@@ -5,6 +5,7 @@ topics:
   - User interaction
 thumbnail: language-switch
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

@@ -5,6 +5,7 @@ topics:
   - Controls and overlays
 thumbnail: disable-scroll-zoom
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

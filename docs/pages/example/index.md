@@ -2,6 +2,7 @@
 title: Examples
 description: Code examples for Mapbox GL JS.
 contentType: example
+hideFeedback: true
 layout: example
 navOrder: 2
 language:

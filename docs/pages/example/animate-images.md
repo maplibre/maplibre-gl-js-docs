@@ -6,6 +6,7 @@ topics:
   - Sources
 thumbnail: animate-images
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

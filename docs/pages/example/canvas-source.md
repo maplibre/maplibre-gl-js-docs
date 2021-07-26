@@ -5,6 +5,7 @@ topics:
   - Sources
 thumbnail: canvas-source
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

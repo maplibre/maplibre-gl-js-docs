@@ -5,6 +5,7 @@ topics:
   - Internationalization support
 thumbnail: local-ideographs
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

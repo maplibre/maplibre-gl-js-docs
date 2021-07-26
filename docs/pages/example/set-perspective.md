@@ -5,6 +5,7 @@ topics:
   - Camera
 thumbnail: set-perspective
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

@@ -6,6 +6,7 @@ topics:
   - User interaction
 thumbnail: color-switcher
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

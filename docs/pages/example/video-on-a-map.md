@@ -6,6 +6,7 @@ topics:
   - Layers
 thumbnail: video-on-a-map
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

@@ -6,6 +6,7 @@ topics:
   - Sources
 thumbnail: animate-a-line
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

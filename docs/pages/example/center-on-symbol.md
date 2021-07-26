@@ -6,6 +6,7 @@ topics:
   - User interaction
 thumbnail: center-on-symbol
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

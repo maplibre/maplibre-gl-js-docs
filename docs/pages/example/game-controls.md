@@ -5,6 +5,7 @@ topics:
   - Camera
 thumbnail: game-controls
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

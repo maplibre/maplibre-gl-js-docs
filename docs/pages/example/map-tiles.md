@@ -5,6 +5,7 @@ topics:
   - Sources
 thumbnail: map-tiles
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

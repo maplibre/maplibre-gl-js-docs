@@ -5,6 +5,7 @@ topics:
   - Camera
 thumbnail: jump-to
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

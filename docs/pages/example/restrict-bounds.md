@@ -5,6 +5,7 @@ topics:
   - User interaction
 thumbnail: restrict-bounds
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript

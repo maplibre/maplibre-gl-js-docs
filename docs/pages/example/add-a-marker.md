@@ -5,6 +5,7 @@ topics:
   - Styles
 thumbnail: add-a-marker
 contentType: example
+hideFeedback: true
 layout: example
 language:
 - JavaScript
