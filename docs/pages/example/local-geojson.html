@@ -6,7 +6,12 @@
     }
 </style>
 <div id="map"></div>
-<input type="file" id="file" name="file" />
+<input
+    type="file"
+    id="file"
+    name="file"
+    accept="application/geo+json,application/vnd.geo+json,.geojson"
+/>
 <script>
     var map = new maplibregl.Map({
         container: 'map',
