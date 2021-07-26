@@ -1,13 +1,4 @@
 {
   "root": true,
-  "extends": "./conf/eslint-config-base.json",
-  "overrides": [{
-    "files": ["docs/pages/example/local-geojson-experimental.html"],
-    "parserOptions": {
-      "ecmaVersion": 2020
-    },
-    "rules": {
-      "es/no-async-functions": "off"
-    }    
-  }]    
+  "extends": "./conf/eslint-config-base.json"  
 }
