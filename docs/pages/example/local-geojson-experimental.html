@@ -61,7 +61,7 @@
         });
     }
 
-    if (typeof window.showOpenFilePicker == 'function') {
+    if ('showOpenFilePicker' in window) {
         viewbutton.addEventListener('click', buttonClickHandler);
     } else {
         viewbutton.innerText =
