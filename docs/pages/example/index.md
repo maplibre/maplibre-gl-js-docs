@@ -1,6 +1,6 @@
 ---
 title: Examples
-description: Code examples for Mapbox GL JS.
+description: Code examples for MapLibre GL JS.
 contentType: example
 hideFeedback: true
 layout: example
@@ -12,5 +12,5 @@ showFilters:
 - topics
 - search
 products:
-- Mapbox GL JS
+- MapLibre GL JS
 ---
