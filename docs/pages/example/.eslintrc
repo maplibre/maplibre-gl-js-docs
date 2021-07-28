@@ -38,5 +38,14 @@
       "es6": false,
       "browser": true
     }
+  },
+  {
+    "files": ["local-geojson-experimental.html"],
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "rules": {
+      "es/no-async-functions": "off"
+    }    
   }]
 }
