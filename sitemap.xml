@@ -145,6 +145,9 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/fallback-image</loc>
     </url>
     <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/featuresat</loc>
+    </url>
+    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/fill-pattern</loc>
     </url>
     <url>
@@ -344,8 +347,5 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/types</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/featuresat</loc>
     </url>
 </urlset>
