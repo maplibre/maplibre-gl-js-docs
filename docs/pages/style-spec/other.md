@@ -5,6 +5,7 @@ description: The value for any layout or paint property may be specified as a fu
 contentType: specification
 order: 11
 layout: page
+hideFeedback: true
 products:
 - Mapbox Style Specification
 prependJs:

@@ -5,6 +5,7 @@ description: A MapLibre style contains values of various types, most commonly as
 contentType: specification
 order: 9
 layout: page
+hideFeedback: true
 products:
 - Mapbox Style Specification
 ---

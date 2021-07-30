@@ -5,6 +5,7 @@ contentType: specification
 navOrder: 4
 order: 1
 layout: page
+hideFeedback: true
 products:
 - Mapbox Style Specification
 overviewHeader:

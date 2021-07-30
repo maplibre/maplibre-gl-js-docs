@@ -7,6 +7,7 @@ thumbnail: set-perspective
 contentType: example
 hideFeedback: true
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

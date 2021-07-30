@@ -5,6 +5,7 @@ description: An expression defines a formula for computing the value of the prop
 contentType: specification
 order: 10
 layout: page
+hideFeedback: true
 products:
 - Mapbox Style Specification
 prependJs:

@@ -7,6 +7,7 @@ thumbnail: fitbounds
 contentType: example
 hideFeedback: true
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:
