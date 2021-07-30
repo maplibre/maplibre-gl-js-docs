@@ -130,6 +130,7 @@
     
     
     var MapboxPageShell = {
+        afterUserCheck: function() {},
         removeNavigation: removeNavigation,
         initialize: function () {
             var e;
