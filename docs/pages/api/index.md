@@ -28,7 +28,7 @@ overviewHeader:
   # version="" version is set dynamically in page-shell.js
 ---
 
-MapLibre GL JS is a JavaScript library that uses WebGL to render interactive maps from [vector tiles](https://docs.mapbox.com/help/glossary/vector-tiles/) and [MapLibre styles](https://maplibre.org/maplibre-gl-js-docs/style-spec/). It is part of the [MapLibre GL ecosystem](https://github.com/maplibre).
+MapLibre GL JS is a JavaScript library that uses WebGL to render interactive maps from vector tiles and [MapLibre styles](https://maplibre.org/maplibre-gl-js-docs/style-spec/). It is part of the [MapLibre GL ecosystem](https://github.com/maplibre).
 
 
 ## Migration Note
@@ -107,7 +107,7 @@ If you use a [URL-restricted access token](https://docs.mapbox.com/accounts/over
 
 If you limit the referrer to the origin, make sure that the URL you restrict your access token to doesn't contain path information, because the `Origin` header doesn't contain a path by definition.
 
-## Mapbox CSS
+## MapLibre CSS
 
 The CSS referenced in the Quickstart is used to style DOM elements created by Mapbox code. Without the CSS, elements like Popups and Markers won't work.
 
