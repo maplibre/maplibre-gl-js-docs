@@ -4,9 +4,9 @@ description: Geolocate the user and then track their current location on the map
 topics:
   - Controls and overlays
 thumbnail: locate-user
-hideFeedback: true # hide feedback from page
 contentType: example
 layout: example
+hideFeedback: true # hide feedback from page
 language:
 - JavaScript
 products:
