@@ -4,7 +4,6 @@ description: Code examples for MapLibre GL JS.
 contentType: example
 hideFeedback: true
 layout: example
-hideFeedback: true
 navOrder: 2
 language:
 - JavaScript

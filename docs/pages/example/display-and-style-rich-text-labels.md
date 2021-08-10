@@ -7,7 +7,6 @@ thumbnail: display-and-style-rich-text-labels
 contentType: example
 hideFeedback: true
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:

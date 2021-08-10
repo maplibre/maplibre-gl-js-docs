@@ -7,7 +7,6 @@ thumbnail: locate-user
 hideFeedback: true # hide feedback from page
 contentType: example
 layout: example
-hideFeedback: true
 language:
 - JavaScript
 products:
