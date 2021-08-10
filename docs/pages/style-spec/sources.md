@@ -238,7 +238,7 @@ The `"coordinates"` array contains `[longitude, latitude]` pairs for the image c
 ```json
 "image": {
     "type": "image",
-    "url": "https://docs.mapbox.com/mapbox-gl-js/assets/radar.gif",
+    "url": "https://maplibre.org/maplibre-gl-js-docs/assets/radar.gif",
     "coordinates": [
         [-80.425, 46.437],
         [-71.516, 46.437],
