@@ -6,7 +6,7 @@ topics:
 thumbnail: locate-user
 contentType: example
 layout: example
-hideFeedback: true # hide feedback from page
+hideFeedback: true
 language:
 - JavaScript
 products:
