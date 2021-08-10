@@ -5,8 +5,8 @@ topics:
   - Camera
 thumbnail: animate-point-along-route
 contentType: example
-hideFeedback: true
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

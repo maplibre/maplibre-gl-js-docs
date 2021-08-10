@@ -5,8 +5,8 @@ topics:
   - Layers
 thumbnail: change-case-of-labels
 contentType: example
-hideFeedback: true
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

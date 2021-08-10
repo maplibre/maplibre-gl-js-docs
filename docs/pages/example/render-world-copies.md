@@ -5,8 +5,8 @@ topics:
   - Styles
 thumbnail: render-world-copies
 contentType: example
-hideFeedback: true
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

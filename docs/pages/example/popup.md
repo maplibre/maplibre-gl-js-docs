@@ -5,8 +5,8 @@ topics:
   - Controls and overlays
 thumbnail: popup
 contentType: example
-hideFeedback: true
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

@@ -5,8 +5,8 @@ topics:
   - Camera
 thumbnail: jump-to
 contentType: example
-hideFeedback: true
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

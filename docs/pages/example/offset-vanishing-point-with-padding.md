@@ -5,8 +5,8 @@ topics:
   - Camera
 thumbnail: offset-vanishing-point-with-padding
 contentType: example
-hideFeedback: true
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

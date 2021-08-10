@@ -5,8 +5,8 @@ topics:
   - Controls and overlays
 thumbnail: mapbox-gl-draw
 contentType: example
-hideFeedback: true
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

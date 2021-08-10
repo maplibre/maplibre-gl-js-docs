@@ -6,8 +6,8 @@ topics:
   - Sources
 thumbnail: timeline-animation
 contentType: example
-hideFeedback: true
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:

@@ -5,8 +5,8 @@ topics:
   - User interaction
 thumbnail: hover-styles
 contentType: example
-hideFeedback: true
 layout: example
+hideFeedback: true
 language:
 - JavaScript
 products:
