@@ -7,7 +7,7 @@ toc:
   - name: Properties and options
     page: 'properties'
     description: |
-      Mapbox GL JS's global properties and options that you can access while initializing your map or accessing information about its status.
+      MapLibre GL JS's global properties and options that you can access while initializing your map or accessing information about its status.
     children:
       - accessToken
       - baseApiUrl
@@ -83,7 +83,7 @@ toc:
   - name: Events
     page: 'events'
     description: |
-      The different types of events that Mapbox GL JS can raise.
+      The different types of events that MapLibre GL JS can raise.
 
       You can also find additional event documentation for: [`Map`](/mapbox-gl-js/api/map/#map-events), [`Marker`](/mapbox-gl-js/api/markers/#marker-events), [`Popup`](/mapbox-gl-js/api/markers/#popup-events), and [`GeolocationControl`](/mapbox-gl-js/api/markers/#geolocatecontrol-events).
     children:

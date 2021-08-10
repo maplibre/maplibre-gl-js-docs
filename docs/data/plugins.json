@@ -22,7 +22,7 @@
     },
     "mapbox-gl-draw": {
       "website": "https://github.com/mapbox/mapbox-gl-draw",
-      "description": "Adds support for drawing and editing features on Mapbox GL JS maps.",
+      "description": "Adds support for drawing and editing features on maps.",
       "example": "mapbox-gl-draw"
     },
     "mapbox-gl-export": {
@@ -31,7 +31,7 @@
     },
     "mapbox-gl-geocoder": {
       "website": "https://github.com/mapbox/mapbox-gl-geocoder",
-      "description": "Adds a geocoder control to Mapbox GL JS."
+      "description": "Adds a geocoder control."
     },
     "mapbox-gl-infobox": {
       "website": "https://github.com/el/infobox-control",
@@ -61,7 +61,7 @@
     },
     "mapbox-gl-rtl-text": {
       "website": "https://github.com/mapbox/mapbox-gl-rtl-text",
-      "description": "Adds right-to-left text support to Mapbox GL JS.",
+      "description": "Adds right-to-left text support.",
       "example": "mapbox-gl-rtl-text"
     },
     "mapbox-gl-traffic": {
@@ -70,11 +70,11 @@
     },
     "deck.gl": {
       "website": "https://github.com/uber/deck.gl",
-      "description": "Adds advanced WebGL visualization layers to Mapbox GL JS."
+      "description": "Adds advanced WebGL visualization layers."
     },
     "L7": {
       "website": "https://github.com/antvis/L7",
-      "description": "Adds large-scale WebGL-powered geospatial data visualization framework to Mapbox GL JS."
+      "description": "Adds large-scale WebGL-powered geospatial data visualization framework."
     },
     "flowmap.blue": {
       "website": "https://github.com/ilyabo/flowmap.blue",
@@ -84,31 +84,31 @@
   "Framework Integrations": {
     "echartslayer": {
       "website": "https://github.com/lzxue/echartLayer",
-      "description": "Provides an [echarts](https://ecomfe.github.io/echarts/index-en.html) integration for Mapbox GL JS."
+      "description": "Provides an [echarts](https://ecomfe.github.io/echarts/index-en.html) integration."
     },
     "wtMapbox": {
       "website": "https://github.com/yvanvds/wtMapbox",
-      "description": "Provides a [Webtoolkit](https://www.webtoolkit.eu/wt) integration for Mapbox GL JS."
+      "description": "Provides a [Webtoolkit](https://www.webtoolkit.eu/wt) integration."
     },
     "react-mapbox-gl": {
       "website": "https://github.com/alex3165/react-mapbox-gl",
-      "description": "Provides a [React](https://facebook.github.io/react/) integration for Mapbox GL JS."
+      "description": "Provides a [React](https://facebook.github.io/react/) integration."
     },
     "angular-mapboxgl-directive": {
       "website": "https://github.com/Naimikan/angular-mapboxgl-directive",
-      "description": "Provides an [AngularJS](https://angularjs.org/) directive for Mapbox GL JS."
+      "description": "Provides an [AngularJS](https://angularjs.org/) directive."
     },
     "ngx-mapbox-gl": {
       "website": "https://github.com/Wykks/ngx-mapbox-gl",
-      "description": "Provides an [Angular](https://angular.io/) integration for Mapbox GL JS."
+      "description": "Provides an [Angular](https://angular.io/) integration."
     },
     "elm-mapbox": {
       "website": "https://package.elm-lang.org/packages/gampleman/elm-mapbox/latest/",
-      "description": "Provides an [Elm](https://elm-lang.org) integration for Mapbox GL JS."
+      "description": "Provides an [Elm](https://elm-lang.org) integration."
     },
     "ember-mapbox-gl": {
       "website": "https://github.com/kturney/ember-mapbox-gl",
-      "description": "Provides an [Ember](http://emberjs.com) integration for Mapbox GL JS."
+      "description": "Provides an [Ember](http://emberjs.com) integration."
     }
   },
   "Utility Libraries": {
@@ -118,7 +118,7 @@
     },
     "mapbox-gl-layer-groups": {
       "website": "https://github.com/mapbox/mapbox-gl-layer-groups",
-      "description": "Manages layer groups in Mapbox GL JS."
+      "description": "Manages layer groups."
     },
     "expression-jamsession": {
       "website": "https://github.com/mapbox/expression-jamsession/",
@@ -126,16 +126,16 @@
     },
     "simplespec-to-gl-style": {
       "website": "https://github.com/mapbox/simplespec-to-gl-style",
-      "description": "Converts GeoJSON styles with [\"simplestyle-spec\"](https://github.com/mapbox/simplestyle-spec/) to a Mapbox GL Style."
+      "description": "Converts GeoJSON styles with [\"simplestyle-spec\"](https://github.com/mapbox/simplestyle-spec/) to a MapLibre GL Style."
     },
     "mapbox-gl-supported": {
       "website": "https://github.com/mapbox/mapbox-gl-supported",
-      "description": "Determines if the current browser supports Mapbox GL JS.",
+      "description": "Determines if the current browser supports MapLibre GL JS.",
       "example": "check-for-support"
     },
     "mapbox-gl-sync-move": {
       "website": "https://github.com/mapbox/mapbox-gl-sync-move",
-      "description": "Syncs movement between two Mapbox GL JS maps."
+      "description": "Syncs movement between two maps."
     },
     "mapbox-choropleth": {
       "website": "https://github.com/stevage/mapbox-choropleth",

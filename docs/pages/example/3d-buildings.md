@@ -10,7 +10,7 @@ hideFeedback: true
 language:
 - JavaScript
 products:
-- Mapbox GL JS
+- MapLibre GL JS
 - Mapbox Streets tileset
 prependJs:
 - "import Example from '../../components/example';"

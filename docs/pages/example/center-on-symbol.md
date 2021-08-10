@@ -11,7 +11,7 @@ hideFeedback: true
 language:
 - JavaScript
 products:
-- Mapbox GL JS
+- MapLibre GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './center-on-symbol.html';"

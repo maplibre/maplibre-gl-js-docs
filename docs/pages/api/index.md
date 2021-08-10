@@ -9,7 +9,7 @@ hideFeedback: true
 language:
 - JavaScript
 products:
-- Mapbox GL JS
+- MapLibre GL JS
 prependJs:
 - "import Quickstart from '../../components/quickstart';"
 - "import Example from '../../components/example';"
@@ -75,7 +75,7 @@ Each section describes classes or objects as well as their **properties**, **par
 
 ## CSP Directives
 
-As a mitigation for Cross-Site Scripting and other types of web security vulnerabilities, you may use a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) to specify security policies for your website. If you do, Mapbox GL JS requires the following CSP directives:
+As a mitigation for Cross-Site Scripting and other types of web security vulnerabilities, you may use a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) to specify security policies for your website. If you do, MapLibre GL JS requires the following CSP directives:
 
 ```
 worker-src blob: ;
@@ -89,7 +89,7 @@ Requesting styles from Mapbox or other services will require additional directiv
 connect-src https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com
 ```
 
-For strict CSP environments without `worker-src blob: ; child-src blob:` enabled, there's a separate Mapbox GL JS bundle (`mapbox-gl-csp.js` and `mapbox-gl-csp-worker.js`) which requires setting the path to the worker manually:
+For strict CSP environments without `worker-src blob: ; child-src blob:` enabled, there's a separate MapLibre GL JS bundle (`mapbox-gl-csp.js` and `mapbox-gl-csp-worker.js`) which requires setting the path to the worker manually:
 
 {{
 <Copyable lang="html">{`<script src='${urls.js().replace('.js', '-csp.js')}'></script>
