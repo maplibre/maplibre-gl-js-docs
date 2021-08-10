@@ -54,7 +54,7 @@ ${viewport}
 
 
 <script src='${urls.js({ local: true })}'></script>
-<link href='https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.css' rel='stylesheet' />
+<link href='${urls.css({ local: true })}' rel='stylesheet' />
 <style>
     ${css}
 </style>
