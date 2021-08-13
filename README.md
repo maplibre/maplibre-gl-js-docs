@@ -89,3 +89,9 @@ so make sure to have a working minified build in your local copy of the `maplibr
 When a new GL JS release goes out, the release manager will make a PR that updates this repo's `maplibre-gl-js` submodule to point to the new release. When updating the submodule, you may need to run `npm test -- -u` to update Jest snapshots related to the sidebar navigation.
 
 To update or add a new example, PR the relevant changes to this repo. The example will be live once the PR is merged.  If this example uses a version of GL JS that isn't yet released, the PR should not be merged until the release is out.
+
+## 日本語版に関する追記
+
+このリポジトリは、MapLibre の日本語版です。
+
+https://github.com/maplibre/maplibre-gl-js-docs
