@@ -4,7 +4,7 @@ description: Initialize a custom map in an HTML element with MapLibre GL JS.
 topics:
   - Getting started
   - Styles
-thumbnail: simple-map
+thumbnail: custom-map
 contentType: example
 layout: example
 hideFeedback: true
@@ -87,8 +87,5 @@ This example assumes that you have saved the [Demotiles](https://github.com/mapl
     }
 }
 ```
-
-
-
 
 For more information, see the [PR](https://github.com/maplibre/maplibre-gl-js/pull/30) that introduced this feature.
