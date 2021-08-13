@@ -1,6 +1,6 @@
 ---
-title: API Reference
-description: The MapLibre GL JS API documentation to render interactive maps from vector tiles and MapLibre styles.
+title: API リファレンス
+description: MapLibre GL JS の API を使用して、ベクトルタイルと MapLibre スタイルを使用したインタラクティブな地図を作成するためのドキュメンテーション
 contentType: API
 navOrder: 1
 order: 1
@@ -19,22 +19,27 @@ prependJs:
 overviewHeader:
   title: MapLibre GL JS
   features:
-    - "Custom map styles"
-    - "Fast vector maps"
-    - "Compatible with other MapLibre tools"
+    - "地図のスタイルのカスタマイズ"
+    - "ベクトルタイルベースの高速な地図"
+    - "他の MapLibre ツールとの互換性"
   changelogLink: "https://github.com/maplibre/maplibre-gl-js/blob/main/CHANGELOG.md"
   ghLink: "https://github.com/maplibre/maplibre-gl-js"
   image: simple-map
   # version="" version is set dynamically in page-shell.js
 ---
 
-MapLibre GL JS is a JavaScript library that uses WebGL to render interactive maps from [vector tiles](https://docs.mapbox.com/help/glossary/vector-tiles/) and [MapLibre styles](https://maplibre.org/maplibre-gl-js-docs/style-spec/). It is part of the [MapLibre GL ecosystem](https://github.com/maplibre).
+MapLibre GL JS は、[ベクトルタイル](https://docs.mapbox.com/help/glossary/vector-tiles/)と[スタイル](https://maplibre.org/maplibre-gl-js-docs/style-spec/)を使用して WebGL によるインタラクティブな地図を表示するための JavaScript ライブラリです。
+
+このドキュメンテーションは、MapLibre JS API の非公式な日本語版です。
 
 
-## Migration Note
+## マイグレーションノート
 
-We are now migrating this documentation from Mapbox to MapLibre. If you want to contribute feel free to open an [issue](https://github.com/maplibre/maplibre-gl-js-docs/issues) on GitHub or submit a [pull request](https://github.com/maplibre/maplibre-gl-js-docs/pulls) to propose directly your changes.
+わたしたちは、Mapbox から MapLibre へのドキュメンテーションへの移行をすすめています。（そして日本語への翻訳も！）
 
+もし英語版への貢献をしたいと思ったら、GitHub で [issue](https://github.com/maplibre/maplibre-gl-js-docs/issues) を開くか、[pull request](https://github.com/maplibre/maplibre-gl-js-docs/pulls) を送ってください。
+
+日本語への翻訳に貢献してくださるなら、日本語版のリポジトリで [issue](https://github.com/geolonia/ja-maplibre-gl-js-docs/issues) を開くか、[pull request](https://github.com/geolonia/ja-maplibre-gl-js-docs/pulls) を送ってください。
 
 ## Quickstart
 

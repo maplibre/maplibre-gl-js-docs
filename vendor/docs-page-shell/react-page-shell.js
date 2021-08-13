@@ -237,7 +237,7 @@ MobileMenuButton.propTypes = {
 };
 
 var language = "en";
-var logoSiteTitle = "Docs";
+var logoSiteTitle = "Docs 日本語版 （非公式）";
 var all = "MapLibre";
 var nav = [
 ];
@@ -419,12 +419,13 @@ PageHeader.defaultProps = {
 };
 
 function FooterLegalStrip(props) {
-  return React.createElement("div", {
-    className: props.className
-  }, React.createElement("a", {
-    className: "shell-link shell-color-gray shell-color-gray-dark-on-hover shell-mr18",
-    href: "https://maplibre.org/"
-  }, "MapLibre"));
+  return (
+    <>
+      <div className={props.className}>
+        <a href="https://maplibre.org/" className="shell-link shell-color-gray shell-color-gray-dark-on-hover">MapLibre ドキュメンテーション日本語版（非公式）</a> by < a href="https://geolonia.com/">Geolonia</a>
+      </div>
+    </>
+  )
 }
 
 FooterLegalStrip.propTypes = {
