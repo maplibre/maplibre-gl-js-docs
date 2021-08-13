@@ -1,4 +1,4 @@
 {
   "root": true,
-  "extends": "./conf/eslint-config-base.json"
+  "extends": "./conf/eslint-config-base.json"  
 }

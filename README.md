@@ -13,6 +13,8 @@ We are now migrating this documentation from Mapbox to MapLibre. If you want to 
 
 If you're not sure if your Node and NPM versions are up to date, run `nvm use` before installing dependencies. If you don't have NVM installed, you can [find installation instructions here](https://github.com/nvm-sh/nvm/blob/master/README.md#installing-and-updating).
 
+The NPM scripts will not run on Windows, but work perfectly with [WSL2](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux).
+
 ## Setting up the Development Environment
 
 After cloning this repository, run:
@@ -80,7 +82,7 @@ The command will print the URL you can use to view the documentation.
 💡 If you receive an error related to `@mapbox/appropriate-images`, try `nvm use && npm start`.
 
 The examples section of the locally run documentation will use the GL JS version located in `../maplibre-gl-js/dist`,
-so make sure to have a working minified build in your local copy of the `maplibre-gl-js` repo (not the submodule).
+so make sure to have a working minified build in your local copy of the `maplibre-gl-js` repo (not the submodule; clone `maplibre-gl-js` into the same directory as `maplibre-gl-js-docs` and run `npm build-prod-min` there).
 
 ## Committing and Publishing Documentation
 
