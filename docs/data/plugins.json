@@ -55,7 +55,7 @@
     },
     "maplibre-gl-temporal-control": {
       "website": "https://github.com/Kanahiro/maplibre-gl-temporal-control",
-      "description": "Temporal Controller plugin for MapLibre GL JS"
+      "description": "Temporal Controller plugin for MapLibre GL JS. [demo](https://kanahiro.github.io/maplibre-gl-temporal-control/raster.html)"
     }
   },
   "Map Rendering Plugins": {
