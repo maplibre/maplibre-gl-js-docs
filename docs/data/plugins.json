@@ -52,6 +52,10 @@
     "mapboxgl-minimap": {
       "website": "https://github.com/aesqe/mapboxgl-minimap",
       "description": "Adds a control to show a miniature overview of the current map."
+    },
+    "maplibre-gl-temporal-control": {
+      "website": "https://github.com/Kanahiro/maplibre-gl-temporal-control",
+      "description": "Temporal Controller plugin for MapLibre GL JS"
     }
   },
   "Map Rendering Plugins": {
