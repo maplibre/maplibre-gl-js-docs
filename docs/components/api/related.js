@@ -10,7 +10,7 @@ export default class Related extends React.Component {
             <SectionWrapper title="Related" {...this.props}>
                 <ul>
                     {section.sees.map((see, i) => (
-                        <li key={i}>{toHtml(see, true)}</li>
+                        <li key={i}>{toHtml(see.description, true)}</li>
                     ))}
                 </ul>
             </SectionWrapper>
