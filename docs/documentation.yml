@@ -1,5 +1,5 @@
 toc:
-  - name: "Map class" # Note: changed to "map class" to get filtering to work for now to differentiate our page name "Map" from the mapbox-gl-js "Map"
+  - name: "Map class" # Note: changed to "map class" to get filtering to work for now to differentiate our page name "Map" from the maplibre-gl-js "Map"
     page: 'map'
     children:
       - Map
@@ -7,7 +7,7 @@ toc:
   - name: Properties and options
     page: 'properties'
     description: |
-      Mapbox GL JS's global properties and options that you can access while initializing your map or accessing information about its status.
+      MapLibre GL JS's global properties and options that you can access while initializing your map or accessing information about its status.
     children:
       - accessToken
       - baseApiUrl
@@ -83,9 +83,9 @@ toc:
   - name: Events
     page: 'events'
     description: |
-      The different types of events that Mapbox GL JS can raise.
+      The different types of events that MapLibre GL JS can raise.
 
-      You can also find additional event documentation for: [`Map`](/mapbox-gl-js/api/map/#map-events), [`Marker`](/mapbox-gl-js/api/markers/#marker-events), [`Popup`](/mapbox-gl-js/api/markers/#popup-events), and [`GeolocationControl`](/mapbox-gl-js/api/markers/#geolocatecontrol-events).
+      You can also find additional event documentation for: [`Map`](/maplibre-gl-js-docs/api/map/#map-events), [`Marker`](/maplibre-gl-js-docs/api/markers/#marker-events), [`Popup`](/maplibre-gl-js-docs/api/markers/#popup-events), and [`GeolocationControl`](/maplibre-gl-js-docs/api/markers/#geolocatecontrol-events).
     children:
       - Evented
       - MapMouseEvent

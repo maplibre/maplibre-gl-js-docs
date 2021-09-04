@@ -7,7 +7,7 @@ layout: page
 language:
 - JavaScript
 products:
-- Mapbox GL JS
+- MapLibre GL JS
 ---*/
 
 import React from 'react';

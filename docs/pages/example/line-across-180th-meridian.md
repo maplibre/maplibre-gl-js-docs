@@ -10,7 +10,7 @@ hideFeedback: true
 language:
 - JavaScript
 products:
-- Mapbox GL JS
+- MapLibre GL JS
 thumbnail: line-across-180th-meridian
 prependJs:
 - "import Example from '../../components/example';"

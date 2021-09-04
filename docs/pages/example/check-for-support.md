@@ -10,12 +10,12 @@ hideFeedback: true
 language:
 - JavaScript
 products:
-- Mapbox GL JS
+- MapLibre GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './check-for-support.html';"
 ---
 
-Use [`supported`](https://maplibre.org/maplibre-gl-js-docs/api/properties/#supported) to check for MapLibre GL browser support, and show an alert if the browser does not support MapLibre GL. Find more information about browser support for Mapbox tools in the [Browser support](https://docs.mapbox.com/help/troubleshooting/mapbox-browser-support/) troubleshooting guide.
+Use [`supported`](https://maplibre.org/maplibre-gl-js-docs/api/properties/#supported) to check for MapLibre GL browser support, and show an alert if the browser does not support MapLibre GL.
 
 {{ <Example html={html} {...this.props} /> }}

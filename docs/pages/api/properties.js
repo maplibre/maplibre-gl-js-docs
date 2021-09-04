@@ -1,13 +1,13 @@
 /*---
 title: Properties and options
-description: Set the map's access token, test whether the browser support Mapbox GL JS, and more with `mapboxgl` properties, options, and utility functions.
+description: Set the map's access token, test whether the browser support MapLibre GL JS, and more with `mapboxgl` properties, options, and utility functions.
 contentType: API
 order: 3
 layout: page
 language:
 - JavaScript
 products:
-- Mapbox GL JS
+- MapLibre GL JS
 ---*/
 
 import React from 'react';
