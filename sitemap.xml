@@ -22,13 +22,13 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/api/events</loc>
-    </url>
-    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/api/geography</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/api/handlers</loc>
+    </url>
+    <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/api/events</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/api/map</loc>
