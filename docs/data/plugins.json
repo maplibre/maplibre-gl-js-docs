@@ -25,9 +25,13 @@
       "description": "Adds support for drawing and editing features on maps.",
       "example": "mapbox-gl-draw"
     },
-    "mapbox-gl-export": {
-      "website": "https://github.com/watergis/mapbox-gl-export",
-      "description": "Adds a control that exports the map as a PDF or PNG."
+    "mapbox-gl-elevation": {
+      "website": "https://github.com/watergis/mapbox-gl-elevation",
+      "description": "Adds a control to retrieve altitude from terrain RGB tilesets."
+    },
+    "maplibre-gl-export": {
+      "website": "https://github.com/watergis/maplibre-gl-export",
+      "description": "Adds a control that exports the map as a PDF or images such as PNG, JPEG and SVG."
     },
     "mapbox-gl-geocoder": {
       "website": "https://github.com/mapbox/mapbox-gl-geocoder",
@@ -56,6 +60,14 @@
     "maplibre-gl-temporal-control": {
       "website": "https://github.com/Kanahiro/maplibre-gl-temporal-control",
       "description": "Temporal Controller plugin for MapLibre GL JS. [demo](https://kanahiro.github.io/maplibre-gl-temporal-control/raster.html)."
+    },
+    "mapbox-gl-valhalla": {
+      "website": "https://github.com/watergis/mapbox-gl-valhalla",
+      "description": "Adds a control to provide isochrone features from valhalla server."
+    },
+    "mapbox.photon": {
+      "website": "https://github.com/watergis/mapbox.photon",
+      "description": "Adds a control to provide a geocoding feature from Photon API."
     }
   },
   "Map Rendering Plugins": {
