@@ -1,6 +1,6 @@
 ---
-title: Use Nominatim with maplibre-gl-geocoder plugin
-description: Use Nominatim with maplibre-gl-geocoder plugin.
+title: Geocode with Nominatim
+description: Geocode with Nominatim and the maplibre-gl-geocoder plugin.
 topics:
   - Geocoder
 thumbnail: geocoder
@@ -16,6 +16,6 @@ prependJs:
 - "import html from './geocoder.html';"
 ---
 
-Use Nominatim with maplibre-gl-geocoder plugin.
+Geocode (turn addresses into locations) with [Nominatim](https://nominatim.org/) and the [maplibre-gl-geocoder](https://github.com/maplibre/maplibre-gl-geocoder) plugin.
 
 {{ <Example html={html} {...this.props} /> }}
