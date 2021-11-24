@@ -7,14 +7,14 @@
     "files": ["*.html"],
     "parser": "espree",
     "parserOptions": {
-      "ecmaVersion": 5,
+      "ecmaVersion": 2020,
       "sourceType": "script"
     },
     "plugins": ["html"],
     "globals": {
       "maplibregl": true,
       "mapboxgl": true,
-      "MapboxGeocoder": true,
+      "MaplibreGeocoder": true,
       "MapboxDirections": true,
       "turf": true,
       "d3": true,
@@ -32,20 +32,11 @@
       "prefer-arrow-callback": "off",
       "prefer-template": "off",
       "object-shorthand": "off",
-      "es/no-promise": "off"
+      "es/no-promise": "off",
+      "es/no-async-functions": "off"
     },
     "env": {
-      "es6": false,
       "browser": true
     }
-  },
-  {
-    "files": ["local-geojson-experimental.html"],
-    "parserOptions": {
-      "ecmaVersion": 2020
-    },
-    "rules": {
-      "es/no-async-functions": "off"
-    }    
   }]
 }
