@@ -68,6 +68,10 @@
     "mapbox.photon": {
       "website": "https://github.com/watergis/mapbox.photon",
       "description": "Adds a control to provide a geocoding feature from Photon API."
+    },
+    "maplibre-gl-basemaps": {
+      "website": "https://github.com/ka7eh/maplibre-gl-basemaps",
+      "description": "A plugin for switching between raster basemaps."
     }
   },
   "Map Rendering Plugins": {
