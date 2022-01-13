@@ -31,11 +31,6 @@ overviewHeader:
 MapLibre GL JS is a JavaScript library that uses WebGL to render interactive maps from vector tiles and [MapLibre styles](https://maplibre.org/maplibre-gl-js-docs/style-spec/). It is part of the [MapLibre GL ecosystem](https://github.com/maplibre).
 
 
-## Migration Note
-
-We are now migrating this documentation from Mapbox to MapLibre. If you want to contribute feel free to open an [issue](https://github.com/maplibre/maplibre-gl-js-docs/issues) on GitHub or submit a [pull request](https://github.com/maplibre/maplibre-gl-js-docs/pulls) to propose directly your changes.
-
-
 ## Quickstart
 
 {{
@@ -51,7 +46,6 @@ We are now migrating this documentation from Mapbox to MapLibre. If you want to 
     />
 }}
 
-In the examples we use vector tiles from [MapTiler](https://maptiler.com). Get your own API key if you want to use MapTiler data in your project.
 
 {{
 <Quickstart />
@@ -72,6 +66,7 @@ This documentation is divided into several sections:
 
 Each section describes classes or objects as well as their **properties**, **parameters**, **instance members**, and associated **events**. Many sections also include inline code examples and related resources.
 
+In the examples, we use vector tiles from [MapTiler](https://maptiler.com). Get your own API key if you want to use MapTiler data in your project.
 
 ## CSP Directives
 
