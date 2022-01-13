@@ -64,41 +64,6 @@ Array [
     "subnav": Array [
       Object {
         "level": 2,
-        "slug": "accesstoken",
-        "text": "accessToken",
-      },
-      Object {
-        "level": 3,
-        "slug": "accesstoken-returns",
-        "text": "Returns",
-      },
-      Object {
-        "level": 3,
-        "slug": "accesstoken-example",
-        "text": "Example",
-      },
-      Object {
-        "level": 3,
-        "slug": "accesstoken-related",
-        "text": "Related",
-      },
-      Object {
-        "level": 2,
-        "slug": "baseapiurl",
-        "text": "baseApiUrl",
-      },
-      Object {
-        "level": 3,
-        "slug": "baseapiurl-returns",
-        "text": "Returns",
-      },
-      Object {
-        "level": 3,
-        "slug": "baseapiurl-example",
-        "text": "Example",
-      },
-      Object {
-        "level": 2,
         "slug": "workercount",
         "text": "workerCount",
       },
@@ -249,6 +214,11 @@ Array [
       },
       Object {
         "level": 3,
+        "slug": "paddingoptions-static-members",
+        "text": "Static members",
+      },
+      Object {
+        "level": 3,
         "slug": "paddingoptions-related",
         "text": "Related",
       },
@@ -274,11 +244,6 @@ Array [
       },
       Object {
         "level": 3,
-        "path": "styleimageinterface-properties",
-        "text": "Properties",
-      },
-      Object {
-        "level": 3,
         "slug": "styleimageinterface-example",
         "text": "Example",
       },
@@ -296,11 +261,6 @@ Array [
         "level": 2,
         "slug": "customlayerinterface",
         "text": "CustomLayerInterface",
-      },
-      Object {
-        "level": 3,
-        "path": "customlayerinterface-properties",
-        "text": "Properties",
       },
       Object {
         "level": 3,
@@ -606,8 +566,23 @@ Array [
       },
       Object {
         "level": 3,
+        "slug": "point-parameters",
+        "text": "Parameters",
+      },
+      Object {
+        "level": 3,
         "slug": "point-example",
         "text": "Example",
+      },
+      Object {
+        "level": 3,
+        "slug": "point-static-members",
+        "text": "Static members",
+      },
+      Object {
+        "level": 3,
+        "slug": "point-instance-members",
+        "text": "Instance members",
       },
       Object {
         "level": 2,
@@ -876,16 +851,6 @@ Array [
         "level": 3,
         "slug": "maptouchevent-instance-members",
         "text": "Instance members",
-      },
-      Object {
-        "level": 2,
-        "slug": "mapboxzoomevent",
-        "text": "MapBoxZoomEvent",
-      },
-      Object {
-        "level": 3,
-        "path": "mapboxzoomevent-properties",
-        "text": "Properties",
       },
       Object {
         "level": 2,
