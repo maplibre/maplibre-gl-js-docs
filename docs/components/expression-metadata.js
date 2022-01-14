@@ -1,8 +1,8 @@
-import { toString } from '@maplibre/maplibre-gl-style-spec/expression/types';
-import CompoundExpression from '@maplibre/maplibre-gl-style-spec/expression/compound_expression';
+import { toString } from '../../maplibre-gl-js/rollup/build/tsc/src/style-spec/expression/types';
+import CompoundExpression from '../../maplibre-gl-js/rollup/build/tsc/src/style-spec/expression/compound_expression';
 
 // registers compound expressions
-import '@maplibre/maplibre-gl-style-spec/expression/definitions/index';
+import '../../maplibre-gl-js/rollup/build/tsc/src/style-spec/expression/definitions/index';
 
 const comparisonSignatures = [
     {
