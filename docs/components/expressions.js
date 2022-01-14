@@ -1,4 +1,4 @@
-import ref from '@maplibre/maplibre-gl-style-spec/reference/latest';
+import ref from '../../maplibre-gl-js/rollup/build/tsc/src/style-spec/reference/latest';
 import { types } from './expression-metadata';
 
 export const expressions = {};

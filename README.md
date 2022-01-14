@@ -8,7 +8,7 @@ We are now migrating this documentation from Mapbox to MapLibre. If you want to 
 
 ## Requirements
 
-* Node 12
+* Node 14
 * npm 6
 
 If you're not sure if your Node and NPM versions are up to date, run `nvm use` before installing dependencies. If you don't have NVM installed, you can [find installation instructions here](https://github.com/nvm-sh/nvm/blob/master/README.md#installing-and-updating).
@@ -22,6 +22,7 @@ After cloning this repository, run:
 ```bash
 npm ci # install dependencies with npm
 git submodule update --init # initialize maplibre-gl-js git submodule
+cd maplibre-gl-js && npm ci && npm run build-tsc
 ```
 
 When pulling in new commits that change the `maplibre-gl-js` submodule,
