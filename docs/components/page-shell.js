@@ -23,7 +23,7 @@ import Browser from '@mapbox/dr-ui/browser';
 import redirectApiRef from '../util/api-ref-redirect';
 import classnames from 'classnames';
 import { version } from '../../maplibre-gl-js/package.json';
-import { styleSpecVersion } from '../../maplibre-gl-js/src/style-spec/package.json';
+import { version as styleSpecVersion } from '../../maplibre-gl-js/src/style-spec/package.json';
 
 import slug from 'slugg';
 
