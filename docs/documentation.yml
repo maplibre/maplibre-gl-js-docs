@@ -9,15 +9,14 @@ toc:
     description: |
       MapLibre GL JS's global properties and options that you can access while initializing your map or accessing information about its status.
     children:
-      - accessToken
-      - baseApiUrl
       - workerCount
       - maxParallelImageRequests
       - supported
-      - version
       - setRTLTextPlugin
       - getRTLTextPluginStatus
       - clearStorage
+      - addProtocol
+      - removeProtocol
       - AnimationOptions
       - CameraOptions
       - PaddingOptions
@@ -90,6 +89,6 @@ toc:
       - Evented
       - MapMouseEvent
       - MapTouchEvent
-      - MapBoxZoomEvent
+      - MapLibreZoomEvent
       - MapDataEvent
       - MapWheelEvent
