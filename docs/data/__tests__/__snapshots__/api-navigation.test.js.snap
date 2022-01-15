@@ -119,11 +119,6 @@ Array [
       },
       Object {
         "level": 2,
-        "slug": "version",
-        "text": "version",
-      },
-      Object {
-        "level": 2,
         "slug": "setrtltextplugin",
         "text": "setRTLTextPlugin",
       },
@@ -165,6 +160,36 @@ Array [
       Object {
         "level": 3,
         "slug": "clearstorage-example",
+        "text": "Example",
+      },
+      Object {
+        "level": 2,
+        "slug": "addprotocol",
+        "text": "addProtocol",
+      },
+      Object {
+        "level": 3,
+        "slug": "addprotocol-parameters",
+        "text": "Parameters",
+      },
+      Object {
+        "level": 3,
+        "slug": "addprotocol-example",
+        "text": "Example",
+      },
+      Object {
+        "level": 2,
+        "slug": "removeprotocol",
+        "text": "removeProtocol",
+      },
+      Object {
+        "level": 3,
+        "slug": "removeprotocol-parameters",
+        "text": "Parameters",
+      },
+      Object {
+        "level": 3,
+        "slug": "removeprotocol-example",
         "text": "Example",
       },
       Object {
@@ -851,6 +876,16 @@ Array [
         "level": 3,
         "slug": "maptouchevent-instance-members",
         "text": "Instance members",
+      },
+      Object {
+        "level": 2,
+        "slug": "maplibrezoomevent",
+        "text": "MapLibreZoomEvent",
+      },
+      Object {
+        "level": 3,
+        "path": "maplibrezoomevent-properties",
+        "text": "Properties",
       },
       Object {
         "level": 2,
