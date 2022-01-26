@@ -6,9 +6,6 @@
     "type": "git",
     "url": "git://github.com/maplibre/maplibre-gl-js-docs.git"
   },
-  "engines": {
-    "node": ">=16"
-  },
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
