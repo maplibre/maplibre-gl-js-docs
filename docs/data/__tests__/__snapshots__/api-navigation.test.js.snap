@@ -586,31 +586,6 @@ Array [
       },
       Object {
         "level": 2,
-        "slug": "point",
-        "text": "Point",
-      },
-      Object {
-        "level": 3,
-        "slug": "point-parameters",
-        "text": "Parameters",
-      },
-      Object {
-        "level": 3,
-        "slug": "point-example",
-        "text": "Example",
-      },
-      Object {
-        "level": 3,
-        "slug": "point-static-members",
-        "text": "Static members",
-      },
-      Object {
-        "level": 3,
-        "slug": "point-instance-members",
-        "text": "Instance members",
-      },
-      Object {
-        "level": 2,
         "slug": "pointlike",
         "text": "PointLike",
       },
