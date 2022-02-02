@@ -29,8 +29,6 @@ jobs:
         cd maplibre-gl-js
         git checkout main
         git pull
-        npm ci
-        npm run build-tsc
         cd ..
         npm run build
         npm run test
