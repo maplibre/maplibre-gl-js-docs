@@ -15,10 +15,6 @@ jobs:
         node-version: 16
     - run: npm ci
     - run: git submodule update --init
-    - run: |
-        cd maplibre-gl-js
-        npm ci
-        npm run build-tsc
     - run: npm run build
     - run: npm run test
     - run: cp _config.yml _site 
