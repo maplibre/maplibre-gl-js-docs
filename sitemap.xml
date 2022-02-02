@@ -82,9 +82,6 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-marker</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-point-along-line</loc>
-    </url>
-    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-point-along-route</loc>
     </url>
     <url>
@@ -323,6 +320,9 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/zoomto-linestring</loc>
+    </url>
+    <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-point-along-line</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/expressions</loc>
