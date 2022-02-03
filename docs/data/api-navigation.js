@@ -36,7 +36,7 @@ module.exports = [
         title: 'Map',
         path: '/maplibre-gl-js-docs/api/map/',
         subnav: buildSubSubNav(
-            apiFilterItems('Map class')[0].members.static[0], // Hack to resolve naming documentaiton.yml conflict b/w the "Map" class and the "Map" section
+            apiFilterItems('Map class')[0].members.static[0], // Hack to resolve naming documentation.yml conflict b/w the "Map" class and the "Map" section
             'map',
             2
         )
@@ -44,37 +44,37 @@ module.exports = [
     {
         title: 'Properties and options',
         path: '/maplibre-gl-js-docs/api/properties/',
-        subnav: buldSubNav('Properties and options')
+        subnav: buildSubNav('Properties and options')
     },
     {
         title: 'Markers and controls',
         path: '/maplibre-gl-js-docs/api/markers/',
-        subnav: buldSubNav('Markers and controls')
+        subnav: buildSubNav('Markers and controls')
     },
 
     {
         title: 'Geography and geometry',
         path: '/maplibre-gl-js-docs/api/geography/',
-        subnav: buldSubNav('Geography and geometry')
+        subnav: buildSubNav('Geography and geometry')
     },
     {
         title: 'User interaction handlers',
         path: '/maplibre-gl-js-docs/api/handlers/',
-        subnav: buldSubNav('User interaction handlers')
+        subnav: buildSubNav('User interaction handlers')
     },
     {
         title: 'Sources',
         path: '/maplibre-gl-js-docs/api/sources/',
-        subnav: buldSubNav('Sources')
+        subnav: buildSubNav('Sources')
     },
     {
         title: 'Events',
         path: '/maplibre-gl-js-docs/api/events/',
-        subnav: buldSubNav('Events')
+        subnav: buildSubNav('Events')
     }
 ];
 
-function buldSubNav(section) {
+function buildSubNav(section) {
     const items = apiFilterItems(section)[0].members.static;
     return items.reduce((arr, item) => {
         arr.push({
