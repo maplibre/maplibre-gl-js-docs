@@ -82,6 +82,9 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-marker</loc>
     </url>
     <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-point-along-line</loc>
+    </url>
+    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-point-along-route</loc>
     </url>
     <url>
@@ -268,13 +271,13 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/popup-on-hover</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/queryrenderedfeatures</loc>
-    </url>
-    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/render-world-copies</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/restrict-bounds</loc>
+    </url>
+    <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/queryrenderedfeatures</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/satellite-map</loc>
@@ -320,9 +323,6 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/zoomto-linestring</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-point-along-line</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/expressions</loc>
