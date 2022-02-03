@@ -49,7 +49,6 @@ toc:
       - LngLatLike
       - LngLatBounds
       - LngLatBoundsLike
-      - Point
       - PointLike
       - MercatorCoordinate
       - EdgeInsets
