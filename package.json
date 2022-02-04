@@ -90,7 +90,7 @@
   },
   "dependencies": {
     "@mapbox/rehype-prism": "^0.5.0",
-    "classnames": "^2.2.6",
+    "classnames": "^2.3.1",
     "fuse.js": "^5.2.3",
     "rehype-slug": "^2.0.3"
   },
