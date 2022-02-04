@@ -12,7 +12,7 @@
     "@babel/plugin-proposal-export-default-from": "^7.10.4",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-flow": "^7.10.4",
-    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-react": "^7.16.7",
     "@mapbox/appropriate-images": "^4.0.0",
     "@mapbox/appropriate-images-react": "^1.0.0",
     "@mapbox/batfish": "^2.1.0",
