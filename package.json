@@ -14,7 +14,7 @@
     "@babel/preset-flow": "^7.10.4",
     "@babel/preset-react": "^7.16.7",
     "@mapbox/appropriate-images": "^4.0.0",
-    "@mapbox/appropriate-images-react": "^1.0.0",
+    "@mapbox/appropriate-images-react": "^2.2.0",
     "@mapbox/batfish": "^2.1.0",
     "@mapbox/copyeditor": "^0.10.0",
     "@mapbox/dr-ui": "^2.2.0",
