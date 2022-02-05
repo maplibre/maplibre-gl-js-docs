@@ -1,5 +1,6 @@
+import { remark } from 'remark';
+
 const { linker } = require('./linker');
-const remark = require('remark');
 
 const docs = require('../components/api.json');
 
