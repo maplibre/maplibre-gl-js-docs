@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import urls from './urls';
-import supported from '@mapbox/mapbox-gl-supported';
+import { supported } from '@mapbox/mapbox-gl-supported';
 import CodeSnippet from '@mapbox/dr-ui/code-snippet';
 import Note from '@mapbox/dr-ui/note';
 import { highlightHtml } from '@mapbox/dr-ui/highlight/html';
