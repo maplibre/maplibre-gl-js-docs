@@ -67,8 +67,9 @@
   },
   "scripts": {
     "lint": "eslint --ext .html docs/pages/example --ext .js .",
+    "prelint": "npm run build-tsc",
     "lint-md": "remark docs/pages/",
-    "build-tsc": "swc maplibre-gl-js/src -d maplibre-gl-js/rollup/build/tsc/src -D -s",
+    "build-tsc": "swc maplibre-gl-js/src -d maplibre-gl-js/rollup/build/tsc -D -s",
     "build-api": "documentation build --pe ts --re ts --re d.ts --github --format json --sort-order alpha --config ./docs/documentation.yml --output docs/components/api.json maplibre-gl-js/src/index.ts",
     "build-images": "mkdir -p docs/img/dist && node docs/bin/build-image-config.js && node docs/bin/appropriate-images.js --all",
     "build-docs": "run-s build-tsc build-api build-images",
