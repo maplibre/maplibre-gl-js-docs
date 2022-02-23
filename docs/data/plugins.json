@@ -114,7 +114,7 @@
   "Framework Integrations": {
     "echartslayer": {
       "website": "https://github.com/lzxue/echartLayer",
-      "description": "Provides an [echarts](https://ecomfe.github.io/echarts/index-en.html) integration."
+      "description": "Provides an [echarts](https://echarts.apache.org/en/index.html) integration."
     },
     "wtMapbox": {
       "website": "https://github.com/yvanvds/wtMapbox",
