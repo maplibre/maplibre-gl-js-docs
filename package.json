@@ -30,7 +30,7 @@
     "check-links": "^1.1.8",
     "documentation": "~13.2.5",
     "downshift": "^6.1.7",
-    "eslint": "^7.8.1",
+    "eslint": "^7.32.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-es": "^3.0.1",
     "eslint-plugin-html": "^6.1.0",
