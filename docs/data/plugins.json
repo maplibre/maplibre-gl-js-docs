@@ -109,6 +109,10 @@
     "mapbox-gl-esri-sources": {
       "website": "https://github.com/frontiersi/mapbox-gl-esri-sources",
       "description": "A library for making it easier to use Esri services in MapLibre GL JS. Supports Esri Map Services (dynamic & tiled), Esri Vector Tile Services & Esri Vector Basemap Styles."
+    },
+    "pmtiles": {
+      "website": "https://github.com/protomaps/PMTiles",
+      "description": "A library for retrieving tiles from single-file, cloud-storage-optimized PMTiles archives, which don't require running a server or API."
     }
   },
   "Framework Integrations": {
@@ -192,6 +196,10 @@
     "mapbox-gl-framerate": {
       "website": "https://github.com/mapbox/mapbox-gl-framerate",
       "description": "A frame rate control to evaluate map rendering performance."
+    },
+    "sdf-glyph-tool": {
+      "website": "https://github.com/protomaps/sdf-glyph-tool",
+      "description": "A web app to generate custom SDF glyph ranges from font files to use in MapLibre GL."
     }
   }
 }
