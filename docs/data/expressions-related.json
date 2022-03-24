@@ -106,6 +106,10 @@
         {
             "title": "Extrude polygons for 3D indoor mapping",
             "href": "https://maplibre.org/maplibre-gl-js-docs/example/3d-extrusion-floorplan/"
+        },
+        {
+            "title": "Provide immersive camera for First Person View",
+            "href": "https://maplibre.org/maplibre-gl-js-docs/example/immersive-camera/"
         }
     ],
     "has": [{
