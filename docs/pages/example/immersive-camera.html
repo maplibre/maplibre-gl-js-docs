@@ -104,9 +104,8 @@
         map.easeTo(target_pos_);
     }
 
-    map.on('click', (e) => {
+    map.on('click', () => {
         position = position % 10 + 1;
-
         let feature = positions.features.find((feat_) =>
             feat_.geometry.type === "Point" &&
             parseInt(feat_.properties.ref) === position);
@@ -121,7 +120,7 @@
     })
     map.on('load', function() {
         fetch("https://maplibre.org/maplibre-gl-js-docs/assets/indoor-3d-positions.geojson")
-            .then(function(response) {
+            .then((response) => {
                 var contentType = response.headers.get("content-type");
                 if (contentType && contentType.indexOf("application/geo+json") !== -1) {
                     return response.json().then(function(json) {
