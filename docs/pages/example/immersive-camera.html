@@ -120,7 +120,7 @@
         map.camera_go_to(cam_pos);
     })
     map.on('load', function() {
-        fetch("https://vegeta.openindoor.io/indoor/immersive-camera/indoor-3d-positions.geojson")
+        fetch("https://maplibre.org/maplibre-gl-js-docs/assets/indoor-3d-positions.geojson")
             .then(function(response) {
                 var contentType = response.headers.get("content-type");
                 if (contentType && contentType.indexOf("application/geo+json") !== -1) {
