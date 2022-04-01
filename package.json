@@ -15,7 +15,7 @@
     "@babel/preset-react": "^7.16.7",
     "@mapbox/appropriate-images": "^5.0.0",
     "@mapbox/appropriate-images-react": "^2.2.0",
-    "@mapbox/batfish": "^2.1.0",
+    "@mapbox/batfish": "^2.3.2",
     "@mapbox/copyeditor": "^0.10.0",
     "@mapbox/dr-ui": "^2.2.0",
     "@mapbox/eslint-config-docs": "0.7.0",
