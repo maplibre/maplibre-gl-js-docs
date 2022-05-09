@@ -84,6 +84,7 @@ The command will print the URL you can use to view the documentation.
 The examples section of the locally run documentation will use the GL JS version located in `../maplibre-gl-js/dist`,
 so make sure to have a working minified build in your local copy of the `maplibre-gl-js` repo (not the submodule; clone `maplibre-gl-js` into the same directory as `maplibre-gl-js-docs` and run `npm build-prod-min` there).
 
+
 ## Committing and Publishing Documentation
 
 When a new GL JS release goes out, the release manager will make a PR that updates this repo's `maplibre-gl-js` submodule to point to the new release. When updating the submodule, you may need to run `npm test -- -u` to update Jest snapshots related to the sidebar navigation.
