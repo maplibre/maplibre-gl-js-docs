@@ -62,7 +62,7 @@
     "remark-react": "^5.0.1",
     "slugg": "^1.2.1",
     "tap-min": "^2.0.0",
-    "tape": "^5.0.1"
+    "tape": "^5.5.3"
   },
   "scripts": {
     "lint": "eslint --ext .html docs/pages/example --ext .js .",
