@@ -103,7 +103,7 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/change-building-color-based-on-zoom-level</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/check-for-support</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/change-case-of-labels</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/cluster</loc>
@@ -223,6 +223,9 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/local-ideographs</loc>
     </url>
     <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/check-for-support</loc>
+    </url>
+    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/locate-user</loc>
     </url>
     <url>
@@ -317,9 +320,6 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/wms</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/change-case-of-labels</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/zoomto-linestring</loc>
