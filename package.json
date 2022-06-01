@@ -41,7 +41,7 @@
     "eslint-plugin-xss": "^0.1.10",
     "execa": "^3.2.0",
     "github-slugger": "1.2.1",
-    "husky": "^4.3.0",
+    "husky": "^8.0.1",
     "jest": "^26.4.1",
     "js-yaml": "^3.13.1",
     "lint-staged": "^10.3.0",
