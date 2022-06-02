@@ -31,7 +31,7 @@
     "documentation": "~13.2.5",
     "downshift": "^6.1.7",
     "eslint": "^7.32.0",
-    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-es": "^3.0.1",
     "eslint-plugin-html": "^6.2.0",
     "eslint-plugin-import": "^2.26.0",
