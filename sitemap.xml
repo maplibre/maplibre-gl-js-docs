@@ -298,6 +298,9 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/third-party</loc>
     </url>
     <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/timeline-animation</loc>
+    </url>
+    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/toggle-interaction-handlers</loc>
     </url>
     <url>
@@ -350,8 +353,5 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/types</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/timeline-animation</loc>
     </url>
 </urlset>
