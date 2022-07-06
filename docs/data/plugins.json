@@ -176,7 +176,7 @@
       "description": "Create a choropleth layer from a CSV source and a geometry source."
     },
     "mapbox-gl-utils": {
-      "website": "https://github.com/stevage/mapbox-gl-utils",
+      "website": "https://github.com/stevage/map-gl-utils",
       "description": "Manage layers, sources, and properties with syntactic sugar and convenience functions."
     }
   },
