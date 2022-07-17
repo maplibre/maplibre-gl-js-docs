@@ -46,6 +46,9 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/3d-buildings</loc>
     </url>
     <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/3d-extrusion-floorplan</loc>
+    </url>
+    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-3d-model</loc>
     </url>
     <url>
@@ -98,9 +101,6 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/change-building-color-based-on-zoom-level</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/3d-extrusion-floorplan</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/change-case-of-labels</loc>
@@ -256,10 +256,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/navigation</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/polygon-popup-on-click</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/offset-vanishing-point-with-padding</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/offset-vanishing-point-with-padding</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/polygon-popup-on-click</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/popup</loc>
@@ -292,10 +292,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/set-popup</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/third-party</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/simple-map</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/simple-map</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/third-party</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/timeline-animation</loc>
