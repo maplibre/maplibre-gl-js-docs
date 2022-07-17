@@ -25,10 +25,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/api/events</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/api/handlers</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/api/geography</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/api/geography</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/api/handlers</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/api/map</loc>
@@ -94,13 +94,13 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/camera-animation</loc>
     </url>
     <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/canvas-source</loc>
+    </url>
+    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/center-on-symbol</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/change-building-color-based-on-zoom-level</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/canvas-source</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/change-case-of-labels</loc>
@@ -118,10 +118,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/color-switcher</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/custom-style-layer</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/custom-marker-icons</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/custom-marker-icons</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/custom-style-layer</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/data-driven-lines</loc>
@@ -133,10 +133,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/disable-scroll-zoom</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/drag-a-marker</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/display-and-style-rich-text-labels</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/display-and-style-rich-text-labels</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/drag-a-marker</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/drag-a-point</loc>
@@ -166,6 +166,9 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/flyto-options</loc>
     </url>
     <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/fullscreen</loc>
+    </url>
+    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/game-controls</loc>
     </url>
     <url>
@@ -173,9 +176,6 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/geojson-layer-in-stack</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/fullscreen</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/geojson-line</loc>
