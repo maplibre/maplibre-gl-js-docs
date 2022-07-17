@@ -211,9 +211,6 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/line-gradient</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/live-geojson</loc>
-    </url>
-    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/live-update-feature</loc>
     </url>
     <url>
@@ -230,6 +227,9 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/map-tiles</loc>
+    </url>
+    <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/live-geojson</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-draw</loc>
