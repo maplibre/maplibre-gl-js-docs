@@ -4,9 +4,6 @@ const path = require('path');
 const apiNavigation = require('./docs/data/api-navigation');
 const { buildApiSearch } = require('./docs/util/build-api-search');
 const {
-    mbxTaggerBatfish
-} = require('@mapbox/remark-lint-mapbox/frontmatter/mbx-tagger-batfish');
-const {
     buildNavigation,
     buildFilters
 } = require('@mapbox/dr-ui/helpers/batfish/index.js');
@@ -79,8 +76,6 @@ module.exports = () => {
             ]
         },
         dataSelectors: {
-            // generate mapbox metadata for every page
-            mbxMeta: (data) => mbxTaggerBatfish(data),
             apiSearch: () => buildApiSearch(),
             apiNavigation: () => apiNavigation,
             navigation: (data) =>
