@@ -22,7 +22,6 @@ After cloning this repository, run:
 ```bash
 npm ci # install dependencies with npm
 git submodule update --init # initialize maplibre-gl-js git submodule
-cd maplibre-gl-js && npm ci && npm run build-tsc
 ```
 
 When pulling in new commits that change the `maplibre-gl-js` submodule,
