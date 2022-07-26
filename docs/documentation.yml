@@ -25,6 +25,11 @@ toc:
       - CustomLayerInterface
       - prewarm
       - clearPrewarmedResources
+      - StylePatchFunction
+      - PreserveLayerFunction
+      - UpdatePaintPropertyFunction
+      - UpdateLayoutPropertyFunction
+      - UpdateFilterFunction
 
   - name: Markers and controls
     page: 'markers'
