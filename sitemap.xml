@@ -52,10 +52,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-3d-model</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-image</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-a-marker</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-a-marker</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-image</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-image-animated</loc>
@@ -148,10 +148,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/featuresat</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/filter-markers</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/fill-pattern</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/fill-pattern</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/filter-markers</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/filter-markers-by-input</loc>
