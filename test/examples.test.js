@@ -1,7 +1,7 @@
-const test = require('tape');
-const fs = require('fs');
-const path = require('path');
-const jsyaml = require('js-yaml');
+import test from 'tape';
+import fs from 'fs';
+import path from 'path';
+import jsyaml from 'js-yaml';
 
 const readPost = (filename) => {
     const buffer = fs.readFileSync(filename),
