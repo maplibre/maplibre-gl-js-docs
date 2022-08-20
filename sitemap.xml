@@ -7,10 +7,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/api</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/examples</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/examples</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/overview</loc>
@@ -55,10 +55,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-a-marker</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-image-animated</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-image</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-image</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-image-animated</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-image-generated</loc>
@@ -115,10 +115,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/cluster-html</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/custom-marker-icons</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/color-switcher</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/color-switcher</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/custom-marker-icons</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/custom-style-layer</loc>
