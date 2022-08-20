@@ -1,6 +1,6 @@
-const test = require('tape');
-const fs = require('fs');
-const categories = require('../docs/data/plugins.json');
+import test from 'tape';
+import fs from 'fs';
+import categories from '../docs/data/plugins.json';
 
 function isUrl(value) {
     const regex = /^(https?:\/\/)?[\w,%-\\.]+\/?$/;
