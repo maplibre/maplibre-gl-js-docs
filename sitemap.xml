@@ -109,13 +109,13 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/check-for-support</loc>
     </url>
     <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/cluster</loc>
+    </url>
+    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/cluster-html</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/color-switcher</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/cluster</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/custom-marker-icons</loc>
@@ -145,10 +145,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/fallback-image</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/featuresat</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/fill-pattern</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/fill-pattern</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/featuresat</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/filter-markers</loc>
@@ -226,10 +226,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/local-ideographs</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/locate-user</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/map-tiles</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/map-tiles</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/locate-user</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-draw</loc>
