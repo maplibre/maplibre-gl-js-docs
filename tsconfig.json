@@ -6,7 +6,6 @@
     "esModuleInterop": true,
     "importHelpers": false,
     "isolatedModules": true,
-    //"importsNotUsedAsValues": "preserve",
     "jsx": "react",
     "module": "esnext",
     "moduleResolution": "Node",
