@@ -265,9 +265,6 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/popup</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/popup-on-click</loc>
-    </url>
-    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/popup-on-hover</loc>
     </url>
     <url>
@@ -302,6 +299,9 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/toggle-interaction-handlers</loc>
+    </url>
+    <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/popup-on-click</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/using-featuresin</loc>
