@@ -142,9 +142,6 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/drag-a-point</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/fallback-image</loc>
-    </url>
-    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/featuresat</loc>
     </url>
     <url>
@@ -317,6 +314,9 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/visualize-population-density</loc>
+    </url>
+    <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/fallback-image</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/wms</loc>
