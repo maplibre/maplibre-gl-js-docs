@@ -69,7 +69,7 @@
   "scripts": {
     "lint": "eslint --ext .html docs/pages/example --ext .js .",
     "lint-md": "remark docs/pages/",
-    "install-gl-js-deps": "cd maplibre-gl-js/ && npm i && tsc --outDir rollup/build/tsc",
+    "install-gl-js-deps": "cd maplibre-gl-js/ && npm ci && tsc --outDir rollup/build/tsc",
     "build-api": "documentation build --pe ts --re ts --re d.ts --github --format json --sort-order alpha --config ./docs/documentation.yml --output docs/components/api.json maplibre-gl-js/src/index.ts",
     "build-images": "mkdir -p docs/img/dist && node --loader ts-node/esm --experimental-specifier-resolution=node docs/bin/build-image-config.js && node --loader ts-node/esm --experimental-specifier-resolution=node docs/bin/appropriate-images.js --all",
     "build-docs": "run-s install-gl-js-deps build-api build-images",
