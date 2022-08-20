@@ -13,7 +13,7 @@ const readPost = (filename) => {
         return {
             name: filename,
             file,
-            metadata: frontmatter ? jsyaml.safeLoad(frontmatter) : null,
+            metadata: frontmatter ? jsyaml.load(frontmatter) : null,
             content: parts[2]
         };
     } catch (err) {
