@@ -1,6 +1,7 @@
-const puppeteer = require('puppeteer'); // eslint-disable-line
-const path = require('path'); // eslint-disable-line
-const pack = require('../../mapbox-gl-js/package.json'); // eslint-disable-line
+import puppeteer from 'puppeteer';
+import path from 'path';
+import pack from '../../maplibre-gl-js/package.json' assert { type: 'json' };
+import fs from 'fs';
 
 const fileName = process.argv[2];
 const token =
@@ -17,7 +18,8 @@ if (!token || !fileName) {
 // strip file extension from file name
 const fileNameFormatted = fileName.replace('.html', '').replace('.js', '');
 // get the example contents/snippet
-const snippet = require('fs').readFileSync(
+
+const snippet = fs.readFileSync(
     path.resolve(
         __dirname,
         '..',
