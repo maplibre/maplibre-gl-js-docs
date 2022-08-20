@@ -226,9 +226,6 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/local-ideographs</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/locate-user</loc>
-    </url>
-    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/map-tiles</loc>
     </url>
     <url>
@@ -353,5 +350,8 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/types</loc>
+    </url>
+    <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/locate-user</loc>
     </url>
 </urlset>
