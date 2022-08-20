@@ -26,7 +26,7 @@
     "@mapbox/remark-lint-link-text": "^0.6.0",
     "babel-eslint": "^10.1.0",
     "check-links": "^1.1.8",
-    "documentation": "~13.2.5",
+    "documentation": "~14.0.0",
     "downshift": "^6.1.7",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.5.0",
