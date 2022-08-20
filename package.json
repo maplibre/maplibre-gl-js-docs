@@ -76,7 +76,7 @@
     "build": "batfish build",
     "serve-static": "batfish serve-static",
     "pretest": "npm run lint",
-    "test": "babel-tape-runner test/*.test.js | tap-min && npm run lint-md && jest",
+    "test": "npm run test-tape && npm run lint-md && jest",
     "test-tape": "babel-tape-runner test/*.test.js | tap-min",
     "start": "NODE_OPTIONS=\"--max_old_space_size=4096\" DEPLOY_ENV=local batfish start",
     "create-image": "node docs/bin/create-image",
