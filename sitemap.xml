@@ -157,6 +157,9 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/filter-markers-by-input</loc>
     </url>
     <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/fitbounds</loc>
+    </url>
+    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/flyto</loc>
     </url>
     <url>
@@ -292,7 +295,7 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/simple-map</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/fitbounds</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/third-party</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/timeline-animation</loc>
@@ -350,8 +353,5 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/types</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/third-party</loc>
     </url>
 </urlset>
