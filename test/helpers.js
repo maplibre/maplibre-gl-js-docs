@@ -1,4 +1,4 @@
-const execa = require('execa');
+import { execa } from 'execa';
 
 function filterTags(tagList) {
     const filtered = tagList.filter(matchesRE);
