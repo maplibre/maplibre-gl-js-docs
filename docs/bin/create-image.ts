@@ -1,4 +1,4 @@
-import puppeteer from 'puppeteer';
+import {Browser, BrowserContext, BrowserType, chromium, Page} from 'playwright';
 import path from 'path';
 import pack from '../../maplibre-gl-js/package.json' assert { type: 'json' };
 import fs from 'fs';
@@ -51,16 +51,20 @@ ${snippet}
 
 // initilize puppeteer
 (async () => {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
+    const browser = await chromium.launch();
+    let page = await browser.newPage();
     // set html for page and then wait until mapbox-gl-js loads
-    await page.setContent(html, { waitUntil: 'networkidle2' }); // eslint-disable-line
+    await page.setContent(html, { waitUntil: 'networkidle' }); // eslint-disable-line
     // set viewport and double deviceScaleFactor to get a closer shot of the map
-    await page.setViewport({
-        width: 600,
-        height: 600,
-        deviceScaleFactor: 2
+
+    const context = await browser.newContext({
+      viewport: {width: 600, height: 600},
+      deviceScaleFactor: 2,
     });
+
+    page = await context.newPage();
+
+
     // create screenshot
     await page
         .screenshot({
