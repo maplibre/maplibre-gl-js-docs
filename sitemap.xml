@@ -343,6 +343,9 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/root</loc>
     </url>
     <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/sources</loc>
+    </url>
+    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/sprite</loc>
     </url>
     <url>
@@ -350,8 +353,5 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/types</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/sources</loc>
     </url>
 </urlset>
