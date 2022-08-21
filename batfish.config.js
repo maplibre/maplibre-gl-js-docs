@@ -1,8 +1,8 @@
 const webpack = require('webpack');
 const mapboxAssembly = require('@mapbox/mbx-assembly');
 const path = require('path');
-const apiNavigation = require('./docs/data/api-navigation');
-const { buildApiSearch } = require('./docs/util/build-api-search');
+const apiNavigation = require('./dist/docs/data/api-navigation');
+const { buildApiSearch } = require('./dist/docs/util/build-api-search');
 const {
     buildNavigation,
     buildFilters
@@ -27,7 +27,7 @@ module.exports = () => {
     const config = {
         siteBasePath: siteBasePath,
         siteOrigin: 'https://maplibre.github.io',
-        pagesDirectory: `${__dirname}/docs/pages`,
+        pagesDirectory: `${__dirname}/dist/docs/pages`,
         outputDirectory: path.join(__dirname, '_site'),
         browserslist: mapboxAssembly.browsersList,
         postcssPlugins: mapboxAssembly.postcssPipeline.plugins,
@@ -35,11 +35,11 @@ module.exports = () => {
         stylesheets: [
             require.resolve('@mapbox/mbx-assembly/dist/assembly.css'),
             require.resolve('@mapbox/dr-ui/css/docs-prose.css'),
-            `${__dirname}/docs/components/site.css`,
+            `${__dirname}/dist/docs/components/site.css`,
             require.resolve('@mapbox/dr-ui/css/prism.css'),
-            `${__dirname}/vendor/docs-page-shell/page-shell-styles.css`
+            `${__dirname}/dist/vendor/docs-page-shell/page-shell-styles.css`
         ],
-        applicationWrapperPath: `${__dirname}/docs/components/application-wrapper.js`,
+        applicationWrapperPath: `${__dirname}/dist/docs/components/application-wrapper.js`,
         webpackLoaders: [
             // Use raw loader to get the HTML string contents of examples
             {
@@ -61,12 +61,12 @@ module.exports = () => {
         ],
         inlineJs: [
             {
-                filename: `${__dirname}/vendor/docs-page-shell/page-shell-script.js`
+                filename: `${__dirname}/dist/vendor/docs-page-shell/page-shell-script.js`
             }
         ],
         jsxtremeMarkdownOptions: {
             getWrapper: () => {
-                return path.join(__dirname, './docs/components/page-shell.js');
+                return path.join(__dirname, './dist/docs/components/page-shell.js');
             },
             rehypePlugins: [
                 require('rehype-slug'),

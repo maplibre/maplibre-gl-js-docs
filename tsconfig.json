@@ -7,13 +7,15 @@
     "importHelpers": false,
     "isolatedModules": true,
     "jsx": "react",
+    "outDir": "dist",
     "module": "ESNext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": false,
-    "target": "ES2019",
+    "downlevelIteration": true,
+    "target": "ES5",
     "lib": [
       "ESNext",
       "DOM",
@@ -26,4 +28,13 @@
       "offscreencanvas"
     ]
   },
+  "include": [
+    "./docs/**/*",
+    "batfish.config.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "vendor**/*",
+    "dist/**/*"
+  ]
 }
