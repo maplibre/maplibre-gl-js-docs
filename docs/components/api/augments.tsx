@@ -20,7 +20,9 @@ export default class Augments extends React.Component<AugmentsProps> {
     }
 }
 
-type AugmentsProps = {
-    section: any;
+interface AugmentsProps {
+    section: {
+      augments: any[]
+    };
     headingLevel?: number;
 };
