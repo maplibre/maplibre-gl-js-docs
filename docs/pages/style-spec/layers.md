@@ -12,7 +12,7 @@ prependJs:
     - "import Items from '../../components/style-spec/items';"
     - "import { layerTypes } from '../../data/types';"
     - "import combineItems from '../../util/combine-items';"
-    - "import ref from '../../../maplibre-gl-js/rollup/build/tsc/src/style-spec/reference/latest';"
+    - "import ref from '../../../node_modules/maplibre-gl/src/style-spec/reference/latest';"
     - "import AppropriateImage from '../../components/appropriate-image';"
     - "import Caption from '../../components/caption';"
 ---

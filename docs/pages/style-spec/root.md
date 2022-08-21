@@ -10,7 +10,7 @@ products:
 - Mapbox Style Specification
 prependJs:
     - "import Items from '../../components/style-spec/items';"
-    - "import ref from '../../../maplibre-gl-js/rollup/build/tsc/src/style-spec/reference/latest';"
+    - "import ref from '../../../maplibre-gl-js/src/style-spec/reference/latest';"
 ---
 
 Root level properties of a MapLibre style specify the map's layers, tile sources and other resources, and default values for the initial camera position when not specified elsewhere.

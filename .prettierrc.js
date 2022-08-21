@@ -1,5 +1,5 @@
 module.exports = {
-    ...require('@mapbox/prettier-config-docs'),
+    ...import('@mapbox/prettier-config-docs'),
     tabWidth: 4,
     singleQuote: true,
     overrides: [

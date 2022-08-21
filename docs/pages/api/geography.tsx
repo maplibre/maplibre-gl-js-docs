@@ -1,0 +1,20 @@
+/*---
+title: Geography and geometry
+description: LngLat and LngLatBounds represent points and rectangles in geographic coordinates. Point represents points in screen coordinates.
+contentType: API
+order: 5
+layout: page
+language:
+- JavaScript
+products:
+- MapLibre GL JS
+---*/
+
+import React from 'react';
+import PageWrapper, { ApiProps } from '../../components/api/page-wrapper.js';
+
+export default class Page extends React.Component<ApiProps> {
+    render() {
+        return <PageWrapper {...this.props} />;
+    }
+}

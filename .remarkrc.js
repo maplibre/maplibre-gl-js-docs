@@ -3,4 +3,4 @@ const config = [
     ['remark-frontmatter', ['yaml']]
 ];
 
-exports.plugins = [...config];
+export default [...config];
