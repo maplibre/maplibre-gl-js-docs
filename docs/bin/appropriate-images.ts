@@ -2,7 +2,7 @@
 
 import path from 'path';
 import appropriateImages from '@mapbox/appropriate-images';
-import imageConfig from '../../batfish-input/docs/img/dist/image.config.json' assert { type: 'json' };
+import imageConfig from '../img/dist/image.config.json' assert { type: 'json' };
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
