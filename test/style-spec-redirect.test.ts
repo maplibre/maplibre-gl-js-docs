@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import { redirect } from '../docs/util/style-spec-redirect';
 
 describe(`style-spec-redirect`, () => {
