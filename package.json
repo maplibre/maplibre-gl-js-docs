@@ -101,9 +101,7 @@
     "format": "prettier --write '**/*.{js,css,html,json}'"
   },
   "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    
   },
   "dependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
