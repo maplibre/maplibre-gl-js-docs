@@ -52,6 +52,8 @@ export default class Properties extends React.Component<PropertiesProps> {
 }
 
 type PropertiesProps = {
-    section: any,
+    section: {
+      properties: any[]
+    },
     headingLevel?: number
 };
