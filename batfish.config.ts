@@ -7,7 +7,12 @@ import {
     buildNavigation,
     buildFilters
 } from '@mapbox/dr-ui/helpers/batfish/index.js';
+import { fileURLToPath } from 'url';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+console.log("TESTE", __dirname)
 const addPages = [
     // {
     //     title: 'Tutorials',
@@ -23,11 +28,11 @@ const addPages = [
 ];
 
 const siteBasePath = '/maplibre-gl-js-docs';
-export default () => {
+export default (): object => {
     let config = {
         siteBasePath: siteBasePath,
         siteOrigin: 'https://maplibre.github.io',
-        pagesDirectory: `${__dirname}/dist/docs/pages`,
+        pagesDirectory: `${__dirname}/batfish-input/docs/pages`,
         outputDirectory: path.join(__dirname, '_site'),
         browserslist: mapboxAssembly.browsersList,
         postcssPlugins: mapboxAssembly.postcssPipeline.plugins,
@@ -35,11 +40,11 @@ export default () => {
         stylesheets: [
             require.resolve('@mapbox/mbx-assembly/dist/assembly.css'),
             require.resolve('@mapbox/dr-ui/css/docs-prose.css'),
-            `${__dirname}/dist/docs/components/site.css`,
+            `${__dirname}/batfish-input/docs/components/site.css`,
             require.resolve('@mapbox/dr-ui/css/prism.css'),
-            `${__dirname}/dist/vendor/docs-page-shell/page-shell-styles.css`
+            `${__dirname}/batfish-input/vendor/docs-page-shell/page-shell-styles.css`
         ],
-        applicationWrapperPath: `${__dirname}/dist/docs/components/application-wrapper.js`,
+        applicationWrapperPath: `${__dirname}/batfish-input/docs/components/application-wrapper.js`,
         webpackLoaders: [
             // Use raw loader to get the HTML string contents of examples
             {
@@ -61,12 +66,12 @@ export default () => {
         ],
         inlineJs: [
             {
-                filename: `${__dirname}/dist/vendor/docs-page-shell/page-shell-script.js`
+                filename: `${__dirname}/batfish-input/vendor/docs-page-shell/page-shell-script.js`
             }
         ],
         jsxtremeMarkdownOptions: {
             getWrapper: () => {
-                return path.join(__dirname, './dist/docs/components/page-shell.js');
+                return path.join(__dirname, './batfish-input/docs/components/page-shell.js');
             },
             rehypePlugins: [
                 import('rehype-slug'),
