@@ -41,7 +41,7 @@ class ApiItemContents extends React.Component<ApiItemContentsProps> {
                         section.constructorComment.access !== 'private') && (
                         <ClassName
                             headingLevel={this.props.headingLevel}
-                            section={section}
+                            section={{name:section.name}}
                         />
                     )}
 
@@ -100,6 +100,7 @@ class ApiItemContents extends React.Component<ApiItemContentsProps> {
 
 interface ApiItemContentsProps {
     augments?: any[],
+    name?: string,
     kind?: string,
     constructorComment?: {
         access: string

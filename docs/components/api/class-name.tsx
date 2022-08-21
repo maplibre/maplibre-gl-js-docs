@@ -18,6 +18,8 @@ export default class ClassName extends React.Component<ClassNameProps> {
 }
 
 type ClassNameProps = {
-    section: any,
+    section: {
+      name: string
+    },
     headingLevel?: number
 };
