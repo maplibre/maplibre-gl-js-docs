@@ -82,7 +82,7 @@
     "unified": "^10.1.2"
   },
   "scripts": {
-    "lint": "eslint --ext .html docs/pages/example --ext .js .",
+    "lint": "eslint --ext .html docs/pages/example --ext .ts .",
     "lint-md": "remark docs/pages/",
     "install-gl-js-deps": "cd maplibre-gl-js/ && npm ci && tsc --outDir rollup/build/tsc",
     "build-api": "documentation build --pe ts --re ts --re d.ts --github --format json --sort-order alpha --config ./docs/documentation.yml --output docs/components/api.json node_modules/maplibre-gl/src/index.ts",
@@ -92,7 +92,7 @@
     "prebuild": "npm run build-docs",
     "prestart": "npm run build-docs",
     "build": "batfish build",
-    "serve-static": "batfish serve-static",
+    "serve-static": "batfish serve-static -c dist/batfish.config.js",
     "pretest": "npm run lint",
     "test": "npm run lint-md && npm run test-jest",
     "test-jest": "jest -c ./jest.config.ts",

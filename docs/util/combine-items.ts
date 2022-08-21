@@ -7,7 +7,7 @@ export default function combineItems(properties: any[], section: any) {
         return {
             ref: ref[`${property}_${section}`],
             kind: property,
-            section: `${property}-${section}`
+            section: `${property}-${section}`,
         };
     });
     // combine items
