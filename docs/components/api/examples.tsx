@@ -22,12 +22,11 @@ export default class Examples extends React.Component<ExamplesProps> {
 }
 
 type ExamplesProps = {
-    section: any;
+    section: {
+        examples: {
+            caption?: string;
+            description: string;
+        }[];
+    };
     headingLevel?: number;
-    // {
-    //     examples: {
-    //         caption?: string;
-    //         description: string;
-    //     }[];
-    // };
 };

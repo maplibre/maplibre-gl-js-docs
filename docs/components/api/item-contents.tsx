@@ -79,7 +79,7 @@ class ApiItemContents extends React.Component<ApiItemContentsProps> {
                 {!empty(section.examples) && (
                     <Examples
                         headingLevel={this.props.headingLevel}
-                        section={section}
+                        section={{examples: section.examples}}
                     />
                 )}
 
