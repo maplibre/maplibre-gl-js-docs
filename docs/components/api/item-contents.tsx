@@ -90,7 +90,7 @@ class ApiItemContents extends React.Component<ApiItemContentsProps> {
                 {!empty(section.sees) && (
                     <Related
                         headingLevel={this.props.headingLevel}
-                        section={section}
+                        section={{sees: section.sees}}
                     />
                 )}
             </React.Fragment>
