@@ -82,7 +82,7 @@
     "build-api": "documentation build --pe ts --re ts --re d.ts --github --format json --sort-order alpha --config ./docs/documentation.yml --output docs/components/api.json node_modules/maplibre-gl/src/index.ts",
     "build-images": "mkdir -p docs/img/dist && node --loader ts-node/esm --experimental-specifier-resolution=node docs/bin/build-image-config.js && node --loader ts-node/esm --experimental-specifier-resolution=node docs/bin/appropriate-images.js --all",
     "build-docs": "run-s build-api build-images",
-    "compile-docs-folder": "rm -rf dist && npx tsc --p tsconfig.json",
+    "compile-docs": "npx tsc --p tsconfig.json",
     "prebuild": "npm run build-docs",
     "prestart": "npm run build-docs",
     "build": "batfish build",
