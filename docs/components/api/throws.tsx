@@ -21,6 +21,8 @@ export default class Throws extends React.Component<ThrowsProps> {
 }
 
 type ThrowsProps = {
-    section: any,
+    section: {
+      throws: any[]
+    },
     headingLevel?: number
 };
