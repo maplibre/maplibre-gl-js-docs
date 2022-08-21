@@ -31,7 +31,7 @@ class ApiItemContents extends React.Component<ApiItemContentsProps> {
                 {!empty(section.augments) && (
                     <Augments
                         headingLevel={this.props.headingLevel}
-                        section={section}
+                        section={{augments: section.augments}}
                     />
                 )}
 
@@ -98,7 +98,7 @@ class ApiItemContents extends React.Component<ApiItemContentsProps> {
     }
 }
 
-type ApiItemContentsProps = {
+interface ApiItemContentsProps {
     augments?: any[],
     kind?: string,
     constructorComment?: {
