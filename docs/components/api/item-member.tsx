@@ -92,6 +92,9 @@ class ApiItemMember extends React.Component<
                         <ApiItem
                             nested={true}
                             location={this.props.location}
+                            name={member.name}
+                            namespace={member.namespace}
+                            context={member.context}
                             {...member}
                         />
                     </div>
@@ -128,6 +131,7 @@ type ApiItemMemberProps = {
     namespace?: string;
     name?: string;
     kind?: string;
+    context?: any;
     location?: any;
     closeAll?: boolean;
     headingLevel?: number;

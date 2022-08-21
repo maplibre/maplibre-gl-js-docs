@@ -13,7 +13,11 @@ class ApiItem extends React.Component<ApiItemProps> {
                     !section.nested && (
                         <SectionHeading
                             headingLevel={section.headingLevel}
-                            section={section}
+                            section={{
+                                namespace: section.namespace,
+                                name: section.name,
+                                context: section.context,
+                            }}
                         />
                     )
                 }
@@ -28,8 +32,17 @@ class ApiItem extends React.Component<ApiItemProps> {
 }
 
 type ApiItemProps = {
-    nested?: boolean,
-    headingLevel?: number
+    nested?: boolean;
+    headingLevel?: number;
+    location?: any;
+    namespace: string;
+    name: string;
+    context: {
+        github: {
+            url: string;
+            path: string;
+        };
+    };
 };
 
 export default ApiItem;

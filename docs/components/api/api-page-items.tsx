@@ -6,7 +6,6 @@ import { toHtml } from '../../util/formatters';
 
 import apiFilterItems from '../../util/api-filter-items';
 
-
 export default class ApiPageItems extends React.Component<ApiPageItemsProps> {
     pageDocSource = apiFilterItems(this.props.name);
     children = this.pageDocSource[0].members.static;
@@ -38,10 +37,9 @@ export default class ApiPageItems extends React.Component<ApiPageItemsProps> {
 }
 
 type ApiPageItemsProps = {
-  name: string;
-  location: any;
+    name: string;
+    location: any;
 };
-
 
 class Section extends React.Component<SectionProps> {
     render() {
@@ -49,7 +47,13 @@ class Section extends React.Component<SectionProps> {
         return (
             <React.Fragment>
                 <div className="mb18">
-                    <ApiItem headingLevel={2} {...child} />
+                    <ApiItem
+                        headingLevel={2}
+                        name={child.name}
+                        namespace={child.namespace}
+                        context={child.context}
+                        {...child}
+                    />
                 </div>
             </React.Fragment>
         );
@@ -57,8 +61,10 @@ class Section extends React.Component<SectionProps> {
 }
 
 type SectionProps = {
-    name: string,
-    location: any
+    name: string;
+    location: any;
+    namespace?: string;
+    context?: any;
 };
 
 class SingleSection extends React.Component<SingleSectionProps> {
@@ -67,7 +73,7 @@ class SingleSection extends React.Component<SingleSectionProps> {
         return (
             <React.Fragment>
                 <div className="mt30-mm mt-neg30-mxl">
-                    <Github section={{context: child.context}} />
+                    <Github section={{ context: child.context }} />
                 </div>
                 <div className="mb18">
                     <ApiItemContents {...child} headingLevel={2} />
@@ -77,6 +83,6 @@ class SingleSection extends React.Component<SingleSectionProps> {
     }
 }
 type SingleSectionProps = {
-    location: any,
-    context: any,
+    location: any;
+    context: any;
 };
