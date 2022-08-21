@@ -99,6 +99,8 @@ export default class Parameters extends React.Component<ParametersProps> {
 }
 
 type ParametersProps = {
-    section: any,
+    section: {
+      params: any[]
+    },
     headingLevel?: number
 };
