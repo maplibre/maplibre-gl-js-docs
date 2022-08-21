@@ -20,6 +20,7 @@
     "@mapbox/prettier-config-docs": "^0.2.1",
     "@mapbox/remark-lint-link-text": "^0.6.0",
     "@types/jest": "^28.1.7",
+    "@types/node": "^18.7.8",
     "@types/offscreencanvas": "^2019.7.0",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
