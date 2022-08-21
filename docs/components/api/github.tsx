@@ -1,5 +1,6 @@
 import React from 'react';
 import IconText from '@mapbox/mr-ui/icon-text';
+import { string } from 'prop-types';
 
 export default class GitHub extends React.Component<GitHubProps> {
     render() {
@@ -21,6 +22,12 @@ export default class GitHub extends React.Component<GitHubProps> {
 }
 
 type GitHubProps = {
-    section?: any,
-    
+    section?: {
+        context?: {
+            github?: {
+                url?: string;
+                path?: string;
+            };
+        };
+    };
 };

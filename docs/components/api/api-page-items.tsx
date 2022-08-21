@@ -67,7 +67,7 @@ class SingleSection extends React.Component<SingleSectionProps> {
         return (
             <React.Fragment>
                 <div className="mt30-mm mt-neg30-mxl">
-                    <Github section={child} />
+                    <Github section={{context: child.context}} />
                 </div>
                 <div className="mb18">
                     <ApiItemContents {...child} headingLevel={2} />
@@ -77,5 +77,6 @@ class SingleSection extends React.Component<SingleSectionProps> {
     }
 }
 type SingleSectionProps = {
-    location: any
+    location: any,
+    context: any,
 };
