@@ -83,7 +83,7 @@
     "build-images": "mkdir -p batfish-input/docs/img/dist && node --loader ts-node/esm --experimental-specifier-resolution=node docs/bin/build-image-config.js && node --loader ts-node/esm --experimental-specifier-resolution=node docs/bin/appropriate-images.js --all",
     "build-docs": "run-s build-api build-images",
     "compile-docs": "npx tsc --p tsconfig.json",
-    "generate-batfish-input": "rm -rf batfish-input && mkdir batfish-input && npm run compile-docs && npm run build-images && build-api",
+    "generate-batfish-input": "rm -rf batfish-input && mkdir batfish-input && npm run build-api && npm run build-images && npm run compile-docs",
     "prebuild": "npm run build-docs",
     "prestart": "npm run build-docs",
     "build": "batfish build",
