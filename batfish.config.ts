@@ -1,8 +1,8 @@
 import webpack from 'webpack';
 import mapboxAssembly from '@mapbox/mbx-assembly';
 import path from 'path';
-import apiNavigation from './dist/docs/data/api-navigation';
-import { buildApiSearch } from './dist/docs/util/build-api-search';
+import apiNavigation from './docs/data/api-navigation';
+import { buildApiSearch } from './docs/util/build-api-search';
 import {
     buildNavigation,
     buildFilters

@@ -30,7 +30,7 @@
   },
   "include": [
     "./docs/**/*",
-    "batfish.config.js"
+    "batfish.config.ts"
   ],
   "exclude": [
     "node_modules",
