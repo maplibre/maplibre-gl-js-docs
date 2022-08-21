@@ -65,7 +65,7 @@ class ApiItemContents extends React.Component<ApiItemContentsProps> {
                 {section.returns && (
                     <Returns
                         headingLevel={this.props.headingLevel}
-                        section={section}
+                        section={{returns: section.returns}}
                     />
                 )}
 
