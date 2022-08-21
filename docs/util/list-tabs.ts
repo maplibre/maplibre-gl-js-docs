@@ -1,16 +1,16 @@
 const tabOrder = {
     api: {
-        title: 'API Reference'
+        title: 'API Reference',
     },
     examples: {
-        title: 'Examples'
+        title: 'Examples',
     },
     plugins: {
-        title: 'Plugins'
+        title: 'Plugins',
     },
     'style-spec': {
-        title: 'Style Specification'
-    }
+        title: 'Style Specification',
+    },
 };
 
 interface Tab {
@@ -35,7 +35,7 @@ export function listTabs(arrayOfFolders: Folder[]) {
             return {
                 label: tabOrder[tabId].title,
                 id: tabId,
-                href: tab.path
+                href: tab.path,
             };
         });
     const orderedTabs: Tab[] = [];

@@ -3,7 +3,7 @@ const expressionExceptions = [
     'camera-expression',
     'composition',
     'type-system',
-    'expression-reference'
+    'expression-reference',
 ];
 
 const pageAllowList = [
@@ -19,10 +19,10 @@ const pageAllowList = [
     'types',
     'expressions',
     'other',
-    'paint'
+    'paint',
 ];
 
-export function redirect(location: { hash: string }): string|undefined {
+export function redirect(location: { hash: string }): string | undefined {
     // some "expressions" headings do not follow the pattern, so we'll set them first
     if (expressionExceptions.indexOf(location.hash.replace('#', '')) > -1) {
         return `/maplibre-gl-js-docs/style-spec/expressions/${location.hash}`;
@@ -61,4 +61,4 @@ export function redirect(location: { hash: string }): string|undefined {
     }`;
 }
 
-export default redirect
+export default redirect;
