@@ -23,6 +23,6 @@ const imageConfig = fs.readdirSync(imagePath).reduce((obj, image) => {
 }, {});
 
 fs.writeFileSync(
-    './docs/img/dist/image.config.json',
+    './batfish-input/docs/img/dist/image.config.json',
     JSON.stringify(imageConfig)
 );

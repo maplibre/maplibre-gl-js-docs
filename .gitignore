@@ -18,3 +18,4 @@ npm-debug.log
 /batfish-input/**/*.jsx
 /batfish-input/**/*.ts
 /batfish-input/**/*.tsx
+/batfish-input/docs/img
