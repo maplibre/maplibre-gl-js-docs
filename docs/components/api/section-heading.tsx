@@ -26,15 +26,15 @@ export default class SectionHeading extends React.Component<SectionHeadingProps>
 
 type SectionHeadingProps = {
     headingLevel?: number,
-    section: any;
-    // section: {
-    //     namespace: string,
-    //     name: string,
-    //     context: {
-    //         github: {
-    //             url: string,
-    //             path: string
-    //         }
-    //     }
-    // }
+    // section: any;
+    section: {
+        namespace: string,
+        name: string,
+        context: {
+            github: {
+                url: string,
+                path: string
+            }
+        }
+    }
 };
