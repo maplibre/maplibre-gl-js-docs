@@ -10,7 +10,7 @@ products:
 - Mapbox Style Specification
 prependJs:
     - "import Items from '../../components/style-spec/items';"
-    - "import ref from '../../../maplibre-gl-js/rollup/build/tsc/src/style-spec/reference/latest';"
+    - "import ref from '../../../maplibre-gl-js/src/style-spec/reference/latest';"
     - "import Icon from '@mapbox/mr-ui/icon';"
 ---
 

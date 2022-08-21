@@ -24,7 +24,6 @@
       "mapboxSdk": true
     },
     "rules": {
-      "flowtype/require-valid-file-annotation": [0],
       "strict": "off",
       "no-unused-vars": ["error", {"varsIgnorePattern": "map|popup|toggleSidebar|marker"}],
       "no-loop-func": "off",

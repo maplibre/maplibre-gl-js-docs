@@ -9,7 +9,7 @@ hideFeedback: true
 products:
 - Mapbox Style Specification
 prependJs:
-    - "import ref from '../../../maplibre-gl-js/rollup/build/tsc/src/style-spec/reference/latest';"
+    - "import ref from '../../../maplibre-gl-js/src/style-spec/reference/latest';"
 ---
 
 <!--copyeditor disable basic-->
