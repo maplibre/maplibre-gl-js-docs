@@ -51,7 +51,7 @@ class ApiItemContents extends React.Component<ApiItemContentsProps> {
                         section.constructorComment.access !== 'private') && (
                         <Parameters
                             headingLevel={this.props.headingLevel}
-                            section={section}
+                            section={{params: section.params}}
                         />
                     )}
 
