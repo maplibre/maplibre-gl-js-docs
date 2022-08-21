@@ -17,6 +17,8 @@ export default class Returns extends React.Component<ReturnsProps> {
 }
 
 type ReturnsProps = {
-    section: any,
+    section: {
+      returns: any[]
+    },
     headingLevel?: number
 };
