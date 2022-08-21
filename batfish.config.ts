@@ -1,12 +1,12 @@
-const webpack = require('webpack');
-const mapboxAssembly = require('@mapbox/mbx-assembly');
-const path = require('path');
-const apiNavigation = require('./dist/docs/data/api-navigation');
-const { buildApiSearch } = require('./dist/docs/util/build-api-search');
-const {
+import webpack from 'webpack';
+import mapboxAssembly from '@mapbox/mbx-assembly';
+import path from 'path';
+import apiNavigation from './dist/docs/data/api-navigation';
+import { buildApiSearch } from './dist/docs/util/build-api-search';
+import {
     buildNavigation,
     buildFilters
-} = require('@mapbox/dr-ui/helpers/batfish/index.js');
+} from '@mapbox/dr-ui/helpers/batfish/index.js';
 
 const addPages = [
     // {
@@ -23,8 +23,8 @@ const addPages = [
 ];
 
 const siteBasePath = '/maplibre-gl-js-docs';
-module.exports = () => {
-    const config = {
+export default () => {
+    let config = {
         siteBasePath: siteBasePath,
         siteOrigin: 'https://maplibre.github.io',
         pagesDirectory: `${__dirname}/dist/docs/pages`,
@@ -69,10 +69,10 @@ module.exports = () => {
                 return path.join(__dirname, './dist/docs/components/page-shell.js');
             },
             rehypePlugins: [
-                require('rehype-slug'),
-                require('@mapbox/rehype-prism'),
-                require('@mapbox/dr-ui/plugins/add-links-to-headings'),
-                require('@mapbox/dr-ui/plugins/make-table-scroll')
+                import('rehype-slug'),
+                import('@mapbox/rehype-prism'),
+                import('@mapbox/dr-ui/plugins/add-links-to-headings'),
+                import('@mapbox/dr-ui/plugins/make-table-scroll')
             ]
         },
         dataSelectors: {
@@ -88,12 +88,13 @@ module.exports = () => {
             '@maplibre/maplibre-gl-style-spec',
             'fuse.js'
         ],
-        webpackStaticIgnore: [/util\/util\.js$/]
+        webpackStaticIgnore: [/util\/util\.js$/],
+        unprocessedPageFiles: ['**/dist/**/*.*']
     };
 
     // Local builds treat the `dist` directory as static assets, allowing you to test examples against the
     // local branch build. Non-local builds ignore the `dist` directory, and examples load assets from the CDN.
-    config.unprocessedPageFiles = ['**/dist/**/*.*'];
+    config["unprocessedPageFiles"] = ['**/dist/**/*.*'];
     if (process.env.DEPLOY_ENV !== 'local') {
         config.ignoreWithinPagesDirectory.push('**/dist/**/*.*');
     }
