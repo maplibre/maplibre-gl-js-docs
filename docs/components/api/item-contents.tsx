@@ -72,7 +72,7 @@ class ApiItemContents extends React.Component<ApiItemContentsProps> {
                 {!empty(section.throws) && (
                     <Throws
                         headingLevel={this.props.headingLevel}
-                        section={section}
+                        section={{throws: section.throws}}
                     />
                 )}
 
