@@ -30,6 +30,8 @@
     "@types/offscreencanvas": "^2019.7.0",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
     "babel-tape-runner": "^3.0.0",
     "check-links": "^1.1.8",
     "documentation": "^14.0.0",
@@ -100,9 +102,7 @@
     "open-changed-examples": "git diff --name-only docs/pages/example/*.html | awk '{print \"http://localhost:8080/maplibre-gl-js-docs\" substr($0,11,length($0)-15)}' | xargs open",
     "format": "prettier --write '**/*.{js,css,html,json}'"
   },
-  "husky": {
-    
-  },
+  "husky": {},
   "dependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
     "classnames": "^2.3.1",

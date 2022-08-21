@@ -1,5 +1,3 @@
-/* eslint-disable xss/no-mixed-html */
-
 import { formatters, toHtml, formatType } from '../formatters';
 
 describe('formatters', () => {
