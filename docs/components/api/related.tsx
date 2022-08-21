@@ -18,6 +18,8 @@ export default class Related extends React.Component<RelatedProps> {
 }
 
 type RelatedProps = {
-    section: any,
+    section: {
+      sees: any[]
+    },
     headingLevel?: number
 };
