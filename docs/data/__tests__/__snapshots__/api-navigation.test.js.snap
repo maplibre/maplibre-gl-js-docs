@@ -722,6 +722,11 @@ Array [
       },
       Object {
         "level": 3,
+        "slug": "touchpitchhandler-parameters",
+        "text": "Parameters",
+      },
+      Object {
+        "level": 3,
         "slug": "touchpitchhandler-instance-members",
         "text": "Instance members",
       },
