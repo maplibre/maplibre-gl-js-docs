@@ -1,6 +1,6 @@
 import {chromium} from 'playwright';
 import path from 'path';
-import pack from '../../node_modules/maplibre-gl/package.json' assert { type: 'json' };
+import pack from 'maplibre-gl/package.json' assert { type: 'json' };
 import fs from 'fs';
 
 const fileName = process.argv[2];
