@@ -26,3 +26,5 @@ fs.writeFileSync(
     './docs/img/dist/image.config.json',
     JSON.stringify(imageConfig)
 );
+
+

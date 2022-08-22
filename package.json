@@ -10,7 +10,7 @@
   "devDependencies": {
     "@mapbox/appropriate-images": "^5.0.0",
     "@mapbox/appropriate-images-react": "^2.2.0",
-    "@mapbox/batfish": "^2.3.2",
+    "@mapbox/batfish": "github:birkskyum/batfish#8ab79e76b3f1fe63cb267ed38a5c10c163139c0d",
     "@mapbox/dr-ui": "^2.2.0",
     "@mapbox/eslint-config-docs": "0.7.0",
     "@mapbox/eslint-config-mapbox": "^3.0.0",
@@ -79,7 +79,6 @@
   "scripts": {
     "lint": "eslint --ext .html docs/pages/example --ext .ts .",
     "lint-md": "remark docs/pages/",
-    "install-gl-js-deps": "cd maplibre-gl-js/ && npm ci && tsc --outDir rollup/build/tsc",
     "build-api": "documentation build --pe ts --re ts --re d.ts --github --format json --sort-order alpha --config ./docs/documentation.yml --output docs/components/api.json node_modules/maplibre-gl/src/index.ts",
     "build-images": "mkdir -p docs/img/dist && node --loader ts-node/esm --experimental-specifier-resolution=node docs/bin/build-image-config.js && mkdir -p batfish-input/docs/img/dist && node --loader ts-node/esm --experimental-specifier-resolution=node docs/bin/appropriate-images.js --all",
     "build-docs": "run-s build-api build-images",

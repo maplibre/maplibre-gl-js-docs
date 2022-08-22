@@ -15,7 +15,7 @@
     "sourceMap": true,
     "strict": false,
     "downlevelIteration": true,
-    "target": "ES5",
+    "target": "es2017",
     "lib": [
       "ESNext",
       "DOM",
