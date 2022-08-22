@@ -1,5 +1,5 @@
 ---
-title: Terrain in 3D
+title: 3D Terrain
 description: Go beyond hillshade and show elevation in actual 3D.
 topics:
   - Layers
@@ -16,6 +16,6 @@ prependJs:
 - "import html from './3d-terrain.html';"
 ---
 
-Use terrain 3D to show mountains and valleys.
+Use 3D terrain to show mountains and valleys.
 
 {{ <Example html={html} {...this.props} /> }}
