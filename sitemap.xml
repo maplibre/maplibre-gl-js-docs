@@ -7,10 +7,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/api</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/examples</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/examples</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/overview</loc>
@@ -82,10 +82,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-images</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-point-along-line</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-marker</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-marker</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-point-along-line</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/animate-point-along-route</loc>
