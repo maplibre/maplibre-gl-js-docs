@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import IconText from '@mapbox/mr-ui/icon-text';
+import { version } from '../../../node_modules/maplibre-gl/package.json';
 
 export default class GitHub extends React.Component {
     render() {
@@ -10,10 +11,18 @@ export default class GitHub extends React.Component {
             section.context.github && (
                 <a
                     className="link--gray unprose block mt-neg12 txt-mono mb18"
-                    href={section.context.github.url}
+                    href={`https://github.com/maplibre/maplibre-gl-js/tree/v${version}/${
+                        section.context.github.url.split(
+                            'node_modules/maplibre-gl/'
+                        )[1]
+                    }`}
                 >
                     <IconText iconBefore="github">
-                        {section.context.github.path}
+                        {
+                            section.context.github.path.split(
+                                'node_modules/maplibre-gl/'
+                            )[1]
+                        }
                     </IconText>
                 </a>
             )
