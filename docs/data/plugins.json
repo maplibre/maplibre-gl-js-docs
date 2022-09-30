@@ -89,7 +89,7 @@
       "description": "Hide and show traffic layers on your map with an optional toggle button."
     },
     "deck.gl": {
-      "website": "https://github.com/uber/deck.gl",
+      "website": "https://github.com/visgl/deck.gl",
       "description": "Adds advanced WebGL visualization layers."
     },
     "L7": {
