@@ -328,6 +328,9 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/zoomto-linestring</loc>
     </url>
     <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/expressions</loc>
+    </url>
+    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/glyphs</loc>
     </url>
     <url>
@@ -353,8 +356,5 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/types</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/expressions</loc>
     </url>
 </urlset>
