@@ -178,6 +178,10 @@
     "mapbox-gl-utils": {
       "website": "https://github.com/stevage/map-gl-utils",
       "description": "Manage layers, sources, and properties with syntactic sugar and convenience functions."
+    },
+    "maplibregl-mapbox-request-transformer": {
+      "website": "https://github.com/rowanwins/maplibregl-mapbox-request-transformer",
+      "description": "This library provides a request transforming function enabling the consumption of MapboxGL Styles in MapLibreGL."
     }
   },
   "Development Tools": {
