@@ -189,8 +189,8 @@
       "website": "https://github.com/mapbox/mapbox-gl-js-mock",
       "description": "A [mock](https://en.wikipedia.org/wiki/Mock_object) of Mapbox GL JS."
     },
-    "mapbox-gl-inspect": {
-      "website": "https://github.com/lukasmartinelli/mapbox-gl-inspect",
+    "maplibre-gl-inspect": {
+      "website": "https://github.com/acalcutt/maplibre-gl-inspect",
       "description": "Adds an inspect control to view vector source features and properties."
     },
     "mapbox-gl-fps": {
