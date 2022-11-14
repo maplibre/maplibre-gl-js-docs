@@ -1,0 +1,147 @@
+<div id="map"></div>
+<script type="module">
+    import path_01 from 'https://maplibre.org/maplibre-gl-js-docs/assets/animate-way/path_01.geojson' assert {type: 'json'};
+    import path_02 from 'https://maplibre.org/maplibre-gl-js-docs/assets/animate-way/path_02.geojson' assert {type: 'json'};
+    import path_03 from 'https://maplibre.org/maplibre-gl-js-docs/assets/animate-way/path_03.geojson' assert {type: 'json'};
+    import style from 'https://maplibre.org/maplibre-gl-js-docs/assets/animate-way/style.json' assert {type: 'json'};
+
+    let initTimestamp = null;
+    let step_length = 0.01;
+    let animateMarker_ = () => { }
+    let loop = 0;
+    let map = new maplibregl.Map({
+        container: 'map',
+        style: style,
+        center: [-103.391908, 20.6529016],
+        zoom: 15.99,
+        pitch: 40,
+        bearing: 20,
+        antialias: true
+    });
+
+    var scale = new maplibregl.ScaleControl({
+        maxWidth: 80,
+        unit: 'imperial'
+    });
+    map.addControl(scale);
+
+    scale.setUnit('metric');
+
+    map.on('load', function () {
+        map.addSource('path', {
+            'type': 'geojson',
+            'data': {
+                "type": "FeatureCollection",
+                "features": [path_01, path_02, path_03]
+            }
+        });
+        map.addLayer({
+            "id": "route",
+            "type": "line",
+            "source": "path",
+            "layout": {
+                "line-join": "round",
+                "line-cap": "round"
+            },
+            "paint": {
+                "line-opacity": 0.8,
+                "line-dasharray": [
+                    2,
+                    2
+                ],
+                "line-color": [
+                    "get",
+                    "color"
+                ],
+                "line-width": 8
+            }
+        });
+        for (let path of [path_01, path_02, path_03]) {
+            let finish = new maplibregl.Marker({
+                color: path.properties.color,
+                draggable: true
+            }).setLngLat(path.geometry.coordinates[path.geometry.coordinates.length - 1])
+                .addTo(map);
+            finish.getElement().addEventListener('click', (e) => {
+                // Start animation for selected path
+                animatePath(path);
+            });
+            let start = new maplibregl.Marker({
+                color: "white",
+                draggable: true
+            }).setLngLat(path.geometry.coordinates[0])
+                .addTo(map);
+        }
+    });
+    function animatePath(path) {
+        let length_ = turf.length(path);
+        let min_len = (length_ / 1000);
+        let line = turf.lineString(path.geometry.coordinates);
+        let start = 0;
+        let stop = length_ * 0.01;
+        let sliced = turf.lineSliceAlong(line, start, stop);
+        if (map.getLayer(path.properties.name) == null) {
+            map.addLayer({
+                "id": path.properties.name,
+                "type": "line",
+                "source": {
+                    'type': 'geojson',
+                    'data': sliced
+                },
+                "paint": {
+                    "line-opacity": 1,
+                    "line-color": "#fff",
+                    "line-width": 10
+                }
+            });
+        }
+        animateMarker_ = (timestamp_) => {
+            let coord_ = path.geometry.coordinates;
+            let distance_ = step_length * ((timestamp_ + 1) / 100);
+            let start_ = Math.min(
+                length_,
+                Math.max(
+                    min_len,
+                    distance_ - step_length
+                )
+            );
+            let end_ = Math.min(length_, distance_);
+            let sliced_ = turf.lineSliceAlong(
+                line,
+                start_,
+                end_
+            );
+
+            map.getSource(path.properties.name).setData(sliced_);
+            let animationAlive_ = (start_ < length_);
+            if (!animationAlive_) {
+                // End of animation
+                if (map.getLayer(path.properties.name)) {
+                    map.removeLayer(path.properties.name);
+                    map.removeSource(path.properties.name);
+                }
+            }
+            return animationAlive_
+        }
+        animateMarker();
+    }
+
+    function animateMarker(timestamp) {
+        if (timestamp == null) {
+            // Start animation
+            initTimestamp = null;
+            requestAnimationFrame(animateMarker);
+            return;
+        }
+        if (initTimestamp == null) {
+            // Initialize timestamp
+            initTimestamp = timestamp
+        }
+        let animationAlive = animateMarker_(timestamp - initTimestamp);
+        if (!animationAlive) {
+            return;
+        }
+        requestAnimationFrame(animateMarker);
+
+    }
+</script>
