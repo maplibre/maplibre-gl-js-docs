@@ -185,6 +185,10 @@
     }
   },
   "Development Tools": {
+    "font-maker": {
+      "website": "https://github.com/maplibre/font-maker",
+      "description": "A web app to convert fonts into fontstacks for use in MapLibre GL."
+    },
     "mapbox-gl-js-mock": {
       "website": "https://github.com/mapbox/mapbox-gl-js-mock",
       "description": "A [mock](https://en.wikipedia.org/wiki/Mock_object) of Mapbox GL JS."
@@ -200,10 +204,6 @@
     "mapbox-gl-framerate": {
       "website": "https://github.com/mapbox/mapbox-gl-framerate",
       "description": "A frame rate control to evaluate map rendering performance."
-    },
-    "sdf-glyph-tool": {
-      "website": "https://github.com/protomaps/sdf-glyph-tool",
-      "description": "A web app to generate custom SDF glyph ranges from font files to use in MapLibre GL."
     }
   }
 }
