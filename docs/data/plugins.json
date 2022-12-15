@@ -72,7 +72,11 @@
     "maplibre-gl-basemaps": {
       "website": "https://github.com/ka7eh/maplibre-gl-basemaps",
       "description": "A plugin for switching between raster basemaps."
-    }
+    },
+    "maplibre-gl-measures": {
+      "website": "https://github.com/jdsantos/maplibre-gl-measures",
+      "description": "A plugin for taking measures on the map."
+    }    
   },
   "Map Rendering Plugins": {
     "mapbox-gl-language": {
