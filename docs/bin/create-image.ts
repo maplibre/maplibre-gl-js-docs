@@ -43,7 +43,7 @@ body { margin:0; padding:0; }
 </head>
 <body>
 <script>
-mapboxgl.accessToken = '${token}';
+maplibregl.accessToken = '${token}';
 </script>
 ${snippet}
 </body>

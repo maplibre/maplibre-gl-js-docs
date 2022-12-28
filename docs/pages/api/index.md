@@ -30,27 +30,24 @@ overviewHeader:
 
 MapLibre GL JS is a JavaScript library that uses WebGL to render interactive maps from vector tiles and [MapLibre styles](https://maplibre.org/maplibre-gl-js-docs/style-spec/). It is part of the [MapLibre GL ecosystem](https://github.com/maplibre).
 
-
 ## Quickstart
 
 {{
-    <Example
-        frontMatter={{
-          title: 'MapLibre GL JS map',
-          description: ''
-        }}
-        location={this.props.location}
-        html={SimpleMapHtml}
-        displaySnippet={false}
-        height={300}
-    />
+<Example
+frontMatter={{
+title: 'MapLibre GL JS map',
+description: ''
 }}
-
+location={this.props.location}
+html={SimpleMapHtml}
+displaySnippet={false}
+height={300}
+/>
+}}
 
 {{
-<Quickstart />
+`<Quickstart />`
 }}
-
 
 ## Reading this documentation
 
@@ -87,11 +84,13 @@ connect-src https://*.tiles.mapbox.com https://api.mapbox.com https://events.map
 For strict CSP environments without `worker-src blob: ; child-src blob:` enabled, there's a separate MapLibre GL JS bundle (`mapbox-gl-csp.js` and `mapbox-gl-csp-worker.js`) which requires setting the path to the worker manually:
 
 {{
-<Copyable lang="html">{`<script src='${urls.js().replace('.js', '-csp.js')}'></script>
+`<Copyable lang="html">`{`<script src='${urls.js().replace('.js', '-csp.js')}'>`</script>`
+
 <script>
-mapboxgl.workerUrl = "${urls.js().replace('.js', '-csp-worker.js')}";
+maplibregl.workerUrl = "${urls.js().replace('.js', '-csp-worker.js')}";
 ...
 </script>`}</Copyable>
+
 }}
 
 If you use the `sandbox` directive, and your [access token is restricted to certain URLs](https://docs.mapbox.com/accounts/overview/tokens/#url-restrictions), the `allow-same-origin` value is required. This allows requests to have a `Referer` header that is not `null`. See the section on [Referrer Policies](https://maplibre.org/maplibre-gl-js-docs/overview/#referrer-policies) for further information.
@@ -120,11 +119,12 @@ You can view a listing of all the files in the MapLibre GL JS package by appendi
 
 *Examples*
 
-| Use Case  | `.js` | `.css` |
-| :------- | :---: | :----: |
-| `latest` | [https://unpkg.com/maplibre-gl/dist/maplibre-gl.js](https://unpkg.com/maplibre-gl/dist/maplibre-gl.js) | [https://unpkg.com/maplibre-gl/dist/maplibre-gl.css](https://unpkg.com/maplibre-gl/dist/maplibre-gl.css) |
-| Use a fixed version `1.14.0` | [https://unpkg.com/maplibre-gl@1.14.0/dist/maplibre-gl.js](https://unpkg.com/maplibre-gl@1.14.0/dist/maplibre-gl.js) | [https://unpkg.com/maplibre-gl@1.14.0/dist/maplibre-gl.css](https://unpkg.com/maplibre-gl@1.14.0/dist/maplibre-gl.css) |
-| Use at least `1.14.x` | [https://unpkg.com/maplibre-gl@^1.14/dist/maplibre-gl.js](https://unpkg.com/maplibre-gl@^1.14/dist/maplibre-gl.js) | [https://unpkg.com/maplibre-gl@^1.14/dist/maplibre-gl.css](https://unpkg.com/maplibre-gl@^1.14/dist/maplibre-gl.css) |
-| Return metadata as JSON on `latest` to review `lastModified` & `size`. | [https://unpkg.com/maplibre-gl/dist/maplibre-gl.js?meta](https://unpkg.com/maplibre-gl/dist/maplibre-gl.js?meta) | [https://unpkg.com/maplibre-gl/dist/maplibre-gl.css?meta](https://unpkg.com/maplibre-gl/dist/maplibre-gl.css?meta)  |
-| `CHANGELOG.md` for `latest` | [https://unpkg.com/browse/maplibre-gl/CHANGELOG.md](https://unpkg.com/browse/maplibre-gl/CHANGELOG.md) |  |
-| `LICENSE.txt` for `latest` | [https://unpkg.com/browse/maplibre-gl/LICENSE.txt](https://unpkg.com/browse/maplibre-gl/LICENSE.txt) |  |
+| Use Case                                                                     |                                                      `.js`                                                      |                                                      `.css`                                                      |
+| :--------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
+| `latest`                                                                   |        [https://unpkg.com/maplibre-gl/dist/maplibre-gl.js](https://unpkg.com/maplibre-gl/dist/maplibre-gl.js)        |        [https://unpkg.com/maplibre-gl/dist/maplibre-gl.css](https://unpkg.com/maplibre-gl/dist/maplibre-gl.css)        |
+| Use a fixed version `1.14.0`                                               | [https://unpkg.com/maplibre-gl@1.14.0/dist/maplibre-gl.js](https://unpkg.com/maplibre-gl@1.14.0/dist/maplibre-gl.js) | [https://unpkg.com/maplibre-gl@1.14.0/dist/maplibre-gl.css](https://unpkg.com/maplibre-gl@1.14.0/dist/maplibre-gl.css) |
+| Use at least `1.14.x`                                                      |  [https://unpkg.com/maplibre-gl@^1.14/dist/maplibre-gl.js](https://unpkg.com/maplibre-gl@^1.14/dist/maplibre-gl.js)  |  [https://unpkg.com/maplibre-gl@^1.14/dist/maplibre-gl.css](https://unpkg.com/maplibre-gl@^1.14/dist/maplibre-gl.css)  |
+| Return metadata as JSON on `latest` to review `lastModified` & `size`. |   [https://unpkg.com/maplibre-gl/dist/maplibre-gl.js?meta](https://unpkg.com/maplibre-gl/dist/maplibre-gl.js?meta)   |   [https://unpkg.com/maplibre-gl/dist/maplibre-gl.css?meta](https://unpkg.com/maplibre-gl/dist/maplibre-gl.css?meta)   |
+| `CHANGELOG.md` for `latest`                                              |        [https://unpkg.com/browse/maplibre-gl/CHANGELOG.md](https://unpkg.com/browse/maplibre-gl/CHANGELOG.md)        |                                                                                                                    |
+| `LICENSE.txt` for `latest`                                               |         [https://unpkg.com/browse/maplibre-gl/LICENSE.txt](https://unpkg.com/browse/maplibre-gl/LICENSE.txt)         |                                                                                                                    |
+

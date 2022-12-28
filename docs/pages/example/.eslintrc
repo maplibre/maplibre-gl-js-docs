@@ -13,7 +13,6 @@
     "plugins": ["html"],
     "globals": {
       "maplibregl": true,
-      "mapboxgl": true,
       "MaplibreGeocoder": true,
       "MapboxDirections": true,
       "turf": true,
