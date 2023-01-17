@@ -1,5 +1,5 @@
 ---
-title: Add a 3D model
+title: Add a 3D model with three.js
 description: Use a custom style layer with three.js to add a 3D model to the map.
 topics:
   - Layers

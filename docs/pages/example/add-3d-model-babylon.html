@@ -1,0 +1,107 @@
+<script src="https://unpkg.com/babylonjs@5.42.2/babylon.js"></script>
+<script src="https://unpkg.com/babylonjs-loaders@5.42.2/babylonjs.loaders.min.js"></script>
+<div id="map"></div>
+<script>
+    var map = (window.map = new maplibregl.Map({
+        container: 'map',
+        style: 'https://api.maptiler.com/maps/basic/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+        zoom: 18,
+        center: [148.9819, -35.3981],
+        pitch: 60,
+        antialias: true // create the gl context with MSAA antialiasing, so custom layers are antialiased
+    }));
+
+    // Model location and orientation on the map
+    var modelOrigin = [148.9819, -35.39847];
+    var modelAltitude = 0;
+    var modelRotate = [Math.PI / 2, 0, 0];
+
+    // Calculate mercator coordinates and scale
+    var modelMercatorCoords = maplibregl.MercatorCoordinate.fromLngLat(
+        modelOrigin,
+        modelAltitude
+    );
+    const modelScale = modelMercatorCoords.meterInMercatorCoordinateUnits();
+
+    // Calculate model matrix
+    var modelMatrix = BABYLON.Matrix.Compose(
+        new BABYLON.Vector3(modelScale, modelScale, modelScale),
+        BABYLON.Quaternion.FromEulerAngles(
+            modelRotate[0],
+            modelRotate[1],
+            modelRotate[2]
+        ),
+        new BABYLON.Vector3(
+            modelMercatorCoords.x,
+            modelMercatorCoords.y,
+            modelMercatorCoords.z
+        )
+    );
+
+    var BABYLON = window.BABYLON;
+
+    // configuration of the custom layer for a 3D model per the CustomLayerInterface
+    var customLayer = {
+        id: '3d-model',
+        type: 'custom',
+        renderingMode: '3d',
+        onAdd: function (map, gl) {
+            this.engine = new BABYLON.Engine(
+                gl,
+                true,
+                {
+                    useHighPrecisionMatrix: true // Important to prevent jitter at mercator scale
+                },
+                true
+            );
+            this.scene = new BABYLON.Scene(this.engine);
+            this.scene.autoClear = false;
+            this.scene.detachControl();
+
+            this.scene.beforeRender = () => {
+                this.engine.wipeCaches(true);
+            };
+
+            // create simple camera (will have its project matrix manually calculated)
+            this.camera = new BABYLON.Camera(
+                'Camera',
+                new BABYLON.Vector3(0, 0, 0),
+                this.scene
+            );
+
+            // create simple light
+            const light = new BABYLON.HemisphericLight(
+                'light1',
+                new BABYLON.Vector3(0, 0, 100),
+                this.scene
+            );
+            light.intensity = 0.7;
+
+            // load GLTF model in to the scene
+            BABYLON.SceneLoader.LoadAssetContainerAsync(
+                'https://maplibre.org/maplibre-gl-js-docs/assets/34M_17/34M_17.gltf',
+                '',
+                this.scene
+            ).then((modelContainer) => {
+                modelContainer.addAllToScene();
+            });
+
+            this.map = map;
+        },
+        render: function (gl, matrix) {
+            const cameraMatrix = BABYLON.Matrix.FromArray(matrix);
+
+            // model-view-projection matrix
+            const mvpMatrix = modelMatrix.multiply(cameraMatrix);
+
+            this.camera.freezeProjectionMatrix(mvpMatrix);
+
+            this.scene.render(false);
+            this.map.triggerRepaint();
+        }
+    };
+
+    map.on('style.load', function () {
+        map.addLayer(customLayer);
+    });
+</script>
