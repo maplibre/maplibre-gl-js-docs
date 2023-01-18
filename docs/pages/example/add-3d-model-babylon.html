@@ -11,30 +11,37 @@
         antialias: true // create the gl context with MSAA antialiasing, so custom layers are antialiased
     }));
 
-    // Model location and orientation on the map
-    var modelOrigin = [148.9819, -35.39847];
-    var modelAltitude = 0;
-    var modelRotate = [Math.PI / 2, 0, 0];
+    // World matrix parameters
+    var worldOrigin = [148.9819, -35.39847];
+    var worldAltitude = 0;
+
+    // Maplibre.js default coordinate system (no rotations)
+    // +x east, -y north, +z up
+    //var worldRotate = [0, 0, 0];
+
+    // Babylon.js default coordinate system
+    // +x east, +y up, +z north
+    var worldRotate = [Math.PI / 2, 0, 0];
 
     // Calculate mercator coordinates and scale
-    var modelMercatorCoords = maplibregl.MercatorCoordinate.fromLngLat(
-        modelOrigin,
-        modelAltitude
+    var worldOriginMercator = maplibregl.MercatorCoordinate.fromLngLat(
+        worldOrigin,
+        worldAltitude
     );
-    const modelScale = modelMercatorCoords.meterInMercatorCoordinateUnits();
+    const worldScale = worldOriginMercator.meterInMercatorCoordinateUnits();
 
-    // Calculate model matrix
-    var modelMatrix = BABYLON.Matrix.Compose(
-        new BABYLON.Vector3(modelScale, modelScale, modelScale),
+    // Calculate world matrix
+    var worldMatrix = BABYLON.Matrix.Compose(
+        new BABYLON.Vector3(worldScale, worldScale, worldScale),
         BABYLON.Quaternion.FromEulerAngles(
-            modelRotate[0],
-            modelRotate[1],
-            modelRotate[2]
+            worldRotate[0],
+            worldRotate[1],
+            worldRotate[2]
         ),
         new BABYLON.Vector3(
-            modelMercatorCoords.x,
-            modelMercatorCoords.y,
-            modelMercatorCoords.z
+            worldOriginMercator.x,
+            worldOriginMercator.y,
+            worldOriginMercator.z
         )
     );
 
@@ -77,6 +84,9 @@
             );
             light.intensity = 0.7;
 
+            // Add debug axes viewer, positioned at origin, 10 meter axis lengths
+            new BABYLON.AxesViewer(this.scene, 10);
+
             // load GLTF model in to the scene
             BABYLON.SceneLoader.LoadAssetContainerAsync(
                 'https://maplibre.org/maplibre-gl-js-docs/assets/34M_17/34M_17.gltf',
@@ -84,6 +94,18 @@
                 this.scene
             ).then((modelContainer) => {
                 modelContainer.addAllToScene();
+
+                const rootMesh = modelContainer.createRootMesh();
+
+                // If using maplibre.js coordinate system (+z up)
+                //rootMesh.rotation.x = Math.PI/2
+
+                // Create a second mesh
+                const rootMesh2 = rootMesh.clone();
+
+                // Position in babylon.js coordinate system
+                rootMesh2.position.x = 25; // +east, meters
+                rootMesh2.position.z = 25; // +north, meters
             });
 
             this.map = map;
@@ -91,10 +113,10 @@
         render: function (gl, matrix) {
             const cameraMatrix = BABYLON.Matrix.FromArray(matrix);
 
-            // model-view-projection matrix
-            const mvpMatrix = modelMatrix.multiply(cameraMatrix);
+            // world-view-projection matrix
+            const wvpMatrix = worldMatrix.multiply(cameraMatrix);
 
-            this.camera.freezeProjectionMatrix(mvpMatrix);
+            this.camera.freezeProjectionMatrix(wvpMatrix);
 
             this.scene.render(false);
             this.map.triggerRepaint();
