@@ -2,6 +2,8 @@
 <script src="https://unpkg.com/babylonjs-loaders@5.42.2/babylonjs.loaders.min.js"></script>
 <div id="map"></div>
 <script>
+    var BABYLON = window.BABYLON;
+
     var map = (window.map = new maplibregl.Map({
         container: 'map',
         style: 'https://api.maptiler.com/maps/basic/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
@@ -44,8 +46,6 @@
             worldOriginMercator.z
         )
     );
-
-    var BABYLON = window.BABYLON;
 
     // configuration of the custom layer for a 3D model per the CustomLayerInterface
     var customLayer = {
