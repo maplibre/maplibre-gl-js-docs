@@ -109,7 +109,7 @@ A raster tile source.
     "type": "raster",
     "tiles": [
         "http://a.example.com/tiles/{z}/{x}/{y}.png"
-    ],,
+    ],
     "tileSize": 256
 }
 ```
