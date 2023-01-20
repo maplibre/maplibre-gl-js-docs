@@ -1,6 +1,6 @@
 /*---
 title: Properties and options
-description: Set the map's access token, test whether the browser support MapLibre GL JS, and more with `mapboxgl` properties, options, and utility functions.
+description: Set the map's access token, test whether the browser support MapLibre GL JS, and more with `maplibregl` properties, options, and utility functions.
 contentType: API
 order: 3
 layout: page

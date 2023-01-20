@@ -4,14 +4,10 @@ import pack from '../../node_modules/maplibre-gl/package.json' assert { type: 'j
 import fs from 'fs';
 
 const fileName = process.argv[2];
-const token =
-    process.argv[3] ||
-    process.env.MAPBOX_ACCESS_TOKEN ||
-    process.env.MapboxAccessToken;
 
-if (!token || !fileName) {
+if (!fileName) {
     throw new Error(
-        '\n  Usage: npm run create-image <file-name> <mapbox-access-token>\nExample: npm run create-image 3d-buildings pk000011110000111100001111\n\n'
+        '\n  Usage: npm run create-image <file-name>\nExample: npm run create-image 3d-buildings pk000011110000111100001111\n\n'
     );
 }
 
@@ -34,26 +30,23 @@ const html = `<!DOCTYPE html>
 <html>
 <head>
 <meta charset='utf-8' />
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v${pack.version}/mapbox-gl.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v${pack.version}/mapbox-gl.css' rel='stylesheet' />
+<script src='https://unpkg.com/maplibre-gl@${pack.version}/dist/maplibre-gl.js'></script>
+<link href='https://unpkg.com/maplibre-gl@${pack.version}/dist/maplibre-gl.css' rel='stylesheet' />
 <style>
 body { margin:0; padding:0; }
 #map { position: absolute; top:0; bottom:0; width: 600px; max-height: 300px; }
 </style>
 </head>
 <body>
-<script>
-mapboxgl.accessToken = '${token}';
-</script>
 ${snippet}
 </body>
 </html>`;
 
-// initilize puppeteer
+// initilize playwright
 (async () => {
     const browser = await chromium.launch();
     let page = await browser.newPage();
-    // set html for page and then wait until mapbox-gl-js loads
+    // set html for page and then wait until maplibre-gl-js loads
     await page.setContent(html, { waitUntil: 'networkidle' }); // eslint-disable-line
     // set viewport and double deviceScaleFactor to get a closer shot of the map
 

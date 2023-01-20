@@ -84,23 +84,15 @@ Requesting styles from Mapbox or other services will require additional directiv
 connect-src https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com
 ```
 
-For strict CSP environments without `worker-src blob: ; child-src blob:` enabled, there's a separate MapLibre GL JS bundle (`mapbox-gl-csp.js` and `mapbox-gl-csp-worker.js`) which requires setting the path to the worker manually:
+For strict CSP environments without `worker-src blob: ; child-src blob:` enabled, there's a separate MapLibre GL JS bundle (`maplibre-gl-csp.js` and `maplibre-gl-csp-worker.js`) which requires setting the path to the worker manually:
 
 {{
 <Copyable lang="html">{`<script src='${urls.js().replace('.js', '-csp.js')}'></script>
 <script>
-mapboxgl.workerUrl = "${urls.js().replace('.js', '-csp-worker.js')}";
+maplibregl.workerUrl = "${urls.js().replace('.js', '-csp-worker.js')}";
 ...
 </script>`}</Copyable>
 }}
-
-If you use the `sandbox` directive, and your [access token is restricted to certain URLs](https://docs.mapbox.com/accounts/overview/tokens/#url-restrictions), the `allow-same-origin` value is required. This allows requests to have a `Referer` header that is not `null`. See the section on [Referrer Policies](https://maplibre.org/maplibre-gl-js-docs/overview/#referrer-policies) for further information.
-
-## Referrer Policies
-
-If you use a [URL-restricted access token](https://docs.mapbox.com/accounts/overview/tokens/#url-restrictions), you have to make sure that the browser sends the correct referrer header. This is the default setting. But if you use the [Referrer-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy) header on your website, pick a value that still sends a `Referer` header, like `no-referrer-when-downgrade`, `origin`, `origin-when-cross-origin`, or `strict-origin`. Specifically, `same-origin` and `no-referrer` will never send a referrer header, and thus Mapbox API calls won't work.
-
-If you limit the referrer to the origin, make sure that the URL you restrict your access token to doesn't contain path information, because the `Origin` header doesn't contain a path by definition.
 
 ## MapLibre CSS
 

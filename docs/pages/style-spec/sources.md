@@ -7,7 +7,7 @@ order: 4
 layout: page
 hideFeedback: true
 products:
-- Mapbox Style Specification
+- MapLibre Style Specification
 prependJs:
     - "import Items from '../../components/style-spec/items';"
     - "import { sourceTypes } from '../../data/types';"
@@ -30,7 +30,7 @@ Tiled sources (vector and raster) must specify their details according to the [T
 - By supplying TileJSON properties such as `"tiles"`, `"minzoom"`, and `"maxzoom"` directly in the source:
 
 ```json
-"mapbox-streets": {
+"maplibre-streets": {
     "type": "vector",
     "tiles": [
         "http://a.example.com/tiles/{z}/{x}/{y}.pbf",
@@ -43,7 +43,7 @@ Tiled sources (vector and raster) must specify their details according to the [T
 - By providing a `"url"` to a TileJSON resource:
 
 ```json
-"mapbox-streets": {
+"maplibre-streets": {
     "type": "vector",
     "url": "http://api.example.com/tilejson.json"
 }
@@ -64,12 +64,14 @@ Tiled sources (vector and raster) must specify their details according to the [T
 ## vector
 
 
-A vector tile source. Tiles must be in [Mapbox Vector Tile format](https://docs.mapbox.com/vector-tiles/). All geometric coordinates in vector tiles must be between `-1 * extent` and `(extent * 2) - 1` inclusive. All layers that use a vector source must specify a [`"source-layer"`](/maplibre-gl-js-docs/style-spec/layers/#source-layer) value. For vector tiles hosted by Mapbox, the `"url"` value should be of the form  `mapbox://tilesetid`.
+A vector tile source. Tiles must be in [Mapbox Vector Tile format](https://docs.mapbox.com/vector-tiles/). All geometric coordinates in vector tiles must be between `-1 * extent` and `(extent * 2) - 1` inclusive. All layers that use a vector source must specify a [`"source-layer"`](/maplibre-gl-js-docs/style-spec/layers/#source-layer) value. 
 
 ```json
-"mapbox-streets": {
+"maplibre-streets": {
     "type": "vector",
-    "url": "mapbox://mapbox.mapbox-streets-v6"
+    "tiles": [
+        "http://a.example.com/tiles/{z}/{x}/{y}.pbf"
+    ],
 }
 ```
 
@@ -100,12 +102,14 @@ https://github.com/maplibre/maplibre-gl-js/blob/main/src/style-spec/reference/v8
 
 ## raster
 
-A raster tile source. For raster tiles hosted by Mapbox, the `"url"` value should be of the form `mapbox://tilesetid`.
+A raster tile source.
 
 ```json
-"mapbox-satellite": {
+"maplibre-satellite": {
     "type": "raster",
-    "url": "mapbox://mapbox.satellite",
+    "tiles": [
+        "http://a.example.com/tiles/{z}/{x}/{y}.png"
+    ],,
     "tileSize": 256
 }
 ```
@@ -136,12 +140,14 @@ https://github.com/maplibre/maplibre-gl-js/blob/main/src/style-spec/reference/v8
 
 ## raster-dem
 
-A raster DEM source. Only supports [Mapbox Terrain RGB](https://blog.mapbox.com/global-elevation-data-6689f1d0ba65) (`mapbox://mapbox.terrain-rgb`):
+A raster DEM source. Only supports [Mapbox Terrain RGB](https://blog.mapbox.com/global-elevation-data-6689f1d0ba65):
 
 ```json
-"mapbox-terrain-rgb": {
+"maplibre-terrain-rgb": {
     "type": "raster-dem",
-    "url": "mapbox://mapbox.terrain-rgb"
+    "tiles": [
+        "http://a.example.com/dem-tiles/{z}/{x}/{y}.png"
+    ],
 }
 ```
 
@@ -177,10 +183,10 @@ A [GeoJSON](http://geojson.org/) source. Data must be provided via a `"data"` pr
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [-77.0323, 38.9131]
+            "coordinates": [12.550343, 55.665957]
         },
         "properties": {
-            "title": "Mapbox DC",
+            "title": "Somewhere",
             "marker-symbol": "monument"
         }
     }

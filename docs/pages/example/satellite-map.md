@@ -11,7 +11,6 @@ language:
 - JavaScript
 products:
 - MapLibre GL JS
-- Mapbox Satellite tileset
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './satellite-map.html';"

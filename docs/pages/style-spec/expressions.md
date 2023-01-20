@@ -7,7 +7,7 @@ order: 10
 layout: page
 hideFeedback: true
 products:
-- Mapbox Style Specification
+- MapLibre Style Specification
 prependJs:
     - "import ExpressionReference from '../../components/style-spec/expression-reference';"
 
