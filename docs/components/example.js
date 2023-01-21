@@ -98,8 +98,8 @@ ${html}
         return (
             <div className="prose">
                 {this.state.unsupported && (
-                    <Note title="Mapbox GL unsupported" theme="warning">
-                        Mapbox GL requires{' '}
+                    <Note title="MapLibre GL unsupported" theme="warning">
+                        MapLibre GL requires{' '}
                         <a
                             className="link"
                             href="https://caniuse.com/#feat=webgl"

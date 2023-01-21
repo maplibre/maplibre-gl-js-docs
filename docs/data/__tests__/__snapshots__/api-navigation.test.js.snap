@@ -22,8 +22,8 @@ Array [
         "title": "Referrer Policies",
       },
       Object {
-        "path": "mapbox-css",
-        "title": "Mapbox CSS",
+        "path": "maplibre-css",
+        "title": "MapLibre CSS",
       },
     ],
     "title": "Introduction",

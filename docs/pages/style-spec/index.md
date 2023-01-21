@@ -7,7 +7,7 @@ order: 1
 layout: page
 hideFeedback: true
 products:
-- Mapbox Style Specification
+- MapLibre Style Specification
 overviewHeader:
   title: Style Specification
   features: []

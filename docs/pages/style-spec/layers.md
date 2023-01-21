@@ -7,7 +7,7 @@ order: 8
 layout: page
 hideFeedback: true
 products:
-- Mapbox Style Specification
+- MapLibre Style Specification
 prependJs:
     - "import Items from '../../components/style-spec/items';"
     - "import { layerTypes } from '../../data/types';"

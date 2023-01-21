@@ -7,7 +7,7 @@ order: 3
 layout: page
 hideFeedback: true
 products:
-- Mapbox Style Specification
+- MapLibre Style Specification
 prependJs:
     - "import Items from '../../components/style-spec/items';"
     - "import ref from '../../../maplibre-gl-js/rollup/build/tsc/src/style-spec/reference/latest';"

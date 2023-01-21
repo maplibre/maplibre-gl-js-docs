@@ -7,7 +7,7 @@ order: 9
 layout: page
 hideFeedback: true
 products:
-- Mapbox Style Specification
+- MapLibre Style Specification
 ---
 
 A MapLibre style contains values of various types, most commonly as values for the style properties of a layer.

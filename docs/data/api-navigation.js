@@ -27,8 +27,8 @@ module.exports = [
                 path: 'referrer-policies'
             },
             {
-                title: 'Mapbox CSS',
-                path: 'mapbox-css'
+                title: 'MapLibre CSS',
+                path: 'maplibre-css'
             }
         ]
     },

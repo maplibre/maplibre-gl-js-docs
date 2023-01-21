@@ -8,7 +8,7 @@
         cursor: pointer;
     }
 
-    .mapboxgl-popup {
+    .maplibregl-popup {
         max-width: 200px;
     }
 </style>
@@ -19,8 +19,7 @@
     var monument = [-77.0353, 38.8895];
     var map = new maplibregl.Map({
         container: 'map',
-        style:
-            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+        style: 'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: monument,
         zoom: 15
     });

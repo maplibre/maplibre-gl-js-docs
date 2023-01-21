@@ -1,5 +1,5 @@
 <style>
-    .mapboxgl-popup {
+    .maplibregl-popup {
         max-width: 400px;
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     }
@@ -8,8 +8,7 @@
 <script>
     var map = new maplibregl.Map({
         container: 'map',
-        style:
-            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+        style: 'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [-100.04, 38.907],
         zoom: 3
     });
@@ -18,8 +17,7 @@
         // Add a source for the state polygons.
         map.addSource('states', {
             'type': 'geojson',
-            'data':
-                'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_admin_1_states_provinces_shp.geojson'
+            'data': 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_admin_1_states_provinces_shp.geojson'
         });
 
         // Add a layer showing the state polygons.

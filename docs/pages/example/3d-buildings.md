@@ -11,7 +11,6 @@ language:
 - JavaScript
 products:
 - MapLibre GL JS
-- Mapbox Streets tileset
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './3d-buildings.html';"
