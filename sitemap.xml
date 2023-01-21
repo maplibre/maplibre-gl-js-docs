@@ -109,16 +109,13 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/change-building-color-based-on-zoom-level</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/change-case-of-labels</loc>
-    </url>
-    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/check-for-support</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/cluster</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/cluster-html</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/change-case-of-labels</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/color-switcher</loc>
@@ -359,5 +356,8 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/types</loc>
+    </url>
+    <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/cluster-html</loc>
     </url>
 </urlset>
