@@ -23,7 +23,7 @@
     "@mapbox/eslint-config-mapbox": "^3.0.0",
     "@mapbox/mapbox-gl-supported": "^2.0.1",
     "@mapbox/mbx-assembly": "^0.29.0",
-    "@mapbox/mr-ui": "^1.1.0",
+    "@mapbox/mr-ui": "^2.1.4",
     "@mapbox/prettier-config-docs": "^0.2.1",
     "@mapbox/remark-lint-link-text": "^0.6.0",
     "babel-tape-runner": "^3.0.0",
