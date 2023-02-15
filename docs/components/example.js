@@ -67,14 +67,14 @@ ${html}
 
     renderSnippet() {
         const { html, location } = this.props;
-        const code = this.displayHTML(html);
+        const code = this.displayHTML(html).replace(/[\r\n]+/gm, '\n');
         const parsedCode = helpers.extractor(code);
         return (
             <div className="bg-white">
                 <div id="code" className="relative">
                     <CodeSnippet
                         code={this.displayHTML(html)}
-                        highlighter={() => highlightHtml}
+                        highlighter={highlightHtml}
                         edit={{
                             frontMatter: {
                                 ...this.props.frontMatter,
