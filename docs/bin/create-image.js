@@ -85,14 +85,9 @@ async function createImage(nameWithExtension) {
 
 if (exampleName === 'all') {
     const allFiles = fs.readdirSync(examplePath);
-    const files = allFiles.filter((file) => /\.html$/.test(file)).reverse();
+    const files = allFiles.filter((file) => /\.html$/.test(file));
     console.log(`Generating ${files.length} images.`);
     for (const file of files) {
-        // for (let i = 0; i <= allFiles.length; i++){
-        // const file = allFiles[i]
-        // if (/\.html$/.test(file)){
-        //     await createImage(file);
-        // }
         await createImage(file);
     }
 } else if (exampleName) {
