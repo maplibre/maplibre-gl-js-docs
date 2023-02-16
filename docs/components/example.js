@@ -74,7 +74,7 @@ ${html}
                 <div id="code" className="relative">
                     <CodeSnippet
                         code={this.displayHTML(html)}
-                        highlighter={highlightHtml}
+                        highlighter={() => highlightHtml}
                         edit={{
                             frontMatter: {
                                 ...this.props.frontMatter,

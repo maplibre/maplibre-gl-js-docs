@@ -30,6 +30,7 @@ module.exports = () => {
         pagesDirectory: `${__dirname}/docs/pages`,
         outputDirectory: path.join(__dirname, '_site'),
         browserslist: mapboxAssembly.browsersList,
+        postcssPlugins: mapboxAssembly.postcssPipeline.plugins,
         productionDevtool: 'source-map',
         stylesheets: [
             require.resolve('@mapbox/mbx-assembly/dist/assembly.css'),
