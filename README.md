@@ -54,15 +54,18 @@ In content area of the markdown page include an extended description of the exam
 
 In the `.html` file, write the HTML and JavaScript constituting the example.
 
-* Do **not** include an access token in the example code. The access token will be inserted automatically by the template, using the current logged in user's default public token, or a placeholder `<insert token here>` string if the user is not logged in.
+* Do **not** include a MapTiler access token in the example code. The access token will be inserted automatically by the template, using the current logged in user's default public token, or a placeholder `<insert token here>` string if the user is not logged in.
 * On commit, Prettier will format the code for all files, including HTML.
 
-Every example **must** have an accompanying image. To get an image, run the site locally and take a screenshot of the rendered map in the example:
+Every example **must** have an accompanying image.
 
-1. Run `npm run create-image <example-file-name> <mapbox-access-token>`. The script will take a screenshot of the map in the example and save it to `docs/img/src/`. Commit the image.
-2. Run `npm start` to verify that your example image is loading as expected.
+1. Ensure that you have a build of the latest `maplibre-gl-js` in the neighboring directory (see below).
+2. Run `npm run create-image <example-file-name>`. The script will take a screenshot of the map in the example and save it to `docs/img/src/`. Commit the image.
+3. Run `npm start` to verify that your example image is loading as expected.
 
-💡 If `npm run create-image` does not generate an ideal image. You can also take a screenshot of it yourself by running the site locally with `npm start` and taking a screenshot of the example map in PNG format. Resize it to 1200 x 500 pixels and save it in the `docs/img/src` folder.
+For some examples, `npm run create-image` does not generate an ideal image. In these cases, you can interact with the map after running `ncreate-image`, or take a screenshot yourself by running the site locally with `npm start`, take a screenshot and save it in the `docs/img/src` folder.
+
+To regenerate all images, run `npm run create-image all`. Note that this doesn't support interaction and examples that require manual interaction (e.g. popups). will need to be manually redone afterward. This feature is experimental and may crash before sucessfully generating all examples.
 
 ## Running the Documentation Server Locally
 
@@ -77,7 +80,7 @@ The command will print the URL you can use to view the documentation.
 💡 If you receive an error related to `@mapbox/appropriate-images`, try `nvm use && npm start`.
 
 The examples section of the locally run documentation will use the GL JS version located in `../maplibre-gl-js/dist`,
-so make sure to have a working minified build in your local copy of the `maplibre-gl-js` repo (not the submodule; clone `maplibre-gl-js` into the same directory as `maplibre-gl-js-docs` and run `npm build-dist` there).
+so make sure to have a working minified build in your local copy of the `maplibre-gl-js` repo (not the submodule; clone `maplibre-gl-js` into the same directory as `maplibre-gl-js-docs` and run `npm run build-dist` there).
 
 
 ## Committing and Publishing Documentation
