@@ -69,7 +69,6 @@ A vector tile source. Tiles must be in [Mapbox Vector Tile format](https://docs.
 ```json
 "maplibre-streets": {
     "type": "vector",
-    "encoding": "mapbox",
     "tiles": [
         "http://a.example.com/tiles/{z}/{x}/{y}.pbf"
     ],
