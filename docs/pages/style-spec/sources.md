@@ -145,6 +145,7 @@ A raster DEM source. Only supports [Mapbox Terrain RGB](https://blog.mapbox.com/
 ```json
 "maplibre-terrain-rgb": {
     "type": "raster-dem",
+    "encoding": "mapbox",
     "tiles": [
         "http://a.example.com/dem-tiles/{z}/{x}/{y}.png"
     ],
