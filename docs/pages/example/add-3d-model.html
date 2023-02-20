@@ -1,5 +1,5 @@
-<script src="https://unpkg.com/three@0.106.2/build/three.min.js"></script>
-<script src="https://unpkg.com/three@0.106.2/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://unpkg.com/three@0.147.0/build/three.min.js"></script>
+<script src="https://unpkg.com/three@0.147.0/examples/js/loaders/GLTFLoader.js"></script>
 <div id="map"></div>
 <script>
     var map = (window.map = new maplibregl.Map({
@@ -108,7 +108,7 @@
                 .multiply(rotationZ);
 
             this.camera.projectionMatrix = m.multiply(l);
-            this.renderer.state.reset();
+            this.renderer.resetState();
             this.renderer.render(this.scene, this.camera);
             this.map.triggerRepaint();
         }
