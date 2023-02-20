@@ -140,11 +140,12 @@ https://github.com/maplibre/maplibre-gl-js/blob/main/src/style-spec/reference/v8
 
 ## raster-dem
 
-A raster DEM source. Only supports [Mapbox Terrain RGB](https://blog.mapbox.com/global-elevation-data-6689f1d0ba65):
+A raster DEM source. Only supports [Mapbox Terrain RGB](https://blog.mapbox.com/global-elevation-data-6689f1d0ba65) and Mapzen Terrarium tiles.
 
 ```json
 "maplibre-terrain-rgb": {
     "type": "raster-dem",
+    "encoding": "mapbox",
     "tiles": [
         "http://a.example.com/dem-tiles/{z}/{x}/{y}.png"
     ],
