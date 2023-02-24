@@ -1,4 +1,4 @@
-import ref from '../../node_modules/@maplibre/maplibre-gl-style-spec/tsc/src/reference/latest';
+import ref from '@maplibre/maplibre-gl-style-spec/tsc/src/reference/latest';
 import { types } from './expression-metadata';
 
 export const expressions = {};

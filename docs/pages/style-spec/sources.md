@@ -12,7 +12,7 @@ prependJs:
     - "import Items from '../../components/style-spec/items';"
     - "import { sourceTypes } from '../../data/types';"
     - "import SDKSupportTable from '../../components/sdk_support_table';"
-    - "import ref from '../../../node_modules/@maplibre/maplibre-gl-style-spec/tsc/src/reference/latest';"
+    - "import ref from '@maplibre/maplibre-gl-style-spec/tsc/src/reference/latest';"
 ---
 
 <!--copyeditor disable basic-->

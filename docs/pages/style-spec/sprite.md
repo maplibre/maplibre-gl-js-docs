@@ -9,7 +9,7 @@ hideFeedback: true
 products:
 - MapLibre Style Specification
 prependJs:
-    - "import ref from '../../../node_modules/@maplibre/maplibre-gl-style-spec/tsc/src/reference/latest';"
+    - "import ref from '@maplibre/maplibre-gl-style-spec/tsc/src/reference/latest';"
 ---
 
 A style's `sprite` property supplies a URL template for loading small images to use in rendering `background-pattern`, `fill-pattern`, `line-pattern`,`fill-extrusion-pattern` and `icon-image` style properties.

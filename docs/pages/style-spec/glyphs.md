@@ -9,7 +9,7 @@ hideFeedback: true
 products:
 - MapLibre Style Specification
 prependJs:
-    - "import ref from '../../../node_modules/@maplibre/maplibre-gl-style-spec/tsc/src/reference/latest';"
+    - "import ref from '@maplibre/maplibre-gl-style-spec/tsc/src/reference/latest';"
 ---
 
 <!--copyeditor disable basic-->
