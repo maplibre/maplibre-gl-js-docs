@@ -10,7 +10,7 @@ products:
 - MapLibre Style Specification
 prependJs:
     - "import Items from '../../components/style-spec/items';"
-    - "import ref from '@maplibre/maplibre-gl-style-spec/tsc/src/reference/latest';"
+    - "import ref from '../../../maplibre-gl-js/rollup/build/tsc/src/style-spec/reference/latest';"
 ---
 
 A style's `light` property provides a global light source for that style. Since this property is the light used to light extruded features, you will only see visible changes to your map style when modifying this property if you are using extrusions.
