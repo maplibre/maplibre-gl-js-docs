@@ -1,7 +1,8 @@
 var fs = require('fs');
 
 /* eslint-disable no-undef */
-fileName = 'maplibre-gl-js/rollup/build/tsc/src/style-spec/reference/latest.js';
+fileName =
+    'node_modules/@maplibre/maplibre-gl-style-spec/tsc/src/reference/latest.js';
 
 fs.readFile(fileName, 'utf8', function (err, data) {
     if (err) {
