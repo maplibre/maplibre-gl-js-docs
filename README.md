@@ -17,15 +17,11 @@ After cloning this repository, run:
 
 ```bash
 npm ci # install dependencies with npm
-git submodule update --init # initialize maplibre-gl-js git submodule
 ```
-
-When pulling in new commits that change the `maplibre-gl-js` submodule,
-run `git submodule update` to update the local copy as well.
 
 ## Writing API Documentation
 
-API documentation is written as [JSDoc comments](http://usejsdoc.org/) and processed with [documentationjs](http://documentation.js.org/) **in the source code of [maplibre-gl-js](https://github.com/maplibre/maplibre-gl-js)**. This repository fetches the source code through a git submodule.
+API documentation is written as [JSDoc comments](http://usejsdoc.org/) and processed with [documentationjs](http://documentation.js.org/) **in the source code of [maplibre-gl-js](https://github.com/maplibre/maplibre-gl-js)**. This repository fetches the source code through npm packages.
 
 * Classes, methods, events, and anything else in the public interface must be documented with JSDoc comments. Everything outside of the public interface may be documented and must be tagged as `@private`.
 * Text within JSDoc comments may use markdown formatting. Code identifiers must be surrounded by \`backticks\`.
@@ -80,7 +76,7 @@ The command will print the URL you can use to view the documentation.
 💡 If you receive an error related to `@mapbox/appropriate-images`, try `nvm use && npm start`.
 
 The examples section of the locally run documentation will use the GL JS version located in `../maplibre-gl-js/dist`,
-so make sure to have a working minified build in your local copy of the `maplibre-gl-js` repo (not the submodule; clone `maplibre-gl-js` into the same directory as `maplibre-gl-js-docs` and run `npm run build-dist` there).
+so make sure to have a working minified build in your local copy of the `maplibre-gl-js` repo; clone `maplibre-gl-js` into the same directory as `maplibre-gl-js-docs` and run `npm run build-dist` there).
 
 
 ## Committing and Publishing Documentation
