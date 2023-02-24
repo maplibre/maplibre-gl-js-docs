@@ -24,12 +24,8 @@ jobs:
         git config --global user.email "mail@example.com"
         git config --global user.name "GitHub Action"
         git checkout -b v${{ steps.prepare.outputs.version_tag }}
+        npm i maplibre-gl@v${{ steps.prepare.outputs.version_tag }}
         npm ci
-        git submodule update --init
-        cd maplibre-gl-js
-        git checkout main
-        git pull
-        cd ..
         npm run build
         npm run test
         git add -u
