@@ -1,8 +1,10 @@
-import { toString } from '../../maplibre-gl-js/rollup/build/tsc/src/style-spec/expression/types';
+import { toString } from '@maplibre/maplibre-gl-style-spec/tsc/src/expression/types';
 import CompoundExpression from '../../maplibre-gl-js/rollup/build/tsc/src/style-spec/expression/compound_expression';
 
 // registers compound expressions
 import '../../maplibre-gl-js/rollup/build/tsc/src/style-spec/expression/definitions/index';
+
+console.log(CompoundExpression);
 
 const comparisonSignatures = [
     {
@@ -303,6 +305,7 @@ export const types = {
 };
 
 for (const name in CompoundExpression.definitions) {
+    console.log('name', name);
     if (/^filter-/.test(name)) {
         continue;
     }
