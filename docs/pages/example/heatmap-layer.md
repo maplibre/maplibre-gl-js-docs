@@ -16,6 +16,6 @@ prependJs:
 - "import html from './heatmap-layer.html';"
 ---
 
-Visualize earthquake frequency by location using a [heatmap layer](https://maplibre.org/maplibre-gl-js-docs/style-spec/layers/#heatmap).
+Visualize earthquake frequency by location using a [heatmap layer](https://maplibre.org/maplibre-gl-style-spec/layers/#heatmap).
 
 {{ <Example html={html} {...this.props} /> }}

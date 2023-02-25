@@ -70,7 +70,7 @@ toc:
   - name: Sources
     page: 'sources'
     description: |
-      The source types MapLibre GL JS can handle in addition to the ones described in the [MapLibre Style Specification](/maplibre-gl-js-docs/style-spec/).
+      The source types MapLibre GL JS can handle in addition to the ones described in the [MapLibre Style Specification](/maplibre-gl-style-spec).
     children:
       - GeoJSONSource
       - VideoSource

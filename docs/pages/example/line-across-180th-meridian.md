@@ -17,6 +17,6 @@ prependJs:
 - "import html from './line-across-180th-meridian.html';"
 ---
 
-Draw a line across the 180th meridian using a [GeoJSON source](https://maplibre.org/maplibre-gl-js-docs/style-spec/sources/#geojson).
+Draw a line across the 180th meridian using a [GeoJSON source](https://maplibre.org/maplibre-gl-style-spec/sources/#geojson).
 
 {{ <Example html={html} {...this.props} /> }}

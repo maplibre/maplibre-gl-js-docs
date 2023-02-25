@@ -16,6 +16,6 @@ prependJs:
 - "import html from './geojson-line.html';"
 ---
 
-Add a GeoJSON line to a map using [`addSource`](https://maplibre.org/maplibre-gl-js-docs/api/map/#map#addsource), then style it using [`addLayer`](https://maplibre.org/maplibre-gl-js-docs/api/map/#map#addlayer)’s [`paint`](https://maplibre.org/maplibre-gl-js-docs/style-spec/layers/#line) properties.
+Add a GeoJSON line to a map using [`addSource`](https://maplibre.org/maplibre-gl-js-docs/api/map/#map#addsource), then style it using [`addLayer`](https://maplibre.org/maplibre-gl-js-docs/api/map/#map#addlayer)’s [`paint`](https://maplibre.org/maplibre-gl-style-spec/layers/#line) properties.
 
 {{ <Example html={html} {...this.props} /> }}
