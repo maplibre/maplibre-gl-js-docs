@@ -17,15 +17,11 @@ After cloning this repository, run:
 
 ```bash
 npm ci # install dependencies with npm
-git submodule update --init # initialize maplibre-gl-js git submodule
 ```
-
-When pulling in new commits that change the `maplibre-gl-js` submodule,
-run `git submodule update` to update the local copy as well.
 
 ## Writing API Documentation
 
-API documentation is written as [JSDoc comments](http://usejsdoc.org/) and processed with [documentationjs](http://documentation.js.org/) **in the source code of [maplibre-gl-js](https://github.com/maplibre/maplibre-gl-js)**. This repository fetches the source code through a git submodule.
+API documentation is written as [JSDoc comments](http://usejsdoc.org/) and processed with [documentationjs](http://documentation.js.org/) **in the source code of [maplibre-gl-js](https://github.com/maplibre/maplibre-gl-js)**. This repository fetches the source code through npm packages.
 
 * Classes, methods, events, and anything else in the public interface must be documented with JSDoc comments. Everything outside of the public interface may be documented and must be tagged as `@private`.
 * Text within JSDoc comments may use markdown formatting. Code identifiers must be surrounded by \`backticks\`.
@@ -80,11 +76,11 @@ The command will print the URL you can use to view the documentation.
 💡 If you receive an error related to `@mapbox/appropriate-images`, try `nvm use && npm start`.
 
 The examples section of the locally run documentation will use the GL JS version located in `../maplibre-gl-js/dist`,
-so make sure to have a working minified build in your local copy of the `maplibre-gl-js` repo (not the submodule; clone `maplibre-gl-js` into the same directory as `maplibre-gl-js-docs` and run `npm run build-dist` there).
+so make sure to have a working minified build in your local copy of the `maplibre-gl-js` repo; clone `maplibre-gl-js` into the same directory as `maplibre-gl-js-docs` and run `npm run build-dist` there).
 
 
 ## Committing and Publishing Documentation
 
-When a new GL JS release goes out, the release manager will make a PR that updates this repo's `maplibre-gl-js` submodule to point to the new release. When updating the submodule, you may need to run `npm test -- -u` to update Jest snapshots related to the sidebar navigation.
+When a new GL JS release goes out, the release manager will make a PR that updates this repo's `maplibre-gl` npm dependency to point to the new release. When updating the npm package, you may need to run `npm test -- -u` to update Jest snapshots related to the sidebar navigation.
 
 To update or add a new example, PR the relevant changes to this repo. The example will be live once the PR is merged.  If this example uses a version of GL JS that isn't yet released, the PR should not be merged until the release is out.

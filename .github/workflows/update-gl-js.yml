@@ -19,17 +19,13 @@ jobs:
       run: |
         echo "::set-output name=version_tag::$(npm show maplibre-gl version)"
 
-    - name: Update submodule, test, build, commit, push
+    - name: Update maplibre-gl npm package, test, build, commit, push
       run: |
         git config --global user.email "mail@example.com"
         git config --global user.name "GitHub Action"
         git checkout -b v${{ steps.prepare.outputs.version_tag }}
+        npm i maplibre-gl@v${{ steps.prepare.outputs.version_tag }}
         npm ci
-        git submodule update --init
-        cd maplibre-gl-js
-        git checkout main
-        git pull
-        cd ..
         npm run build
         npm run test
         git add -u
