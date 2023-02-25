@@ -13,8 +13,6 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 18
-    - run: sudo apt-get update 
-    - run: sudo apt-get install libxi-dev
     - run: npm ci
     - run: npm run build
     - run: npm run test
