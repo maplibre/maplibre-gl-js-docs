@@ -4,8 +4,8 @@ The source code for https://maplibre.org/maplibre-gl-js-docs/, the website that 
 
 ## Requirements
 
-* Node 16
-* npm 8
+* Node 18
+* npm 9
 
 If you're not sure if your Node and NPM versions are up to date, run `nvm use` before installing dependencies. If you don't have NVM installed, you can [find installation instructions here](https://github.com/nvm-sh/nvm/blob/master/README.md#installing-and-updating).
 
@@ -59,9 +59,9 @@ Every example **must** have an accompanying image.
 2. Run `npm run create-image <example-file-name>`. The script will take a screenshot of the map in the example and save it to `docs/img/src/`. Commit the image.
 3. Run `npm start` to verify that your example image is loading as expected.
 
-For some examples, `npm run create-image` does not generate an ideal image. In these cases, you can interact with the map after running `ncreate-image`, or take a screenshot yourself by running the site locally with `npm start`, take a screenshot and save it in the `docs/img/src` folder.
+For some examples, `npm run create-image` does not generate an ideal image. In these cases, you can interact with the map after running the command before the screenshot is taken, or take a screenshot yourself by running the site locally with `npm start`, take a screenshot and save it in the `docs/img/src` folder.
 
-To regenerate all images, run `npm run create-image all`. Note that this doesn't support interaction and examples that require manual interaction (e.g. popups). will need to be manually redone afterward. This feature is experimental and may crash before sucessfully generating all examples.
+To regenerate all images, run `npm run create-image all`. Note that this doesn't support interaction and examples that require manual interaction (e.g. popups) will need to be manually redone afterward. This feature is experimental and may crash before sucessfully generating all examples.
 
 ## Running the Documentation Server Locally
 
@@ -72,8 +72,6 @@ npm start
 ```
 
 The command will print the URL you can use to view the documentation.
-
-💡 If you receive an error related to `@mapbox/appropriate-images`, try `nvm use && npm start`.
 
 The examples section of the locally run documentation will use the GL JS version located in `../maplibre-gl-js/dist`,
 so make sure to have a working minified build in your local copy of the `maplibre-gl-js` repo; clone `maplibre-gl-js` into the same directory as `maplibre-gl-js-docs` and run `npm run build-dist` there).
