@@ -76,7 +76,11 @@
     "maplibre-gl-measures": {
       "website": "https://github.com/jdsantos/maplibre-gl-measures",
       "description": "A plugin for taking measures on the map."
-    }    
+    },
+    "any-routing": {
+      "website": "https://github.com/marucjmar/any-routing",
+      "description": "A modular plugin for calculating routes"
+    }
   },
   "Map Rendering Plugins": {
     "mapbox-gl-language": {
