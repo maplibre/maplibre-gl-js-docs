@@ -79,7 +79,7 @@
     },
     "any-routing": {
       "website": "https://github.com/marucjmar/any-routing",
-      "description": "A modular plugin for calculating routes"
+      "description": "A modular plugin for calculating routes."
     }
   },
   "Map Rendering Plugins": {
