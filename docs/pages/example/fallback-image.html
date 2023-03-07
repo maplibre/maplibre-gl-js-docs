@@ -2,8 +2,7 @@
 <script>
     var map = new maplibregl.Map({
         container: 'map',
-        style:
-            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+        style: 'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
         center: [-77, 38.75],
         zoom: 5
     });
@@ -18,8 +17,7 @@
                         'geometry': {
                             'type': 'Point',
                             'coordinates': [
-                                -77.03238901390978,
-                                38.913188059745586
+                                -77.03238901390978, 38.913188059745586
                             ]
                         },
                         'properties': {
@@ -59,7 +57,7 @@
             'layout': {
                 'icon-image': [
                     'coalesce',
-                    ['image', ['concat', ['get', 'icon'], '-15']],
+                    ['image', ['concat', ['get', 'icon'], '_15']],
                     ['image', 'marker_15']
                 ],
                 'text-field': ['get', 'title'],
