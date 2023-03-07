@@ -268,16 +268,13 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/polygon-popup-on-click</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/popup</loc>
-    </url>
-    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/popup-on-click</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/popup-on-hover</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/queryrenderedfeatures</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/queryrenderedfeatures</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/popup-on-hover</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/render-world-copies</loc>
@@ -290,6 +287,9 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/scroll-fly-to</loc>
+    </url>
+    <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/popup</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/set-perspective</loc>
