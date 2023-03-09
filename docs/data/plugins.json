@@ -190,6 +190,10 @@
     "maplibregl-mapbox-request-transformer": {
       "website": "https://github.com/rowanwins/maplibregl-mapbox-request-transformer",
       "description": "This library provides a request transforming function enabling the consumption of MapboxGL Styles in MapLibreGL."
+    },
+    "maplibre-layers-event-propagator": {
+      "website": "https://github.com/marucjmar/any-routing/tree/master/packages/maplibre-layers-event-propagator",
+      "description": "Plugin to stop event propagation between layers."
     }
   },
   "Development Tools": {
