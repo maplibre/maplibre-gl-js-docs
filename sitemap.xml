@@ -7,10 +7,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/api</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/examples</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/examples</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/overview</loc>
@@ -46,10 +46,13 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/3d-buildings</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/3d-terrain</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/3d-extrusion-floorplan</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-3d-model</loc>
+    </url>
+    <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/3d-terrain</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-3d-model-babylon</loc>
@@ -67,7 +70,7 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-image-generated</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/3d-extrusion-floorplan</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-image-missing-generated</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-image-stretchable</loc>
@@ -94,6 +97,9 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/attribution-position</loc>
     </url>
     <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/camera-animation</loc>
+    </url>
+    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/canvas-source</loc>
     </url>
     <url>
@@ -112,7 +118,13 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/cluster</loc>
     </url>
     <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/cluster-html</loc>
+    </url>
+    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/color-switcher</loc>
+    </url>
+    <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/custom-marker-icons</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/custom-style-layer</loc>
@@ -139,7 +151,7 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/fallback-image</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/add-image-missing-generated</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/featuresat</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/fill-pattern</loc>
@@ -166,7 +178,7 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/game-controls</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/camera-animation</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/geocoder</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/geojson-layer-in-stack</loc>
@@ -190,10 +202,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/hover-styles</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/custom-marker-icons</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/interactive-false</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/featuresat</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/jump-to</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/language-switch</loc>
@@ -211,16 +223,19 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/live-update-feature</loc>
     </url>
     <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/local-geojson</loc>
+    </url>
+    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/local-geojson-experimental</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/geocoder</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/local-ideographs</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/locate-user</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/interactive-false</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/map-tiles</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-draw</loc>
@@ -241,7 +256,7 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mouse-position</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/map-tiles</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/multiple-geometries</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/navigation</loc>
@@ -265,7 +280,7 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/queryrenderedfeatures</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/local-ideographs</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/render-world-copies</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/restrict-bounds</loc>
@@ -286,7 +301,10 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/simple-map</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/multiple-geometries</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/third-party</loc>
+    </url>
+    <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/timeline-animation</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/toggle-interaction-handlers</loc>
@@ -307,7 +325,7 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/visualize-population-density</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/jump-to</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/wms</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/zoomto-linestring</loc>
@@ -328,7 +346,7 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/other</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/render-world-copies</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/root</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/sources</loc>
@@ -341,23 +359,5 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/types</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/third-party</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/local-geojson</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/timeline-animation</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/cluster-html</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/style-spec/root</loc>
-    </url>
-    <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/wms</loc>
     </url>
 </urlset>
