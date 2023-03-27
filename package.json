@@ -51,7 +51,7 @@
     "playwright": "^1.25.0",
     "prettier": "^2.7.1",
     "prop-types": "^15.8.1",
-    "puppeteer": "^16.2.0",
+    "puppeteer": "^19.8.0",
     "raw-loader": "^4.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
