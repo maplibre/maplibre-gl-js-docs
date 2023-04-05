@@ -1,0 +1,150 @@
+<div id="map"></div>
+<script>
+    let position = 0;
+    let positions;
+    var map = new maplibregl.Map({
+        container: 'map',
+        style: {
+            "id": "raster",
+            "version": 8,
+            "name": "Raster tiles",
+            "center": [0, 0],
+            "zoom": 0,
+            "sources": {
+                "raster-tiles": {
+                    "type": "raster",
+                    "tiles": [
+                        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                    ],
+                    "tileSize": 256,
+                    "minzoom": 0,
+                    "maxzoom": 19
+                }
+            },
+            "layers": [{
+                "id": "background",
+                "type": "background",
+                "paint": {
+                    "background-color": "#e0dfdf"
+                }
+            }, {
+                "id": "simple-tiles",
+                "type": "raster",
+                "source": "raster-tiles"
+            }]
+        },
+        center: [-87.61694, 41.86625],
+        zoom: 15.99,
+        pitch: 40,
+        bearing: 0,
+        antialias: true,
+        maxPitch: 85,
+        maxZoom: 25,
+    });
+
+
+    map.getCameraPosition = () => {
+        const pitch = map.transform._pitch;
+        const altitude = Math.cos(pitch) * map.transform.cameraToCenterDistance;
+        const latOffset = Math.tan(pitch) * map.transform.cameraToCenterDistance;
+        const latPosPointInPixels = map.transform.centerPoint.add(new maplibregl.Point(0, latOffset));
+        const latLong = map.transform.pointLocation(latPosPointInPixels);
+        const verticalScaleConstant = map.transform.worldSize / (2 * Math.PI * 6378137 * Math.abs(Math.cos(latLong.lat * (Math.PI / 180))));
+        const altitudeInMeters = altitude / verticalScaleConstant;
+        return {
+            lng: latLong.lng,
+            lat: latLong.lat,
+            altitude: altitudeInMeters,
+            pitch: pitch * 180 / Math.PI
+        };
+    }
+    map.setCameraPosition = (camPos) => {
+        const {
+            lng,
+            lat,
+            altitude,
+            pitch
+        } = camPos;
+        const pitch_ = pitch * Math.PI / 180;
+        const cameraToCenterDistance = 0.5 / Math.tan(map.transform._fov / 2) * map.transform.height;
+        const pixelAltitude = Math.abs(Math.cos(pitch_) * cameraToCenterDistance);
+        const metersInWorldAtLat = (2 * Math.PI * 6378137 * Math.abs(Math.cos(lat * (Math.PI / 180))));
+        const worldsize = (pixelAltitude / altitude) * metersInWorldAtLat;
+        const zoom = Math.log(worldsize / map.transform.tileSize) / Math.LN2;
+        const latOffset = Math.tan(pitch_) * cameraToCenterDistance;
+        const newPixelPoint = new maplibregl.Point(map.transform.width / 2, map.transform.height / 2 + latOffset);
+        const newLongLat = new maplibregl.LngLat(lng, lat);
+        map.transform.zoom = zoom;
+        map.transform.pitch = pitch;
+        map.transform.setLocationAtPoint(newLongLat, newPixelPoint);
+    }
+    map.camera_go_to = (camera_pos) => {
+        // console.log('camera_go_to');
+
+        let current_pos = map.getCameraPosition();
+        let old_bearing = map.getBearing();
+
+        // Move quickly to expected position to get target point position for flyTo call
+        map.setBearing(camera_pos.bearing);
+        map.setCameraPosition(camera_pos);
+
+        let target_pos_ = {
+            center: map.getCenter(),
+            zoom: map.getZoom(),
+            pitch: map.getPitch(),
+            bearing: camera_pos.bearing,
+            duration: 1000,
+        }
+
+        // back to old position
+        map.setBearing(old_bearing);
+        map.setCameraPosition(current_pos);
+
+        // Do it baby
+        map.easeTo(target_pos_);
+    }
+
+    map.on('click', () => {
+        position = position % 10 + 1;
+        let feature = positions.features.find((feat_) =>
+            feat_.geometry.type === "Point" &&
+            parseInt(feat_.properties.ref) === position);
+        let cam_pos = {
+            lng: feature.geometry.coordinates[0],
+            lat: feature.geometry.coordinates[1],
+            altitude: 30,
+            pitch: 70,
+            bearing: parseInt(feature.properties.bearing)
+        }
+        map.camera_go_to(cam_pos);
+    })
+    map.on('load', function() {
+        fetch("https://maplibre.org/maplibre-gl-js-docs/assets/indoor-3d-positions.geojson")
+            .then((response) => {
+                var contentType = response.headers.get("content-type");
+                if (contentType && contentType.indexOf("application/geo+json") !== -1) {
+                    return response.json().then(function(json) {
+                        positions = json;
+                    });
+                } else {
+                    console.log("No json!");
+                }
+            });
+
+        map.addSource('floorplan', {
+            'type': 'geojson',
+            'data': 'https://maplibre.org/maplibre-gl-js-docs/assets/indoor-3d-map.geojson'
+        });
+        map.addLayer({
+            'id': 'room-extrusion',
+            'type': 'fill-extrusion',
+            'source': 'floorplan',
+            'paint': {
+                'fill-extrusion-color': ['get', 'color'],
+                'fill-extrusion-height': ['get', 'height'],
+                'fill-extrusion-base': ['get', 'base_height'],
+                'fill-extrusion-opacity': 0.5
+            }
+        });
+    });
+</script>
