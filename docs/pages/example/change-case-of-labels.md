@@ -16,6 +16,6 @@ prependJs:
 - "import html from './change-case-of-labels.html';"
 ---
 
-Use the [`upcase`](https://maplibre.org/maplibre-gl-style-spec/expressions/#upcase) and [`downcase`](https://maplibre.org/maplibre-gl-style-spec/expressions/#downcase) expressions to change the case of labels.
+Use the [`upcase`](https://maplibre.org/maplibre-style/expressions/#upcase) and [`downcase`](https://maplibre.org/maplibre-style/expressions/#downcase) expressions to change the case of labels.
 
 {{ <Example html={html} {...this.props} /> }}

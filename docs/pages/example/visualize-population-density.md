@@ -16,6 +16,6 @@ prependJs:
 - "import html from './visualize-population-density.html';"
 ---
 
-Use a [variable binding expression](https://maplibre.org/maplibre-gl-style-spec/expressions/#variable-binding) to calculate and display population density.
+Use a [variable binding expression](https://maplibre.org/maplibre-style/expressions/#variable-binding) to calculate and display population density.
 
 {{ <Example html={html} {...this.props} /> }}
