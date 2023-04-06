@@ -57,7 +57,7 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "regenerator-runtime": "^0.13.9",
-    "remark": "^10.0.1",
+    "remark": "^14.0.2",
     "remark-cli": "^11.0.0",
     "remark-frontmatter": "^4.0.1",
     "remark-lint-heading-increment": "^3.1.1",
