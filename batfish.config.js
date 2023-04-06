@@ -8,7 +8,13 @@ const {
     buildFilters
 } = require('@mapbox/dr-ui/helpers/batfish/index.js');
 
-const addPages = [];
+const addPages = [
+    {
+        title: 'Style Docs',
+        path: 'https://maplibre.org/maplibre-style/',
+        navOrder: 5
+    }
+];
 
 const siteBasePath = '/maplibre-gl-js-docs';
 module.exports = () => {
