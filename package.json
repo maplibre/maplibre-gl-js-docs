@@ -73,8 +73,7 @@
     "lint-md": "remark docs/pages/",
     "build-api": "documentation build --pe ts --re ts --re d.ts --github --format json --sort-order alpha --config ./docs/documentation.yml --output docs/components/api.json node_modules/maplibre-gl/src/index.ts",
     "build-images": "mkdir -p docs/img/dist && node --loader ts-node/esm --experimental-specifier-resolution=node docs/bin/build-image-config.js && node --loader ts-node/esm --experimental-specifier-resolution=node docs/bin/appropriate-images.js --all",
-    "remove-assert": "node remove-assert.js",
-    "build-docs": "run-s build-api build-images remove-assert",
+    "build-docs": "run-s build-api build-images",
     "prebuild": "npm run build-docs",
     "prestart": "npm run build-docs",
     "build": "NODE_OPTIONS=\"--openssl-legacy-provider --max_old_space_size=4096\" batfish build",
@@ -94,7 +93,6 @@
   },
   "dependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
-    "@maplibre/maplibre-gl-style-spec": "^18.0.1",
     "classnames": "^2.3.1",
     "fuse.js": "^6.6.2",
     "rehype-slug": "^2.0.3"

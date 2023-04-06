@@ -164,7 +164,7 @@
     },
     "expression-jamsession": {
       "website": "https://github.com/mapbox/expression-jamsession/",
-      "description": "Converts [Mapbox Studio formulas](https://www.mapbox.com/help/studio-manual-styles/#use-a-formula) into [expressions](/maplibre-gl-js-docs/style-spec/#expressions)."
+      "description": "Converts [Mapbox Studio formulas](https://www.mapbox.com/help/studio-manual-styles/#use-a-formula) into [expressions](https://maplibre.org/maplibre-style/expressions/)."
     },
     "simplespec-to-gl-style": {
       "website": "https://github.com/mapbox/simplespec-to-gl-style",

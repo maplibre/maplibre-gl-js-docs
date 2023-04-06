@@ -16,6 +16,6 @@ prependJs:
 - "import html from './vector-source.html';"
 ---
 
-Add a [vector source](https://maplibre.org/maplibre-gl-js-docs/style-spec/sources/#vector) to a map.
+Add a [vector source](https://maplibre.org/maplibre-style/sources/#vector) to a map.
 
 {{ <Example html={html} {...this.props} /> }}
