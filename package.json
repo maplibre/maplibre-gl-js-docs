@@ -101,6 +101,9 @@
     "testPathIgnorePatterns": [
       "/maplibre-gl-js/"
     ],
+    "transformIgnorePatterns": [
+      "/node_modules\\/(?!(maplibre-gl-style-spec))/"
+    ],
     "testRegex": "/__tests__/.*\\.test\\.js$"
   }
 }
