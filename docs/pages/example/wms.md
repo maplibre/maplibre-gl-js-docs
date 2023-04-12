@@ -16,6 +16,6 @@ prependJs:
 - "import html from './wms.html';"
 ---
 
-Add an external [Web Map Service raster layer](https://www.ogc.org/standards/wms) to the map using [`addSource`](https://maplibre.org/maplibre-gl-js-docs/api/map/#map#addsource)'s [`tiles`](https://maplibre.org/maplibre-style/sources/#raster-tiles) option.
+Add an external [Web Map Service raster layer](https://www.ogc.org/standards/wms) to the map using [`addSource`](https://maplibre.org/maplibre-gl-js-docs/api/map/#map#addsource)'s [`tiles`](https://maplibre.org/maplibre-style-spec/sources/#raster-tiles) option.
 
 {{ <Example html={html} {...this.props} /> }}
