@@ -11,7 +11,7 @@ const {
 const addPages = [
     {
         title: 'Style Specification',
-        path: 'https://maplibre.org/maplibre-style/',
+        path: 'https://maplibre.org/maplibre-style-spec/',
         navOrder: 5
     }
 ];
