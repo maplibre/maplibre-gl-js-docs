@@ -14,7 +14,6 @@ toc:
       - supported
       - setRTLTextPlugin
       - getRTLTextPluginStatus
-      - clearStorage
       - addProtocol
       - removeProtocol
       - AnimationOptions
@@ -64,8 +63,8 @@ toc:
       - DragRotateHandler
       - KeyboardHandler
       - DoubleClickZoomHandler
-      - TouchZoomRotateHandler
-      - TouchPitchHandler
+      - TwoFingersTouchZoomRotateHandler
+      - TwoFingersTouchPitchHandler
 
   - name: Sources
     page: 'sources'

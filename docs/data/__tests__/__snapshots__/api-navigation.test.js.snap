@@ -149,21 +149,6 @@ Array [
       },
       Object {
         "level": 2,
-        "slug": "clearstorage",
-        "text": "clearStorage",
-      },
-      Object {
-        "level": 3,
-        "slug": "clearstorage-parameters",
-        "text": "Parameters",
-      },
-      Object {
-        "level": 3,
-        "slug": "clearstorage-example",
-        "text": "Example",
-      },
-      Object {
-        "level": 2,
         "slug": "addprotocol",
         "text": "addProtocol",
       },
@@ -500,6 +485,11 @@ Array [
       },
       Object {
         "level": 3,
+        "slug": "fullscreencontrol-events",
+        "text": "Events",
+      },
+      Object {
+        "level": 3,
         "slug": "fullscreencontrol-related",
         "text": "Related",
       },
@@ -707,27 +697,27 @@ Array [
       },
       Object {
         "level": 2,
-        "slug": "touchzoomrotatehandler",
-        "text": "TouchZoomRotateHandler",
+        "slug": "twofingerstouchzoomrotatehandler",
+        "text": "TwoFingersTouchZoomRotateHandler",
       },
       Object {
         "level": 3,
-        "slug": "touchzoomrotatehandler-instance-members",
+        "slug": "twofingerstouchzoomrotatehandler-instance-members",
         "text": "Instance members",
       },
       Object {
         "level": 2,
-        "slug": "touchpitchhandler",
-        "text": "TouchPitchHandler",
+        "slug": "twofingerstouchpitchhandler",
+        "text": "TwoFingersTouchPitchHandler",
       },
       Object {
         "level": 3,
-        "slug": "touchpitchhandler-parameters",
+        "slug": "twofingerstouchpitchhandler-parameters",
         "text": "Parameters",
       },
       Object {
         "level": 3,
-        "slug": "touchpitchhandler-instance-members",
+        "slug": "twofingerstouchpitchhandler-instance-members",
         "text": "Instance members",
       },
     ],
