@@ -1,16 +1,15 @@
 <div id="map"></div>
 <script>
-    var map = (window.map = new maplibregl.Map({
+    const map = new maplibregl.Map({
         container: 'map',
         zoom: 3,
         center: [7.5, 58],
-        style:
-            'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+        style: 'https://demotiles.maplibre.org/style.json',
         antialias: true // create the gl context with MSAA antialiasing, so custom layers are antialiased
-    }));
+    });
 
     // create a custom style layer to implement the WebGL content
-    var highlightLayer = {
+    const highlightLayer = {
         id: 'highlight',
         type: 'custom',
 
@@ -18,28 +17,29 @@
         // https://maplibre.org/maplibre-gl-js-docs/api/properties/#styleimageinterface#onadd
         onAdd: function (map, gl) {
             // create GLSL source for vertex shader
-            var vertexSource =
-                '' +
-                'uniform mat4 u_matrix;' +
-                'attribute vec2 a_pos;' +
-                'void main() {' +
-                '    gl_Position = u_matrix * vec4(a_pos, 0.0, 1.0);' +
-                '}';
+            const vertexSource = `#version 300 es
+                
+                uniform mat4 u_matrix;
+                in vec2 a_pos;
+                void main() {
+                    gl_Position = u_matrix * vec4(a_pos, 0.0, 1.0);
+                }`;
 
             // create GLSL source for fragment shader
-            var fragmentSource =
-                '' +
-                'void main() {' +
-                '    gl_FragColor = vec4(1.0, 0.0, 0.0, 0.5);' +
-                '}';
+            const fragmentSource = `#version 300 es
+
+                out highp vec4 fragColor;
+                void main() {
+                    fragColor = vec4(1.0, 0.0, 0.0, 0.5);
+                }`;
 
             // create a vertex shader
-            var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+            const vertexShader = gl.createShader(gl.VERTEX_SHADER);
             gl.shaderSource(vertexShader, vertexSource);
             gl.compileShader(vertexShader);
 
             // create a fragment shader
-            var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+            const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
             gl.shaderSource(fragmentShader, fragmentSource);
             gl.compileShader(fragmentShader);
 
@@ -52,15 +52,15 @@
             this.aPos = gl.getAttribLocation(this.program, 'a_pos');
 
             // define vertices of the triangle to be rendered in the custom style layer
-            var helsinki = maplibregl.MercatorCoordinate.fromLngLat({
+            const helsinki = maplibregl.MercatorCoordinate.fromLngLat({
                 lng: 25.004,
                 lat: 60.239
             });
-            var berlin = maplibregl.MercatorCoordinate.fromLngLat({
+            const berlin = maplibregl.MercatorCoordinate.fromLngLat({
                 lng: 13.403,
                 lat: 52.562
             });
-            var kyiv = maplibregl.MercatorCoordinate.fromLngLat({
+            const kyiv = maplibregl.MercatorCoordinate.fromLngLat({
                 lng: 30.498,
                 lat: 50.541
             });
@@ -102,6 +102,6 @@
 
     // add the custom style layer to the map
     map.on('load', function () {
-        map.addLayer(highlightLayer, 'building');
+        map.addLayer(highlightLayer, 'crimea-fill');
     });
 </script>
