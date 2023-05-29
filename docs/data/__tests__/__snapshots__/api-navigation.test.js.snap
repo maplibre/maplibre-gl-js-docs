@@ -94,31 +94,6 @@ Array [
       },
       Object {
         "level": 2,
-        "slug": "supported",
-        "text": "supported",
-      },
-      Object {
-        "level": 3,
-        "slug": "supported-parameters",
-        "text": "Parameters",
-      },
-      Object {
-        "level": 3,
-        "slug": "supported-returns",
-        "text": "Returns",
-      },
-      Object {
-        "level": 3,
-        "slug": "supported-example",
-        "text": "Example",
-      },
-      Object {
-        "level": 3,
-        "slug": "supported-related",
-        "text": "Related",
-      },
-      Object {
-        "level": 2,
         "slug": "setrtltextplugin",
         "text": "setRTLTextPlugin",
       },
