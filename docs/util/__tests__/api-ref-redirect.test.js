@@ -45,9 +45,11 @@ it(`api-ref-redirect`, () => {
 
     expect(
         redirect({
-            hash: '#touchpitchhandler#isenabled'
+            hash: '#twofingerstouchpitchhandler#isenabled'
         })
-    ).toEqual('/maplibre-gl-js-docs/api/handlers/#touchpitchhandler#isenabled');
+    ).toEqual(
+        '/maplibre-gl-js-docs/api/handlers/#twofingerstouchpitchhandler#isenabled'
+    );
 
     expect(
         redirect({

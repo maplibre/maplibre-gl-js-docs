@@ -17,6 +17,6 @@ prependJs:
 - "import html from './add-image.html';"
 ---
 
-Add an icon to the map from an external URL and use it in a [symbol layer](https://maplibre.org/maplibre-gl-js-docs/style-spec/layers/#symbol).
+Add an icon to the map from an external URL and use it in a [symbol layer](https://maplibre.org/maplibre-style-spec/layers/#symbol).
 
 {{ <Example html={html} {...this.props} /> }}

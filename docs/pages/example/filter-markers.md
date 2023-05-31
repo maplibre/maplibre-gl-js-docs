@@ -16,6 +16,6 @@ prependJs:
 - "import html from './filter-markers.html';"
 ---
 
-Filter a set of [symbols](https://maplibre.org/maplibre-gl-js-docs/style-spec/layers/#symbol) based on a property value in the data.
+Filter a set of [symbols](https://maplibre.org/maplibre-style-spec/layers/#symbol) based on a property value in the data.
 
 {{ <Example html={html} {...this.props} /> }}

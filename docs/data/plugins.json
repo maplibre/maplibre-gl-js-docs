@@ -76,7 +76,11 @@
     "maplibre-gl-measures": {
       "website": "https://github.com/jdsantos/maplibre-gl-measures",
       "description": "A plugin for taking measures on the map."
-    }    
+    },
+    "any-routing": {
+      "website": "https://github.com/marucjmar/any-routing",
+      "description": "A modular plugin for calculating routes."
+    }
   },
   "Map Rendering Plugins": {
     "mapbox-gl-language": {
@@ -160,7 +164,7 @@
     },
     "expression-jamsession": {
       "website": "https://github.com/mapbox/expression-jamsession/",
-      "description": "Converts [Mapbox Studio formulas](https://www.mapbox.com/help/studio-manual-styles/#use-a-formula) into [expressions](/maplibre-gl-js-docs/style-spec/#expressions)."
+      "description": "Converts [Mapbox Studio formulas](https://www.mapbox.com/help/studio-manual-styles/#use-a-formula) into [expressions](https://maplibre.org/maplibre-style-spec/expressions/)."
     },
     "simplespec-to-gl-style": {
       "website": "https://github.com/mapbox/simplespec-to-gl-style",

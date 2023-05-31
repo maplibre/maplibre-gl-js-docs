@@ -94,31 +94,6 @@ Array [
       },
       Object {
         "level": 2,
-        "slug": "supported",
-        "text": "supported",
-      },
-      Object {
-        "level": 3,
-        "slug": "supported-parameters",
-        "text": "Parameters",
-      },
-      Object {
-        "level": 3,
-        "slug": "supported-returns",
-        "text": "Returns",
-      },
-      Object {
-        "level": 3,
-        "slug": "supported-example",
-        "text": "Example",
-      },
-      Object {
-        "level": 3,
-        "slug": "supported-related",
-        "text": "Related",
-      },
-      Object {
-        "level": 2,
         "slug": "setrtltextplugin",
         "text": "setRTLTextPlugin",
       },
@@ -145,21 +120,6 @@ Array [
       Object {
         "level": 3,
         "slug": "getrtltextpluginstatus-example",
-        "text": "Example",
-      },
-      Object {
-        "level": 2,
-        "slug": "clearstorage",
-        "text": "clearStorage",
-      },
-      Object {
-        "level": 3,
-        "slug": "clearstorage-parameters",
-        "text": "Parameters",
-      },
-      Object {
-        "level": 3,
-        "slug": "clearstorage-example",
         "text": "Example",
       },
       Object {
@@ -500,6 +460,11 @@ Array [
       },
       Object {
         "level": 3,
+        "slug": "fullscreencontrol-events",
+        "text": "Events",
+      },
+      Object {
+        "level": 3,
         "slug": "fullscreencontrol-related",
         "text": "Related",
       },
@@ -707,27 +672,27 @@ Array [
       },
       Object {
         "level": 2,
-        "slug": "touchzoomrotatehandler",
-        "text": "TouchZoomRotateHandler",
+        "slug": "twofingerstouchzoomrotatehandler",
+        "text": "TwoFingersTouchZoomRotateHandler",
       },
       Object {
         "level": 3,
-        "slug": "touchzoomrotatehandler-instance-members",
+        "slug": "twofingerstouchzoomrotatehandler-instance-members",
         "text": "Instance members",
       },
       Object {
         "level": 2,
-        "slug": "touchpitchhandler",
-        "text": "TouchPitchHandler",
+        "slug": "twofingerstouchpitchhandler",
+        "text": "TwoFingersTouchPitchHandler",
       },
       Object {
         "level": 3,
-        "slug": "touchpitchhandler-parameters",
+        "slug": "twofingerstouchpitchhandler-parameters",
         "text": "Parameters",
       },
       Object {
         "level": 3,
-        "slug": "touchpitchhandler-instance-members",
+        "slug": "twofingerstouchpitchhandler-instance-members",
         "text": "Instance members",
       },
     ],
