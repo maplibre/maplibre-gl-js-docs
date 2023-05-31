@@ -67,7 +67,7 @@ ${html}
 
     renderSnippet() {
         const { html, location } = this.props;
-        const code = this.displayHTML(html);
+        const code = this.displayHTML(html).replace(/[\r\n]+/gm, '\n');
         const parsedCode = helpers.extractor(code);
         return (
             <div className="bg-white">
