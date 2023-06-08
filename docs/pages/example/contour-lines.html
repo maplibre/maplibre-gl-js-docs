@@ -4,9 +4,16 @@
     var demSource = new mlcontour.DemSource({
         url: 'https://demotiles.maplibre.org/terrain-tiles/{z}/{x}/{y}.png',
         encoding: 'mapbox',
-        maxzoom: 12
+        maxzoom: 12,
+        // offload contour line computation to a web worker
+        worker: true
     });
+
+    // calls maplibregl.addProtocol to register a dynamic vector tile provider that
+    // downloads raster-dem tiles, computes contour lines, and encodes as a vector
+    // tile for each tile request from maplibre
     demSource.setupMaplibre(maplibregl);
+
     var map = (window.map = new maplibregl.Map({
         container: 'map',
         zoom: 13,
