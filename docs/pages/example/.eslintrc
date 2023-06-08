@@ -14,6 +14,7 @@
     "globals": {
       "maplibregl": true,
       "mapboxgl": true,
+      "mlcontour": true,
       "MaplibreGeocoder": true,
       "MapboxDirections": true,
       "turf": true,
