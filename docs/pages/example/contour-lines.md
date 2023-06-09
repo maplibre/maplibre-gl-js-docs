@@ -1,6 +1,6 @@
 ---
 title: Add Contour Lines
-description: Add contour lines to your map from a raster-dem source
+description: Add contour lines to your map from a raster-dem source.
 topics:
     - Layers
 thumbnail: contour-lines
