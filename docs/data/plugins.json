@@ -114,6 +114,10 @@
     }
   },
   "Layer Types": {
+    "mapbox-gl-flatgeobuf": {
+      "website": "https://github.com/rowanwins/mapbox-gl-flatgeobuf",
+      "description": "A library for retrieving features from FlatGeobuf file using a tiled approach. Compatible with MapLibre GL JS and Mapbox GL JS."
+    }, 
     "mapbox-gl-arcgis-featureserver": {
       "website": "https://github.com/rowanwins/mapbox-gl-arcgis-featureserver",
       "description": "A library for retrieving features from an ArcGIS FeatureServer or MapServer. This library makes tiled requests rather than simply requesting every feature."
