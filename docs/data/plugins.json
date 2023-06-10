@@ -107,6 +107,10 @@
     "flowmap.blue": {
       "website": "https://github.com/ilyabo/flowmap.blue",
       "description": "Render a geographic flow map visualization from a spreadsheet published on Google Sheets."
+    },
+    "maplibre-contour": {
+      "website": "https://github.com/onthegomap/maplibre-contour",
+      "description": "Adds elevation contour lines to a map from raster-dem tiles."
     }
   },
   "Layer Types": {
