@@ -38,6 +38,7 @@ toc:
       - AttributionControl
       - ScaleControl
       - FullscreenControl
+      - TerrainControl
 
   - name: Geography and geometry
     page: 'geography'

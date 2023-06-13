@@ -468,6 +468,21 @@ Array [
         "slug": "fullscreencontrol-related",
         "text": "Related",
       },
+      Object {
+        "level": 2,
+        "slug": "terraincontrol",
+        "text": "TerrainControl",
+      },
+      Object {
+        "level": 3,
+        "slug": "terraincontrol-parameters",
+        "text": "Parameters",
+      },
+      Object {
+        "level": 3,
+        "slug": "terraincontrol-example",
+        "text": "Example",
+      },
     ],
     "title": "Markers and controls",
   },
