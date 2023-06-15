@@ -211,9 +211,6 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/language-switch</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/line-across-180th-meridian</loc>
-    </url>
-    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/line-gradient</loc>
     </url>
     <url>
@@ -229,13 +226,13 @@
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/local-geojson-experimental</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/local-ideographs</loc>
-    </url>
-    <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/locate-user</loc>
     </url>
     <url>
-        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/map-tiles</loc>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/local-ideographs</loc>
+    </url>
+    <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/line-across-180th-meridian</loc>
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/mapbox-gl-draw</loc>
@@ -329,5 +326,8 @@
     </url>
     <url>
         <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/zoomto-linestring</loc>
+    </url>
+    <url>
+        <loc>https://maplibre.github.io/maplibre-gl-js-docs/example/map-tiles</loc>
     </url>
 </urlset>
