@@ -80,6 +80,10 @@
     "any-routing": {
       "website": "https://github.com/marucjmar/any-routing",
       "description": "A modular plugin for calculating routes."
+    },
+    "maplibre-search-box": {
+      "website": "https://github.com/stadiamaps/maplibre-search-box",
+      "description": "Adds a control for searching for places using Stadia Maps."
     }
   },
   "Map Rendering Plugins": {
