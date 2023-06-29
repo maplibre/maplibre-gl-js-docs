@@ -25,6 +25,10 @@
       "description": "Adds support for drawing and editing features on maps.",
       "example": "mapbox-gl-draw"
     },
+    "terra-draw": {
+      "website": "https://github.com/JamesLMilner/terra-draw",
+      "description": "Provides a MapLibre GL JS adapter to allow creation, selection and editing of geometries",
+     },
     "mapbox-gl-elevation": {
       "website": "https://github.com/watergis/mapbox-gl-elevation",
       "description": "Adds a control to retrieve altitude from terrain RGB tilesets."
