@@ -1,3 +1,12 @@
+# ⚠️This repo is now archived⚠️
+
+### All the code related to the generation of the docs, that now resides in https://maplibre.org/maplibre-gl-js/docs can be found in the at the [main repo](https://github.com/maplibre/maplibre-gl-js). 
+
+<hr/>
+<br/>
+<br/>
+<br/>
+
 # MapLibre GL JS Documentation
 
 The source code for https://maplibre.org/maplibre-gl-js-docs/, the website that hosts [API documentation](#writing-api-documentation) and [examples](#writing-examples) for [MapLibre GL JS](https://github.com/maplibre/maplibre-gl-js). A GitHub Actions Workflow is triggered on push to the ```main``` branch. This Action builds the static website and deploys it to GitHub Pages by pushing to the ```gh-pages``` branch.
