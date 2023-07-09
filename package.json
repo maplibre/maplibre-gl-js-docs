@@ -15,7 +15,7 @@
     "@babel/preset-env": "^7.18.10",
     "@babel/preset-flow": "^7.18.6",
     "@babel/preset-react": "^7.18.6",
-    "@mapbox/appropriate-images": "^5.0.0",
+    "@mapbox/appropriate-images": "^6.0.0",
     "@mapbox/appropriate-images-react": "^2.2.0",
     "@mapbox/batfish": "^2.3.2",
     "@mapbox/dr-ui": "^2.2.0",
