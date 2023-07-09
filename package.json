@@ -61,7 +61,7 @@
     "remark-cli": "^11.0.0",
     "remark-frontmatter": "^4.0.1",
     "remark-lint-heading-increment": "^3.1.1",
-    "remark-react": "^5.0.1",
+    "remark-react": "^9.0.1",
     "slugg": "^1.2.1",
     "tap-min": "^2.0.0",
     "tape": "^5.6.0",
