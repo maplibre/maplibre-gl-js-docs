@@ -27,7 +27,7 @@
     "@mapbox/prettier-config-docs": "^0.2.1",
     "@mapbox/remark-lint-link-text": "^0.6.0",
     "babel-tape-runner": "^3.0.0",
-    "check-links": "^1.1.8",
+    "check-links": "^2.1.2",
     "documentation": "^14.0.2",
     "downshift": "^6.1.9",
     "eslint": "^7.32.0",
